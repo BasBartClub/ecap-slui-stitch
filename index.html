@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="utf-8">
+  <title>ECAP SLUI — Advies & Projectontwikkeling</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow"/>
+<link rel="icon" href="data:,"/>
+<link rel="stylesheet" href="tokens.css"/>
+<script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-[#0b0e14] text-slate-100 min-h-screen">
+<!-- Interactive WebGL Circuit Shader Layer -->
+<div class="fixed inset-0 pointer-events-none opacity-40 z-0">
+<canvas class="w-full h-full" id="shader-canvas-home"></canvas>
+</div>
+<div class="relative z-10 flex flex-col min-h-screen">
+<!-- Shared Header -->
+<header class="border-b border-white/10 bg-[#0b0e14]/85 backdrop-blur-md">
+<div class="max-w-[1680px] mx-auto px-6 h-20 flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-md bg-blue-600/20 border border-blue-500/40 flex items-center justify-center font-bold text-blue-400">ES</div>
+<div>
+<div class="text-base font-bold text-white tracking-tight">ECAP SLUI</div>
+<div class="text-[10px] font-mono tracking-widest text-slate-400 uppercase">Elektrotechnisch Bureau • Ede</div>
+</div>
+</div>
+<nav class="hidden md:flex gap-8 text-sm font-medium text-slate-300">
+<a class="text-blue-400" href="#">Home</a>
+<a class="hover:text-white" href="diensten.html">Diensten</a>
+<a class="hover:text-white" href="sectoren.html">Sectoren</a>
+<a class="hover:text-white" href="werkwijze.html">Werkwijze</a>
+<a class="hover:text-white" href="contact.html">Contact</a>
+</nav>
+<a class="px-5 py-2.5 rounded-lg bg-blue-600 hover:bg-blue-500 text-white font-medium text-sm shadow-[0_0_20px_rgba(0,102,255,0.35)]" href="contact.html">Contact</a>
+</div>
+</header>
+<!-- Hero Section -->
+<section class="max-w-[1680px] mx-auto px-6 pt-24 pb-20 text-center">
+<div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-blue-500/30 bg-blue-500/10 text-blue-400 font-mono text-xs tracking-wider uppercase mb-8">
+<span class="w-2 h-2 rounded-full bg-blue-400 animate-ping"></span>
+        [SYS.STATUS: OPERATIONAL] • NEN 1010 / 3140 GEBORGD
+      </div>
+<h1 class="text-5xl md:text-7xl font-extrabold tracking-tight text-white max-w-5xl mx-auto leading-tight">
+        Advies &amp; <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-sky-300">Projectontwikkeling</span>
+</h1>
+<p class="mt-6 text-xl text-slate-400 max-w-3xl mx-auto leading-relaxed">
+        Elektrotechnisch calculatie-, adviserings- en projectenbureau in Ede. Meer dan 30 jaar onafhankelijk vakmanschap in utiliteit, industriële installaties en infrastructurele projecten.
+      </p>
+<div class="mt-10 flex flex-wrap justify-center gap-4">
+<a class="px-8 py-4 rounded-xl bg-blue-600 hover:bg-blue-500 text-white font-semibold text-base shadow-[0_0_30px_rgba(0,102,255,0.4)] transition" href="diensten.html">
+          Bekijk de diensten →
+        </a>
+<a class="px-8 py-4 rounded-xl border border-white/15 bg-white/5 hover:bg-white/10 text-white font-semibold text-base transition" href="contact.html">
+          Samenwerken?
+        </a>
+</div>
+</section>
+<!-- Kerncijfers -->
+<section class="border-y border-white/10 bg-[#10131a]/80 py-12">
+<div class="max-w-[1680px] mx-auto px-6 grid grid-cols-2 md:grid-cols-4 gap-8">
+<div>
+<div class="text-4xl md:text-5xl font-extrabold text-blue-400">30+</div>
+<div class="text-xs font-mono uppercase tracking-widest text-slate-400 mt-2">Jaar Praktijkkennis</div>
+</div>
+<div>
+<div class="text-4xl md:text-5xl font-extrabold text-white">14</div>
+<div class="text-xs font-mono uppercase tracking-widest text-slate-400 mt-2">Technische Specialismen</div>
+</div>
+<div>
+<div class="text-4xl md:text-5xl font-extrabold text-emerald-400">100%</div>
+<div class="text-xs font-mono uppercase tracking-widest text-slate-400 mt-2">Onafhankelijk Advies</div>
+</div>
+<div>
+<div class="text-4xl md:text-5xl font-extrabold text-sky-400">3</div>
+<div class="text-xs font-mono uppercase tracking-widest text-slate-400 mt-2">Kernsectoren</div>
+</div>
+</div>
+</section>
+</div>
+<script src="shader.js"></script>
+<script>initWebGLShader('shader-canvas-home');</script>
+</body>
+</html>
