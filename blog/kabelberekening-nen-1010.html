@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="utf-8"/>
+<title>Kabelberekening volgens NEN 1010: zo pakt u het aan | ECAP SLUI</title>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta name="description" content="Hoe maak je een kabelberekening volgens NEN 1010? Uitleg over belastbaarheid, correctiefactoren, spanningsval, kortsluitvastheid en documentatie."/>
+<meta name="robots" content="noindex, nofollow"/>
+<link rel="canonical" href="https://basbartclub.github.io/ecap-slui-stitch/blog/kabelberekening-nen-1010.html"/>
+<meta property="og:type" content="article"/>
+<meta property="og:locale" content="nl_NL"/>
+<meta property="og:site_name" content="ECAP SLUI"/>
+<meta property="og:title" content="Kabelberekening volgens NEN 1010: zo pakt u het aan | ECAP SLUI"/>
+<meta property="og:description" content="Hoe maak je een kabelberekening volgens NEN 1010? Uitleg over belastbaarheid, correctiefactoren, spanningsval, kortsluitvastheid en documentatie."/>
+<meta property="og:url" content="https://basbartclub.github.io/ecap-slui-stitch/blog/kabelberekening-nen-1010.html"/>
+<meta property="og:image" content="https://basbartclub.github.io/ecap-slui-stitch/img/verdeelinrichting-ecap-slui.jpg"/>
+<meta name="twitter:card" content="summary_large_image"/>
+<link rel="icon" href="data:,"/>
+<link rel="stylesheet" href="../tokens.css"/>
+<script src="https://cdn.tailwindcss.com"></script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BlogPosting", "headline": "Kabelberekening volgens NEN 1010: zo pakt u het aan", "description": "Hoe maak je een kabelberekening volgens NEN 1010? Uitleg over belastbaarheid, correctiefactoren, spanningsval, kortsluitvastheid en documentatie.", "inLanguage": "nl-NL", "keywords": "kabelberekening NEN 1010", "articleSection": "Energiedistributie & aarding", "wordCount": 839, "datePublished": "2026-11-18", "dateModified": "2026-11-18", "mainEntityOfPage": "https://basbartclub.github.io/ecap-slui-stitch/blog/kabelberekening-nen-1010.html", "image": "https://basbartclub.github.io/ecap-slui-stitch/img/verdeelinrichting-ecap-slui.jpg", "author": {"@type": "Organization", "name": "ECAP SLUI", "url": "https://basbartclub.github.io/ecap-slui-stitch/"}, "publisher": {"@type": "Organization", "name": "ECAP SLUI", "logo": {"@type": "ImageObject", "url": "https://basbartclub.github.io/ecap-slui-stitch/img/ecap-slui-logo.png"}}}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://basbartclub.github.io/ecap-slui-stitch/index.html"}, {"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://basbartclub.github.io/ecap-slui-stitch/blog/"}, {"@type": "ListItem", "position": 3, "name": "Energiedistributie & aarding", "item": "https://basbartclub.github.io/ecap-slui-stitch/blog/categorie/energiedistributie.html"}, {"@type": "ListItem", "position": 4, "name": "Kabelberekening volgens NEN 1010: zo pakt u het aan", "item": "https://basbartclub.github.io/ecap-slui-stitch/blog/kabelberekening-nen-1010.html"}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Is een kabelberekening verplicht?", "acceptedAnswer": {"@type": "Answer", "text": "NEN 1010 eist dat de installatie aan de voorwaarden voor belastbaarheid, beveiliging en foutbescherming voldoet. Een berekening is de gangbare manier om dat aan te tonen en hoort daarom in elk serieus ontwerp."}}, {"@type": "Question", "name": "Hoe vaak moet een kabelberekening worden herzien?", "acceptedAnswer": {"@type": "Answer", "text": "Bij elke wezenlijke wijziging: extra belasting, een nieuwe transformator of netaansluiting, andere kabelroutes of vervanging van beveiligingen."}}, {"@type": "Question", "name": "Kan een bestaande installatie achteraf worden doorgerekend?", "acceptedAnswer": {"@type": "Answer", "text": "Ja. Met de gegevens van kabels, lengtes en beveiligingen kan een bestaande installatie worden gecontroleerd. Dat is zinvol vóór een uitbreiding of renovatie."}}]}</script>
+</head>
+<body class="bg-[#0b0e14] text-slate-100 min-h-screen">
+<div class="fixed inset-0 pointer-events-none opacity-30 z-0">
+<canvas class="w-full h-full" id="shader-canvas-blog"></canvas>
+</div>
+<header class="sticky top-0 z-50 border-b border-white/10 bg-[#0b0e14]/90 backdrop-blur-md">
+  <div class="max-w-[1680px] mx-auto px-6 h-20 flex items-center justify-between">
+    <a href="../index.html" class="flex items-center gap-4" aria-label="ECAP SLUI home">
+      <div class="w-10 h-10 rounded-lg bg-blue-600/20 border border-blue-500/40 flex items-center justify-center font-bold text-blue-400">
+        ES
+      </div>
+      <div>
+        <div class="text-base font-bold tracking-tight text-white">ECAP SLUI</div>
+        <div class="text-[10px] uppercase font-mono tracking-widest text-slate-400">Elektrotechnisch Bureau • Ede</div>
+      </div>
+    </a>
+    <nav class="hidden lg:flex items-center gap-8 text-sm font-medium text-slate-300" aria-label="Hoofdmenu">
+      <a href="../index.html" class="hover:text-white transition">Home</a>
+      <a href="../diensten.html" class="hover:text-white transition">Diensten</a>
+      <a href="../sectoren.html" class="hover:text-white transition">Sectoren</a>
+      <a href="../projecten.html" class="hover:text-white transition">Projecten</a>
+      <a href="../werkwijze.html" class="hover:text-white transition">Werkwijze</a>
+      <a href="../over-ons.html" class="hover:text-white transition">Over ons</a>
+      <a href="../blog/" class="text-blue-400">Blog</a>
+      <a href="../contact.html" class="hover:text-white transition">Contact</a>
+    </nav>
+    <div class="flex items-center gap-4">
+      <a href="../contact.html" class="px-5 py-2.5 rounded-lg bg-blue-600 hover:bg-blue-500 text-white font-medium text-sm transition shadow-[0_0_20px_rgba(0,102,255,0.35)]">
+        Direct Contact
+      </a>
+    </div>
+  </div>
+</header>
+<main class="relative z-10 max-w-[1680px] mx-auto px-6 py-16">
+<nav class="font-mono text-xs text-slate-400 uppercase tracking-widest mb-6" aria-label="Kruimelpad"><a class="hover:text-white" href="../index.html">Home</a> / <a class="hover:text-white" href="../blog/">Blog</a> / <a class="text-blue-400 hover:underline" href="../blog/categorie/energiedistributie.html">Energiedistributie &amp; aarding</a></nav>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-10">
+<article class="lg:col-span-8">
+<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-blue-500/30 bg-blue-500/10 text-blue-400 font-mono text-xs uppercase mb-6"><span class="w-2 h-2 rounded-full bg-blue-400"></span>Energiedistributie &amp; aarding • 4 min leestijd</div>
+<h1 class="text-4xl md:text-5xl font-bold tracking-tight text-white mb-6 leading-tight">Kabelberekening volgens NEN 1010: zo pakt u het aan</h1>
+<p class="text-xl text-slate-400 leading-relaxed mb-10">Een kabel die te dun is, wordt warm, veroorzaakt spanningsval en kan bij een kortsluiting bezwijken. Een kabel die te dik is, kost onnodig geld en ruimte. De kabelberekening volgens NEN 1010 zoekt het juiste midden en maakt dat aantoonbaar.</p>
+<h2 id="waarom-een-kabelberekening-onmisbaar-is" class="text-2xl md:text-3xl font-bold text-white tracking-tight mt-12 mb-4 scroll-mt-24">Waarom een kabelberekening onmisbaar is</h2>
+<p class="text-slate-300 leading-relaxed mb-5">NEN 1010 is de Nederlandse norm voor laagspanningsinstallaties. De norm schrijft niet voor welke kabel u moet kiezen, maar wel aan welke voorwaarden de keuze moet voldoen. Een kabel moet de bedrijfsstroom continu kunnen voeren zonder te warm te worden, de spanningsval moet binnen redelijke grenzen blijven, de beveiliging moet bij overbelasting en kortsluiting op tijd afschakelen en bij een fout moet de aanrakingsspanning snel genoeg verdwijnen. Die vier eisen samen bepalen de doorsnede.</p>
+<p class="text-slate-300 leading-relaxed mb-5">In de praktijk worden kabels nog wel eens 'op ervaring' gekozen. Dat gaat lang goed, tot een installatie wordt uitgebreid, kabels in een volle goot komen te liggen of een lange voedingskabel naar een bijgebouw net te veel spanning verliest. Een berekening voorkomt dat soort verrassingen en vormt bovendien het bewijs dat het ontwerp klopt.</p>
+<h2 id="de-vier-toetsen-in-een-kabelberekening" class="text-2xl md:text-3xl font-bold text-white tracking-tight mt-12 mb-4 scroll-mt-24">De vier toetsen in een kabelberekening</h2>
+<h3 class="text-xl font-semibold text-white mt-8 mb-3">1. Belastbaarheid en correctiefactoren</h3>
+<p class="text-slate-300 leading-relaxed mb-5">Het startpunt is de ontwerpstroom van de groep of voeding. Daarbij hoort een kabel waarvan de toelaatbare stroom groter is dan die ontwerpstroom. De tabelwaarden uit de norm gelden voor een referentiesituatie. Wijkt de werkelijkheid af, dan corrigeert u met factoren voor onder meer:</p>
+<ul class="list-disc pl-6 space-y-2 text-slate-300 leading-relaxed mb-6 marker:text-blue-400"><li>de omgevingstemperatuur, bijvoorbeeld in een warme technische ruimte of onder een dak;</li><li>het bundelen van kabels in goten, ladders of buizen;</li><li>de installatiemethode: in de grond, in de lucht, in een wand of in een buis;</li><li>de thermische weerstand van de bodem bij grondkabels.</li></ul>
+<p class="text-slate-300 leading-relaxed mb-5">Juist het bundelen wordt vaak onderschat. Tien kabels dicht op elkaar in een goot kunnen samen tot een forse reductie van de belastbaarheid per kabel leiden.</p>
+<h3 class="text-xl font-semibold text-white mt-8 mb-3">2. Beveiliging tegen overbelasting</h3>
+<p class="text-slate-300 leading-relaxed mb-5">De beveiliging moet passen bij de kabel. Kort gezegd: de nominale stroom van de beveiliging ligt tussen de ontwerpstroom en de toelaatbare stroom van de kabel, en de beveiliging moet ook bij langdurige lichte overbelasting tijdig afschakelen. Zo beschermt de automaat of smeltpatroon de kabel en niet alleen het apparaat.</p>
+<h3 class="text-xl font-semibold text-white mt-8 mb-3">3. Kortsluitvastheid</h3>
+<p class="text-slate-300 leading-relaxed mb-5">Bij een kortsluiting loopt de stroom in korte tijd sterk op. De kabel moet die energie kunnen opnemen tot de beveiliging heeft afgeschakeld. Hiervoor berekent u de maximale kortsluitstroom aan het begin van de kabel en controleert u of de doorgelaten energie van de beveiliging past bij de doorsnede en het isolatiemateriaal. Meer daarover leest u in <a class="text-blue-400 hover:underline" href="kortsluitstroom-berekenen.html">kortsluitstroom berekenen</a>.</p>
+<h3 class="text-xl font-semibold text-white mt-8 mb-3">4. Foutbescherming en spanningsval</h3>
+<p class="text-slate-300 leading-relaxed mb-5">Aan het einde van de kabel moet de foutstroom groot genoeg zijn om de beveiliging binnen de vereiste tijd te laten aanspreken. Bij lange kabels is dat vaak de beslissende toets. Daarnaast controleert u de spanningsval, zodat aangesloten apparatuur goed blijft functioneren. Een uitgebreide uitleg vindt u in <a class="text-blue-400 hover:underline" href="spanningsval-berekenen.html">spanningsval berekenen</a>.</p>
+<h2 id="welke-gegevens-heeft-u-nodig" class="text-2xl md:text-3xl font-bold text-white tracking-tight mt-12 mb-4 scroll-mt-24">Welke gegevens heeft u nodig?</h2>
+<p class="text-slate-300 leading-relaxed mb-5">Een betrouwbare berekening begint met goede invoer. Verzamel vooraf:</p>
+<ol class="list-decimal pl-6 space-y-2 text-slate-300 leading-relaxed mb-6 marker:text-blue-400"><li>de gegevens van de netaansluiting of transformator (vermogen, kortsluitvermogen, aardingsstelsel);</li><li>het vermogen en de aard van de belastingen, inclusief aanloopstromen van motoren;</li><li>de lengte en route van elke kabel;</li><li>de installatiemethode en het aantal kabels per goot of buis;</li><li>het type beveiliging per groep en de gewenste selectiviteit.</li></ol>
+<div class="my-8 p-6 rounded-xl border border-blue-500/30 bg-blue-500/10 text-slate-200 leading-relaxed"><div class="text-xs font-mono text-blue-400 uppercase tracking-widest mb-2">[PRAKTIJKTIP]</div>Leg ook vast welke reserve u wilt voor toekomstige uitbreiding. Een kabel die nu precies past, is bij de eerste uitbreiding al te klein.</div>
+<h2 id="software-en-handwerk" class="text-2xl md:text-3xl font-bold text-white tracking-tight mt-12 mb-4 scroll-mt-24">Software en handwerk</h2>
+<p class="text-slate-300 leading-relaxed mb-5">Er bestaan uitstekende rekenprogramma's die alle toetsen in één keer uitvoeren en een rapport opleveren. Maar software is zo goed als de invoer. Een ervaren adviseur kijkt daarom altijd ook kritisch naar de uitkomst: is de gekozen installatiemethode reëel, kloppen de lengtes met de tekening, is rekening gehouden met harmonische stromen in de nulgeleider? Bij installaties met veel elektronische belastingen, zoals LED-verlichting en frequentieregelaars, kan de nulgeleider zwaarder belast worden dan de fasen. Zie ook <a class="text-blue-400 hover:underline" href="harmonische-vervuiling.html">harmonische vervuiling</a>.</p>
+<h2 id="documentatie-en-beheer" class="text-2xl md:text-3xl font-bold text-white tracking-tight mt-12 mb-4 scroll-mt-24">Documentatie en beheer</h2>
+<p class="text-slate-300 leading-relaxed mb-5">Een kabelberekening hoort in het opleverdossier. Bij latere wijzigingen of uitbreidingen is ze de basis om te bepalen wat er nog kan. Bij periodieke inspecties volgens NEN 3140 helpt ze om afwijkingen te verklaren. Zorg dat kabelnummers in de berekening overeenkomen met de tekeningen en met de labels in het veld, zodat de documentatie ook echt bruikbaar is.</p>
+<h2 id="hoe-ecap-slui-helpt" class="text-2xl md:text-3xl font-bold text-white tracking-tight mt-12 mb-4 scroll-mt-24">Hoe ECAP SLUI helpt</h2>
+<p class="text-slate-300 leading-relaxed mb-5">Kabelberekeningen volgens NEN 1010 horen bij de vaste <a class="text-blue-400 hover:underline" href="../diensten.html#kabelberekeningen-nen1010">diensten van ECAP SLUI</a>. Ze worden gemaakt als onderdeel van de engineering, of als controle op een ontwerp van een ander. Zo weet u voordat er een meter kabel wordt getrokken dat de <a class="text-blue-400 hover:underline" href="../diensten.html#energiedistributie">energiedistributie</a> klopt.</p>
+<h2 id="veelgestelde-vragen" class="text-2xl md:text-3xl font-bold text-white tracking-tight mt-12 mb-6">Veelgestelde vragen</h2><div class="space-y-4"><details class="p-6 rounded-xl border border-white/10 bg-[#161a22]/80"><summary class="font-semibold text-white cursor-pointer">Is een kabelberekening verplicht?</summary><p class="text-slate-300 leading-relaxed mt-3">NEN 1010 eist dat de installatie aan de voorwaarden voor belastbaarheid, beveiliging en foutbescherming voldoet. Een berekening is de gangbare manier om dat aan te tonen en hoort daarom in elk serieus ontwerp.</p></details><details class="p-6 rounded-xl border border-white/10 bg-[#161a22]/80"><summary class="font-semibold text-white cursor-pointer">Hoe vaak moet een kabelberekening worden herzien?</summary><p class="text-slate-300 leading-relaxed mt-3">Bij elke wezenlijke wijziging: extra belasting, een nieuwe transformator of netaansluiting, andere kabelroutes of vervanging van beveiligingen.</p></details><details class="p-6 rounded-xl border border-white/10 bg-[#161a22]/80"><summary class="font-semibold text-white cursor-pointer">Kan een bestaande installatie achteraf worden doorgerekend?</summary><p class="text-slate-300 leading-relaxed mt-3">Ja. Met de gegevens van kabels, lengtes en beveiligingen kan een bestaande installatie worden gecontroleerd. Dat is zinvol vóór een uitbreiding of renovatie.</p></details></div>
+<div class="mt-14 p-8 rounded-2xl border border-white/10 bg-[#161a22]/90">
+<div class="font-mono text-xs text-blue-400 uppercase tracking-widest mb-3">[SAMENWERKEN?]</div>
+<h2 class="text-2xl font-bold text-white mb-3">Advies op maat voor uw project</h2>
+<p class="text-slate-400 leading-relaxed mb-6">ECAP SLUI in Ede adviseert, engineert en calculeert elektrotechnische installaties en begeleidt de uitvoering, van de eerste ontwerpfase tot en met test &amp; commissioning. Met meer dan 30 jaar ervaring in utiliteit en industrie.</p>
+<div class="flex flex-wrap gap-4"><a class="px-6 py-3 rounded-xl bg-blue-600 hover:bg-blue-500 text-white font-semibold text-sm shadow-[0_0_25px_rgba(0,102,255,0.4)] transition" href="../contact.html">Neem contact op →</a><a class="px-6 py-3 rounded-xl border border-white/15 bg-white/5 hover:bg-white/10 text-white font-semibold text-sm transition" href="tel:+31651322666">Bel 06 51322666</a></div>
+</div>
+</article>
+<aside class="lg:col-span-4 space-y-6 lg:sticky lg:top-28 self-start">
+<div class="p-6 rounded-xl border border-white/10 bg-[#161a22]/80"><div class="text-xs font-mono text-blue-400 uppercase tracking-widest mb-4">[INHOUD]</div><ol class="space-y-2 text-sm text-slate-300 list-decimal pl-5 marker:text-blue-400"><li><a class="hover:text-white" href="#waarom-een-kabelberekening-onmisbaar-is">Waarom een kabelberekening onmisbaar is</a></li><li><a class="hover:text-white" href="#de-vier-toetsen-in-een-kabelberekening">De vier toetsen in een kabelberekening</a></li><li><a class="hover:text-white" href="#welke-gegevens-heeft-u-nodig">Welke gegevens heeft u nodig?</a></li><li><a class="hover:text-white" href="#software-en-handwerk">Software en handwerk</a></li><li><a class="hover:text-white" href="#documentatie-en-beheer">Documentatie en beheer</a></li><li><a class="hover:text-white" href="#hoe-ecap-slui-helpt">Hoe ECAP SLUI helpt</a></li><li><a class="hover:text-white" href="#veelgestelde-vragen">Veelgestelde vragen</a></li></ol></div>
+<div class="p-6 rounded-xl border border-white/10 bg-[#161a22]/80"><div class="text-xs font-mono text-blue-400 uppercase tracking-widest mb-4">[GERELATEERDE DIENSTEN]</div><ul class="space-y-2 text-sm"><li><a class="text-blue-400 hover:underline" href="../diensten.html#energiedistributie">Energiedistributie</a></li><li><a class="text-blue-400 hover:underline" href="../diensten.html#kabelberekeningen-nen1010">Kabelberekeningen (NEN 1010)</a></li><li><a class="text-blue-400 hover:underline" href="../diensten.html#aarding-bliksembeveiliging">Aarding- en bliksembeveiliging</a></li><li><a class="text-blue-400 hover:underline" href="../diensten.html#noodstroom-energievoorziening">Noodstroom- en energievoorziening</a></li><li><a class="text-blue-400 hover:underline" href="../werkwijze.html">Werkwijze &amp; V-model</a></li></ul></div>
+<div class="p-6 rounded-xl border border-white/10 bg-[#161a22]/80 font-mono text-xs space-y-3"><div class="flex justify-between"><span class="text-slate-400">ZOEKWOORD</span><span class="text-white text-right">kabelberekening NEN 1010</span></div><div class="flex justify-between"><span class="text-slate-400">WOORDEN</span><span class="text-white">839</span></div><div class="flex justify-between"><span class="text-slate-400">CATEGORIE</span><a class="text-blue-400 text-right" href="../blog/categorie/energiedistributie.html">Energiedistributie &amp; aarding</a></div></div>
+</aside>
+</div>
+<section class="mt-16"><div class="font-mono text-xs text-blue-400 uppercase tracking-widest mb-6">[LEES OOK]</div><div class="grid grid-cols-1 md:grid-cols-3 gap-4"><a href="../blog/spanningsval-berekenen.html" class="group p-6 rounded-xl border border-white/10 bg-[#161a22]/80 hover:border-blue-500/50 transition flex flex-col">
+<div class="text-xs font-mono text-blue-400 mb-3 uppercase tracking-wider">Energiedistributie &amp; aarding</div>
+<h3 class="font-semibold text-white text-lg leading-snug mb-2 group-hover:text-blue-300">Spanningsval berekenen: formules, grenswaarden en valkuilen</h3>
+<p class="text-sm text-slate-400 leading-relaxed flex-1">Spanningsval berekenen in een laagspanningsinstallatie: de formule, gangbare grenswaarden volgens NEN 1010 en praktische tips voor lange kabels.</p>
+<div class="mt-5 pt-4 border-t border-white/10 text-xs font-mono text-slate-400 flex justify-between"><span>3 MIN LEESTIJD</span><span class="text-blue-400">LEES →</span></div>
+</a><a href="../blog/kortsluitstroom-berekenen.html" class="group p-6 rounded-xl border border-white/10 bg-[#161a22]/80 hover:border-blue-500/50 transition flex flex-col">
+<div class="text-xs font-mono text-blue-400 mb-3 uppercase tracking-wider">Energiedistributie &amp; aarding</div>
+<h3 class="font-semibold text-white text-lg leading-snug mb-2 group-hover:text-blue-300">Kortsluitstroom berekenen: waarom de grootste én kleinste waarde tellen</h3>
+<p class="text-sm text-slate-400 leading-relaxed flex-1">Kortsluitstroom berekenen in een laagspanningsinstallatie: maximale en minimale kortsluitstroom, schakelvermogen, kortsluitvastheid en afschakeltijden.</p>
+<div class="mt-5 pt-4 border-t border-white/10 text-xs font-mono text-slate-400 flex justify-between"><span>4 MIN LEESTIJD</span><span class="text-blue-400">LEES →</span></div>
+</a><a href="../blog/selectiviteit-installatie.html" class="group p-6 rounded-xl border border-white/10 bg-[#161a22]/80 hover:border-blue-500/50 transition flex flex-col">
+<div class="text-xs font-mono text-blue-400 mb-3 uppercase tracking-wider">Energiedistributie &amp; aarding</div>
+<h3 class="font-semibold text-white text-lg leading-snug mb-2 group-hover:text-blue-300">Selectiviteit in de installatie: alleen uitschakelen wat moet</h3>
+<p class="text-sm text-slate-400 leading-relaxed flex-1">Wat is selectiviteit in een elektrische installatie? Uitleg over stroom-, tijd- en energieselectiviteit, cascadering en hoe u het in het ontwerp borgt.</p>
+<div class="mt-5 pt-4 border-t border-white/10 text-xs font-mono text-slate-400 flex justify-between"><span>3 MIN LEESTIJD</span><span class="text-blue-400">LEES →</span></div>
+</a></div></section>
+</main>
+<footer class="relative z-10 border-t border-white/10 bg-[#10131a]/80 mt-16">
+<div class="max-w-[1680px] mx-auto px-6 py-12 grid grid-cols-1 md:grid-cols-3 gap-10 text-sm">
+<div>
+<div class="text-base font-bold text-white tracking-tight">ECAP SLUI</div>
+<div class="text-[10px] font-mono tracking-widest text-slate-400 uppercase mt-1 mb-4">Elektrotechnisch calculatie-, adviserings- en projectenbureau</div>
+<address class="not-italic text-slate-400 leading-relaxed">Prof. Oudpark 90<br/>6716 EJ Ede<br/>
+<a class="text-blue-400 hover:underline" href="tel:+31651322666">06 51322666</a><br/>
+<a class="text-blue-400 hover:underline" href="mailto:vincent.slui@kpnmail.nl">vincent.slui@kpnmail.nl</a><br/>
+KvK 59289430</address>
+</div>
+<div>
+<div class="font-mono text-xs text-blue-400 uppercase tracking-widest mb-4">[NAVIGATIE]</div>
+<nav class="flex flex-wrap gap-x-6 gap-y-2 text-slate-300" aria-label="Footer"><a class="hover:text-white" href="../index.html">Home</a> <a class="hover:text-white" href="../diensten.html">Diensten</a> <a class="hover:text-white" href="../sectoren.html">Sectoren</a> <a class="hover:text-white" href="../projecten.html">Projecten</a> <a class="hover:text-white" href="../werkwijze.html">Werkwijze</a> <a class="hover:text-white" href="../over-ons.html">Over ons</a> <a class="hover:text-white" href="../blog/">Blog</a> <a class="hover:text-white" href="../contact.html">Contact</a> <a class="hover:text-white" href="../privacy.html">Privacyverklaring</a></nav>
+</div>
+<div>
+<div class="font-mono text-xs text-blue-400 uppercase tracking-widest mb-4">[STAY CONNECTED]</div>
+<div class="flex flex-col gap-2 text-slate-300">
+<a class="hover:text-white" href="https://www.linkedin.com/company/ecap-slui/" rel="noopener" target="_blank">LinkedIn ECAP SLUI →</a>
+<a class="hover:text-white" href="https://www.linkedin.com/in/vincent-slui-a629ba19/" rel="noopener" target="_blank">LinkedIn Vincent Slui →</a>
+</div>
+<div class="text-xs font-mono text-slate-500 mt-6">Beeld © Studio Csány</div>
+</div>
+</div>
+</footer>
+<script src="../shader.js"></script>
+<script>initWebGLShader('shader-canvas-blog');</script>
+</body>
+</html>

@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="utf-8"/>
+<title>EN 50600: het Europese kader voor datacenterfaciliteiten | ECAP SLUI</title>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta name="description" content="Wat is de EN 50600-reeks voor datacenters? Opbouw van de norm, beschikbaarheidsklassen, beveiliging, energie-efficiëntie en wat het betekent voor het ontwerp."/>
+<meta name="robots" content="noindex, nofollow"/>
+<link rel="canonical" href="https://basbartclub.github.io/ecap-slui-stitch/blog/en-50600-datacenter.html"/>
+<meta property="og:type" content="article"/>
+<meta property="og:locale" content="nl_NL"/>
+<meta property="og:site_name" content="ECAP SLUI"/>
+<meta property="og:title" content="EN 50600: het Europese kader voor datacenterfaciliteiten | ECAP SLUI"/>
+<meta property="og:description" content="Wat is de EN 50600-reeks voor datacenters? Opbouw van de norm, beschikbaarheidsklassen, beveiliging, energie-efficiëntie en wat het betekent voor het ontwerp."/>
+<meta property="og:url" content="https://basbartclub.github.io/ecap-slui-stitch/blog/en-50600-datacenter.html"/>
+<meta property="og:image" content="https://basbartclub.github.io/ecap-slui-stitch/img/verdeelinrichting-ecap-slui.jpg"/>
+<meta name="twitter:card" content="summary_large_image"/>
+<link rel="icon" href="data:,"/>
+<link rel="stylesheet" href="../tokens.css"/>
+<script src="https://cdn.tailwindcss.com"></script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BlogPosting", "headline": "EN 50600: het Europese kader voor datacenterfaciliteiten", "description": "Wat is de EN 50600-reeks voor datacenters? Opbouw van de norm, beschikbaarheidsklassen, beveiliging, energie-efficiëntie en wat het betekent voor het ontwerp.", "inLanguage": "nl-NL", "keywords": "EN 50600", "articleSection": "Data, communicatie & datacenters", "wordCount": 622, "datePublished": "2026-11-18", "dateModified": "2026-11-18", "mainEntityOfPage": "https://basbartclub.github.io/ecap-slui-stitch/blog/en-50600-datacenter.html", "image": "https://basbartclub.github.io/ecap-slui-stitch/img/verdeelinrichting-ecap-slui.jpg", "author": {"@type": "Organization", "name": "ECAP SLUI", "url": "https://basbartclub.github.io/ecap-slui-stitch/"}, "publisher": {"@type": "Organization", "name": "ECAP SLUI", "logo": {"@type": "ImageObject", "url": "https://basbartclub.github.io/ecap-slui-stitch/img/ecap-slui-logo.png"}}}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://basbartclub.github.io/ecap-slui-stitch/index.html"}, {"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://basbartclub.github.io/ecap-slui-stitch/blog/"}, {"@type": "ListItem", "position": 3, "name": "Data, communicatie & datacenters", "item": "https://basbartclub.github.io/ecap-slui-stitch/blog/categorie/data-datacenters.html"}, {"@type": "ListItem", "position": 4, "name": "EN 50600: het Europese kader voor datacenterfaciliteiten", "item": "https://basbartclub.github.io/ecap-slui-stitch/blog/en-50600-datacenter.html"}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Is EN 50600 verplicht?", "acceptedAnswer": {"@type": "Answer", "text": "Nee, het is een vrijwillige norm. Ze wordt wel veel gebruikt als ontwerpkader en voor certificering van datacenters."}}, {"@type": "Question", "name": "Wat is een beschikbaarheidsklasse?", "acceptedAnswer": {"@type": "Answer", "text": "Een indeling die aangeeft hoe robuust de infrastructuur is, van zonder redundantie tot fouttolerant met gelijktijdig onderhoud."}}]}</script>
+</head>
+<body class="bg-[#0b0e14] text-slate-100 min-h-screen">
+<div class="fixed inset-0 pointer-events-none opacity-30 z-0">
+<canvas class="w-full h-full" id="shader-canvas-blog"></canvas>
+</div>
+<header class="sticky top-0 z-50 border-b border-white/10 bg-[#0b0e14]/90 backdrop-blur-md">
+  <div class="max-w-[1680px] mx-auto px-6 h-20 flex items-center justify-between">
+    <a href="../index.html" class="flex items-center gap-4" aria-label="ECAP SLUI home">
+      <div class="w-10 h-10 rounded-lg bg-blue-600/20 border border-blue-500/40 flex items-center justify-center font-bold text-blue-400">
+        ES
+      </div>
+      <div>
+        <div class="text-base font-bold tracking-tight text-white">ECAP SLUI</div>
+        <div class="text-[10px] uppercase font-mono tracking-widest text-slate-400">Elektrotechnisch Bureau • Ede</div>
+      </div>
+    </a>
+    <nav class="hidden lg:flex items-center gap-8 text-sm font-medium text-slate-300" aria-label="Hoofdmenu">
+      <a href="../index.html" class="hover:text-white transition">Home</a>
+      <a href="../diensten.html" class="hover:text-white transition">Diensten</a>
+      <a href="../sectoren.html" class="hover:text-white transition">Sectoren</a>
+      <a href="../projecten.html" class="hover:text-white transition">Projecten</a>
+      <a href="../werkwijze.html" class="hover:text-white transition">Werkwijze</a>
+      <a href="../over-ons.html" class="hover:text-white transition">Over ons</a>
+      <a href="../blog/" class="text-blue-400">Blog</a>
+      <a href="../contact.html" class="hover:text-white transition">Contact</a>
+    </nav>
+    <div class="flex items-center gap-4">
+      <a href="../contact.html" class="px-5 py-2.5 rounded-lg bg-blue-600 hover:bg-blue-500 text-white font-medium text-sm transition shadow-[0_0_20px_rgba(0,102,255,0.35)]">
+        Direct Contact
+      </a>
+    </div>
+  </div>
+</header>
+<main class="relative z-10 max-w-[1680px] mx-auto px-6 py-16">
+<nav class="font-mono text-xs text-slate-400 uppercase tracking-widest mb-6" aria-label="Kruimelpad"><a class="hover:text-white" href="../index.html">Home</a> / <a class="hover:text-white" href="../blog/">Blog</a> / <a class="text-blue-400 hover:underline" href="../blog/categorie/data-datacenters.html">Data, communicatie &amp; datacenters</a></nav>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-10">
+<article class="lg:col-span-8">
+<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-blue-500/30 bg-blue-500/10 text-blue-400 font-mono text-xs uppercase mb-6"><span class="w-2 h-2 rounded-full bg-blue-400"></span>Data, communicatie &amp; datacenters • 3 min leestijd</div>
+<h1 class="text-4xl md:text-5xl font-bold tracking-tight text-white mb-6 leading-tight">EN 50600: het Europese kader voor datacenterfaciliteiten</h1>
+<p class="text-xl text-slate-400 leading-relaxed mb-10">Wie een datacenter of grote serverruimte bouwt, komt de EN 50600-reeks tegen. Deze Europese normenreeks beschrijft de faciliteiten en infrastructuur van datacenters, van stroom en koeling tot bekabeling, beveiliging en energie-efficiëntie.</p>
+<h2 id="wat-is-en-50600" class="text-2xl md:text-3xl font-bold text-white tracking-tight mt-12 mb-4 scroll-mt-24">Wat is EN 50600?</h2>
+<p class="text-slate-300 leading-relaxed mb-5">EN 50600 is een reeks Europese normen voor 'information technology – data centre facilities and infrastructures'. Ze biedt een gemeenschappelijk kader om datacenters te ontwerpen, te bouwen en te beheren. De reeks is ook als internationale ISO/IEC-norm overgenomen.</p>
+<p class="text-slate-300 leading-relaxed mb-5">De norm schrijft niet voor hoe een datacenter er precies uit moet zien, maar geeft een systematiek om eisen te stellen en te classificeren. Daardoor kunnen opdrachtgever, ontwerper en eigenaar dezelfde taal spreken.</p>
+<h2 id="de-opbouw" class="text-2xl md:text-3xl font-bold text-white tracking-tight mt-12 mb-4 scroll-mt-24">De opbouw</h2>
+<p class="text-slate-300 leading-relaxed mb-5">De reeks bestaat uit meerdere delen, die elk een aspect behandelen:</p>
+<div class="my-8 overflow-x-auto rounded-xl border border-white/10 bg-[#161a22]/80"><table class="w-full text-sm"><thead><tr><th class="text-left px-4 py-3 font-mono text-xs uppercase tracking-wider text-blue-400">Onderwerp</th><th class="text-left px-4 py-3 font-mono text-xs uppercase tracking-wider text-blue-400">Inhoud</th></tr></thead><tbody><tr class="border-t border-white/10"><td class="px-4 py-3 text-slate-300 align-top">Algemene concepten</td><td class="px-4 py-3 text-slate-300 align-top">begrippen, ontwerpprincipes, classificaties</td></tr><tr class="border-t border-white/10"><td class="px-4 py-3 text-slate-300 align-top">Bouwconstructie</td><td class="px-4 py-3 text-slate-300 align-top">locatie, gebouw, ruimten</td></tr><tr class="border-t border-white/10"><td class="px-4 py-3 text-slate-300 align-top">Stroomvoorziening en distributie</td><td class="px-4 py-3 text-slate-300 align-top">van aansluiting tot rack</td></tr><tr class="border-t border-white/10"><td class="px-4 py-3 text-slate-300 align-top">Omgevingsbeheersing</td><td class="px-4 py-3 text-slate-300 align-top">koeling, luchtvochtigheid</td></tr><tr class="border-t border-white/10"><td class="px-4 py-3 text-slate-300 align-top">Telecommunicatiebekabeling</td><td class="px-4 py-3 text-slate-300 align-top">infrastructuur voor data</td></tr><tr class="border-t border-white/10"><td class="px-4 py-3 text-slate-300 align-top">Beveiligingssystemen</td><td class="px-4 py-3 text-slate-300 align-top">fysieke beveiliging, brand</td></tr><tr class="border-t border-white/10"><td class="px-4 py-3 text-slate-300 align-top">Beheer en bedrijfsvoering</td><td class="px-4 py-3 text-slate-300 align-top">processen en informatie</td></tr><tr class="border-t border-white/10"><td class="px-4 py-3 text-slate-300 align-top">Kengetallen</td><td class="px-4 py-3 text-slate-300 align-top">onder meer energie-efficiëntie</td></tr></tbody></table></div>
+<h2 id="beschikbaarheidsklassen" class="text-2xl md:text-3xl font-bold text-white tracking-tight mt-12 mb-4 scroll-mt-24">Beschikbaarheidsklassen</h2>
+<p class="text-slate-300 leading-relaxed mb-5">Een kernbegrip is de beschikbaarheidsklasse, die aangeeft hoe robuust de infrastructuur is. De klassen lopen op van een basisinfrastructuur zonder redundantie tot een infrastructuur die fouttolerant is en gelijktijdig onderhoud toestaat. Voor de stroomvoorziening en de koeling betekent dat bijvoorbeeld het verschil tussen één voedingspad, een redundant pad en volledig gescheiden paden. Lees meer over de principes in <a class="text-blue-400 hover:underline" href="redundantie-n-plus-1.html">redundantie: N+1 en 2N</a>.</p>
+<p class="text-slate-300 leading-relaxed mb-5">De klasse wordt gekozen op basis van de bedrijfsbehoefte. Niet elk datacenter hoeft de hoogste klasse te hebben, en een hogere klasse betekent hogere kosten.</p>
+<h2 id="beveiligingsklassen" class="text-2xl md:text-3xl font-bold text-white tracking-tight mt-12 mb-4 scroll-mt-24">Beveiligingsklassen</h2>
+<p class="text-slate-300 leading-relaxed mb-5">Ook voor fysieke beveiliging kent de norm een indeling. Ruimten worden in zones verdeeld met oplopende beschermingsniveaus, van openbaar terrein tot de zalen met de IT-apparatuur. Dat vertaalt zich in eisen aan <a class="text-blue-400 hover:underline" href="toegangscontrolesysteem.html">toegangscontrole</a>, <a class="text-blue-400 hover:underline" href="cctv-ontwerp.html">camerabewaking</a>, inbraakwerendheid en bescherming tegen brand en andere incidenten.</p>
+<h2 id="energie-effici-ntie" class="text-2xl md:text-3xl font-bold text-white tracking-tight mt-12 mb-4 scroll-mt-24">Energie-efficiëntie</h2>
+<p class="text-slate-300 leading-relaxed mb-5">De norm besteedt aandacht aan het meten en verbeteren van energie-efficiëntie, onder meer met kengetallen zoals PUE (power usage effectiveness). Daarvoor moet op de juiste punten worden gemeten. Lees ook <a class="text-blue-400 hover:underline" href="datacenter-stroomvoorziening.html">stroomvoorziening van een datacenter</a> en <a class="text-blue-400 hover:underline" href="energiemonitoring.html">energiemonitoring</a>.</p>
+<h2 id="wat-betekent-het-voor-het-ontwerp" class="text-2xl md:text-3xl font-bold text-white tracking-tight mt-12 mb-4 scroll-mt-24">Wat betekent het voor het ontwerp?</h2>
+<ol class="list-decimal pl-6 space-y-2 text-slate-300 leading-relaxed mb-6 marker:text-blue-400"><li><strong class="text-white">Kies vooraf de klassen</strong> voor beschikbaarheid, beveiliging en energie-efficiëntie, op basis van de bedrijfsbehoefte.</li><li><strong class="text-white">Vertaal die klassen naar concrete eisen</strong> voor elk onderdeel: stroom, koeling, bekabeling, beveiliging.</li><li><strong class="text-white">Zoek naar zwakke plekken</strong>: de beschikbaarheid van het geheel wordt bepaald door het zwakste onderdeel.</li><li><strong class="text-white">Leg alles vast</strong> in een ontwerpdocument dat de basis vormt voor bouw, test en beheer.</li><li><strong class="text-white">Toets bij oplevering</strong> of de gerealiseerde infrastructuur aan de gekozen klassen voldoet.</li></ol>
+<div class="my-8 p-6 rounded-xl border border-blue-500/30 bg-blue-500/10 text-slate-200 leading-relaxed"><div class="text-xs font-mono text-blue-400 uppercase tracking-widest mb-2">[PRAKTIJKTIP]</div>Een veelgemaakte fout is een hoge klasse voor de stroomvoorziening en een lagere voor de koeling, zonder dat dit een bewuste keuze is. De beschikbaarheid van het datacenter is dan die van de koeling.</div>
+<h2 id="certificering" class="text-2xl md:text-3xl font-bold text-white tracking-tight mt-12 mb-4 scroll-mt-24">Certificering</h2>
+<p class="text-slate-300 leading-relaxed mb-5">Er zijn certificeringsschema's waarmee een datacenter kan laten toetsen dat het aan de EN 50600 voldoet. Dat kan waardevol zijn voor commerciële datacenters die hun klanten zekerheid willen bieden. Voor een eigen serverruimte is de norm vooral nuttig als ontwerpkader.</p>
+<h2 id="en-50600-en-andere-kaders" class="text-2xl md:text-3xl font-bold text-white tracking-tight mt-12 mb-4 scroll-mt-24">EN 50600 en andere kaders</h2>
+<p class="text-slate-300 leading-relaxed mb-5">Naast EN 50600 bestaan andere classificaties, zoals de Tier-indeling van het Uptime Institute. De systematiek verschilt, maar de onderliggende principes van redundantie en onderhoudbaarheid zijn vergelijkbaar. Kies in een project één kader als uitgangspunt, zodat er geen verwarring ontstaat.</p>
+<h2 id="test-en-commissioning" class="text-2xl md:text-3xl font-bold text-white tracking-tight mt-12 mb-4 scroll-mt-24">Test en commissioning</h2>
+<p class="text-slate-300 leading-relaxed mb-5">De beloofde beschikbaarheid moet worden aangetoond. Dat gebeurt met testen waarin componenten en paden bewust worden uitgeschakeld, onder belasting. Lees <a class="text-blue-400 hover:underline" href="integrale-test-installaties.html">integrale testen</a> en <a class="text-blue-400 hover:underline" href="wat-is-commissioning.html">wat is commissioning</a>.</p>
+<h2 id="advies" class="text-2xl md:text-3xl font-bold text-white tracking-tight mt-12 mb-4 scroll-mt-24">Advies</h2>
+<p class="text-slate-300 leading-relaxed mb-5">ECAP SLUI begeleidt <a class="text-blue-400 hover:underline" href="../diensten.html#computerruimten-datacenters">installaties in computerruimten en datacenters</a>, van uitgangspunten tot <a class="text-blue-400 hover:underline" href="../diensten.html#test-commissioning">test &amp; commissioning</a>.</p>
+<h2 id="veelgestelde-vragen" class="text-2xl md:text-3xl font-bold text-white tracking-tight mt-12 mb-6">Veelgestelde vragen</h2><div class="space-y-4"><details class="p-6 rounded-xl border border-white/10 bg-[#161a22]/80"><summary class="font-semibold text-white cursor-pointer">Is EN 50600 verplicht?</summary><p class="text-slate-300 leading-relaxed mt-3">Nee, het is een vrijwillige norm. Ze wordt wel veel gebruikt als ontwerpkader en voor certificering van datacenters.</p></details><details class="p-6 rounded-xl border border-white/10 bg-[#161a22]/80"><summary class="font-semibold text-white cursor-pointer">Wat is een beschikbaarheidsklasse?</summary><p class="text-slate-300 leading-relaxed mt-3">Een indeling die aangeeft hoe robuust de infrastructuur is, van zonder redundantie tot fouttolerant met gelijktijdig onderhoud.</p></details></div>
+<div class="mt-14 p-8 rounded-2xl border border-white/10 bg-[#161a22]/90">
+<div class="font-mono text-xs text-blue-400 uppercase tracking-widest mb-3">[SAMENWERKEN?]</div>
+<h2 class="text-2xl font-bold text-white mb-3">Advies op maat voor uw project</h2>
+<p class="text-slate-400 leading-relaxed mb-6">ECAP SLUI in Ede adviseert, engineert en calculeert elektrotechnische installaties en begeleidt de uitvoering, van de eerste ontwerpfase tot en met test &amp; commissioning. Met meer dan 30 jaar ervaring in utiliteit en industrie.</p>
+<div class="flex flex-wrap gap-4"><a class="px-6 py-3 rounded-xl bg-blue-600 hover:bg-blue-500 text-white font-semibold text-sm shadow-[0_0_25px_rgba(0,102,255,0.4)] transition" href="../contact.html">Neem contact op →</a><a class="px-6 py-3 rounded-xl border border-white/15 bg-white/5 hover:bg-white/10 text-white font-semibold text-sm transition" href="tel:+31651322666">Bel 06 51322666</a></div>
+</div>
+</article>
+<aside class="lg:col-span-4 space-y-6 lg:sticky lg:top-28 self-start">
+<div class="p-6 rounded-xl border border-white/10 bg-[#161a22]/80"><div class="text-xs font-mono text-blue-400 uppercase tracking-widest mb-4">[INHOUD]</div><ol class="space-y-2 text-sm text-slate-300 list-decimal pl-5 marker:text-blue-400"><li><a class="hover:text-white" href="#wat-is-en-50600">Wat is EN 50600?</a></li><li><a class="hover:text-white" href="#de-opbouw">De opbouw</a></li><li><a class="hover:text-white" href="#beschikbaarheidsklassen">Beschikbaarheidsklassen</a></li><li><a class="hover:text-white" href="#beveiligingsklassen">Beveiligingsklassen</a></li><li><a class="hover:text-white" href="#energie-effici-ntie">Energie-efficiëntie</a></li><li><a class="hover:text-white" href="#wat-betekent-het-voor-het-ontwerp">Wat betekent het voor het ontwerp?</a></li><li><a class="hover:text-white" href="#certificering">Certificering</a></li><li><a class="hover:text-white" href="#en-50600-en-andere-kaders">EN 50600 en andere kaders</a></li><li><a class="hover:text-white" href="#test-en-commissioning">Test en commissioning</a></li><li><a class="hover:text-white" href="#advies">Advies</a></li><li><a class="hover:text-white" href="#veelgestelde-vragen">Veelgestelde vragen</a></li></ol></div>
+<div class="p-6 rounded-xl border border-white/10 bg-[#161a22]/80"><div class="text-xs font-mono text-blue-400 uppercase tracking-widest mb-4">[GERELATEERDE DIENSTEN]</div><ul class="space-y-2 text-sm"><li><a class="text-blue-400 hover:underline" href="../diensten.html#communicatie-datanetwerken">Communicatie- en datanetwerken</a></li><li><a class="text-blue-400 hover:underline" href="../diensten.html#computerruimten-datacenters">Installaties in computerruimten en datacenters</a></li><li><a class="text-blue-400 hover:underline" href="../diensten.html#noodstroom-energievoorziening">Noodstroom- en energievoorziening</a></li><li><a class="text-blue-400 hover:underline" href="../werkwijze.html">Werkwijze &amp; V-model</a></li></ul></div>
+<div class="p-6 rounded-xl border border-white/10 bg-[#161a22]/80 font-mono text-xs space-y-3"><div class="flex justify-between"><span class="text-slate-400">ZOEKWOORD</span><span class="text-white text-right">EN 50600</span></div><div class="flex justify-between"><span class="text-slate-400">WOORDEN</span><span class="text-white">622</span></div><div class="flex justify-between"><span class="text-slate-400">CATEGORIE</span><a class="text-blue-400 text-right" href="../blog/categorie/data-datacenters.html">Data, communicatie &amp; datacenters</a></div></div>
+</aside>
+</div>
+<section class="mt-16"><div class="font-mono text-xs text-blue-400 uppercase tracking-widest mb-6">[LEES OOK]</div><div class="grid grid-cols-1 md:grid-cols-3 gap-4"><a href="../blog/koeling-serverruimte.html" class="group p-6 rounded-xl border border-white/10 bg-[#161a22]/80 hover:border-blue-500/50 transition flex flex-col">
+<div class="text-xs font-mono text-blue-400 mb-3 uppercase tracking-wider">Data, communicatie &amp; datacenters</div>
+<h3 class="font-semibold text-white text-lg leading-snug mb-2 group-hover:text-blue-300">Koeling van serverruimten: de elektrotechnische kant</h3>
+<p class="text-sm text-slate-400 leading-relaxed flex-1">Koeling van serverruimten en datacenters vanuit elektrotechnisch perspectief: warmtelast, voeding van koeling, noodstroom, redundantie en monitoring.</p>
+<div class="mt-5 pt-4 border-t border-white/10 text-xs font-mono text-slate-400 flex justify-between"><span>3 MIN LEESTIJD</span><span class="text-blue-400">LEES →</span></div>
+</a><a href="../blog/redundantie-n-plus-1.html" class="group p-6 rounded-xl border border-white/10 bg-[#161a22]/80 hover:border-blue-500/50 transition flex flex-col">
+<div class="text-xs font-mono text-blue-400 mb-3 uppercase tracking-wider">Data, communicatie &amp; datacenters</div>
+<h3 class="font-semibold text-white text-lg leading-snug mb-2 group-hover:text-blue-300">Redundantie uitgelegd: N, N+1, 2N en 2N+1</h3>
+<p class="text-sm text-slate-400 leading-relaxed flex-1">Wat betekenen N, N+1, 2N en 2N+1? Redundantie in voeding en koeling uitgelegd, met de verschillen in beschikbaarheid, kosten en onderhoudbaarheid.</p>
+<div class="mt-5 pt-4 border-t border-white/10 text-xs font-mono text-slate-400 flex justify-between"><span>3 MIN LEESTIJD</span><span class="text-blue-400">LEES →</span></div>
+</a><a href="../blog/wifi-bedrijfspand.html" class="group p-6 rounded-xl border border-white/10 bg-[#161a22]/80 hover:border-blue-500/50 transition flex flex-col">
+<div class="text-xs font-mono text-blue-400 mb-3 uppercase tracking-wider">Data, communicatie &amp; datacenters</div>
+<h3 class="font-semibold text-white text-lg leading-snug mb-2 group-hover:text-blue-300">Wifi in een bedrijfspand: ontwerp vanuit dekking én capaciteit</h3>
+<p class="text-sm text-slate-400 leading-relaxed flex-1">Een betrouwbaar wifi-netwerk in kantoor, hal of zorggebouw: site survey, dekking en capaciteit, plaatsing van accesspoints, bekabeling, PoE en beheer.</p>
+<div class="mt-5 pt-4 border-t border-white/10 text-xs font-mono text-slate-400 flex justify-between"><span>3 MIN LEESTIJD</span><span class="text-blue-400">LEES →</span></div>
+</a></div></section>
+</main>
+<footer class="relative z-10 border-t border-white/10 bg-[#10131a]/80 mt-16">
+<div class="max-w-[1680px] mx-auto px-6 py-12 grid grid-cols-1 md:grid-cols-3 gap-10 text-sm">
+<div>
+<div class="text-base font-bold text-white tracking-tight">ECAP SLUI</div>
+<div class="text-[10px] font-mono tracking-widest text-slate-400 uppercase mt-1 mb-4">Elektrotechnisch calculatie-, adviserings- en projectenbureau</div>
+<address class="not-italic text-slate-400 leading-relaxed">Prof. Oudpark 90<br/>6716 EJ Ede<br/>
+<a class="text-blue-400 hover:underline" href="tel:+31651322666">06 51322666</a><br/>
+<a class="text-blue-400 hover:underline" href="mailto:vincent.slui@kpnmail.nl">vincent.slui@kpnmail.nl</a><br/>
+KvK 59289430</address>
+</div>
+<div>
+<div class="font-mono text-xs text-blue-400 uppercase tracking-widest mb-4">[NAVIGATIE]</div>
+<nav class="flex flex-wrap gap-x-6 gap-y-2 text-slate-300" aria-label="Footer"><a class="hover:text-white" href="../index.html">Home</a> <a class="hover:text-white" href="../diensten.html">Diensten</a> <a class="hover:text-white" href="../sectoren.html">Sectoren</a> <a class="hover:text-white" href="../projecten.html">Projecten</a> <a class="hover:text-white" href="../werkwijze.html">Werkwijze</a> <a class="hover:text-white" href="../over-ons.html">Over ons</a> <a class="hover:text-white" href="../blog/">Blog</a> <a class="hover:text-white" href="../contact.html">Contact</a> <a class="hover:text-white" href="../privacy.html">Privacyverklaring</a></nav>
+</div>
+<div>
+<div class="font-mono text-xs text-blue-400 uppercase tracking-widest mb-4">[STAY CONNECTED]</div>
+<div class="flex flex-col gap-2 text-slate-300">
+<a class="hover:text-white" href="https://www.linkedin.com/company/ecap-slui/" rel="noopener" target="_blank">LinkedIn ECAP SLUI →</a>
+<a class="hover:text-white" href="https://www.linkedin.com/in/vincent-slui-a629ba19/" rel="noopener" target="_blank">LinkedIn Vincent Slui →</a>
+</div>
+<div class="text-xs font-mono text-slate-500 mt-6">Beeld © Studio Csány</div>
+</div>
+</div>
+</footer>
+<script src="../shader.js"></script>
+<script>initWebGLShader('shader-canvas-blog');</script>
+</body>
+</html>

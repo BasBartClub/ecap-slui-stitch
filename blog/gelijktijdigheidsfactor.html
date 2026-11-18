@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="utf-8"/>
+<title>Gelijktijdigheidsfactor: realistisch dimensioneren zonder risico | ECAP SLUI</title>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta name="description" content="Wat is de gelijktijdigheidsfactor en hoe bepaalt u die? Uitleg met voorbeelden voor kantoor, industrie en laadinfra, en de risico&#x27;s van te optimistisch rekenen."/>
+<meta name="robots" content="noindex, nofollow"/>
+<link rel="canonical" href="https://basbartclub.github.io/ecap-slui-stitch/blog/gelijktijdigheidsfactor.html"/>
+<meta property="og:type" content="article"/>
+<meta property="og:locale" content="nl_NL"/>
+<meta property="og:site_name" content="ECAP SLUI"/>
+<meta property="og:title" content="Gelijktijdigheidsfactor: realistisch dimensioneren zonder risico | ECAP SLUI"/>
+<meta property="og:description" content="Wat is de gelijktijdigheidsfactor en hoe bepaalt u die? Uitleg met voorbeelden voor kantoor, industrie en laadinfra, en de risico&#x27;s van te optimistisch rekenen."/>
+<meta property="og:url" content="https://basbartclub.github.io/ecap-slui-stitch/blog/gelijktijdigheidsfactor.html"/>
+<meta property="og:image" content="https://basbartclub.github.io/ecap-slui-stitch/img/verdeelinrichting-ecap-slui.jpg"/>
+<meta name="twitter:card" content="summary_large_image"/>
+<link rel="icon" href="data:,"/>
+<link rel="stylesheet" href="../tokens.css"/>
+<script src="https://cdn.tailwindcss.com"></script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BlogPosting", "headline": "Gelijktijdigheidsfactor: realistisch dimensioneren zonder risico", "description": "Wat is de gelijktijdigheidsfactor en hoe bepaalt u die? Uitleg met voorbeelden voor kantoor, industrie en laadinfra, en de risico's van te optimistisch rekenen.", "inLanguage": "nl-NL", "keywords": "gelijktijdigheidsfactor", "articleSection": "Energiedistributie & aarding", "wordCount": 657, "datePublished": "2026-11-18", "dateModified": "2026-11-18", "mainEntityOfPage": "https://basbartclub.github.io/ecap-slui-stitch/blog/gelijktijdigheidsfactor.html", "image": "https://basbartclub.github.io/ecap-slui-stitch/img/verdeelinrichting-ecap-slui.jpg", "author": {"@type": "Organization", "name": "ECAP SLUI", "url": "https://basbartclub.github.io/ecap-slui-stitch/"}, "publisher": {"@type": "Organization", "name": "ECAP SLUI", "logo": {"@type": "ImageObject", "url": "https://basbartclub.github.io/ecap-slui-stitch/img/ecap-slui-logo.png"}}}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://basbartclub.github.io/ecap-slui-stitch/index.html"}, {"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://basbartclub.github.io/ecap-slui-stitch/blog/"}, {"@type": "ListItem", "position": 3, "name": "Energiedistributie & aarding", "item": "https://basbartclub.github.io/ecap-slui-stitch/blog/categorie/energiedistributie.html"}, {"@type": "ListItem", "position": 4, "name": "Gelijktijdigheidsfactor: realistisch dimensioneren zonder risico", "item": "https://basbartclub.github.io/ecap-slui-stitch/blog/gelijktijdigheidsfactor.html"}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Welke gelijktijdigheidsfactor gebruik ik voor een kantoor?", "acceptedAnswer": {"@type": "Answer", "text": "Dat hangt af van het gebouw en het gebruik. Indicatieve waarden bestaan, maar metingen in een vergelijkbaar gebouw en kennis van het gebruik geven een betrouwbaarder beeld."}}, {"@type": "Question", "name": "Mag ik de gelijktijdigheid gebruiken voor een eindgroep?", "acceptedAnswer": {"@type": "Answer", "text": "Meestal niet. Kabel en beveiliging van een eindgroep moeten geschikt zijn voor het volledige vermogen dat op die groep kan worden aangesloten."}}]}</script>
+</head>
+<body class="bg-[#0b0e14] text-slate-100 min-h-screen">
+<div class="fixed inset-0 pointer-events-none opacity-30 z-0">
+<canvas class="w-full h-full" id="shader-canvas-blog"></canvas>
+</div>
+<header class="sticky top-0 z-50 border-b border-white/10 bg-[#0b0e14]/90 backdrop-blur-md">
+  <div class="max-w-[1680px] mx-auto px-6 h-20 flex items-center justify-between">
+    <a href="../index.html" class="flex items-center gap-4" aria-label="ECAP SLUI home">
+      <div class="w-10 h-10 rounded-lg bg-blue-600/20 border border-blue-500/40 flex items-center justify-center font-bold text-blue-400">
+        ES
+      </div>
+      <div>
+        <div class="text-base font-bold tracking-tight text-white">ECAP SLUI</div>
+        <div class="text-[10px] uppercase font-mono tracking-widest text-slate-400">Elektrotechnisch Bureau • Ede</div>
+      </div>
+    </a>
+    <nav class="hidden lg:flex items-center gap-8 text-sm font-medium text-slate-300" aria-label="Hoofdmenu">
+      <a href="../index.html" class="hover:text-white transition">Home</a>
+      <a href="../diensten.html" class="hover:text-white transition">Diensten</a>
+      <a href="../sectoren.html" class="hover:text-white transition">Sectoren</a>
+      <a href="../projecten.html" class="hover:text-white transition">Projecten</a>
+      <a href="../werkwijze.html" class="hover:text-white transition">Werkwijze</a>
+      <a href="../over-ons.html" class="hover:text-white transition">Over ons</a>
+      <a href="../blog/" class="text-blue-400">Blog</a>
+      <a href="../contact.html" class="hover:text-white transition">Contact</a>
+    </nav>
+    <div class="flex items-center gap-4">
+      <a href="../contact.html" class="px-5 py-2.5 rounded-lg bg-blue-600 hover:bg-blue-500 text-white font-medium text-sm transition shadow-[0_0_20px_rgba(0,102,255,0.35)]">
+        Direct Contact
+      </a>
+    </div>
+  </div>
+</header>
+<main class="relative z-10 max-w-[1680px] mx-auto px-6 py-16">
+<nav class="font-mono text-xs text-slate-400 uppercase tracking-widest mb-6" aria-label="Kruimelpad"><a class="hover:text-white" href="../index.html">Home</a> / <a class="hover:text-white" href="../blog/">Blog</a> / <a class="text-blue-400 hover:underline" href="../blog/categorie/energiedistributie.html">Energiedistributie &amp; aarding</a></nav>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-10">
+<article class="lg:col-span-8">
+<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-blue-500/30 bg-blue-500/10 text-blue-400 font-mono text-xs uppercase mb-6"><span class="w-2 h-2 rounded-full bg-blue-400"></span>Energiedistributie &amp; aarding • 3 min leestijd</div>
+<h1 class="text-4xl md:text-5xl font-bold tracking-tight text-white mb-6 leading-tight">Gelijktijdigheidsfactor: realistisch dimensioneren zonder risico</h1>
+<p class="text-xl text-slate-400 leading-relaxed mb-10">Niet alle apparaten in een gebouw staan tegelijk op vol vermogen aan. De gelijktijdigheidsfactor vertaalt de optelsom van alle aansluitwaarden naar het vermogen dat u werkelijk moet kunnen leveren. Wie hem goed kiest, voorkomt zowel overdimensionering als overbelasting.</p>
+<h2 id="wat-is-het" class="text-2xl md:text-3xl font-bold text-white tracking-tight mt-12 mb-4 scroll-mt-24">Wat is het?</h2>
+<p class="text-slate-300 leading-relaxed mb-5">De gelijktijdigheidsfactor is de verhouding tussen het maximale vermogen dat een groep belastingen tegelijk vraagt en de som van hun afzonderlijke maximale vermogens. Een factor van 0,6 betekent dat er op het drukste moment 60 procent van de opgetelde vermogens tegelijk wordt gevraagd.</p>
+<p class="text-slate-300 leading-relaxed mb-5">Naast gelijktijdigheid wordt vaak een belastingsfactor gebruikt: de mate waarin een apparaat zijn nominale vermogen werkelijk gebruikt. Een motor van 15 kW die een pomp aandrijft die 11 kW vraagt, heeft een belastingsfactor van ongeveer 0,73.</p>
+<h2 id="waarom-het-ertoe-doet" class="text-2xl md:text-3xl font-bold text-white tracking-tight mt-12 mb-4 scroll-mt-24">Waarom het ertoe doet</h2>
+<p class="text-slate-300 leading-relaxed mb-5">Het vermogen bepaalt de keuze van de netaansluiting, de transformator, de hoofdkabels, de hoofdverdeler en de beveiligingen. Te hoog inschatten maakt alles duurder en groter dan nodig. Te laag inschatten leidt tot overbelasting, uitschakelingen en een installatie die bij de eerste uitbreiding vastloopt.</p>
+<h2 id="het-hangt-af-van-het-niveau" class="text-2xl md:text-3xl font-bold text-white tracking-tight mt-12 mb-4 scroll-mt-24">Het hangt af van het niveau</h2>
+<p class="text-slate-300 leading-relaxed mb-5">Hoe meer belastingen u samenneemt, hoe kleiner de kans dat ze allemaal tegelijk vol aanstaan. Daarom verschilt de factor per niveau:</p>
+<ol class="list-decimal pl-6 space-y-2 text-slate-300 leading-relaxed mb-6 marker:text-blue-400"><li><strong class="text-white">Eindgroep</strong>: vaak een hoge factor; een groep voor één machine draait gewoon op vol vermogen.</li><li><strong class="text-white">Onderverdeler</strong>: lager, omdat niet alle machines of werkplekken tegelijk piek vragen.</li><li><strong class="text-white">Hoofdverdeler</strong>: nog lager, omdat verschillende functies hun piek op verschillende momenten hebben.</li></ol>
+<p class="text-slate-300 leading-relaxed mb-5">Een veelgemaakte fout is om één factor voor de hele installatie te gebruiken.</p>
+<h2 id="voorbeelden" class="text-2xl md:text-3xl font-bold text-white tracking-tight mt-12 mb-4 scroll-mt-24">Voorbeelden</h2>
+<div class="my-8 overflow-x-auto rounded-xl border border-white/10 bg-[#161a22]/80"><table class="w-full text-sm"><thead><tr><th class="text-left px-4 py-3 font-mono text-xs uppercase tracking-wider text-blue-400">Situatie</th><th class="text-left px-4 py-3 font-mono text-xs uppercase tracking-wider text-blue-400">Kenmerk</th><th class="text-left px-4 py-3 font-mono text-xs uppercase tracking-wider text-blue-400">Aandachtspunt</th></tr></thead><tbody><tr class="border-t border-white/10"><td class="px-4 py-3 text-slate-300 align-top">Kantoor</td><td class="px-4 py-3 text-slate-300 align-top">veel kleine belastingen</td><td class="px-4 py-3 text-slate-300 align-top">verlichting en klimaat zijn vaak gelijktijdig</td></tr><tr class="border-t border-white/10"><td class="px-4 py-3 text-slate-300 align-top">Productiehal</td><td class="px-4 py-3 text-slate-300 align-top">grote machines in ploegen</td><td class="px-4 py-3 text-slate-300 align-top">een productielijn draait vaak volledig</td></tr><tr class="border-t border-white/10"><td class="px-4 py-3 text-slate-300 align-top">Laadplein</td><td class="px-4 py-3 text-slate-300 align-top">veel laders tegelijk bij aankomst</td><td class="px-4 py-3 text-slate-300 align-top">zonder sturing kan gelijktijdigheid hoog zijn</td></tr><tr class="border-t border-white/10"><td class="px-4 py-3 text-slate-300 align-top">Keuken</td><td class="px-4 py-3 text-slate-300 align-top">korte, hoge pieken</td><td class="px-4 py-3 text-slate-300 align-top">pieken rond maaltijden vallen samen</td></tr></tbody></table></div>
+<h3 class="text-xl font-semibold text-white mt-8 mb-3">Kantoor</h3>
+<p class="text-slate-300 leading-relaxed mb-5">In een kantoor met honderden werkplekken staan niet alle apparaten tegelijk aan. Maar verlichting, ventilatie en koeling draaien op een warme dag wel allemaal. Daar is de gelijktijdigheid dus hoog.</p>
+<h3 class="text-xl font-semibold text-white mt-8 mb-3">Laadinfrastructuur</h3>
+<p class="text-slate-300 leading-relaxed mb-5">Een parkeerterrein waar medewerkers rond dezelfde tijd aankomen, geeft 's ochtends een hoge gelijktijdigheid. Met een slim laadsysteem dat het totale vermogen verdeelt, kan het vermogen worden begrensd. De factor is dan geen aanname meer, maar een instelling.</p>
+<div class="my-8 p-6 rounded-xl border border-blue-500/30 bg-blue-500/10 text-slate-200 leading-relaxed"><div class="text-xs font-mono text-blue-400 uppercase tracking-widest mb-2">[PRAKTIJKTIP]</div>Als een vermogensbegrenzing de gelijktijdigheid bepaalt, leg dan in het ontwerp vast dat die begrenzing er moet zijn. Wordt hij later uitgezet, dan klopt de dimensionering niet meer.</div>
+<h2 id="hoe-bepaalt-u-de-factor" class="text-2xl md:text-3xl font-bold text-white tracking-tight mt-12 mb-4 scroll-mt-24">Hoe bepaalt u de factor?</h2>
+<ul class="list-disc pl-6 space-y-2 text-slate-300 leading-relaxed mb-6 marker:text-blue-400"><li><strong class="text-white">Metingen in een vergelijkbare of bestaande situatie</strong>: het meest betrouwbaar. Kwartierwaarden over een representatieve periode geven een goed beeld.</li><li><strong class="text-white">Normen en richtlijnen</strong>: geven indicatieve waarden voor woningen en bepaalde toepassingen.</li><li><strong class="text-white">Gesprekken met de gebruiker</strong>: hoe werkt het proces, welke machines draaien samen, wanneer zijn de pieken?</li><li><strong class="text-white">Ervaring</strong>: een adviseur met kennis van vergelijkbare projecten kan aannames toetsen.</li></ul>
+<p class="text-slate-300 leading-relaxed mb-5">Combineer deze bronnen. Een getal uit een tabel zonder kennis van het proces is riskant.</p>
+<h2 id="relatie-met-andere-berekeningen" class="text-2xl md:text-3xl font-bold text-white tracking-tight mt-12 mb-4 scroll-mt-24">Relatie met andere berekeningen</h2>
+<p class="text-slate-300 leading-relaxed mb-5">De gelijktijdigheidsfactor is invoer voor de <a class="text-blue-400 hover:underline" href="kabelberekening-nen-1010.html">kabelberekening volgens NEN 1010</a>, het ontwerp van de <a class="text-blue-400 hover:underline" href="hoofdverdeler-ontwerp.html">hoofdverdeler</a> en de aanvraag van een <a class="text-blue-400 hover:underline" href="netaansluiting-verzwaren.html">netaansluiting</a>. Voor de beveiliging en de kabel van een eindgroep moet u wel uitgaan van het volledige vermogen dat op die groep kan worden aangesloten.</p>
+<h2 id="documenteer-de-aannames" class="text-2xl md:text-3xl font-bold text-white tracking-tight mt-12 mb-4 scroll-mt-24">Documenteer de aannames</h2>
+<p class="text-slate-300 leading-relaxed mb-5">Leg per niveau vast welke factor is gebruikt en waarom. Dat is belangrijk bij latere uitbreidingen: wie weet welke aannames zijn gedaan, kan beoordelen of er ruimte is. Zonder die informatie begint elke uitbreiding met een nieuwe meting of een gok.</p>
+<h2 id="ondersteuning" class="text-2xl md:text-3xl font-bold text-white tracking-tight mt-12 mb-4 scroll-mt-24">Ondersteuning</h2>
+<p class="text-slate-300 leading-relaxed mb-5">ECAP SLUI gebruikt realistische aannames voor gelijktijdigheid bij het ontwerp van <a class="text-blue-400 hover:underline" href="../diensten.html#energiedistributie">energiedistributie</a> en in de <a class="text-blue-400 hover:underline" href="elektrotechnische-calculatie.html">calculatie</a> van installaties. Waar mogelijk worden aannames onderbouwd met metingen in de bestaande situatie.</p>
+<h2 id="veelgestelde-vragen" class="text-2xl md:text-3xl font-bold text-white tracking-tight mt-12 mb-6">Veelgestelde vragen</h2><div class="space-y-4"><details class="p-6 rounded-xl border border-white/10 bg-[#161a22]/80"><summary class="font-semibold text-white cursor-pointer">Welke gelijktijdigheidsfactor gebruik ik voor een kantoor?</summary><p class="text-slate-300 leading-relaxed mt-3">Dat hangt af van het gebouw en het gebruik. Indicatieve waarden bestaan, maar metingen in een vergelijkbaar gebouw en kennis van het gebruik geven een betrouwbaarder beeld.</p></details><details class="p-6 rounded-xl border border-white/10 bg-[#161a22]/80"><summary class="font-semibold text-white cursor-pointer">Mag ik de gelijktijdigheid gebruiken voor een eindgroep?</summary><p class="text-slate-300 leading-relaxed mt-3">Meestal niet. Kabel en beveiliging van een eindgroep moeten geschikt zijn voor het volledige vermogen dat op die groep kan worden aangesloten.</p></details></div>
+<div class="mt-14 p-8 rounded-2xl border border-white/10 bg-[#161a22]/90">
+<div class="font-mono text-xs text-blue-400 uppercase tracking-widest mb-3">[SAMENWERKEN?]</div>
+<h2 class="text-2xl font-bold text-white mb-3">Advies op maat voor uw project</h2>
+<p class="text-slate-400 leading-relaxed mb-6">ECAP SLUI in Ede adviseert, engineert en calculeert elektrotechnische installaties en begeleidt de uitvoering, van de eerste ontwerpfase tot en met test &amp; commissioning. Met meer dan 30 jaar ervaring in utiliteit en industrie.</p>
+<div class="flex flex-wrap gap-4"><a class="px-6 py-3 rounded-xl bg-blue-600 hover:bg-blue-500 text-white font-semibold text-sm shadow-[0_0_25px_rgba(0,102,255,0.4)] transition" href="../contact.html">Neem contact op →</a><a class="px-6 py-3 rounded-xl border border-white/15 bg-white/5 hover:bg-white/10 text-white font-semibold text-sm transition" href="tel:+31651322666">Bel 06 51322666</a></div>
+</div>
+</article>
+<aside class="lg:col-span-4 space-y-6 lg:sticky lg:top-28 self-start">
+<div class="p-6 rounded-xl border border-white/10 bg-[#161a22]/80"><div class="text-xs font-mono text-blue-400 uppercase tracking-widest mb-4">[INHOUD]</div><ol class="space-y-2 text-sm text-slate-300 list-decimal pl-5 marker:text-blue-400"><li><a class="hover:text-white" href="#wat-is-het">Wat is het?</a></li><li><a class="hover:text-white" href="#waarom-het-ertoe-doet">Waarom het ertoe doet</a></li><li><a class="hover:text-white" href="#het-hangt-af-van-het-niveau">Het hangt af van het niveau</a></li><li><a class="hover:text-white" href="#voorbeelden">Voorbeelden</a></li><li><a class="hover:text-white" href="#hoe-bepaalt-u-de-factor">Hoe bepaalt u de factor?</a></li><li><a class="hover:text-white" href="#relatie-met-andere-berekeningen">Relatie met andere berekeningen</a></li><li><a class="hover:text-white" href="#documenteer-de-aannames">Documenteer de aannames</a></li><li><a class="hover:text-white" href="#ondersteuning">Ondersteuning</a></li><li><a class="hover:text-white" href="#veelgestelde-vragen">Veelgestelde vragen</a></li></ol></div>
+<div class="p-6 rounded-xl border border-white/10 bg-[#161a22]/80"><div class="text-xs font-mono text-blue-400 uppercase tracking-widest mb-4">[GERELATEERDE DIENSTEN]</div><ul class="space-y-2 text-sm"><li><a class="text-blue-400 hover:underline" href="../diensten.html#energiedistributie">Energiedistributie</a></li><li><a class="text-blue-400 hover:underline" href="../diensten.html#kabelberekeningen-nen1010">Kabelberekeningen (NEN 1010)</a></li><li><a class="text-blue-400 hover:underline" href="../diensten.html#aarding-bliksembeveiliging">Aarding- en bliksembeveiliging</a></li><li><a class="text-blue-400 hover:underline" href="../diensten.html#noodstroom-energievoorziening">Noodstroom- en energievoorziening</a></li><li><a class="text-blue-400 hover:underline" href="../werkwijze.html">Werkwijze &amp; V-model</a></li></ul></div>
+<div class="p-6 rounded-xl border border-white/10 bg-[#161a22]/80 font-mono text-xs space-y-3"><div class="flex justify-between"><span class="text-slate-400">ZOEKWOORD</span><span class="text-white text-right">gelijktijdigheidsfactor</span></div><div class="flex justify-between"><span class="text-slate-400">WOORDEN</span><span class="text-white">657</span></div><div class="flex justify-between"><span class="text-slate-400">CATEGORIE</span><a class="text-blue-400 text-right" href="../blog/categorie/energiedistributie.html">Energiedistributie &amp; aarding</a></div></div>
+</aside>
+</div>
+<section class="mt-16"><div class="font-mono text-xs text-blue-400 uppercase tracking-widest mb-6">[LEES OOK]</div><div class="grid grid-cols-1 md:grid-cols-3 gap-4"><a href="../blog/kabelberekening-nen-1010.html" class="group p-6 rounded-xl border border-white/10 bg-[#161a22]/80 hover:border-blue-500/50 transition flex flex-col">
+<div class="text-xs font-mono text-blue-400 mb-3 uppercase tracking-wider">Energiedistributie &amp; aarding</div>
+<h3 class="font-semibold text-white text-lg leading-snug mb-2 group-hover:text-blue-300">Kabelberekening volgens NEN 1010: zo pakt u het aan</h3>
+<p class="text-sm text-slate-400 leading-relaxed flex-1">Hoe maak je een kabelberekening volgens NEN 1010? Uitleg over belastbaarheid, correctiefactoren, spanningsval, kortsluitvastheid en documentatie.</p>
+<div class="mt-5 pt-4 border-t border-white/10 text-xs font-mono text-slate-400 flex justify-between"><span>4 MIN LEESTIJD</span><span class="text-blue-400">LEES →</span></div>
+</a><a href="../blog/spanningsval-berekenen.html" class="group p-6 rounded-xl border border-white/10 bg-[#161a22]/80 hover:border-blue-500/50 transition flex flex-col">
+<div class="text-xs font-mono text-blue-400 mb-3 uppercase tracking-wider">Energiedistributie &amp; aarding</div>
+<h3 class="font-semibold text-white text-lg leading-snug mb-2 group-hover:text-blue-300">Spanningsval berekenen: formules, grenswaarden en valkuilen</h3>
+<p class="text-sm text-slate-400 leading-relaxed flex-1">Spanningsval berekenen in een laagspanningsinstallatie: de formule, gangbare grenswaarden volgens NEN 1010 en praktische tips voor lange kabels.</p>
+<div class="mt-5 pt-4 border-t border-white/10 text-xs font-mono text-slate-400 flex justify-between"><span>3 MIN LEESTIJD</span><span class="text-blue-400">LEES →</span></div>
+</a><a href="../blog/kortsluitstroom-berekenen.html" class="group p-6 rounded-xl border border-white/10 bg-[#161a22]/80 hover:border-blue-500/50 transition flex flex-col">
+<div class="text-xs font-mono text-blue-400 mb-3 uppercase tracking-wider">Energiedistributie &amp; aarding</div>
+<h3 class="font-semibold text-white text-lg leading-snug mb-2 group-hover:text-blue-300">Kortsluitstroom berekenen: waarom de grootste én kleinste waarde tellen</h3>
+<p class="text-sm text-slate-400 leading-relaxed flex-1">Kortsluitstroom berekenen in een laagspanningsinstallatie: maximale en minimale kortsluitstroom, schakelvermogen, kortsluitvastheid en afschakeltijden.</p>
+<div class="mt-5 pt-4 border-t border-white/10 text-xs font-mono text-slate-400 flex justify-between"><span>4 MIN LEESTIJD</span><span class="text-blue-400">LEES →</span></div>
+</a></div></section>
+</main>
+<footer class="relative z-10 border-t border-white/10 bg-[#10131a]/80 mt-16">
+<div class="max-w-[1680px] mx-auto px-6 py-12 grid grid-cols-1 md:grid-cols-3 gap-10 text-sm">
+<div>
+<div class="text-base font-bold text-white tracking-tight">ECAP SLUI</div>
+<div class="text-[10px] font-mono tracking-widest text-slate-400 uppercase mt-1 mb-4">Elektrotechnisch calculatie-, adviserings- en projectenbureau</div>
+<address class="not-italic text-slate-400 leading-relaxed">Prof. Oudpark 90<br/>6716 EJ Ede<br/>
+<a class="text-blue-400 hover:underline" href="tel:+31651322666">06 51322666</a><br/>
+<a class="text-blue-400 hover:underline" href="mailto:vincent.slui@kpnmail.nl">vincent.slui@kpnmail.nl</a><br/>
+KvK 59289430</address>
+</div>
+<div>
+<div class="font-mono text-xs text-blue-400 uppercase tracking-widest mb-4">[NAVIGATIE]</div>
+<nav class="flex flex-wrap gap-x-6 gap-y-2 text-slate-300" aria-label="Footer"><a class="hover:text-white" href="../index.html">Home</a> <a class="hover:text-white" href="../diensten.html">Diensten</a> <a class="hover:text-white" href="../sectoren.html">Sectoren</a> <a class="hover:text-white" href="../projecten.html">Projecten</a> <a class="hover:text-white" href="../werkwijze.html">Werkwijze</a> <a class="hover:text-white" href="../over-ons.html">Over ons</a> <a class="hover:text-white" href="../blog/">Blog</a> <a class="hover:text-white" href="../contact.html">Contact</a> <a class="hover:text-white" href="../privacy.html">Privacyverklaring</a></nav>
+</div>
+<div>
+<div class="font-mono text-xs text-blue-400 uppercase tracking-widest mb-4">[STAY CONNECTED]</div>
+<div class="flex flex-col gap-2 text-slate-300">
+<a class="hover:text-white" href="https://www.linkedin.com/company/ecap-slui/" rel="noopener" target="_blank">LinkedIn ECAP SLUI →</a>
+<a class="hover:text-white" href="https://www.linkedin.com/in/vincent-slui-a629ba19/" rel="noopener" target="_blank">LinkedIn Vincent Slui →</a>
+</div>
+<div class="text-xs font-mono text-slate-500 mt-6">Beeld © Studio Csány</div>
+</div>
+</div>
+</footer>
+<script src="../shader.js"></script>
+<script>initWebGLShader('shader-canvas-blog');</script>
+</body>
+</html>

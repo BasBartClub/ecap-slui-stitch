@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="utf-8"/>
+<title>Blindstroomcompensatie: arbeidsfactor verbeteren in de praktijk | ECAP SLUI</title>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta name="description" content="Wat is blindvermogen en wanneer is blindstroomcompensatie zinvol? Uitleg over cos φ, condensatorbanken, gesmoorde compensatie, harmonischen en dimensionering."/>
+<meta name="robots" content="noindex, nofollow"/>
+<link rel="canonical" href="https://basbartclub.github.io/ecap-slui-stitch/blog/blindstroomcompensatie.html"/>
+<meta property="og:type" content="article"/>
+<meta property="og:locale" content="nl_NL"/>
+<meta property="og:site_name" content="ECAP SLUI"/>
+<meta property="og:title" content="Blindstroomcompensatie: arbeidsfactor verbeteren in de praktijk | ECAP SLUI"/>
+<meta property="og:description" content="Wat is blindvermogen en wanneer is blindstroomcompensatie zinvol? Uitleg over cos φ, condensatorbanken, gesmoorde compensatie, harmonischen en dimensionering."/>
+<meta property="og:url" content="https://basbartclub.github.io/ecap-slui-stitch/blog/blindstroomcompensatie.html"/>
+<meta property="og:image" content="https://basbartclub.github.io/ecap-slui-stitch/img/verdeelinrichting-ecap-slui.jpg"/>
+<meta name="twitter:card" content="summary_large_image"/>
+<link rel="icon" href="data:,"/>
+<link rel="stylesheet" href="../tokens.css"/>
+<script src="https://cdn.tailwindcss.com"></script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BlogPosting", "headline": "Blindstroomcompensatie: arbeidsfactor verbeteren in de praktijk", "description": "Wat is blindvermogen en wanneer is blindstroomcompensatie zinvol? Uitleg over cos φ, condensatorbanken, gesmoorde compensatie, harmonischen en dimensionering.", "inLanguage": "nl-NL", "keywords": "blindstroomcompensatie", "articleSection": "Energiebesparing & PV", "wordCount": 620, "datePublished": "2026-11-18", "dateModified": "2026-11-18", "mainEntityOfPage": "https://basbartclub.github.io/ecap-slui-stitch/blog/blindstroomcompensatie.html", "image": "https://basbartclub.github.io/ecap-slui-stitch/img/verdeelinrichting-ecap-slui.jpg", "author": {"@type": "Organization", "name": "ECAP SLUI", "url": "https://basbartclub.github.io/ecap-slui-stitch/"}, "publisher": {"@type": "Organization", "name": "ECAP SLUI", "logo": {"@type": "ImageObject", "url": "https://basbartclub.github.io/ecap-slui-stitch/img/ecap-slui-logo.png"}}}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://basbartclub.github.io/ecap-slui-stitch/index.html"}, {"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://basbartclub.github.io/ecap-slui-stitch/blog/"}, {"@type": "ListItem", "position": 3, "name": "Energiebesparing & PV", "item": "https://basbartclub.github.io/ecap-slui-stitch/blog/categorie/energie-pv.html"}, {"@type": "ListItem", "position": 4, "name": "Blindstroomcompensatie: arbeidsfactor verbeteren in de praktijk", "item": "https://basbartclub.github.io/ecap-slui-stitch/blog/blindstroomcompensatie.html"}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Wat is een goede cos φ?", "acceptedAnswer": {"@type": "Answer", "text": "Hoe dichter bij 1, hoe beter. Veel bedrijven streven naar een waarde boven de grens waarbij de netbeheerder kosten rekent voor blindvermogen."}}, {"@type": "Question", "name": "Waarom een gesmoorde compensatiebank?", "acceptedAnswer": {"@type": "Answer", "text": "Om resonantie met harmonischen te voorkomen, die condensatoren kan beschadigen en de spanningskwaliteit kan verslechteren."}}]}</script>
+</head>
+<body class="bg-[#0b0e14] text-slate-100 min-h-screen">
+<div class="fixed inset-0 pointer-events-none opacity-30 z-0">
+<canvas class="w-full h-full" id="shader-canvas-blog"></canvas>
+</div>
+<header class="sticky top-0 z-50 border-b border-white/10 bg-[#0b0e14]/90 backdrop-blur-md">
+  <div class="max-w-[1680px] mx-auto px-6 h-20 flex items-center justify-between">
+    <a href="../index.html" class="flex items-center gap-4" aria-label="ECAP SLUI home">
+      <div class="w-10 h-10 rounded-lg bg-blue-600/20 border border-blue-500/40 flex items-center justify-center font-bold text-blue-400">
+        ES
+      </div>
+      <div>
+        <div class="text-base font-bold tracking-tight text-white">ECAP SLUI</div>
+        <div class="text-[10px] uppercase font-mono tracking-widest text-slate-400">Elektrotechnisch Bureau • Ede</div>
+      </div>
+    </a>
+    <nav class="hidden lg:flex items-center gap-8 text-sm font-medium text-slate-300" aria-label="Hoofdmenu">
+      <a href="../index.html" class="hover:text-white transition">Home</a>
+      <a href="../diensten.html" class="hover:text-white transition">Diensten</a>
+      <a href="../sectoren.html" class="hover:text-white transition">Sectoren</a>
+      <a href="../projecten.html" class="hover:text-white transition">Projecten</a>
+      <a href="../werkwijze.html" class="hover:text-white transition">Werkwijze</a>
+      <a href="../over-ons.html" class="hover:text-white transition">Over ons</a>
+      <a href="../blog/" class="text-blue-400">Blog</a>
+      <a href="../contact.html" class="hover:text-white transition">Contact</a>
+    </nav>
+    <div class="flex items-center gap-4">
+      <a href="../contact.html" class="px-5 py-2.5 rounded-lg bg-blue-600 hover:bg-blue-500 text-white font-medium text-sm transition shadow-[0_0_20px_rgba(0,102,255,0.35)]">
+        Direct Contact
+      </a>
+    </div>
+  </div>
+</header>
+<main class="relative z-10 max-w-[1680px] mx-auto px-6 py-16">
+<nav class="font-mono text-xs text-slate-400 uppercase tracking-widest mb-6" aria-label="Kruimelpad"><a class="hover:text-white" href="../index.html">Home</a> / <a class="hover:text-white" href="../blog/">Blog</a> / <a class="text-blue-400 hover:underline" href="../blog/categorie/energie-pv.html">Energiebesparing &amp; PV</a></nav>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-10">
+<article class="lg:col-span-8">
+<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-blue-500/30 bg-blue-500/10 text-blue-400 font-mono text-xs uppercase mb-6"><span class="w-2 h-2 rounded-full bg-blue-400"></span>Energiebesparing &amp; PV • 3 min leestijd</div>
+<h1 class="text-4xl md:text-5xl font-bold tracking-tight text-white mb-6 leading-tight">Blindstroomcompensatie: arbeidsfactor verbeteren in de praktijk</h1>
+<p class="text-xl text-slate-400 leading-relaxed mb-10">Motoren, transformatoren en sommige andere belastingen vragen naast nuttig vermogen ook blindvermogen. Dat belast kabels, transformatoren en de netaansluiting zonder dat het nuttig werk levert. Blindstroomcompensatie verlaagt die belasting.</p>
+<h2 id="werkzaam-blind-en-schijnbaar-vermogen" class="text-2xl md:text-3xl font-bold text-white tracking-tight mt-12 mb-4 scroll-mt-24">Werkzaam, blind en schijnbaar vermogen</h2>
+<ul class="list-disc pl-6 space-y-2 text-slate-300 leading-relaxed mb-6 marker:text-blue-400"><li><strong class="text-white">Werkzaam vermogen (kW)</strong>: het vermogen dat nuttig werk doet, zoals een motor die een pomp aandrijft.</li><li><strong class="text-white">Blindvermogen (kvar)</strong>: het vermogen dat nodig is voor magnetische velden in motoren en transformatoren, en dat heen en weer pendelt tussen net en belasting.</li><li><strong class="text-white">Schijnbaar vermogen (kVA)</strong>: de combinatie van beide, waarop kabels, transformatoren en de aansluiting moeten zijn berekend.</li></ul>
+<p class="text-slate-300 leading-relaxed mb-5">De arbeidsfactor (cos φ) is de verhouding tussen werkzaam en schijnbaar vermogen. Bij een cos φ van 1 is er geen blindvermogen; bij een lage cos φ is de stroom veel hoger dan nodig voor het nuttige vermogen.</p>
+<h2 id="waarom-compenseren" class="text-2xl md:text-3xl font-bold text-white tracking-tight mt-12 mb-4 scroll-mt-24">Waarom compenseren?</h2>
+<ol class="list-decimal pl-6 space-y-2 text-slate-300 leading-relaxed mb-6 marker:text-blue-400"><li><strong class="text-white">Minder stroom</strong>: kabels, transformatoren en de aansluiting worden minder belast. Dat kan ruimte maken voor uitbreiding zonder <a class="text-blue-400 hover:underline" href="netaansluiting-verzwaren.html">netverzwaring</a>.</li><li><strong class="text-white">Minder verliezen</strong>: lagere stromen betekenen minder warmteverlies in kabels en transformatoren.</li><li><strong class="text-white">Minder kosten</strong>: netbeheerders kunnen bij grootverbruikers kosten rekenen voor blindvermogen boven een bepaalde grens.</li><li><strong class="text-white">Betere spanning</strong>: minder <a class="text-blue-400 hover:underline" href="spanningsval-berekenen.html">spanningsval</a> over lange kabels.</li></ol>
+<h2 id="hoe-werkt-compensatie" class="text-2xl md:text-3xl font-bold text-white tracking-tight mt-12 mb-4 scroll-mt-24">Hoe werkt compensatie?</h2>
+<p class="text-slate-300 leading-relaxed mb-5">Condensatoren leveren blindvermogen met het tegengestelde karakter van motoren. Door condensatoren parallel aan de belasting te schakelen, wordt het blindvermogen lokaal geleverd in plaats van door het net. Er zijn verschillende vormen:</p>
+<div class="my-8 overflow-x-auto rounded-xl border border-white/10 bg-[#161a22]/80"><table class="w-full text-sm"><thead><tr><th class="text-left px-4 py-3 font-mono text-xs uppercase tracking-wider text-blue-400">Vorm</th><th class="text-left px-4 py-3 font-mono text-xs uppercase tracking-wider text-blue-400">Kenmerk</th><th class="text-left px-4 py-3 font-mono text-xs uppercase tracking-wider text-blue-400">Wanneer</th></tr></thead><tbody><tr class="border-t border-white/10"><td class="px-4 py-3 text-slate-300 align-top">Individueel</td><td class="px-4 py-3 text-slate-300 align-top">condensator bij een grote motor</td><td class="px-4 py-3 text-slate-300 align-top">grote, continu draaiende motoren</td></tr><tr class="border-t border-white/10"><td class="px-4 py-3 text-slate-300 align-top">Groepscompensatie</td><td class="px-4 py-3 text-slate-300 align-top">per onderverdeler</td><td class="px-4 py-3 text-slate-300 align-top">groepen met vergelijkbare belasting</td></tr><tr class="border-t border-white/10"><td class="px-4 py-3 text-slate-300 align-top">Centrale compensatie</td><td class="px-4 py-3 text-slate-300 align-top">automatische bank bij de hoofdverdeler</td><td class="px-4 py-3 text-slate-300 align-top">wisselende belasting in de hele installatie</td></tr><tr class="border-t border-white/10"><td class="px-4 py-3 text-slate-300 align-top">Actieve compensatie</td><td class="px-4 py-3 text-slate-300 align-top">vermogenselektronica</td><td class="px-4 py-3 text-slate-300 align-top">snel wisselende belasting, ook harmonischen</td></tr></tbody></table></div>
+<p class="text-slate-300 leading-relaxed mb-5">Een automatische compensatiebank meet de arbeidsfactor en schakelt condensatortrappen bij of af, zodat de cos φ binnen een ingesteld bereik blijft.</p>
+<h2 id="let-op-harmonischen" class="text-2xl md:text-3xl font-bold text-white tracking-tight mt-12 mb-4 scroll-mt-24">Let op harmonischen</h2>
+<p class="text-slate-300 leading-relaxed mb-5">In installaties met veel frequentieregelaars, LED-drivers en andere elektronica is <a class="text-blue-400 hover:underline" href="harmonische-vervuiling.html">harmonische vervuiling</a> aanwezig. Condensatoren hebben bij hogere frequenties een lage impedantie en trekken harmonische stromen aan. Bovendien kan een condensatorbank samen met de netinductie in resonantie komen. Dat kan condensatoren beschadigen en de spanningsvervorming versterken.</p>
+<p class="text-slate-300 leading-relaxed mb-5">De oplossing is een gesmoorde compensatiebank: condensatoren met in serie geschakelde smoorspoelen, afgestemd onder de laagste relevante harmonische. Daarmee wordt resonantie voorkomen.</p>
+<div class="my-8 p-6 rounded-xl border border-blue-500/30 bg-blue-500/10 text-slate-200 leading-relaxed"><div class="text-xs font-mono text-blue-400 uppercase tracking-widest mb-2">[PRAKTIJKTIP]</div>Laat vóór het plaatsen van een compensatiebank een netanalyse maken. Die laat zien hoeveel blindvermogen er is, hoe het varieert en hoeveel harmonischen er zijn. Zonder die gegevens is de kans op een verkeerde of zelfs schadelijke oplossing groot.</div>
+<h2 id="frequentieregelaars-veranderen-het-beeld" class="text-2xl md:text-3xl font-bold text-white tracking-tight mt-12 mb-4 scroll-mt-24">Frequentieregelaars veranderen het beeld</h2>
+<p class="text-slate-300 leading-relaxed mb-5">Moderne frequentieregelaars hebben aan de netzijde vaak een goede arbeidsfactor voor de grondfrequentie, maar veroorzaken wel harmonischen. In installaties waar veel motoren direct op het net zijn vervangen door frequentiegeregelde aandrijvingen, kan een bestaande compensatiebank daardoor overcompenseren of in resonantie komen. Bij grote wijzigingen in de installatie is een nieuwe beoordeling nodig.</p>
+<h2 id="dimensionering" class="text-2xl md:text-3xl font-bold text-white tracking-tight mt-12 mb-4 scroll-mt-24">Dimensionering</h2>
+<p class="text-slate-300 leading-relaxed mb-5">De benodigde compensatie volgt uit het werkzaam vermogen, de huidige cos φ en de gewenste cos φ. Een meting over een representatieve periode laat zien hoe het blindvermogen varieert. Kies de trapgrootte zo dat de bank de variatie goed kan volgen. Houd rekening met de <a class="text-blue-400 hover:underline" href="kortsluitstroom-berekenen.html">kortsluitstroom</a> en met de schakelapparatuur, die geschikt moet zijn voor het schakelen van condensatoren.</p>
+<h2 id="onderhoud" class="text-2xl md:text-3xl font-bold text-white tracking-tight mt-12 mb-4 scroll-mt-24">Onderhoud</h2>
+<p class="text-slate-300 leading-relaxed mb-5">Condensatoren verouderen, vooral bij hoge temperaturen en harmonische belasting. Periodieke controle van de capaciteit, de schakelaars en de temperatuur in de kast voorkomt verrassingen. Een compensatiebank die niet meer werkt, wordt vaak pas opgemerkt als de netbeheerder kosten rekent.</p>
+<h2 id="advies" class="text-2xl md:text-3xl font-bold text-white tracking-tight mt-12 mb-4 scroll-mt-24">Advies</h2>
+<p class="text-slate-300 leading-relaxed mb-5">ECAP SLUI neemt de arbeidsfactor en compensatie mee in het ontwerp van de <a class="text-blue-400 hover:underline" href="../diensten.html#energiedistributie">energiedistributie</a> en in <a class="text-blue-400 hover:underline" href="../diensten.html#energiebesparingsmaatregelen">energiebesparingsmaatregelen</a>, op basis van metingen in de bestaande installatie.</p>
+<h2 id="veelgestelde-vragen" class="text-2xl md:text-3xl font-bold text-white tracking-tight mt-12 mb-6">Veelgestelde vragen</h2><div class="space-y-4"><details class="p-6 rounded-xl border border-white/10 bg-[#161a22]/80"><summary class="font-semibold text-white cursor-pointer">Wat is een goede cos φ?</summary><p class="text-slate-300 leading-relaxed mt-3">Hoe dichter bij 1, hoe beter. Veel bedrijven streven naar een waarde boven de grens waarbij de netbeheerder kosten rekent voor blindvermogen.</p></details><details class="p-6 rounded-xl border border-white/10 bg-[#161a22]/80"><summary class="font-semibold text-white cursor-pointer">Waarom een gesmoorde compensatiebank?</summary><p class="text-slate-300 leading-relaxed mt-3">Om resonantie met harmonischen te voorkomen, die condensatoren kan beschadigen en de spanningskwaliteit kan verslechteren.</p></details></div>
+<div class="mt-14 p-8 rounded-2xl border border-white/10 bg-[#161a22]/90">
+<div class="font-mono text-xs text-blue-400 uppercase tracking-widest mb-3">[SAMENWERKEN?]</div>
+<h2 class="text-2xl font-bold text-white mb-3">Advies op maat voor uw project</h2>
+<p class="text-slate-400 leading-relaxed mb-6">ECAP SLUI in Ede adviseert, engineert en calculeert elektrotechnische installaties en begeleidt de uitvoering, van de eerste ontwerpfase tot en met test &amp; commissioning. Met meer dan 30 jaar ervaring in utiliteit en industrie.</p>
+<div class="flex flex-wrap gap-4"><a class="px-6 py-3 rounded-xl bg-blue-600 hover:bg-blue-500 text-white font-semibold text-sm shadow-[0_0_25px_rgba(0,102,255,0.4)] transition" href="../contact.html">Neem contact op →</a><a class="px-6 py-3 rounded-xl border border-white/15 bg-white/5 hover:bg-white/10 text-white font-semibold text-sm transition" href="tel:+31651322666">Bel 06 51322666</a></div>
+</div>
+</article>
+<aside class="lg:col-span-4 space-y-6 lg:sticky lg:top-28 self-start">
+<div class="p-6 rounded-xl border border-white/10 bg-[#161a22]/80"><div class="text-xs font-mono text-blue-400 uppercase tracking-widest mb-4">[INHOUD]</div><ol class="space-y-2 text-sm text-slate-300 list-decimal pl-5 marker:text-blue-400"><li><a class="hover:text-white" href="#werkzaam-blind-en-schijnbaar-vermogen">Werkzaam, blind en schijnbaar vermogen</a></li><li><a class="hover:text-white" href="#waarom-compenseren">Waarom compenseren?</a></li><li><a class="hover:text-white" href="#hoe-werkt-compensatie">Hoe werkt compensatie?</a></li><li><a class="hover:text-white" href="#let-op-harmonischen">Let op harmonischen</a></li><li><a class="hover:text-white" href="#frequentieregelaars-veranderen-het-beeld">Frequentieregelaars veranderen het beeld</a></li><li><a class="hover:text-white" href="#dimensionering">Dimensionering</a></li><li><a class="hover:text-white" href="#onderhoud">Onderhoud</a></li><li><a class="hover:text-white" href="#advies">Advies</a></li><li><a class="hover:text-white" href="#veelgestelde-vragen">Veelgestelde vragen</a></li></ol></div>
+<div class="p-6 rounded-xl border border-white/10 bg-[#161a22]/80"><div class="text-xs font-mono text-blue-400 uppercase tracking-widest mb-4">[GERELATEERDE DIENSTEN]</div><ul class="space-y-2 text-sm"><li><a class="text-blue-400 hover:underline" href="../diensten.html#energiebesparingsmaatregelen">Energiebesparingsmaatregelen</a></li><li><a class="text-blue-400 hover:underline" href="../diensten.html#pv-installaties">PV-installaties</a></li><li><a class="text-blue-400 hover:underline" href="../diensten.html#energiedistributie">Energiedistributie</a></li><li><a class="text-blue-400 hover:underline" href="../werkwijze.html">Werkwijze &amp; V-model</a></li></ul></div>
+<div class="p-6 rounded-xl border border-white/10 bg-[#161a22]/80 font-mono text-xs space-y-3"><div class="flex justify-between"><span class="text-slate-400">ZOEKWOORD</span><span class="text-white text-right">blindstroomcompensatie</span></div><div class="flex justify-between"><span class="text-slate-400">WOORDEN</span><span class="text-white">620</span></div><div class="flex justify-between"><span class="text-slate-400">CATEGORIE</span><a class="text-blue-400 text-right" href="../blog/categorie/energie-pv.html">Energiebesparing &amp; PV</a></div></div>
+</aside>
+</div>
+<section class="mt-16"><div class="font-mono text-xs text-blue-400 uppercase tracking-widest mb-6">[LEES OOK]</div><div class="grid grid-cols-1 md:grid-cols-3 gap-4"><a href="../blog/energielabel-c-kantoor.html" class="group p-6 rounded-xl border border-white/10 bg-[#161a22]/80 hover:border-blue-500/50 transition flex flex-col">
+<div class="text-xs font-mono text-blue-400 mb-3 uppercase tracking-wider">Energiebesparing &amp; PV</div>
+<h3 class="font-semibold text-white text-lg leading-snug mb-2 group-hover:text-blue-300">Energielabel C voor kantoren: wat de elektrotechniek bijdraagt</h3>
+<p class="text-sm text-slate-400 leading-relaxed flex-1">Sinds 2023 moeten kantoren minimaal energielabel C hebben. Wat de plicht inhoudt, uitzonderingen en hoe verlichting, PV en regeling helpen het label te halen.</p>
+<div class="mt-5 pt-4 border-t border-white/10 text-xs font-mono text-slate-400 flex justify-between"><span>3 MIN LEESTIJD</span><span class="text-blue-400">LEES →</span></div>
+</a><a href="../blog/zonnepanelen-bedrijfsdak.html" class="group p-6 rounded-xl border border-white/10 bg-[#161a22]/80 hover:border-blue-500/50 transition flex flex-col">
+<div class="text-xs font-mono text-blue-400 mb-3 uppercase tracking-wider">Energiebesparing &amp; PV</div>
+<h3 class="font-semibold text-white text-lg leading-snug mb-2 group-hover:text-blue-300">Zonnepanelen op het bedrijfsdak: van haalbaarheid tot aansluiting</h3>
+<p class="text-sm text-slate-400 leading-relaxed flex-1">Zonnepanelen op uw bedrijfsdak: dakconstructie, opbrengst, eigen verbruik, netaansluiting en teruglevering, elektrotechnisch ontwerp, brandveiligheid en onderhoud.</p>
+<div class="mt-5 pt-4 border-t border-white/10 text-xs font-mono text-slate-400 flex justify-between"><span>3 MIN LEESTIJD</span><span class="text-blue-400">LEES →</span></div>
+</a><a href="../blog/brandveiligheid-zonnepanelen.html" class="group p-6 rounded-xl border border-white/10 bg-[#161a22]/80 hover:border-blue-500/50 transition flex flex-col">
+<div class="text-xs font-mono text-blue-400 mb-3 uppercase tracking-wider">Energiebesparing &amp; PV</div>
+<h3 class="font-semibold text-white text-lg leading-snug mb-2 group-hover:text-blue-300">Brandveiligheid van zonnepanelen op bedrijfsdaken</h3>
+<p class="text-sm text-slate-400 leading-relaxed flex-1">Hoe voorkomt u brand bij PV-installaties op bedrijfsdaken? Oorzaken, connectoren, DC-bekabeling, dakopbouw, inspectie en afspraken met verzekeraar en brandweer.</p>
+<div class="mt-5 pt-4 border-t border-white/10 text-xs font-mono text-slate-400 flex justify-between"><span>3 MIN LEESTIJD</span><span class="text-blue-400">LEES →</span></div>
+</a></div></section>
+</main>
+<footer class="relative z-10 border-t border-white/10 bg-[#10131a]/80 mt-16">
+<div class="max-w-[1680px] mx-auto px-6 py-12 grid grid-cols-1 md:grid-cols-3 gap-10 text-sm">
+<div>
+<div class="text-base font-bold text-white tracking-tight">ECAP SLUI</div>
+<div class="text-[10px] font-mono tracking-widest text-slate-400 uppercase mt-1 mb-4">Elektrotechnisch calculatie-, adviserings- en projectenbureau</div>
+<address class="not-italic text-slate-400 leading-relaxed">Prof. Oudpark 90<br/>6716 EJ Ede<br/>
+<a class="text-blue-400 hover:underline" href="tel:+31651322666">06 51322666</a><br/>
+<a class="text-blue-400 hover:underline" href="mailto:vincent.slui@kpnmail.nl">vincent.slui@kpnmail.nl</a><br/>
+KvK 59289430</address>
+</div>
+<div>
+<div class="font-mono text-xs text-blue-400 uppercase tracking-widest mb-4">[NAVIGATIE]</div>
+<nav class="flex flex-wrap gap-x-6 gap-y-2 text-slate-300" aria-label="Footer"><a class="hover:text-white" href="../index.html">Home</a> <a class="hover:text-white" href="../diensten.html">Diensten</a> <a class="hover:text-white" href="../sectoren.html">Sectoren</a> <a class="hover:text-white" href="../projecten.html">Projecten</a> <a class="hover:text-white" href="../werkwijze.html">Werkwijze</a> <a class="hover:text-white" href="../over-ons.html">Over ons</a> <a class="hover:text-white" href="../blog/">Blog</a> <a class="hover:text-white" href="../contact.html">Contact</a> <a class="hover:text-white" href="../privacy.html">Privacyverklaring</a></nav>
+</div>
+<div>
+<div class="font-mono text-xs text-blue-400 uppercase tracking-widest mb-4">[STAY CONNECTED]</div>
+<div class="flex flex-col gap-2 text-slate-300">
+<a class="hover:text-white" href="https://www.linkedin.com/company/ecap-slui/" rel="noopener" target="_blank">LinkedIn ECAP SLUI →</a>
+<a class="hover:text-white" href="https://www.linkedin.com/in/vincent-slui-a629ba19/" rel="noopener" target="_blank">LinkedIn Vincent Slui →</a>
+</div>
+<div class="text-xs font-mono text-slate-500 mt-6">Beeld © Studio Csány</div>
+</div>
+</div>
+</footer>
+<script src="../shader.js"></script>
+<script>initWebGLShader('shader-canvas-blog');</script>
+</body>
+</html>

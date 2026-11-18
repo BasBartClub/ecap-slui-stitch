@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="utf-8"/>
+<title>TN-S, TN-C-S of TT: aardingsstelsels helder uitgelegd | ECAP SLUI</title>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta name="description" content="Het verschil tussen TN-S, TN-C-S en TT-stelsels: wat de letters betekenen, voor- en nadelen en wat het stelsel betekent voor beveiliging en EMC."/>
+<meta name="robots" content="noindex, nofollow"/>
+<link rel="canonical" href="https://basbartclub.github.io/ecap-slui-stitch/blog/aardingsstelsels-tn-tt.html"/>
+<meta property="og:type" content="article"/>
+<meta property="og:locale" content="nl_NL"/>
+<meta property="og:site_name" content="ECAP SLUI"/>
+<meta property="og:title" content="TN-S, TN-C-S of TT: aardingsstelsels helder uitgelegd | ECAP SLUI"/>
+<meta property="og:description" content="Het verschil tussen TN-S, TN-C-S en TT-stelsels: wat de letters betekenen, voor- en nadelen en wat het stelsel betekent voor beveiliging en EMC."/>
+<meta property="og:url" content="https://basbartclub.github.io/ecap-slui-stitch/blog/aardingsstelsels-tn-tt.html"/>
+<meta property="og:image" content="https://basbartclub.github.io/ecap-slui-stitch/img/verdeelinrichting-ecap-slui.jpg"/>
+<meta name="twitter:card" content="summary_large_image"/>
+<link rel="icon" href="data:,"/>
+<link rel="stylesheet" href="../tokens.css"/>
+<script src="https://cdn.tailwindcss.com"></script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BlogPosting", "headline": "TN-S, TN-C-S of TT: aardingsstelsels helder uitgelegd", "description": "Het verschil tussen TN-S, TN-C-S en TT-stelsels: wat de letters betekenen, voor- en nadelen en wat het stelsel betekent voor beveiliging en EMC.", "inLanguage": "nl-NL", "keywords": "TN-S TN-C-S TT stelsel", "articleSection": "Energiedistributie & aarding", "wordCount": 692, "datePublished": "2026-11-18", "dateModified": "2026-11-18", "mainEntityOfPage": "https://basbartclub.github.io/ecap-slui-stitch/blog/aardingsstelsels-tn-tt.html", "image": "https://basbartclub.github.io/ecap-slui-stitch/img/verdeelinrichting-ecap-slui.jpg", "author": {"@type": "Organization", "name": "ECAP SLUI", "url": "https://basbartclub.github.io/ecap-slui-stitch/"}, "publisher": {"@type": "Organization", "name": "ECAP SLUI", "logo": {"@type": "ImageObject", "url": "https://basbartclub.github.io/ecap-slui-stitch/img/ecap-slui-logo.png"}}}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://basbartclub.github.io/ecap-slui-stitch/index.html"}, {"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://basbartclub.github.io/ecap-slui-stitch/blog/"}, {"@type": "ListItem", "position": 3, "name": "Energiedistributie & aarding", "item": "https://basbartclub.github.io/ecap-slui-stitch/blog/categorie/energiedistributie.html"}, {"@type": "ListItem", "position": 4, "name": "TN-S, TN-C-S of TT: aardingsstelsels helder uitgelegd", "item": "https://basbartclub.github.io/ecap-slui-stitch/blog/aardingsstelsels-tn-tt.html"}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Welk aardingsstelsel is het veiligst?", "acceptedAnswer": {"@type": "Answer", "text": "Elk stelsel is veilig als de beveiliging erop is afgestemd. De keuze hangt af van de voeding, het gebruik en de eisen aan continuïteit en EMC."}}, {"@type": "Question", "name": "Mag ik de nul en aarde na het splitspunt nog verbinden?", "acceptedAnswer": {"@type": "Answer", "text": "Nee. Na het splitspunt in een TN-C-S-stelsel moeten nul en beschermingsleiding gescheiden blijven."}}]}</script>
+</head>
+<body class="bg-[#0b0e14] text-slate-100 min-h-screen">
+<div class="fixed inset-0 pointer-events-none opacity-30 z-0">
+<canvas class="w-full h-full" id="shader-canvas-blog"></canvas>
+</div>
+<header class="sticky top-0 z-50 border-b border-white/10 bg-[#0b0e14]/90 backdrop-blur-md">
+  <div class="max-w-[1680px] mx-auto px-6 h-20 flex items-center justify-between">
+    <a href="../index.html" class="flex items-center gap-4" aria-label="ECAP SLUI home">
+      <div class="w-10 h-10 rounded-lg bg-blue-600/20 border border-blue-500/40 flex items-center justify-center font-bold text-blue-400">
+        ES
+      </div>
+      <div>
+        <div class="text-base font-bold tracking-tight text-white">ECAP SLUI</div>
+        <div class="text-[10px] uppercase font-mono tracking-widest text-slate-400">Elektrotechnisch Bureau • Ede</div>
+      </div>
+    </a>
+    <nav class="hidden lg:flex items-center gap-8 text-sm font-medium text-slate-300" aria-label="Hoofdmenu">
+      <a href="../index.html" class="hover:text-white transition">Home</a>
+      <a href="../diensten.html" class="hover:text-white transition">Diensten</a>
+      <a href="../sectoren.html" class="hover:text-white transition">Sectoren</a>
+      <a href="../projecten.html" class="hover:text-white transition">Projecten</a>
+      <a href="../werkwijze.html" class="hover:text-white transition">Werkwijze</a>
+      <a href="../over-ons.html" class="hover:text-white transition">Over ons</a>
+      <a href="../blog/" class="text-blue-400">Blog</a>
+      <a href="../contact.html" class="hover:text-white transition">Contact</a>
+    </nav>
+    <div class="flex items-center gap-4">
+      <a href="../contact.html" class="px-5 py-2.5 rounded-lg bg-blue-600 hover:bg-blue-500 text-white font-medium text-sm transition shadow-[0_0_20px_rgba(0,102,255,0.35)]">
+        Direct Contact
+      </a>
+    </div>
+  </div>
+</header>
+<main class="relative z-10 max-w-[1680px] mx-auto px-6 py-16">
+<nav class="font-mono text-xs text-slate-400 uppercase tracking-widest mb-6" aria-label="Kruimelpad"><a class="hover:text-white" href="../index.html">Home</a> / <a class="hover:text-white" href="../blog/">Blog</a> / <a class="text-blue-400 hover:underline" href="../blog/categorie/energiedistributie.html">Energiedistributie &amp; aarding</a></nav>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-10">
+<article class="lg:col-span-8">
+<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-blue-500/30 bg-blue-500/10 text-blue-400 font-mono text-xs uppercase mb-6"><span class="w-2 h-2 rounded-full bg-blue-400"></span>Energiedistributie &amp; aarding • 3 min leestijd</div>
+<h1 class="text-4xl md:text-5xl font-bold tracking-tight text-white mb-6 leading-tight">TN-S, TN-C-S of TT: aardingsstelsels helder uitgelegd</h1>
+<p class="text-xl text-slate-400 leading-relaxed mb-10">Twee of drie letters op een tekening bepalen hoe een installatie zich bij een fout gedraagt. Het aardingsstelsel beïnvloedt de keuze van beveiligingen, de foutbescherming en zelfs de storingsgevoeligheid van ICT. Toch wordt het vaak als gegeven aangenomen.</p>
+<h2 id="wat-betekenen-de-letters" class="text-2xl md:text-3xl font-bold text-white tracking-tight mt-12 mb-4 scroll-mt-24">Wat betekenen de letters?</h2>
+<p class="text-slate-300 leading-relaxed mb-5">De eerste letter zegt iets over de bron:</p>
+<ul class="list-disc pl-6 space-y-2 text-slate-300 leading-relaxed mb-6 marker:text-blue-400"><li><strong class="text-white">T</strong> (terre): een punt van de bron, meestal het sterpunt van de transformator, is rechtstreeks geaard.</li><li><strong class="text-white">I</strong> (isolé): de bron is niet of via een hoge impedantie geaard.</li></ul>
+<p class="text-slate-300 leading-relaxed mb-5">De tweede letter zegt iets over de gestellen van de installatie:</p>
+<ul class="list-disc pl-6 space-y-2 text-slate-300 leading-relaxed mb-6 marker:text-blue-400"><li><strong class="text-white">T</strong>: de gestellen zijn verbonden met een eigen, lokale aardelektrode.</li><li><strong class="text-white">N</strong>: de gestellen zijn via een beschermingsleiding verbonden met het geaarde punt van de bron.</li></ul>
+<p class="text-slate-300 leading-relaxed mb-5">Bij TN-stelsels volgen nog letters voor de manier waarop nul en beschermingsleiding lopen: <strong class="text-white">S</strong> (separate, gescheiden), <strong class="text-white">C</strong> (combined, gecombineerd in een PEN-leiding) of <strong class="text-white">C-S</strong> (eerst gecombineerd, daarna gescheiden).</p>
+<h2 id="de-stelsels-op-een-rij" class="text-2xl md:text-3xl font-bold text-white tracking-tight mt-12 mb-4 scroll-mt-24">De stelsels op een rij</h2>
+<div class="my-8 overflow-x-auto rounded-xl border border-white/10 bg-[#161a22]/80"><table class="w-full text-sm"><thead><tr><th class="text-left px-4 py-3 font-mono text-xs uppercase tracking-wider text-blue-400">Stelsel</th><th class="text-left px-4 py-3 font-mono text-xs uppercase tracking-wider text-blue-400">Kenmerk</th><th class="text-left px-4 py-3 font-mono text-xs uppercase tracking-wider text-blue-400">Typische toepassing</th></tr></thead><tbody><tr class="border-t border-white/10"><td class="px-4 py-3 text-slate-300 align-top">TN-S</td><td class="px-4 py-3 text-slate-300 align-top">nul en PE over de hele lengte gescheiden</td><td class="px-4 py-3 text-slate-300 align-top">installaties met eigen transformator</td></tr><tr class="border-t border-white/10"><td class="px-4 py-3 text-slate-300 align-top">TN-C-S</td><td class="px-4 py-3 text-slate-300 align-top">PEN tot een splitspunt, daarna N en PE apart</td><td class="px-4 py-3 text-slate-300 align-top">veel aansluitingen op het openbare net</td></tr><tr class="border-t border-white/10"><td class="px-4 py-3 text-slate-300 align-top">TT</td><td class="px-4 py-3 text-slate-300 align-top">gestellen op eigen aardelektrode</td><td class="px-4 py-3 text-slate-300 align-top">aansluitingen waar het net geen PE levert</td></tr><tr class="border-t border-white/10"><td class="px-4 py-3 text-slate-300 align-top">IT</td><td class="px-4 py-3 text-slate-300 align-top">bron niet direct geaard</td><td class="px-4 py-3 text-slate-300 align-top">bijzondere toepassingen met hoge eisen aan continuïteit</td></tr></tbody></table></div>
+<h2 id="tn-s-de-voorkeur-voor-gevoelige-installaties" class="text-2xl md:text-3xl font-bold text-white tracking-tight mt-12 mb-4 scroll-mt-24">TN-S: de voorkeur voor gevoelige installaties</h2>
+<p class="text-slate-300 leading-relaxed mb-5">In een TN-S-stelsel lopen nul- en beschermingsleiding vanaf de bron gescheiden. Over de beschermingsleiding loopt bij normaal bedrijf geen stroom. Dat is gunstig voor EMC: er lopen geen zwerfstromen over kabelgoten, datakabelafschermingen en constructiedelen. Voor installaties met veel ICT, zoals <a class="text-blue-400 hover:underline" href="serverruimte-inrichten.html">serverruimten</a> en datacenters, is TN-S daarom vaak het uitgangspunt.</p>
+<h2 id="tn-c-s-gangbaar-maar-let-op-het-splitspunt" class="text-2xl md:text-3xl font-bold text-white tracking-tight mt-12 mb-4 scroll-mt-24">TN-C-S: gangbaar, maar let op het splitspunt</h2>
+<p class="text-slate-300 leading-relaxed mb-5">Bij TN-C-S loopt de PEN-leiding tot een bepaald punt, waarna nul en PE gescheiden worden. Belangrijk: na dat splitspunt mogen ze nergens meer met elkaar verbonden worden. Een extra verbinding verderop in de installatie zorgt ervoor dat nulstroom ook over de beschermingsleiding en andere geleidende delen gaat lopen. In de praktijk is dit een veelvoorkomende oorzaak van onverklaarbare EMC-problemen.</p>
+<div class="my-8 p-6 rounded-xl border border-blue-500/30 bg-blue-500/10 text-slate-200 leading-relaxed"><div class="text-xs font-mono text-blue-400 uppercase tracking-widest mb-2">[PRAKTIJKTIP]</div>Een eenvoudige controle bij oplevering is het meten van stroom in de beschermingsleidingen en aardverbindingen. Bij een correct TN-S-deel hoort daar vrijwel geen stroom te lopen.</div>
+<h2 id="tt-eigen-aarde-andere-beveiliging" class="text-2xl md:text-3xl font-bold text-white tracking-tight mt-12 mb-4 scroll-mt-24">TT: eigen aarde, andere beveiliging</h2>
+<p class="text-slate-300 leading-relaxed mb-5">Bij een TT-stelsel is de aardverspreidingsweerstand van de lokale aardelektrode bepalend voor de foutstroom. Die is meestal te klein om een gewone installatieautomaat snel te laten afschakelen. Foutbescherming gebeurt daarom met aardlekschakelaars. De kwaliteit van de aardelektrode moet worden gemeten en periodiek gecontroleerd; zie <a class="text-blue-400 hover:underline" href="aardverspreidingsweerstand-meten.html">aardverspreidingsweerstand meten</a>.</p>
+<h2 id="it-doordraaien-bij-een-eerste-fout" class="text-2xl md:text-3xl font-bold text-white tracking-tight mt-12 mb-4 scroll-mt-24">IT: doordraaien bij een eerste fout</h2>
+<p class="text-slate-300 leading-relaxed mb-5">In een IT-stelsel leidt een eerste aardfout niet tot een grote foutstroom. De installatie kan doorwerken, terwijl een isolatiebewaking de fout meldt. Pas bij een tweede fout moet worden afgeschakeld. Dit stelsel wordt toegepast waar continuïteit kritisch is, zoals bepaalde medische ruimten en industriële processen. Het vraagt wel om discipline: een eerste fout moet snel worden opgespoord.</p>
+<h2 id="gevolgen-voor-het-ontwerp" class="text-2xl md:text-3xl font-bold text-white tracking-tight mt-12 mb-4 scroll-mt-24">Gevolgen voor het ontwerp</h2>
+<p class="text-slate-300 leading-relaxed mb-5">Het stelsel heeft gevolgen voor:</p>
+<ol class="list-decimal pl-6 space-y-2 text-slate-300 leading-relaxed mb-6 marker:text-blue-400"><li>de keuze van beveiligingen en de toets op afschakeltijden;</li><li>het aantal polen van schakelaars (bij TN-S en TT wordt de nul vaak meegeschakeld);</li><li>de <a class="text-blue-400 hover:underline" href="potentiaalvereffening.html">potentiaalvereffening</a> en de opbouw van het aardnet;</li><li>de keuze en plaatsing van <a class="text-blue-400 hover:underline" href="overspanningsbeveiliging.html">overspanningsbeveiliging</a>;</li><li>de aansluiting van een noodstroomaggregaat, waar het stelsel bij omschakeling gelijk moet blijven of bewust moet worden gekozen.</li></ol>
+<h2 id="welk-stelsel-heeft-u" class="text-2xl md:text-3xl font-bold text-white tracking-tight mt-12 mb-4 scroll-mt-24">Welk stelsel heeft u?</h2>
+<p class="text-slate-300 leading-relaxed mb-5">Het stelsel volgt uit de aansluiting: wie een eigen transformator heeft, kiest zelf; wie op het openbare laagspanningsnet is aangesloten, krijgt het stelsel dat de netbeheerder levert. Controleer bij een bestaand gebouw altijd de werkelijke situatie in het veld: tekeningen en praktijk lopen nog weleens uiteen.</p>
+<h2 id="advies" class="text-2xl md:text-3xl font-bold text-white tracking-tight mt-12 mb-4 scroll-mt-24">Advies</h2>
+<p class="text-slate-300 leading-relaxed mb-5">Een goed aardingsconcept is de basis onder <a class="text-blue-400 hover:underline" href="../diensten.html#aarding-bliksembeveiliging">aarding en bliksembeveiliging</a> en onder betrouwbare <a class="text-blue-400 hover:underline" href="../diensten.html#communicatie-datanetwerken">communicatie- en datanetwerken</a>. ECAP SLUI betrekt het aardingsstelsel daarom vanaf de ontwerpfase bij de <a class="text-blue-400 hover:underline" href="../diensten.html#energiedistributie">energiedistributie</a>.</p>
+<h2 id="veelgestelde-vragen" class="text-2xl md:text-3xl font-bold text-white tracking-tight mt-12 mb-6">Veelgestelde vragen</h2><div class="space-y-4"><details class="p-6 rounded-xl border border-white/10 bg-[#161a22]/80"><summary class="font-semibold text-white cursor-pointer">Welk aardingsstelsel is het veiligst?</summary><p class="text-slate-300 leading-relaxed mt-3">Elk stelsel is veilig als de beveiliging erop is afgestemd. De keuze hangt af van de voeding, het gebruik en de eisen aan continuïteit en EMC.</p></details><details class="p-6 rounded-xl border border-white/10 bg-[#161a22]/80"><summary class="font-semibold text-white cursor-pointer">Mag ik de nul en aarde na het splitspunt nog verbinden?</summary><p class="text-slate-300 leading-relaxed mt-3">Nee. Na het splitspunt in een TN-C-S-stelsel moeten nul en beschermingsleiding gescheiden blijven.</p></details></div>
+<div class="mt-14 p-8 rounded-2xl border border-white/10 bg-[#161a22]/90">
+<div class="font-mono text-xs text-blue-400 uppercase tracking-widest mb-3">[SAMENWERKEN?]</div>
+<h2 class="text-2xl font-bold text-white mb-3">Advies op maat voor uw project</h2>
+<p class="text-slate-400 leading-relaxed mb-6">ECAP SLUI in Ede adviseert, engineert en calculeert elektrotechnische installaties en begeleidt de uitvoering, van de eerste ontwerpfase tot en met test &amp; commissioning. Met meer dan 30 jaar ervaring in utiliteit en industrie.</p>
+<div class="flex flex-wrap gap-4"><a class="px-6 py-3 rounded-xl bg-blue-600 hover:bg-blue-500 text-white font-semibold text-sm shadow-[0_0_25px_rgba(0,102,255,0.4)] transition" href="../contact.html">Neem contact op →</a><a class="px-6 py-3 rounded-xl border border-white/15 bg-white/5 hover:bg-white/10 text-white font-semibold text-sm transition" href="tel:+31651322666">Bel 06 51322666</a></div>
+</div>
+</article>
+<aside class="lg:col-span-4 space-y-6 lg:sticky lg:top-28 self-start">
+<div class="p-6 rounded-xl border border-white/10 bg-[#161a22]/80"><div class="text-xs font-mono text-blue-400 uppercase tracking-widest mb-4">[INHOUD]</div><ol class="space-y-2 text-sm text-slate-300 list-decimal pl-5 marker:text-blue-400"><li><a class="hover:text-white" href="#wat-betekenen-de-letters">Wat betekenen de letters?</a></li><li><a class="hover:text-white" href="#de-stelsels-op-een-rij">De stelsels op een rij</a></li><li><a class="hover:text-white" href="#tn-s-de-voorkeur-voor-gevoelige-installaties">TN-S: de voorkeur voor gevoelige installaties</a></li><li><a class="hover:text-white" href="#tn-c-s-gangbaar-maar-let-op-het-splitspunt">TN-C-S: gangbaar, maar let op het splitspunt</a></li><li><a class="hover:text-white" href="#tt-eigen-aarde-andere-beveiliging">TT: eigen aarde, andere beveiliging</a></li><li><a class="hover:text-white" href="#it-doordraaien-bij-een-eerste-fout">IT: doordraaien bij een eerste fout</a></li><li><a class="hover:text-white" href="#gevolgen-voor-het-ontwerp">Gevolgen voor het ontwerp</a></li><li><a class="hover:text-white" href="#welk-stelsel-heeft-u">Welk stelsel heeft u?</a></li><li><a class="hover:text-white" href="#advies">Advies</a></li><li><a class="hover:text-white" href="#veelgestelde-vragen">Veelgestelde vragen</a></li></ol></div>
+<div class="p-6 rounded-xl border border-white/10 bg-[#161a22]/80"><div class="text-xs font-mono text-blue-400 uppercase tracking-widest mb-4">[GERELATEERDE DIENSTEN]</div><ul class="space-y-2 text-sm"><li><a class="text-blue-400 hover:underline" href="../diensten.html#energiedistributie">Energiedistributie</a></li><li><a class="text-blue-400 hover:underline" href="../diensten.html#kabelberekeningen-nen1010">Kabelberekeningen (NEN 1010)</a></li><li><a class="text-blue-400 hover:underline" href="../diensten.html#aarding-bliksembeveiliging">Aarding- en bliksembeveiliging</a></li><li><a class="text-blue-400 hover:underline" href="../diensten.html#noodstroom-energievoorziening">Noodstroom- en energievoorziening</a></li><li><a class="text-blue-400 hover:underline" href="../werkwijze.html">Werkwijze &amp; V-model</a></li></ul></div>
+<div class="p-6 rounded-xl border border-white/10 bg-[#161a22]/80 font-mono text-xs space-y-3"><div class="flex justify-between"><span class="text-slate-400">ZOEKWOORD</span><span class="text-white text-right">TN-S TN-C-S TT stelsel</span></div><div class="flex justify-between"><span class="text-slate-400">WOORDEN</span><span class="text-white">692</span></div><div class="flex justify-between"><span class="text-slate-400">CATEGORIE</span><a class="text-blue-400 text-right" href="../blog/categorie/energiedistributie.html">Energiedistributie &amp; aarding</a></div></div>
+</aside>
+</div>
+<section class="mt-16"><div class="font-mono text-xs text-blue-400 uppercase tracking-widest mb-6">[LEES OOK]</div><div class="grid grid-cols-1 md:grid-cols-3 gap-4"><a href="../blog/aardverspreidingsweerstand-meten.html" class="group p-6 rounded-xl border border-white/10 bg-[#161a22]/80 hover:border-blue-500/50 transition flex flex-col">
+<div class="text-xs font-mono text-blue-400 mb-3 uppercase tracking-wider">Energiedistributie &amp; aarding</div>
+<h3 class="font-semibold text-white text-lg leading-snug mb-2 group-hover:text-blue-300">Aardverspreidingsweerstand meten: methoden en interpretatie</h3>
+<p class="text-sm text-slate-400 leading-relaxed flex-1">Hoe meet u de aardverspreidingsweerstand van een aardelektrode? De drie-puntsmeting, de tangmeting, invloed van seizoenen en wanneer de waarde goed genoeg is.</p>
+<div class="mt-5 pt-4 border-t border-white/10 text-xs font-mono text-slate-400 flex justify-between"><span>3 MIN LEESTIJD</span><span class="text-blue-400">LEES →</span></div>
+</a><a href="../blog/bliksembeveiliging-nen-en-iec-62305.html" class="group p-6 rounded-xl border border-white/10 bg-[#161a22]/80 hover:border-blue-500/50 transition flex flex-col">
+<div class="text-xs font-mono text-blue-400 mb-3 uppercase tracking-wider">Energiedistributie &amp; aarding</div>
+<h3 class="font-semibold text-white text-lg leading-snug mb-2 group-hover:text-blue-300">Bliksembeveiliging volgens NEN-EN-IEC 62305: de vier delen</h3>
+<p class="text-sm text-slate-400 leading-relaxed flex-1">Wat vraagt NEN-EN-IEC 62305 van bliksembeveiliging? De vier normdelen, beveiligingsklassen, uitwendige en inwendige bescherming en onderhoud uitgelegd.</p>
+<div class="mt-5 pt-4 border-t border-white/10 text-xs font-mono text-slate-400 flex justify-between"><span>3 MIN LEESTIJD</span><span class="text-blue-400">LEES →</span></div>
+</a><a href="../blog/risicoanalyse-bliksembeveiliging.html" class="group p-6 rounded-xl border border-white/10 bg-[#161a22]/80 hover:border-blue-500/50 transition flex flex-col">
+<div class="text-xs font-mono text-blue-400 mb-3 uppercase tracking-wider">Energiedistributie &amp; aarding</div>
+<h3 class="font-semibold text-white text-lg leading-snug mb-2 group-hover:text-blue-300">Risicoanalyse bliksembeveiliging: is bescherming nodig?</h3>
+<p class="text-sm text-slate-400 leading-relaxed flex-1">Hoe werkt een risicoanalyse voor bliksembeveiliging volgens NEN-EN-IEC 62305-2? Risicotypen, invloedsfactoren en hoe de uitkomst leidt tot een beveiligingsklasse.</p>
+<div class="mt-5 pt-4 border-t border-white/10 text-xs font-mono text-slate-400 flex justify-between"><span>3 MIN LEESTIJD</span><span class="text-blue-400">LEES →</span></div>
+</a></div></section>
+</main>
+<footer class="relative z-10 border-t border-white/10 bg-[#10131a]/80 mt-16">
+<div class="max-w-[1680px] mx-auto px-6 py-12 grid grid-cols-1 md:grid-cols-3 gap-10 text-sm">
+<div>
+<div class="text-base font-bold text-white tracking-tight">ECAP SLUI</div>
+<div class="text-[10px] font-mono tracking-widest text-slate-400 uppercase mt-1 mb-4">Elektrotechnisch calculatie-, adviserings- en projectenbureau</div>
+<address class="not-italic text-slate-400 leading-relaxed">Prof. Oudpark 90<br/>6716 EJ Ede<br/>
+<a class="text-blue-400 hover:underline" href="tel:+31651322666">06 51322666</a><br/>
+<a class="text-blue-400 hover:underline" href="mailto:vincent.slui@kpnmail.nl">vincent.slui@kpnmail.nl</a><br/>
+KvK 59289430</address>
+</div>
+<div>
+<div class="font-mono text-xs text-blue-400 uppercase tracking-widest mb-4">[NAVIGATIE]</div>
+<nav class="flex flex-wrap gap-x-6 gap-y-2 text-slate-300" aria-label="Footer"><a class="hover:text-white" href="../index.html">Home</a> <a class="hover:text-white" href="../diensten.html">Diensten</a> <a class="hover:text-white" href="../sectoren.html">Sectoren</a> <a class="hover:text-white" href="../projecten.html">Projecten</a> <a class="hover:text-white" href="../werkwijze.html">Werkwijze</a> <a class="hover:text-white" href="../over-ons.html">Over ons</a> <a class="hover:text-white" href="../blog/">Blog</a> <a class="hover:text-white" href="../contact.html">Contact</a> <a class="hover:text-white" href="../privacy.html">Privacyverklaring</a></nav>
+</div>
+<div>
+<div class="font-mono text-xs text-blue-400 uppercase tracking-widest mb-4">[STAY CONNECTED]</div>
+<div class="flex flex-col gap-2 text-slate-300">
+<a class="hover:text-white" href="https://www.linkedin.com/company/ecap-slui/" rel="noopener" target="_blank">LinkedIn ECAP SLUI →</a>
+<a class="hover:text-white" href="https://www.linkedin.com/in/vincent-slui-a629ba19/" rel="noopener" target="_blank">LinkedIn Vincent Slui →</a>
+</div>
+<div class="text-xs font-mono text-slate-500 mt-6">Beeld © Studio Csány</div>
+</div>
+</div>
+</footer>
+<script src="../shader.js"></script>
+<script>initWebGLShader('shader-canvas-blog');</script>
+</body>
+</html>

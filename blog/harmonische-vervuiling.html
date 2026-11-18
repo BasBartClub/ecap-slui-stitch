@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="utf-8"/>
+<title>Harmonische vervuiling: oorzaken, gevolgen en oplossingen | ECAP SLUI</title>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta name="description" content="Wat is harmonische vervuiling in een elektrische installatie? Bronnen, gevolgen voor kabels, nulgeleider en transformator, meten en oplossingen zoals filters."/>
+<meta name="robots" content="noindex, nofollow"/>
+<link rel="canonical" href="https://basbartclub.github.io/ecap-slui-stitch/blog/harmonische-vervuiling.html"/>
+<meta property="og:type" content="article"/>
+<meta property="og:locale" content="nl_NL"/>
+<meta property="og:site_name" content="ECAP SLUI"/>
+<meta property="og:title" content="Harmonische vervuiling: oorzaken, gevolgen en oplossingen | ECAP SLUI"/>
+<meta property="og:description" content="Wat is harmonische vervuiling in een elektrische installatie? Bronnen, gevolgen voor kabels, nulgeleider en transformator, meten en oplossingen zoals filters."/>
+<meta property="og:url" content="https://basbartclub.github.io/ecap-slui-stitch/blog/harmonische-vervuiling.html"/>
+<meta property="og:image" content="https://basbartclub.github.io/ecap-slui-stitch/img/verdeelinrichting-ecap-slui.jpg"/>
+<meta name="twitter:card" content="summary_large_image"/>
+<link rel="icon" href="data:,"/>
+<link rel="stylesheet" href="../tokens.css"/>
+<script src="https://cdn.tailwindcss.com"></script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BlogPosting", "headline": "Harmonische vervuiling: oorzaken, gevolgen en oplossingen", "description": "Wat is harmonische vervuiling in een elektrische installatie? Bronnen, gevolgen voor kabels, nulgeleider en transformator, meten en oplossingen zoals filters.", "inLanguage": "nl-NL", "keywords": "harmonische vervuiling", "articleSection": "Energiedistributie & aarding", "wordCount": 574, "datePublished": "2026-11-18", "dateModified": "2026-11-18", "mainEntityOfPage": "https://basbartclub.github.io/ecap-slui-stitch/blog/harmonische-vervuiling.html", "image": "https://basbartclub.github.io/ecap-slui-stitch/img/verdeelinrichting-ecap-slui.jpg", "author": {"@type": "Organization", "name": "ECAP SLUI", "url": "https://basbartclub.github.io/ecap-slui-stitch/"}, "publisher": {"@type": "Organization", "name": "ECAP SLUI", "logo": {"@type": "ImageObject", "url": "https://basbartclub.github.io/ecap-slui-stitch/img/ecap-slui-logo.png"}}}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://basbartclub.github.io/ecap-slui-stitch/index.html"}, {"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://basbartclub.github.io/ecap-slui-stitch/blog/"}, {"@type": "ListItem", "position": 3, "name": "Energiedistributie & aarding", "item": "https://basbartclub.github.io/ecap-slui-stitch/blog/categorie/energiedistributie.html"}, {"@type": "ListItem", "position": 4, "name": "Harmonische vervuiling: oorzaken, gevolgen en oplossingen", "item": "https://basbartclub.github.io/ecap-slui-stitch/blog/harmonische-vervuiling.html"}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Hoe weet ik of ik last heb van harmonischen?", "acceptedAnswer": {"@type": "Answer", "text": "Signalen zijn warme nulgeleiders, onverklaarbare storingen of uitschakelingen en warme transformatoren. Een netanalyse geeft zekerheid."}}, {"@type": "Question", "name": "Is LED-verlichting een bron van harmonischen?", "acceptedAnswer": {"@type": "Answer", "text": "Ja, LED-drivers zijn niet-lineaire belastingen. Kwalitatieve drivers hebben een lage vervorming, maar in grote aantallen telt het op."}}]}</script>
+</head>
+<body class="bg-[#0b0e14] text-slate-100 min-h-screen">
+<div class="fixed inset-0 pointer-events-none opacity-30 z-0">
+<canvas class="w-full h-full" id="shader-canvas-blog"></canvas>
+</div>
+<header class="sticky top-0 z-50 border-b border-white/10 bg-[#0b0e14]/90 backdrop-blur-md">
+  <div class="max-w-[1680px] mx-auto px-6 h-20 flex items-center justify-between">
+    <a href="../index.html" class="flex items-center gap-4" aria-label="ECAP SLUI home">
+      <div class="w-10 h-10 rounded-lg bg-blue-600/20 border border-blue-500/40 flex items-center justify-center font-bold text-blue-400">
+        ES
+      </div>
+      <div>
+        <div class="text-base font-bold tracking-tight text-white">ECAP SLUI</div>
+        <div class="text-[10px] uppercase font-mono tracking-widest text-slate-400">Elektrotechnisch Bureau • Ede</div>
+      </div>
+    </a>
+    <nav class="hidden lg:flex items-center gap-8 text-sm font-medium text-slate-300" aria-label="Hoofdmenu">
+      <a href="../index.html" class="hover:text-white transition">Home</a>
+      <a href="../diensten.html" class="hover:text-white transition">Diensten</a>
+      <a href="../sectoren.html" class="hover:text-white transition">Sectoren</a>
+      <a href="../projecten.html" class="hover:text-white transition">Projecten</a>
+      <a href="../werkwijze.html" class="hover:text-white transition">Werkwijze</a>
+      <a href="../over-ons.html" class="hover:text-white transition">Over ons</a>
+      <a href="../blog/" class="text-blue-400">Blog</a>
+      <a href="../contact.html" class="hover:text-white transition">Contact</a>
+    </nav>
+    <div class="flex items-center gap-4">
+      <a href="../contact.html" class="px-5 py-2.5 rounded-lg bg-blue-600 hover:bg-blue-500 text-white font-medium text-sm transition shadow-[0_0_20px_rgba(0,102,255,0.35)]">
+        Direct Contact
+      </a>
+    </div>
+  </div>
+</header>
+<main class="relative z-10 max-w-[1680px] mx-auto px-6 py-16">
+<nav class="font-mono text-xs text-slate-400 uppercase tracking-widest mb-6" aria-label="Kruimelpad"><a class="hover:text-white" href="../index.html">Home</a> / <a class="hover:text-white" href="../blog/">Blog</a> / <a class="text-blue-400 hover:underline" href="../blog/categorie/energiedistributie.html">Energiedistributie &amp; aarding</a></nav>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-10">
+<article class="lg:col-span-8">
+<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-blue-500/30 bg-blue-500/10 text-blue-400 font-mono text-xs uppercase mb-6"><span class="w-2 h-2 rounded-full bg-blue-400"></span>Energiedistributie &amp; aarding • 3 min leestijd</div>
+<h1 class="text-4xl md:text-5xl font-bold tracking-tight text-white mb-6 leading-tight">Harmonische vervuiling: oorzaken, gevolgen en oplossingen</h1>
+<p class="text-xl text-slate-400 leading-relaxed mb-10">Het net levert een mooie sinusvormige spanning. Maar veel moderne apparatuur trekt de stroom niet sinusvormig, maar in pieken. Die vervorming heet harmonische vervuiling en kan kabels, transformatoren en gevoelige apparatuur ongemerkt belasten.</p>
+<h2 id="wat-zijn-harmonischen" class="text-2xl md:text-3xl font-bold text-white tracking-tight mt-12 mb-4 scroll-mt-24">Wat zijn harmonischen?</h2>
+<p class="text-slate-300 leading-relaxed mb-5">Een vervormde stroom kan worden beschreven als een optelsom van de grondfrequentie (50 Hz) en veelvouden daarvan: 150 Hz (3e harmonische), 250 Hz (5e), 350 Hz (7e) enzovoort. De mate van vervorming wordt uitgedrukt in de THD (total harmonic distortion), voor stroom en voor spanning apart.</p>
+<h2 id="waar-komen-ze-vandaan" class="text-2xl md:text-3xl font-bold text-white tracking-tight mt-12 mb-4 scroll-mt-24">Waar komen ze vandaan?</h2>
+<p class="text-slate-300 leading-relaxed mb-5">Elke belasting met een gelijkrichter aan de ingang is een bron:</p>
+<ul class="list-disc pl-6 space-y-2 text-slate-300 leading-relaxed mb-6 marker:text-blue-400"><li>LED-drivers en schakelende voedingen in computers en netwerkapparatuur;</li><li>frequentieregelaars voor motoren;</li><li>UPS-systemen;</li><li>laders voor elektrische voertuigen en accu's;</li><li>omvormers van PV-installaties.</li></ul>
+<p class="text-slate-300 leading-relaxed mb-5">Eén apparaat stelt weinig voor. Maar honderden LED-armaturen, tientallen computers en een paar grote frequentieregelaars op dezelfde voeding tellen op.</p>
+<h2 id="gevolgen-in-de-installatie" class="text-2xl md:text-3xl font-bold text-white tracking-tight mt-12 mb-4 scroll-mt-24">Gevolgen in de installatie</h2>
+<h3 class="text-xl font-semibold text-white mt-8 mb-3">Overbelaste nulgeleider</h3>
+<p class="text-slate-300 leading-relaxed mb-5">Bij enkelfasige elektronische belastingen tellen de 3e harmonische en haar veelvouden in de nulgeleider bij elkaar op in plaats van elkaar op te heffen. De nulstroom kan daardoor groter worden dan de fasestroom. Een nulgeleider met een gereduceerde doorsnede, wat vroeger gangbaar was, kan dan oververhit raken. Neem dit mee in de <a class="text-blue-400 hover:underline" href="kabelberekening-nen-1010.html">kabelberekening</a>.</p>
+<h3 class="text-xl font-semibold text-white mt-8 mb-3">Warmere transformatoren en kabels</h3>
+<p class="text-slate-300 leading-relaxed mb-5">Harmonische stromen veroorzaken extra verliezen, vooral in transformatoren en motoren. Een transformator kan bij een sterk vervormde belasting minder vermogen leveren dan zijn typeplaatje aangeeft.</p>
+<h3 class="text-xl font-semibold text-white mt-8 mb-3">Spanningsvervorming</h3>
+<p class="text-slate-300 leading-relaxed mb-5">Vervormde stromen veroorzaken via de impedantie van het net een vervormde spanning. Dat kan storingen geven in andere apparatuur, zoals besturingen, meters en gevoelige elektronica.</p>
+<h3 class="text-xl font-semibold text-white mt-8 mb-3">Problemen met condensatoren</h3>
+<p class="text-slate-300 leading-relaxed mb-5">Condensatorbanken voor <a class="text-blue-400 hover:underline" href="blindstroomcompensatie.html">blindstroomcompensatie</a> vormen met de netinductie een resonantiekring. Valt de resonantiefrequentie samen met een aanwezige harmonische, dan kunnen stromen en spanningen sterk oplopen. Gesmoorde compensatiebanken voorkomen dat.</p>
+<h3 class="text-xl font-semibold text-white mt-8 mb-3">Hinderlijk uitschakelen</h3>
+<p class="text-slate-300 leading-relaxed mb-5">Beveiligingen en aardlekschakelaars kunnen ongewenst reageren op hoogfrequente stromen, vooral bij frequentieregelaars met lange motorkabels.</p>
+<h2 id="meten" class="text-2xl md:text-3xl font-bold text-white tracking-tight mt-12 mb-4 scroll-mt-24">Meten</h2>
+<p class="text-slate-300 leading-relaxed mb-5">Een netanalyse met een power quality analyzer maakt de situatie zichtbaar. Meet bij voorkeur:</p>
+<ol class="list-decimal pl-6 space-y-2 text-slate-300 leading-relaxed mb-6 marker:text-blue-400"><li>op het overdrachtspunt en in de hoofdverdeler;</li><li>bij grote bronnen, zoals frequentieregelaars en UPS'en;</li><li>in de nulgeleiders van onderverdelers met veel enkelfasige elektronica;</li><li>over een representatieve periode, inclusief productiepieken.</li></ol>
+<p class="text-slate-300 leading-relaxed mb-5">Normen voor spanningskwaliteit, zoals de EN 50160 voor het openbare net, geven grenswaarden voor de spanningsvervorming. Voor de eigen installatie worden vaak eisen gesteld die passen bij de aangesloten apparatuur.</p>
+<div class="my-8 p-6 rounded-xl border border-blue-500/30 bg-blue-500/10 text-slate-200 leading-relaxed"><div class="text-xs font-mono text-blue-400 uppercase tracking-widest mb-2">[PRAKTIJKTIP]</div>Meet al vóór grote uitbreidingen. Een nulmeting maakt het later veel makkelijker om aan te tonen waar een probleem vandaan komt.</div>
+<h2 id="oplossingen" class="text-2xl md:text-3xl font-bold text-white tracking-tight mt-12 mb-4 scroll-mt-24">Oplossingen</h2>
+<div class="my-8 overflow-x-auto rounded-xl border border-white/10 bg-[#161a22]/80"><table class="w-full text-sm"><thead><tr><th class="text-left px-4 py-3 font-mono text-xs uppercase tracking-wider text-blue-400">Oplossing</th><th class="text-left px-4 py-3 font-mono text-xs uppercase tracking-wider text-blue-400">Werking</th><th class="text-left px-4 py-3 font-mono text-xs uppercase tracking-wider text-blue-400">Wanneer</th></tr></thead><tbody><tr class="border-t border-white/10"><td class="px-4 py-3 text-slate-300 align-top">Netsmoorspoelen</td><td class="px-4 py-3 text-slate-300 align-top">dempen stroompieken bij de bron</td><td class="px-4 py-3 text-slate-300 align-top">frequentieregelaars</td></tr><tr class="border-t border-white/10"><td class="px-4 py-3 text-slate-300 align-top">Passieve filters</td><td class="px-4 py-3 text-slate-300 align-top">afgestemd op specifieke harmonischen</td><td class="px-4 py-3 text-slate-300 align-top">grote, constante bronnen</td></tr><tr class="border-t border-white/10"><td class="px-4 py-3 text-slate-300 align-top">Actieve filters</td><td class="px-4 py-3 text-slate-300 align-top">compenseren meerdere harmonischen dynamisch</td><td class="px-4 py-3 text-slate-300 align-top">wisselende belasting</td></tr><tr class="border-t border-white/10"><td class="px-4 py-3 text-slate-300 align-top">Volle nulgeleider</td><td class="px-4 py-3 text-slate-300 align-top">voorkomt overbelasting nul</td><td class="px-4 py-3 text-slate-300 align-top">veel enkelfasige elektronica</td></tr><tr class="border-t border-white/10"><td class="px-4 py-3 text-slate-300 align-top">Low-harmonic regelaars</td><td class="px-4 py-3 text-slate-300 align-top">actieve front-end</td><td class="px-4 py-3 text-slate-300 align-top">nieuwe installaties</td></tr></tbody></table></div>
+<p class="text-slate-300 leading-relaxed mb-5">De beste oplossing begint bij de keuze van apparatuur. Een frequentieregelaar met ingebouwde smoorspoel of actieve ingangstrap veroorzaakt veel minder vervorming dan een goedkope variant zonder.</p>
+<h2 id="in-het-ontwerp" class="text-2xl md:text-3xl font-bold text-white tracking-tight mt-12 mb-4 scroll-mt-24">In het ontwerp</h2>
+<p class="text-slate-300 leading-relaxed mb-5">Bij het ontwerp van de <a class="text-blue-400 hover:underline" href="../diensten.html#energiedistributie">energiedistributie</a> hoort een inschatting van de harmonische belasting: welke bronnen komen er, waar en hoeveel? Daarop worden de doorsnede van de nulgeleider, de keuze van de transformator en eventuele filters afgestemd. ECAP SLUI neemt dit mee in engineering en <a class="text-blue-400 hover:underline" href="../diensten.html#kabelberekeningen-nen1010">kabelberekeningen</a>.</p>
+<h2 id="veelgestelde-vragen" class="text-2xl md:text-3xl font-bold text-white tracking-tight mt-12 mb-6">Veelgestelde vragen</h2><div class="space-y-4"><details class="p-6 rounded-xl border border-white/10 bg-[#161a22]/80"><summary class="font-semibold text-white cursor-pointer">Hoe weet ik of ik last heb van harmonischen?</summary><p class="text-slate-300 leading-relaxed mt-3">Signalen zijn warme nulgeleiders, onverklaarbare storingen of uitschakelingen en warme transformatoren. Een netanalyse geeft zekerheid.</p></details><details class="p-6 rounded-xl border border-white/10 bg-[#161a22]/80"><summary class="font-semibold text-white cursor-pointer">Is LED-verlichting een bron van harmonischen?</summary><p class="text-slate-300 leading-relaxed mt-3">Ja, LED-drivers zijn niet-lineaire belastingen. Kwalitatieve drivers hebben een lage vervorming, maar in grote aantallen telt het op.</p></details></div>
+<div class="mt-14 p-8 rounded-2xl border border-white/10 bg-[#161a22]/90">
+<div class="font-mono text-xs text-blue-400 uppercase tracking-widest mb-3">[SAMENWERKEN?]</div>
+<h2 class="text-2xl font-bold text-white mb-3">Advies op maat voor uw project</h2>
+<p class="text-slate-400 leading-relaxed mb-6">ECAP SLUI in Ede adviseert, engineert en calculeert elektrotechnische installaties en begeleidt de uitvoering, van de eerste ontwerpfase tot en met test &amp; commissioning. Met meer dan 30 jaar ervaring in utiliteit en industrie.</p>
+<div class="flex flex-wrap gap-4"><a class="px-6 py-3 rounded-xl bg-blue-600 hover:bg-blue-500 text-white font-semibold text-sm shadow-[0_0_25px_rgba(0,102,255,0.4)] transition" href="../contact.html">Neem contact op →</a><a class="px-6 py-3 rounded-xl border border-white/15 bg-white/5 hover:bg-white/10 text-white font-semibold text-sm transition" href="tel:+31651322666">Bel 06 51322666</a></div>
+</div>
+</article>
+<aside class="lg:col-span-4 space-y-6 lg:sticky lg:top-28 self-start">
+<div class="p-6 rounded-xl border border-white/10 bg-[#161a22]/80"><div class="text-xs font-mono text-blue-400 uppercase tracking-widest mb-4">[INHOUD]</div><ol class="space-y-2 text-sm text-slate-300 list-decimal pl-5 marker:text-blue-400"><li><a class="hover:text-white" href="#wat-zijn-harmonischen">Wat zijn harmonischen?</a></li><li><a class="hover:text-white" href="#waar-komen-ze-vandaan">Waar komen ze vandaan?</a></li><li><a class="hover:text-white" href="#gevolgen-in-de-installatie">Gevolgen in de installatie</a></li><li><a class="hover:text-white" href="#meten">Meten</a></li><li><a class="hover:text-white" href="#oplossingen">Oplossingen</a></li><li><a class="hover:text-white" href="#in-het-ontwerp">In het ontwerp</a></li><li><a class="hover:text-white" href="#veelgestelde-vragen">Veelgestelde vragen</a></li></ol></div>
+<div class="p-6 rounded-xl border border-white/10 bg-[#161a22]/80"><div class="text-xs font-mono text-blue-400 uppercase tracking-widest mb-4">[GERELATEERDE DIENSTEN]</div><ul class="space-y-2 text-sm"><li><a class="text-blue-400 hover:underline" href="../diensten.html#energiedistributie">Energiedistributie</a></li><li><a class="text-blue-400 hover:underline" href="../diensten.html#kabelberekeningen-nen1010">Kabelberekeningen (NEN 1010)</a></li><li><a class="text-blue-400 hover:underline" href="../diensten.html#aarding-bliksembeveiliging">Aarding- en bliksembeveiliging</a></li><li><a class="text-blue-400 hover:underline" href="../diensten.html#noodstroom-energievoorziening">Noodstroom- en energievoorziening</a></li><li><a class="text-blue-400 hover:underline" href="../werkwijze.html">Werkwijze &amp; V-model</a></li></ul></div>
+<div class="p-6 rounded-xl border border-white/10 bg-[#161a22]/80 font-mono text-xs space-y-3"><div class="flex justify-between"><span class="text-slate-400">ZOEKWOORD</span><span class="text-white text-right">harmonische vervuiling</span></div><div class="flex justify-between"><span class="text-slate-400">WOORDEN</span><span class="text-white">574</span></div><div class="flex justify-between"><span class="text-slate-400">CATEGORIE</span><a class="text-blue-400 text-right" href="../blog/categorie/energiedistributie.html">Energiedistributie &amp; aarding</a></div></div>
+</aside>
+</div>
+<section class="mt-16"><div class="font-mono text-xs text-blue-400 uppercase tracking-widest mb-6">[LEES OOK]</div><div class="grid grid-cols-1 md:grid-cols-3 gap-4"><a href="../blog/gelijktijdigheidsfactor.html" class="group p-6 rounded-xl border border-white/10 bg-[#161a22]/80 hover:border-blue-500/50 transition flex flex-col">
+<div class="text-xs font-mono text-blue-400 mb-3 uppercase tracking-wider">Energiedistributie &amp; aarding</div>
+<h3 class="font-semibold text-white text-lg leading-snug mb-2 group-hover:text-blue-300">Gelijktijdigheidsfactor: realistisch dimensioneren zonder risico</h3>
+<p class="text-sm text-slate-400 leading-relaxed flex-1">Wat is de gelijktijdigheidsfactor en hoe bepaalt u die? Uitleg met voorbeelden voor kantoor, industrie en laadinfra, en de risico&#x27;s van te optimistisch rekenen.</p>
+<div class="mt-5 pt-4 border-t border-white/10 text-xs font-mono text-slate-400 flex justify-between"><span>3 MIN LEESTIJD</span><span class="text-blue-400">LEES →</span></div>
+</a><a href="../blog/kabelberekening-nen-1010.html" class="group p-6 rounded-xl border border-white/10 bg-[#161a22]/80 hover:border-blue-500/50 transition flex flex-col">
+<div class="text-xs font-mono text-blue-400 mb-3 uppercase tracking-wider">Energiedistributie &amp; aarding</div>
+<h3 class="font-semibold text-white text-lg leading-snug mb-2 group-hover:text-blue-300">Kabelberekening volgens NEN 1010: zo pakt u het aan</h3>
+<p class="text-sm text-slate-400 leading-relaxed flex-1">Hoe maak je een kabelberekening volgens NEN 1010? Uitleg over belastbaarheid, correctiefactoren, spanningsval, kortsluitvastheid en documentatie.</p>
+<div class="mt-5 pt-4 border-t border-white/10 text-xs font-mono text-slate-400 flex justify-between"><span>4 MIN LEESTIJD</span><span class="text-blue-400">LEES →</span></div>
+</a><a href="../blog/spanningsval-berekenen.html" class="group p-6 rounded-xl border border-white/10 bg-[#161a22]/80 hover:border-blue-500/50 transition flex flex-col">
+<div class="text-xs font-mono text-blue-400 mb-3 uppercase tracking-wider">Energiedistributie &amp; aarding</div>
+<h3 class="font-semibold text-white text-lg leading-snug mb-2 group-hover:text-blue-300">Spanningsval berekenen: formules, grenswaarden en valkuilen</h3>
+<p class="text-sm text-slate-400 leading-relaxed flex-1">Spanningsval berekenen in een laagspanningsinstallatie: de formule, gangbare grenswaarden volgens NEN 1010 en praktische tips voor lange kabels.</p>
+<div class="mt-5 pt-4 border-t border-white/10 text-xs font-mono text-slate-400 flex justify-between"><span>3 MIN LEESTIJD</span><span class="text-blue-400">LEES →</span></div>
+</a></div></section>
+</main>
+<footer class="relative z-10 border-t border-white/10 bg-[#10131a]/80 mt-16">
+<div class="max-w-[1680px] mx-auto px-6 py-12 grid grid-cols-1 md:grid-cols-3 gap-10 text-sm">
+<div>
+<div class="text-base font-bold text-white tracking-tight">ECAP SLUI</div>
+<div class="text-[10px] font-mono tracking-widest text-slate-400 uppercase mt-1 mb-4">Elektrotechnisch calculatie-, adviserings- en projectenbureau</div>
+<address class="not-italic text-slate-400 leading-relaxed">Prof. Oudpark 90<br/>6716 EJ Ede<br/>
+<a class="text-blue-400 hover:underline" href="tel:+31651322666">06 51322666</a><br/>
+<a class="text-blue-400 hover:underline" href="mailto:vincent.slui@kpnmail.nl">vincent.slui@kpnmail.nl</a><br/>
+KvK 59289430</address>
+</div>
+<div>
+<div class="font-mono text-xs text-blue-400 uppercase tracking-widest mb-4">[NAVIGATIE]</div>
+<nav class="flex flex-wrap gap-x-6 gap-y-2 text-slate-300" aria-label="Footer"><a class="hover:text-white" href="../index.html">Home</a> <a class="hover:text-white" href="../diensten.html">Diensten</a> <a class="hover:text-white" href="../sectoren.html">Sectoren</a> <a class="hover:text-white" href="../projecten.html">Projecten</a> <a class="hover:text-white" href="../werkwijze.html">Werkwijze</a> <a class="hover:text-white" href="../over-ons.html">Over ons</a> <a class="hover:text-white" href="../blog/">Blog</a> <a class="hover:text-white" href="../contact.html">Contact</a> <a class="hover:text-white" href="../privacy.html">Privacyverklaring</a></nav>
+</div>
+<div>
+<div class="font-mono text-xs text-blue-400 uppercase tracking-widest mb-4">[STAY CONNECTED]</div>
+<div class="flex flex-col gap-2 text-slate-300">
+<a class="hover:text-white" href="https://www.linkedin.com/company/ecap-slui/" rel="noopener" target="_blank">LinkedIn ECAP SLUI →</a>
+<a class="hover:text-white" href="https://www.linkedin.com/in/vincent-slui-a629ba19/" rel="noopener" target="_blank">LinkedIn Vincent Slui →</a>
+</div>
+<div class="text-xs font-mono text-slate-500 mt-6">Beeld © Studio Csány</div>
+</div>
+</div>
+</footer>
+<script src="../shader.js"></script>
+<script>initWebGLShader('shader-canvas-blog');</script>
+</body>
+</html>

@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="utf-8"/>
+<title>De brandcontrolematrix opstellen en integraal testen | ECAP SLUI</title>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta name="description" content="Wat is een brandcontrolematrix? Uitleg over sturingen bij brand, het opstellen van de matrix, raakvlakken tussen disciplines en het integraal testen van brandscenario&#x27;s."/>
+<meta name="robots" content="noindex, nofollow"/>
+<link rel="canonical" href="https://basbartclub.github.io/ecap-slui-stitch/blog/brandcontrolematrix-testen.html"/>
+<meta property="og:type" content="article"/>
+<meta property="og:locale" content="nl_NL"/>
+<meta property="og:site_name" content="ECAP SLUI"/>
+<meta property="og:title" content="De brandcontrolematrix opstellen en integraal testen | ECAP SLUI"/>
+<meta property="og:description" content="Wat is een brandcontrolematrix? Uitleg over sturingen bij brand, het opstellen van de matrix, raakvlakken tussen disciplines en het integraal testen van brandscenario&#x27;s."/>
+<meta property="og:url" content="https://basbartclub.github.io/ecap-slui-stitch/blog/brandcontrolematrix-testen.html"/>
+<meta property="og:image" content="https://basbartclub.github.io/ecap-slui-stitch/img/verdeelinrichting-ecap-slui.jpg"/>
+<meta name="twitter:card" content="summary_large_image"/>
+<link rel="icon" href="data:,"/>
+<link rel="stylesheet" href="../tokens.css"/>
+<script src="https://cdn.tailwindcss.com"></script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BlogPosting", "headline": "De brandcontrolematrix opstellen en integraal testen", "description": "Wat is een brandcontrolematrix? Uitleg over sturingen bij brand, het opstellen van de matrix, raakvlakken tussen disciplines en het integraal testen van brandscenario's.", "inLanguage": "nl-NL", "keywords": "brandcontrolematrix", "articleSection": "Test & commissioning", "wordCount": 562, "datePublished": "2026-11-18", "dateModified": "2026-11-18", "mainEntityOfPage": "https://basbartclub.github.io/ecap-slui-stitch/blog/brandcontrolematrix-testen.html", "image": "https://basbartclub.github.io/ecap-slui-stitch/img/verdeelinrichting-ecap-slui.jpg", "author": {"@type": "Organization", "name": "ECAP SLUI", "url": "https://basbartclub.github.io/ecap-slui-stitch/"}, "publisher": {"@type": "Organization", "name": "ECAP SLUI", "logo": {"@type": "ImageObject", "url": "https://basbartclub.github.io/ecap-slui-stitch/img/ecap-slui-logo.png"}}}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://basbartclub.github.io/ecap-slui-stitch/index.html"}, {"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://basbartclub.github.io/ecap-slui-stitch/blog/"}, {"@type": "ListItem", "position": 3, "name": "Test & commissioning", "item": "https://basbartclub.github.io/ecap-slui-stitch/blog/categorie/test-commissioning.html"}, {"@type": "ListItem", "position": 4, "name": "De brandcontrolematrix opstellen en integraal testen", "item": "https://basbartclub.github.io/ecap-slui-stitch/blog/brandcontrolematrix-testen.html"}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Wat is een brandcontrolematrix?", "acceptedAnswer": {"@type": "Answer", "text": "Een overzicht van alle sturingen die volgen op een brandmelding, per melder of zone, zoals ontruimingsalarm, ventilatie uit, brandkleppen dicht en liften naar de evacuatieverdieping."}}, {"@type": "Question", "name": "Wie test de brandcontrolematrix?", "acceptedAnswer": {"@type": "Answer", "text": "Alle betrokken disciplines samen, bij een integrale test, onder coördinatie van één partij en volgens het commissioningsplan."}}]}</script>
+</head>
+<body class="bg-[#0b0e14] text-slate-100 min-h-screen">
+<div class="fixed inset-0 pointer-events-none opacity-30 z-0">
+<canvas class="w-full h-full" id="shader-canvas-blog"></canvas>
+</div>
+<header class="sticky top-0 z-50 border-b border-white/10 bg-[#0b0e14]/90 backdrop-blur-md">
+  <div class="max-w-[1680px] mx-auto px-6 h-20 flex items-center justify-between">
+    <a href="../index.html" class="flex items-center gap-4" aria-label="ECAP SLUI home">
+      <div class="w-10 h-10 rounded-lg bg-blue-600/20 border border-blue-500/40 flex items-center justify-center font-bold text-blue-400">
+        ES
+      </div>
+      <div>
+        <div class="text-base font-bold tracking-tight text-white">ECAP SLUI</div>
+        <div class="text-[10px] uppercase font-mono tracking-widest text-slate-400">Elektrotechnisch Bureau • Ede</div>
+      </div>
+    </a>
+    <nav class="hidden lg:flex items-center gap-8 text-sm font-medium text-slate-300" aria-label="Hoofdmenu">
+      <a href="../index.html" class="hover:text-white transition">Home</a>
+      <a href="../diensten.html" class="hover:text-white transition">Diensten</a>
+      <a href="../sectoren.html" class="hover:text-white transition">Sectoren</a>
+      <a href="../projecten.html" class="hover:text-white transition">Projecten</a>
+      <a href="../werkwijze.html" class="hover:text-white transition">Werkwijze</a>
+      <a href="../over-ons.html" class="hover:text-white transition">Over ons</a>
+      <a href="../blog/" class="text-blue-400">Blog</a>
+      <a href="../contact.html" class="hover:text-white transition">Contact</a>
+    </nav>
+    <div class="flex items-center gap-4">
+      <a href="../contact.html" class="px-5 py-2.5 rounded-lg bg-blue-600 hover:bg-blue-500 text-white font-medium text-sm transition shadow-[0_0_20px_rgba(0,102,255,0.35)]">
+        Direct Contact
+      </a>
+    </div>
+  </div>
+</header>
+<main class="relative z-10 max-w-[1680px] mx-auto px-6 py-16">
+<nav class="font-mono text-xs text-slate-400 uppercase tracking-widest mb-6" aria-label="Kruimelpad"><a class="hover:text-white" href="../index.html">Home</a> / <a class="hover:text-white" href="../blog/">Blog</a> / <a class="text-blue-400 hover:underline" href="../blog/categorie/test-commissioning.html">Test &amp; commissioning</a></nav>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-10">
+<article class="lg:col-span-8">
+<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-blue-500/30 bg-blue-500/10 text-blue-400 font-mono text-xs uppercase mb-6"><span class="w-2 h-2 rounded-full bg-blue-400"></span>Test &amp; commissioning • 3 min leestijd</div>
+<h1 class="text-4xl md:text-5xl font-bold tracking-tight text-white mb-6 leading-tight">De brandcontrolematrix opstellen en integraal testen</h1>
+<p class="text-xl text-slate-400 leading-relaxed mb-10">Bij een brandmelding moet een gebouw in korte tijd veel tegelijk doen: ontruimen, ventilatie stoppen, brandkleppen sluiten, deuren vrijgeven, liften terugsturen. Al die sturingen zijn vastgelegd in de brandcontrolematrix. Die matrix is alleen zo goed als de test die bewijst dat ze klopt.</p>
+<h2 id="wat-is-een-brandcontrolematrix" class="text-2xl md:text-3xl font-bold text-white tracking-tight mt-12 mb-4 scroll-mt-24">Wat is een brandcontrolematrix?</h2>
+<p class="text-slate-300 leading-relaxed mb-5">Een brandcontrolematrix is een overzicht van alle acties die volgen op een brandmelding, per melder of zone. Het is een matrix: op de ene as de ingangen (melders, handmelders, zones), op de andere de uitgangen (sturingen naar andere installaties).</p>
+<h2 id="typische-sturingen" class="text-2xl md:text-3xl font-bold text-white tracking-tight mt-12 mb-4 scroll-mt-24">Typische sturingen</h2>
+<div class="my-8 overflow-x-auto rounded-xl border border-white/10 bg-[#161a22]/80"><table class="w-full text-sm"><thead><tr><th class="text-left px-4 py-3 font-mono text-xs uppercase tracking-wider text-blue-400">Sturing</th><th class="text-left px-4 py-3 font-mono text-xs uppercase tracking-wider text-blue-400">Doel</th></tr></thead><tbody><tr class="border-t border-white/10"><td class="px-4 py-3 text-slate-300 align-top"><a class="text-blue-400 hover:underline" href="ontruimingsinstallatie.html">Ontruimingsalarm</a></td><td class="px-4 py-3 text-slate-300 align-top">mensen waarschuwen</td></tr><tr class="border-t border-white/10"><td class="px-4 py-3 text-slate-300 align-top">Ventilatie uit of in rookbeheersingsmodus</td><td class="px-4 py-3 text-slate-300 align-top">rookverspreiding beperken</td></tr><tr class="border-t border-white/10"><td class="px-4 py-3 text-slate-300 align-top">Brandkleppen dicht</td><td class="px-4 py-3 text-slate-300 align-top">brandcompartimenten intact houden</td></tr><tr class="border-t border-white/10"><td class="px-4 py-3 text-slate-300 align-top">Branddeuren dicht (kleefmagneten los)</td><td class="px-4 py-3 text-slate-300 align-top">compartimenten sluiten</td></tr><tr class="border-t border-white/10"><td class="px-4 py-3 text-slate-300 align-top">Toegangsdeuren vrijgeven</td><td class="px-4 py-3 text-slate-300 align-top">vluchten mogelijk maken</td></tr><tr class="border-t border-white/10"><td class="px-4 py-3 text-slate-300 align-top">Liften naar evacuatieverdieping</td><td class="px-4 py-3 text-slate-300 align-top">voorkomen dat liften stoppen op de brandverdieping</td></tr><tr class="border-t border-white/10"><td class="px-4 py-3 text-slate-300 align-top">Rook- en warmteafvoer</td><td class="px-4 py-3 text-slate-300 align-top">rook afvoeren, vluchtwegen vrijhouden</td></tr><tr class="border-t border-white/10"><td class="px-4 py-3 text-slate-300 align-top">Doormelding</td><td class="px-4 py-3 text-slate-300 align-top">de brandweer of meldkamer waarschuwen. Zie <a class="text-blue-400 hover:underline" href="doormelding-brandmeldinstallatie.html">doormelding</a></td></tr><tr class="border-t border-white/10"><td class="px-4 py-3 text-slate-300 align-top">Zonwering op</td><td class="px-4 py-3 text-slate-300 align-top">toegang voor de brandweer</td></tr></tbody></table></div>
+<h2 id="opstellen-van-de-matrix" class="text-2xl md:text-3xl font-bold text-white tracking-tight mt-12 mb-4 scroll-mt-24">Opstellen van de matrix</h2>
+<p class="text-slate-300 leading-relaxed mb-5">De brandcontrolematrix volgt uit het brandveiligheidsconcept en het <a class="text-blue-400 hover:underline" href="pve-brandmeldinstallatie.html">programma van eisen voor de brandmeldinstallatie</a>. Het opstellen vraagt samenwerking:</p>
+<ol class="list-decimal pl-6 space-y-2 text-slate-300 leading-relaxed mb-6 marker:text-blue-400"><li>De brandveiligheidsadviseur bepaalt de gewenste reacties per scenario.</li><li>De installatieadviseurs bepalen welke installaties betrokken zijn en hoe ze worden aangestuurd.</li><li>De matrix wordt vastgelegd en goedgekeurd.</li><li>De installateurs programmeren en bedraden de sturingen.</li></ol>
+<h2 id="raakvlakken" class="text-2xl md:text-3xl font-bold text-white tracking-tight mt-12 mb-4 scroll-mt-24">Raakvlakken</h2>
+<p class="text-slate-300 leading-relaxed mb-5">Een brandcontrolematrix raakt bijna alle disciplines: brandmelding, ventilatie, liften, deuren, toegangscontrole, zonwering en het gebouwbeheersysteem. Elke koppeling is een <a class="text-blue-400 hover:underline" href="raakvlakken-installaties.html">raakvlak</a>. Leg per sturing vast wie het signaal levert, wie het ontvangt en wie de koppeling bedraadt en test.</p>
+<div class="my-8 p-6 rounded-xl border border-blue-500/30 bg-blue-500/10 text-slate-200 leading-relaxed"><div class="text-xs font-mono text-blue-400 uppercase tracking-widest mb-2">[PRAKTIJKTIP]</div>Leg in de raakvlakkenmatrix niet alleen vast wie de sturing bedraadt, maar ook wie de spanning levert voor de stuurcontacten. Een potentiaalvrij contact dat een spanning nodig heeft die niemand levert, is een klassieke fout.</div>
+<h2 id="integraal-testen" class="text-2xl md:text-3xl font-bold text-white tracking-tight mt-12 mb-4 scroll-mt-24">Integraal testen</h2>
+<p class="text-slate-300 leading-relaxed mb-5">De brandcontrolematrix wordt bij oplevering integraal getest. Dat betekent dat per scenario een melding wordt gegeven en dat alle acties worden gecontroleerd:</p>
+<ul class="list-disc pl-6 space-y-2 text-slate-300 leading-relaxed mb-6 marker:text-blue-400"><li>wordt het juiste alarm gegeven, in de juiste zones?</li><li>schakelen de juiste ventilatoren uit?</li><li>sluiten de juiste brandkleppen, en komt de terugmelding binnen?</li><li>gaan de branddeuren dicht en de toegangsdeuren vrij?</li><li>gaan de liften naar de juiste verdieping?</li><li>komt de doormelding aan bij de meldkamer?</li></ul>
+<p class="text-slate-300 leading-relaxed mb-5">Elke actie wordt afgevinkt in de matrix, met de tijd en het resultaat. Lees ook <a class="text-blue-400 hover:underline" href="integrale-test-installaties.html">integrale testen</a>.</p>
+<h2 id="hoeveel-scenario-s" class="text-2xl md:text-3xl font-bold text-white tracking-tight mt-12 mb-4 scroll-mt-24">Hoeveel scenario's?</h2>
+<p class="text-slate-300 leading-relaxed mb-5">Het is meestal niet nodig om elke melder afzonderlijk integraal te testen. Wel moet elk type scenario en elke uitgang minstens één keer worden getest. Bij een gebouw met meerdere compartimenten wordt per compartiment getest. De keuze wordt vastgelegd in het <a class="text-blue-400 hover:underline" href="commissioningsplan.html">commissioningsplan</a>.</p>
+<h2 id="herstel-na-de-test" class="text-2xl md:text-3xl font-bold text-white tracking-tight mt-12 mb-4 scroll-mt-24">Herstel na de test</h2>
+<p class="text-slate-300 leading-relaxed mb-5">Na elke test moet het gebouw weer in de normale toestand komen: brandkleppen open, ventilatie aan, deuren in de normale stand. Ook dat herstel moet worden gecontroleerd; een brandklep die na de test dicht blijft, geeft klachten over ventilatie.</p>
+<h2 id="periodiek-testen" class="text-2xl md:text-3xl font-bold text-white tracking-tight mt-12 mb-4 scroll-mt-24">Periodiek testen</h2>
+<p class="text-slate-300 leading-relaxed mb-5">Gebouwen veranderen, en met elke verbouwing kan de matrix veranderen. Periodiek, bijvoorbeeld jaarlijks, wordt een integrale brandtest uitgevoerd. Na een wijziging aan de brandmeldinstallatie of de aangestuurde installaties wordt opnieuw getest.</p>
+<h2 id="advies" class="text-2xl md:text-3xl font-bold text-white tracking-tight mt-12 mb-4 scroll-mt-24">Advies</h2>
+<p class="text-slate-300 leading-relaxed mb-5">ECAP SLUI adviseert over brandmeld- en ontruimingsinstallaties en zet een test- en commissioningsmodule op met iSat-testen. Bekijk <a class="text-blue-400 hover:underline" href="../diensten.html#brandmeld-ontruimingsinstallaties">brandmeld- en ontruimingsinstallaties</a> en <a class="text-blue-400 hover:underline" href="../diensten.html#test-commissioning">test &amp; commissioning</a>.</p>
+<h2 id="veelgestelde-vragen" class="text-2xl md:text-3xl font-bold text-white tracking-tight mt-12 mb-6">Veelgestelde vragen</h2><div class="space-y-4"><details class="p-6 rounded-xl border border-white/10 bg-[#161a22]/80"><summary class="font-semibold text-white cursor-pointer">Wat is een brandcontrolematrix?</summary><p class="text-slate-300 leading-relaxed mt-3">Een overzicht van alle sturingen die volgen op een brandmelding, per melder of zone, zoals ontruimingsalarm, ventilatie uit, brandkleppen dicht en liften naar de evacuatieverdieping.</p></details><details class="p-6 rounded-xl border border-white/10 bg-[#161a22]/80"><summary class="font-semibold text-white cursor-pointer">Wie test de brandcontrolematrix?</summary><p class="text-slate-300 leading-relaxed mt-3">Alle betrokken disciplines samen, bij een integrale test, onder coördinatie van één partij en volgens het commissioningsplan.</p></details></div>
+<div class="mt-14 p-8 rounded-2xl border border-white/10 bg-[#161a22]/90">
+<div class="font-mono text-xs text-blue-400 uppercase tracking-widest mb-3">[SAMENWERKEN?]</div>
+<h2 class="text-2xl font-bold text-white mb-3">Advies op maat voor uw project</h2>
+<p class="text-slate-400 leading-relaxed mb-6">ECAP SLUI in Ede adviseert, engineert en calculeert elektrotechnische installaties en begeleidt de uitvoering, van de eerste ontwerpfase tot en met test &amp; commissioning. Met meer dan 30 jaar ervaring in utiliteit en industrie.</p>
+<div class="flex flex-wrap gap-4"><a class="px-6 py-3 rounded-xl bg-blue-600 hover:bg-blue-500 text-white font-semibold text-sm shadow-[0_0_25px_rgba(0,102,255,0.4)] transition" href="../contact.html">Neem contact op →</a><a class="px-6 py-3 rounded-xl border border-white/15 bg-white/5 hover:bg-white/10 text-white font-semibold text-sm transition" href="tel:+31651322666">Bel 06 51322666</a></div>
+</div>
+</article>
+<aside class="lg:col-span-4 space-y-6 lg:sticky lg:top-28 self-start">
+<div class="p-6 rounded-xl border border-white/10 bg-[#161a22]/80"><div class="text-xs font-mono text-blue-400 uppercase tracking-widest mb-4">[INHOUD]</div><ol class="space-y-2 text-sm text-slate-300 list-decimal pl-5 marker:text-blue-400"><li><a class="hover:text-white" href="#wat-is-een-brandcontrolematrix">Wat is een brandcontrolematrix?</a></li><li><a class="hover:text-white" href="#typische-sturingen">Typische sturingen</a></li><li><a class="hover:text-white" href="#opstellen-van-de-matrix">Opstellen van de matrix</a></li><li><a class="hover:text-white" href="#raakvlakken">Raakvlakken</a></li><li><a class="hover:text-white" href="#integraal-testen">Integraal testen</a></li><li><a class="hover:text-white" href="#hoeveel-scenario-s">Hoeveel scenario&#x27;s?</a></li><li><a class="hover:text-white" href="#herstel-na-de-test">Herstel na de test</a></li><li><a class="hover:text-white" href="#periodiek-testen">Periodiek testen</a></li><li><a class="hover:text-white" href="#advies">Advies</a></li><li><a class="hover:text-white" href="#veelgestelde-vragen">Veelgestelde vragen</a></li></ol></div>
+<div class="p-6 rounded-xl border border-white/10 bg-[#161a22]/80"><div class="text-xs font-mono text-blue-400 uppercase tracking-widest mb-4">[GERELATEERDE DIENSTEN]</div><ul class="space-y-2 text-sm"><li><a class="text-blue-400 hover:underline" href="../diensten.html#test-commissioning">Test &amp; commissioning: FAT-, SAT- en iSat-testen</a></li><li><a class="text-blue-400 hover:underline" href="../diensten.html#begeleiding-wtb">Begeleiding werktuigbouwkundige installaties</a></li><li><a class="text-blue-400 hover:underline" href="../werkwijze.html">Werkwijze &amp; V-model</a></li></ul></div>
+<div class="p-6 rounded-xl border border-white/10 bg-[#161a22]/80 font-mono text-xs space-y-3"><div class="flex justify-between"><span class="text-slate-400">ZOEKWOORD</span><span class="text-white text-right">brandcontrolematrix</span></div><div class="flex justify-between"><span class="text-slate-400">WOORDEN</span><span class="text-white">562</span></div><div class="flex justify-between"><span class="text-slate-400">CATEGORIE</span><a class="text-blue-400 text-right" href="../blog/categorie/test-commissioning.html">Test &amp; commissioning</a></div></div>
+</aside>
+</div>
+<section class="mt-16"><div class="font-mono text-xs text-blue-400 uppercase tracking-widest mb-6">[LEES OOK]</div><div class="grid grid-cols-1 md:grid-cols-3 gap-4"><a href="../blog/integrale-test-installaties.html" class="group p-6 rounded-xl border border-white/10 bg-[#161a22]/80 hover:border-blue-500/50 transition flex flex-col">
+<div class="text-xs font-mono text-blue-400 mb-3 uppercase tracking-wider">Test &amp; commissioning</div>
+<h3 class="font-semibold text-white text-lg leading-snug mb-2 group-hover:text-blue-300">Integrale testen (iSAT): installaties testen als één geheel</h3>
+<p class="text-sm text-slate-400 leading-relaxed flex-1">Wat is een integrale test of iSAT? Waarom systemen samen moeten worden getest, voorbeelden van scenario&#x27;s, voorbereiding, uitvoering en vastlegging.</p>
+<div class="mt-5 pt-4 border-t border-white/10 text-xs font-mono text-slate-400 flex justify-between"><span>3 MIN LEESTIJD</span><span class="text-blue-400">LEES →</span></div>
+</a><a href="../blog/opleverdossier-installatie.html" class="group p-6 rounded-xl border border-white/10 bg-[#161a22]/80 hover:border-blue-500/50 transition flex flex-col">
+<div class="text-xs font-mono text-blue-400 mb-3 uppercase tracking-wider">Test &amp; commissioning</div>
+<h3 class="font-semibold text-white text-lg leading-snug mb-2 group-hover:text-blue-300">Het opleverdossier van een installatie: wat moet erin?</h3>
+<p class="text-sm text-slate-400 leading-relaxed flex-1">Wat hoort in een compleet opleverdossier voor elektrotechnische installaties? Tekeningen, berekeningen, testrapporten, certificaten, handleidingen en onderhoudsinformatie.</p>
+<div class="mt-5 pt-4 border-t border-white/10 text-xs font-mono text-slate-400 flex justify-between"><span>2 MIN LEESTIJD</span><span class="text-blue-400">LEES →</span></div>
+</a><a href="../blog/commissioningsplan.html" class="group p-6 rounded-xl border border-white/10 bg-[#161a22]/80 hover:border-blue-500/50 transition flex flex-col">
+<div class="text-xs font-mono text-blue-400 mb-3 uppercase tracking-wider">Test &amp; commissioning</div>
+<h3 class="font-semibold text-white text-lg leading-snug mb-2 group-hover:text-blue-300">Het commissioningsplan: zo legt u testen vooraf vast</h3>
+<p class="text-sm text-slate-400 leading-relaxed flex-1">Wat staat er in een commissioningsplan? Doel, scope, organisatie, testniveaus, protocollen, acceptatiecriteria, planning en documentatie, met een praktisch stappenplan.</p>
+<div class="mt-5 pt-4 border-t border-white/10 text-xs font-mono text-slate-400 flex justify-between"><span>3 MIN LEESTIJD</span><span class="text-blue-400">LEES →</span></div>
+</a></div></section>
+</main>
+<footer class="relative z-10 border-t border-white/10 bg-[#10131a]/80 mt-16">
+<div class="max-w-[1680px] mx-auto px-6 py-12 grid grid-cols-1 md:grid-cols-3 gap-10 text-sm">
+<div>
+<div class="text-base font-bold text-white tracking-tight">ECAP SLUI</div>
+<div class="text-[10px] font-mono tracking-widest text-slate-400 uppercase mt-1 mb-4">Elektrotechnisch calculatie-, adviserings- en projectenbureau</div>
+<address class="not-italic text-slate-400 leading-relaxed">Prof. Oudpark 90<br/>6716 EJ Ede<br/>
+<a class="text-blue-400 hover:underline" href="tel:+31651322666">06 51322666</a><br/>
+<a class="text-blue-400 hover:underline" href="mailto:vincent.slui@kpnmail.nl">vincent.slui@kpnmail.nl</a><br/>
+KvK 59289430</address>
+</div>
+<div>
+<div class="font-mono text-xs text-blue-400 uppercase tracking-widest mb-4">[NAVIGATIE]</div>
+<nav class="flex flex-wrap gap-x-6 gap-y-2 text-slate-300" aria-label="Footer"><a class="hover:text-white" href="../index.html">Home</a> <a class="hover:text-white" href="../diensten.html">Diensten</a> <a class="hover:text-white" href="../sectoren.html">Sectoren</a> <a class="hover:text-white" href="../projecten.html">Projecten</a> <a class="hover:text-white" href="../werkwijze.html">Werkwijze</a> <a class="hover:text-white" href="../over-ons.html">Over ons</a> <a class="hover:text-white" href="../blog/">Blog</a> <a class="hover:text-white" href="../contact.html">Contact</a> <a class="hover:text-white" href="../privacy.html">Privacyverklaring</a></nav>
+</div>
+<div>
+<div class="font-mono text-xs text-blue-400 uppercase tracking-widest mb-4">[STAY CONNECTED]</div>
+<div class="flex flex-col gap-2 text-slate-300">
+<a class="hover:text-white" href="https://www.linkedin.com/company/ecap-slui/" rel="noopener" target="_blank">LinkedIn ECAP SLUI →</a>
+<a class="hover:text-white" href="https://www.linkedin.com/in/vincent-slui-a629ba19/" rel="noopener" target="_blank">LinkedIn Vincent Slui →</a>
+</div>
+<div class="text-xs font-mono text-slate-500 mt-6">Beeld © Studio Csány</div>
+</div>
+</div>
+</footer>
+<script src="../shader.js"></script>
+<script>initWebGLShader('shader-canvas-blog');</script>
+</body>
+</html>

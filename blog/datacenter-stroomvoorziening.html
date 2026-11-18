@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="utf-8"/>
+<title>Stroomvoorziening van een datacenter: van net tot rack | ECAP SLUI</title>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta name="description" content="Hoe is de stroomvoorziening van een datacenter opgebouwd? Netaansluiting, transformatoren, aggregaten, UPS, distributie, PDU&#x27;s, redundantie en meten."/>
+<meta name="robots" content="noindex, nofollow"/>
+<link rel="canonical" href="https://basbartclub.github.io/ecap-slui-stitch/blog/datacenter-stroomvoorziening.html"/>
+<meta property="og:type" content="article"/>
+<meta property="og:locale" content="nl_NL"/>
+<meta property="og:site_name" content="ECAP SLUI"/>
+<meta property="og:title" content="Stroomvoorziening van een datacenter: van net tot rack | ECAP SLUI"/>
+<meta property="og:description" content="Hoe is de stroomvoorziening van een datacenter opgebouwd? Netaansluiting, transformatoren, aggregaten, UPS, distributie, PDU&#x27;s, redundantie en meten."/>
+<meta property="og:url" content="https://basbartclub.github.io/ecap-slui-stitch/blog/datacenter-stroomvoorziening.html"/>
+<meta property="og:image" content="https://basbartclub.github.io/ecap-slui-stitch/img/verdeelinrichting-ecap-slui.jpg"/>
+<meta name="twitter:card" content="summary_large_image"/>
+<link rel="icon" href="data:,"/>
+<link rel="stylesheet" href="../tokens.css"/>
+<script src="https://cdn.tailwindcss.com"></script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BlogPosting", "headline": "Stroomvoorziening van een datacenter: van net tot rack", "description": "Hoe is de stroomvoorziening van een datacenter opgebouwd? Netaansluiting, transformatoren, aggregaten, UPS, distributie, PDU's, redundantie en meten.", "inLanguage": "nl-NL", "keywords": "datacenter stroomvoorziening", "articleSection": "Data, communicatie & datacenters", "wordCount": 692, "datePublished": "2026-11-18", "dateModified": "2026-11-18", "mainEntityOfPage": "https://basbartclub.github.io/ecap-slui-stitch/blog/datacenter-stroomvoorziening.html", "image": "https://basbartclub.github.io/ecap-slui-stitch/img/verdeelinrichting-ecap-slui.jpg", "author": {"@type": "Organization", "name": "ECAP SLUI", "url": "https://basbartclub.github.io/ecap-slui-stitch/"}, "publisher": {"@type": "Organization", "name": "ECAP SLUI", "logo": {"@type": "ImageObject", "url": "https://basbartclub.github.io/ecap-slui-stitch/img/ecap-slui-logo.png"}}}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://basbartclub.github.io/ecap-slui-stitch/index.html"}, {"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://basbartclub.github.io/ecap-slui-stitch/blog/"}, {"@type": "ListItem", "position": 3, "name": "Data, communicatie & datacenters", "item": "https://basbartclub.github.io/ecap-slui-stitch/blog/categorie/data-datacenters.html"}, {"@type": "ListItem", "position": 4, "name": "Stroomvoorziening van een datacenter: van net tot rack", "item": "https://basbartclub.github.io/ecap-slui-stitch/blog/datacenter-stroomvoorziening.html"}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Wat is een A/B-voeding?", "acceptedAnswer": {"@type": "Answer", "text": "Twee onafhankelijke voedingspaden naar de IT-apparatuur, zodat bij uitval of onderhoud van één pad de apparatuur via het andere pad blijft werken."}}, {"@type": "Question", "name": "Wat is PUE?", "acceptedAnswer": {"@type": "Answer", "text": "Power usage effectiveness: het totale energieverbruik van het datacenter gedeeld door het verbruik van de IT-apparatuur. Een lagere waarde betekent een efficiënter datacenter."}}]}</script>
+</head>
+<body class="bg-[#0b0e14] text-slate-100 min-h-screen">
+<div class="fixed inset-0 pointer-events-none opacity-30 z-0">
+<canvas class="w-full h-full" id="shader-canvas-blog"></canvas>
+</div>
+<header class="sticky top-0 z-50 border-b border-white/10 bg-[#0b0e14]/90 backdrop-blur-md">
+  <div class="max-w-[1680px] mx-auto px-6 h-20 flex items-center justify-between">
+    <a href="../index.html" class="flex items-center gap-4" aria-label="ECAP SLUI home">
+      <div class="w-10 h-10 rounded-lg bg-blue-600/20 border border-blue-500/40 flex items-center justify-center font-bold text-blue-400">
+        ES
+      </div>
+      <div>
+        <div class="text-base font-bold tracking-tight text-white">ECAP SLUI</div>
+        <div class="text-[10px] uppercase font-mono tracking-widest text-slate-400">Elektrotechnisch Bureau • Ede</div>
+      </div>
+    </a>
+    <nav class="hidden lg:flex items-center gap-8 text-sm font-medium text-slate-300" aria-label="Hoofdmenu">
+      <a href="../index.html" class="hover:text-white transition">Home</a>
+      <a href="../diensten.html" class="hover:text-white transition">Diensten</a>
+      <a href="../sectoren.html" class="hover:text-white transition">Sectoren</a>
+      <a href="../projecten.html" class="hover:text-white transition">Projecten</a>
+      <a href="../werkwijze.html" class="hover:text-white transition">Werkwijze</a>
+      <a href="../over-ons.html" class="hover:text-white transition">Over ons</a>
+      <a href="../blog/" class="text-blue-400">Blog</a>
+      <a href="../contact.html" class="hover:text-white transition">Contact</a>
+    </nav>
+    <div class="flex items-center gap-4">
+      <a href="../contact.html" class="px-5 py-2.5 rounded-lg bg-blue-600 hover:bg-blue-500 text-white font-medium text-sm transition shadow-[0_0_20px_rgba(0,102,255,0.35)]">
+        Direct Contact
+      </a>
+    </div>
+  </div>
+</header>
+<main class="relative z-10 max-w-[1680px] mx-auto px-6 py-16">
+<nav class="font-mono text-xs text-slate-400 uppercase tracking-widest mb-6" aria-label="Kruimelpad"><a class="hover:text-white" href="../index.html">Home</a> / <a class="hover:text-white" href="../blog/">Blog</a> / <a class="text-blue-400 hover:underline" href="../blog/categorie/data-datacenters.html">Data, communicatie &amp; datacenters</a></nav>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-10">
+<article class="lg:col-span-8">
+<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-blue-500/30 bg-blue-500/10 text-blue-400 font-mono text-xs uppercase mb-6"><span class="w-2 h-2 rounded-full bg-blue-400"></span>Data, communicatie &amp; datacenters • 3 min leestijd</div>
+<h1 class="text-4xl md:text-5xl font-bold tracking-tight text-white mb-6 leading-tight">Stroomvoorziening van een datacenter: van net tot rack</h1>
+<p class="text-xl text-slate-400 leading-relaxed mb-10">In een datacenter is stroom geen nutsvoorziening, maar het product zelf. Elke server, switch en koelunit hangt aan een keten van net, transformator, aggregaat, UPS en verdeling. De betrouwbaarheid van het geheel is zo sterk als de zwakste schakel.</p>
+<h2 id="de-keten-in-vogelvlucht" class="text-2xl md:text-3xl font-bold text-white tracking-tight mt-12 mb-4 scroll-mt-24">De keten in vogelvlucht</h2>
+<ol class="list-decimal pl-6 space-y-2 text-slate-300 leading-relaxed mb-6 marker:text-blue-400"><li><strong class="text-white">Netaansluiting</strong>: vaak op middenspanning, soms met twee onafhankelijke aansluitingen.</li><li><strong class="text-white">Transformatoren</strong>: van middenspanning naar laagspanning.</li><li><strong class="text-white">Noodstroomaggregaten</strong>: nemen het over bij netuitval.</li><li><strong class="text-white">Omschakeling</strong>: automatisch tussen net en aggregaat.</li><li><strong class="text-white">UPS</strong>: overbrugt de tijd tot het aggregaat het overneemt en levert schone spanning.</li><li><strong class="text-white">Distributie</strong>: hoofdverdelers, railkokers of kabels naar de zalen.</li><li><strong class="text-white">PDU's en rackvoeding</strong>: de laatste meters tot aan de apparatuur.</li></ol>
+<p class="text-slate-300 leading-relaxed mb-5">Elk onderdeel kan uitvallen of moet onderhouden worden. Het ontwerp bepaalt wat er dan gebeurt.</p>
+<h2 id="twee-voedingspaden" class="text-2xl md:text-3xl font-bold text-white tracking-tight mt-12 mb-4 scroll-mt-24">Twee voedingspaden</h2>
+<p class="text-slate-300 leading-relaxed mb-5">De meeste IT-apparatuur heeft twee voedingen. Een datacenter met hoge beschikbaarheid voedt die vanuit twee onafhankelijke paden, A en B, elk met eigen UPS en distributie. Valt pad A uit of moet het worden onderhouden, dan draait alles door op pad B. Hoe ver die scheiding doorloopt, van rack tot transformator of zelfs tot de netaansluiting, bepaalt het niveau van redundantie. Lees meer in <a class="text-blue-400 hover:underline" href="redundantie-n-plus-1.html">redundantie: N+1 en 2N</a>.</p>
+<div class="my-8 p-6 rounded-xl border border-blue-500/30 bg-blue-500/10 text-slate-200 leading-relaxed"><div class="text-xs font-mono text-blue-400 uppercase tracking-widest mb-2">[PRAKTIJKTIP]</div>De sterkste keten heeft geen gemeenschappelijke punten. Controleer in het ontwerp waar de A- en B-paden samenkomen, bijvoorbeeld in één verdeler, één kabeltracé of één ruimte. Daar zit het restrisico.</div>
+<h2 id="aggregaten" class="text-2xl md:text-3xl font-bold text-white tracking-tight mt-12 mb-4 scroll-mt-24">Aggregaten</h2>
+<p class="text-slate-300 leading-relaxed mb-5">Aggregaten moeten de volledige kritische belasting, inclusief de koeling, kunnen overnemen. Belangrijke punten zijn de starttijd, het bijschakelen van belasting in stappen, de brandstofvoorraad voor de gewenste autonomie en het regelmatig testen onder belasting. Zie <a class="text-blue-400 hover:underline" href="noodstroomaggregaat.html">noodstroomaggregaat dimensioneren</a>.</p>
+<h2 id="ups" class="text-2xl md:text-3xl font-bold text-white tracking-tight mt-12 mb-4 scroll-mt-24">UPS</h2>
+<p class="text-slate-300 leading-relaxed mb-5">In datacenters worden meestal modulaire online UPS-systemen gebruikt, met redundante modules. De autonomie op batterij hoeft niet lang te zijn als de aggregaten betrouwbaar starten; ze moet de opstart en eventueel een tweede startpoging overbruggen. Lees <a class="text-blue-400 hover:underline" href="ups-systeem-kiezen.html">UPS kiezen</a>.</p>
+<h2 id="distributie" class="text-2xl md:text-3xl font-bold text-white tracking-tight mt-12 mb-4 scroll-mt-24">Distributie</h2>
+<p class="text-slate-300 leading-relaxed mb-5">Vanuit de UPS gaat de voeding naar de zalen. Railkokers boven de racks zijn flexibel: een nieuwe aftakking voor een rack is snel te plaatsen. Kabels naar vaste verdelers zijn een alternatief. In beide gevallen gelden de normale regels voor <a class="text-blue-400 hover:underline" href="kabelberekening-nen-1010.html">kabelberekening</a>, <a class="text-blue-400 hover:underline" href="selectiviteit-installatie.html">selectiviteit</a> en kortsluitvastheid.</p>
+<p class="text-slate-300 leading-relaxed mb-5">Selectiviteit is in een datacenter extra belangrijk. Een kortsluiting in één rack mag niet de beveiliging van een hele PDU of UPS-uitgang laten aanspreken. Bij voeding door een UPS of aggregaat is de kortsluitstroom beperkt, wat de selectiviteit lastiger maakt.</p>
+<h2 id="rackvoeding" class="text-2xl md:text-3xl font-bold text-white tracking-tight mt-12 mb-4 scroll-mt-24">Rackvoeding</h2>
+<p class="text-slate-300 leading-relaxed mb-5">Intelligente PDU's in de racks meten stroom per fase of per uitgang en melden overbelasting. Ze maken het mogelijk om de belasting per rack te bewaken en de capaciteit te plannen. Stem de PDU-keuze af op de vermogensdichtheid per rack, die sterk kan verschillen tussen klassieke servers en zware rekenapparatuur.</p>
+<h2 id="meten-en-effici-ntie" class="text-2xl md:text-3xl font-bold text-white tracking-tight mt-12 mb-4 scroll-mt-24">Meten en efficiëntie</h2>
+<p class="text-slate-300 leading-relaxed mb-5">Een veelgebruikte maat voor de efficiëntie van een datacenter is de PUE (power usage effectiveness): het totale energieverbruik gedeeld door het verbruik van de IT-apparatuur. Hoe dichter bij 1, hoe efficiënter. Om de PUE te kunnen bepalen, is meting nodig op de juiste punten: aan de netzijde, na de UPS en bij de koeling. Lees ook <a class="text-blue-400 hover:underline" href="energiemonitoring.html">energiemonitoring</a>.</p>
+<h2 id="aarding-en-emc" class="text-2xl md:text-3xl font-bold text-white tracking-tight mt-12 mb-4 scroll-mt-24">Aarding en EMC</h2>
+<p class="text-slate-300 leading-relaxed mb-5">Een datacenter heeft een robuust aardings- en vereffeningsnet nodig, bij voorkeur in een TN-S-stelsel zonder zwerfstromen. Zie <a class="text-blue-400 hover:underline" href="aardingsstelsels-tn-tt.html">aardingsstelsels</a> en <a class="text-blue-400 hover:underline" href="aarding-ict-installatie.html">aarding van ICT-installaties</a>.</p>
+<h2 id="testen" class="text-2xl md:text-3xl font-bold text-white tracking-tight mt-12 mb-4 scroll-mt-24">Testen</h2>
+<p class="text-slate-300 leading-relaxed mb-5">Een datacenter wordt pas opgeleverd na uitgebreide testen: functionele testen per component, integrale testen met netuitval en het overnemen door aggregaten, en testen waarbij onderdelen bewust worden uitgeschakeld om de redundantie aan te tonen. Belastingbanken simuleren de IT-belasting voordat de echte apparatuur er staat. Dit is het domein van <a class="text-blue-400 hover:underline" href="../diensten.html#test-commissioning">test &amp; commissioning</a>; lees ook <a class="text-blue-400 hover:underline" href="integrale-test-installaties.html">integrale testen</a>.</p>
+<h2 id="normen" class="text-2xl md:text-3xl font-bold text-white tracking-tight mt-12 mb-4 scroll-mt-24">Normen</h2>
+<p class="text-slate-300 leading-relaxed mb-5">De EN 50600-reeks geeft een kader voor het ontwerp van datacenterfaciliteiten, inclusief de stroomvoorziening, met beschikbaarheidsklassen. Lees meer in <a class="text-blue-400 hover:underline" href="en-50600-datacenter.html">EN 50600</a>.</p>
+<h2 id="advies" class="text-2xl md:text-3xl font-bold text-white tracking-tight mt-12 mb-4 scroll-mt-24">Advies</h2>
+<p class="text-slate-300 leading-relaxed mb-5">ECAP SLUI ontwerpt, stuurt aan en controleert <a class="text-blue-400 hover:underline" href="../diensten.html#computerruimten-datacenters">installaties in computerruimten en datacenters</a> en <a class="text-blue-400 hover:underline" href="../diensten.html#noodstroom-energievoorziening">noodstroom- en energievoorziening</a>, inclusief de FAT-, SAT- en iSat-testen.</p>
+<h2 id="veelgestelde-vragen" class="text-2xl md:text-3xl font-bold text-white tracking-tight mt-12 mb-6">Veelgestelde vragen</h2><div class="space-y-4"><details class="p-6 rounded-xl border border-white/10 bg-[#161a22]/80"><summary class="font-semibold text-white cursor-pointer">Wat is een A/B-voeding?</summary><p class="text-slate-300 leading-relaxed mt-3">Twee onafhankelijke voedingspaden naar de IT-apparatuur, zodat bij uitval of onderhoud van één pad de apparatuur via het andere pad blijft werken.</p></details><details class="p-6 rounded-xl border border-white/10 bg-[#161a22]/80"><summary class="font-semibold text-white cursor-pointer">Wat is PUE?</summary><p class="text-slate-300 leading-relaxed mt-3">Power usage effectiveness: het totale energieverbruik van het datacenter gedeeld door het verbruik van de IT-apparatuur. Een lagere waarde betekent een efficiënter datacenter.</p></details></div>
+<div class="mt-14 p-8 rounded-2xl border border-white/10 bg-[#161a22]/90">
+<div class="font-mono text-xs text-blue-400 uppercase tracking-widest mb-3">[SAMENWERKEN?]</div>
+<h2 class="text-2xl font-bold text-white mb-3">Advies op maat voor uw project</h2>
+<p class="text-slate-400 leading-relaxed mb-6">ECAP SLUI in Ede adviseert, engineert en calculeert elektrotechnische installaties en begeleidt de uitvoering, van de eerste ontwerpfase tot en met test &amp; commissioning. Met meer dan 30 jaar ervaring in utiliteit en industrie.</p>
+<div class="flex flex-wrap gap-4"><a class="px-6 py-3 rounded-xl bg-blue-600 hover:bg-blue-500 text-white font-semibold text-sm shadow-[0_0_25px_rgba(0,102,255,0.4)] transition" href="../contact.html">Neem contact op →</a><a class="px-6 py-3 rounded-xl border border-white/15 bg-white/5 hover:bg-white/10 text-white font-semibold text-sm transition" href="tel:+31651322666">Bel 06 51322666</a></div>
+</div>
+</article>
+<aside class="lg:col-span-4 space-y-6 lg:sticky lg:top-28 self-start">
+<div class="p-6 rounded-xl border border-white/10 bg-[#161a22]/80"><div class="text-xs font-mono text-blue-400 uppercase tracking-widest mb-4">[INHOUD]</div><ol class="space-y-2 text-sm text-slate-300 list-decimal pl-5 marker:text-blue-400"><li><a class="hover:text-white" href="#de-keten-in-vogelvlucht">De keten in vogelvlucht</a></li><li><a class="hover:text-white" href="#twee-voedingspaden">Twee voedingspaden</a></li><li><a class="hover:text-white" href="#aggregaten">Aggregaten</a></li><li><a class="hover:text-white" href="#ups">UPS</a></li><li><a class="hover:text-white" href="#distributie">Distributie</a></li><li><a class="hover:text-white" href="#rackvoeding">Rackvoeding</a></li><li><a class="hover:text-white" href="#meten-en-effici-ntie">Meten en efficiëntie</a></li><li><a class="hover:text-white" href="#aarding-en-emc">Aarding en EMC</a></li><li><a class="hover:text-white" href="#testen">Testen</a></li><li><a class="hover:text-white" href="#normen">Normen</a></li><li><a class="hover:text-white" href="#advies">Advies</a></li><li><a class="hover:text-white" href="#veelgestelde-vragen">Veelgestelde vragen</a></li></ol></div>
+<div class="p-6 rounded-xl border border-white/10 bg-[#161a22]/80"><div class="text-xs font-mono text-blue-400 uppercase tracking-widest mb-4">[GERELATEERDE DIENSTEN]</div><ul class="space-y-2 text-sm"><li><a class="text-blue-400 hover:underline" href="../diensten.html#communicatie-datanetwerken">Communicatie- en datanetwerken</a></li><li><a class="text-blue-400 hover:underline" href="../diensten.html#computerruimten-datacenters">Installaties in computerruimten en datacenters</a></li><li><a class="text-blue-400 hover:underline" href="../diensten.html#noodstroom-energievoorziening">Noodstroom- en energievoorziening</a></li><li><a class="text-blue-400 hover:underline" href="../werkwijze.html">Werkwijze &amp; V-model</a></li></ul></div>
+<div class="p-6 rounded-xl border border-white/10 bg-[#161a22]/80 font-mono text-xs space-y-3"><div class="flex justify-between"><span class="text-slate-400">ZOEKWOORD</span><span class="text-white text-right">datacenter stroomvoorziening</span></div><div class="flex justify-between"><span class="text-slate-400">WOORDEN</span><span class="text-white">692</span></div><div class="flex justify-between"><span class="text-slate-400">CATEGORIE</span><a class="text-blue-400 text-right" href="../blog/categorie/data-datacenters.html">Data, communicatie &amp; datacenters</a></div></div>
+</aside>
+</div>
+<section class="mt-16"><div class="font-mono text-xs text-blue-400 uppercase tracking-widest mb-6">[LEES OOK]</div><div class="grid grid-cols-1 md:grid-cols-3 gap-4"><a href="../blog/cat6a-of-glasvezel.html" class="group p-6 rounded-xl border border-white/10 bg-[#161a22]/80 hover:border-blue-500/50 transition flex flex-col">
+<div class="text-xs font-mono text-blue-400 mb-3 uppercase tracking-wider">Data, communicatie &amp; datacenters</div>
+<h3 class="font-semibold text-white text-lg leading-snug mb-2 group-hover:text-blue-300">Cat6A of glasvezel: welke bekabeling kiest u waar?</h3>
+<p class="text-sm text-slate-400 leading-relaxed flex-1">Koper of glasvezel? Een vergelijking van Cat6A en glasvezel op afstand, snelheid, PoE, kosten, installatie en toepassingen in gebouwen en terreinen.</p>
+<div class="mt-5 pt-4 border-t border-white/10 text-xs font-mono text-slate-400 flex justify-between"><span>3 MIN LEESTIJD</span><span class="text-blue-400">LEES →</span></div>
+</a><a href="../blog/serverruimte-inrichten.html" class="group p-6 rounded-xl border border-white/10 bg-[#161a22]/80 hover:border-blue-500/50 transition flex flex-col">
+<div class="text-xs font-mono text-blue-400 mb-3 uppercase tracking-wider">Data, communicatie &amp; datacenters</div>
+<h3 class="font-semibold text-white text-lg leading-snug mb-2 group-hover:text-blue-300">Een serverruimte inrichten: elektrotechniek, koeling en veiligheid</h3>
+<p class="text-sm text-slate-400 leading-relaxed flex-1">Een serverruimte inrichten: voeding en UPS, verdeling naar racks, aarding, koeling, brandveiligheid, toegang, monitoring en ruimte voor groei.</p>
+<div class="mt-5 pt-4 border-t border-white/10 text-xs font-mono text-slate-400 flex justify-between"><span>3 MIN LEESTIJD</span><span class="text-blue-400">LEES →</span></div>
+</a><a href="../blog/koeling-serverruimte.html" class="group p-6 rounded-xl border border-white/10 bg-[#161a22]/80 hover:border-blue-500/50 transition flex flex-col">
+<div class="text-xs font-mono text-blue-400 mb-3 uppercase tracking-wider">Data, communicatie &amp; datacenters</div>
+<h3 class="font-semibold text-white text-lg leading-snug mb-2 group-hover:text-blue-300">Koeling van serverruimten: de elektrotechnische kant</h3>
+<p class="text-sm text-slate-400 leading-relaxed flex-1">Koeling van serverruimten en datacenters vanuit elektrotechnisch perspectief: warmtelast, voeding van koeling, noodstroom, redundantie en monitoring.</p>
+<div class="mt-5 pt-4 border-t border-white/10 text-xs font-mono text-slate-400 flex justify-between"><span>3 MIN LEESTIJD</span><span class="text-blue-400">LEES →</span></div>
+</a></div></section>
+</main>
+<footer class="relative z-10 border-t border-white/10 bg-[#10131a]/80 mt-16">
+<div class="max-w-[1680px] mx-auto px-6 py-12 grid grid-cols-1 md:grid-cols-3 gap-10 text-sm">
+<div>
+<div class="text-base font-bold text-white tracking-tight">ECAP SLUI</div>
+<div class="text-[10px] font-mono tracking-widest text-slate-400 uppercase mt-1 mb-4">Elektrotechnisch calculatie-, adviserings- en projectenbureau</div>
+<address class="not-italic text-slate-400 leading-relaxed">Prof. Oudpark 90<br/>6716 EJ Ede<br/>
+<a class="text-blue-400 hover:underline" href="tel:+31651322666">06 51322666</a><br/>
+<a class="text-blue-400 hover:underline" href="mailto:vincent.slui@kpnmail.nl">vincent.slui@kpnmail.nl</a><br/>
+KvK 59289430</address>
+</div>
+<div>
+<div class="font-mono text-xs text-blue-400 uppercase tracking-widest mb-4">[NAVIGATIE]</div>
+<nav class="flex flex-wrap gap-x-6 gap-y-2 text-slate-300" aria-label="Footer"><a class="hover:text-white" href="../index.html">Home</a> <a class="hover:text-white" href="../diensten.html">Diensten</a> <a class="hover:text-white" href="../sectoren.html">Sectoren</a> <a class="hover:text-white" href="../projecten.html">Projecten</a> <a class="hover:text-white" href="../werkwijze.html">Werkwijze</a> <a class="hover:text-white" href="../over-ons.html">Over ons</a> <a class="hover:text-white" href="../blog/">Blog</a> <a class="hover:text-white" href="../contact.html">Contact</a> <a class="hover:text-white" href="../privacy.html">Privacyverklaring</a></nav>
+</div>
+<div>
+<div class="font-mono text-xs text-blue-400 uppercase tracking-widest mb-4">[STAY CONNECTED]</div>
+<div class="flex flex-col gap-2 text-slate-300">
+<a class="hover:text-white" href="https://www.linkedin.com/company/ecap-slui/" rel="noopener" target="_blank">LinkedIn ECAP SLUI →</a>
+<a class="hover:text-white" href="https://www.linkedin.com/in/vincent-slui-a629ba19/" rel="noopener" target="_blank">LinkedIn Vincent Slui →</a>
+</div>
+<div class="text-xs font-mono text-slate-500 mt-6">Beeld © Studio Csány</div>
+</div>
+</div>
+</footer>
+<script src="../shader.js"></script>
+<script>initWebGLShader('shader-canvas-blog');</script>
+</body>
+</html>

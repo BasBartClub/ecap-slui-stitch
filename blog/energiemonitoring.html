@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="utf-8"/>
+<title>Energiemonitoring voor bedrijven: meten is weten (en besparen) | ECAP SLUI</title>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta name="description" content="Energiemonitoring in bedrijven en utiliteitsgebouwen: wat meet u, waar plaatst u meters, welke data heeft u nodig en hoe vertaalt u inzicht naar besparing."/>
+<meta name="robots" content="noindex, nofollow"/>
+<link rel="canonical" href="https://basbartclub.github.io/ecap-slui-stitch/blog/energiemonitoring.html"/>
+<meta property="og:type" content="article"/>
+<meta property="og:locale" content="nl_NL"/>
+<meta property="og:site_name" content="ECAP SLUI"/>
+<meta property="og:title" content="Energiemonitoring voor bedrijven: meten is weten (en besparen) | ECAP SLUI"/>
+<meta property="og:description" content="Energiemonitoring in bedrijven en utiliteitsgebouwen: wat meet u, waar plaatst u meters, welke data heeft u nodig en hoe vertaalt u inzicht naar besparing."/>
+<meta property="og:url" content="https://basbartclub.github.io/ecap-slui-stitch/blog/energiemonitoring.html"/>
+<meta property="og:image" content="https://basbartclub.github.io/ecap-slui-stitch/img/verdeelinrichting-ecap-slui.jpg"/>
+<meta name="twitter:card" content="summary_large_image"/>
+<link rel="icon" href="data:,"/>
+<link rel="stylesheet" href="../tokens.css"/>
+<script src="https://cdn.tailwindcss.com"></script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BlogPosting", "headline": "Energiemonitoring voor bedrijven: meten is weten (en besparen)", "description": "Energiemonitoring in bedrijven en utiliteitsgebouwen: wat meet u, waar plaatst u meters, welke data heeft u nodig en hoe vertaalt u inzicht naar besparing.", "inLanguage": "nl-NL", "keywords": "energiemonitoring bedrijf", "articleSection": "Energiebesparing & PV", "wordCount": 540, "datePublished": "2026-11-18", "dateModified": "2026-11-18", "mainEntityOfPage": "https://basbartclub.github.io/ecap-slui-stitch/blog/energiemonitoring.html", "image": "https://basbartclub.github.io/ecap-slui-stitch/img/verdeelinrichting-ecap-slui.jpg", "author": {"@type": "Organization", "name": "ECAP SLUI", "url": "https://basbartclub.github.io/ecap-slui-stitch/"}, "publisher": {"@type": "Organization", "name": "ECAP SLUI", "logo": {"@type": "ImageObject", "url": "https://basbartclub.github.io/ecap-slui-stitch/img/ecap-slui-logo.png"}}}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://basbartclub.github.io/ecap-slui-stitch/index.html"}, {"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://basbartclub.github.io/ecap-slui-stitch/blog/"}, {"@type": "ListItem", "position": 3, "name": "Energiebesparing & PV", "item": "https://basbartclub.github.io/ecap-slui-stitch/blog/categorie/energie-pv.html"}, {"@type": "ListItem", "position": 4, "name": "Energiemonitoring voor bedrijven: meten is weten (en besparen)", "item": "https://basbartclub.github.io/ecap-slui-stitch/blog/energiemonitoring.html"}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Waar begin ik met energiemonitoring?", "acceptedAnswer": {"@type": "Answer", "text": "Met de kwartierwaarden van de hoofdaansluiting. Die geven al veel inzicht. Daarna volgt submetering bij de grootste verbruikers."}}, {"@type": "Question", "name": "Kunnen meters in een bestaande verdeler worden geplaatst?", "acceptedAnswer": {"@type": "Answer", "text": "Ja, bijvoorbeeld met deelbare stroomtransformatoren, zodat geen grote ingrepen nodig zijn."}}]}</script>
+</head>
+<body class="bg-[#0b0e14] text-slate-100 min-h-screen">
+<div class="fixed inset-0 pointer-events-none opacity-30 z-0">
+<canvas class="w-full h-full" id="shader-canvas-blog"></canvas>
+</div>
+<header class="sticky top-0 z-50 border-b border-white/10 bg-[#0b0e14]/90 backdrop-blur-md">
+  <div class="max-w-[1680px] mx-auto px-6 h-20 flex items-center justify-between">
+    <a href="../index.html" class="flex items-center gap-4" aria-label="ECAP SLUI home">
+      <div class="w-10 h-10 rounded-lg bg-blue-600/20 border border-blue-500/40 flex items-center justify-center font-bold text-blue-400">
+        ES
+      </div>
+      <div>
+        <div class="text-base font-bold tracking-tight text-white">ECAP SLUI</div>
+        <div class="text-[10px] uppercase font-mono tracking-widest text-slate-400">Elektrotechnisch Bureau • Ede</div>
+      </div>
+    </a>
+    <nav class="hidden lg:flex items-center gap-8 text-sm font-medium text-slate-300" aria-label="Hoofdmenu">
+      <a href="../index.html" class="hover:text-white transition">Home</a>
+      <a href="../diensten.html" class="hover:text-white transition">Diensten</a>
+      <a href="../sectoren.html" class="hover:text-white transition">Sectoren</a>
+      <a href="../projecten.html" class="hover:text-white transition">Projecten</a>
+      <a href="../werkwijze.html" class="hover:text-white transition">Werkwijze</a>
+      <a href="../over-ons.html" class="hover:text-white transition">Over ons</a>
+      <a href="../blog/" class="text-blue-400">Blog</a>
+      <a href="../contact.html" class="hover:text-white transition">Contact</a>
+    </nav>
+    <div class="flex items-center gap-4">
+      <a href="../contact.html" class="px-5 py-2.5 rounded-lg bg-blue-600 hover:bg-blue-500 text-white font-medium text-sm transition shadow-[0_0_20px_rgba(0,102,255,0.35)]">
+        Direct Contact
+      </a>
+    </div>
+  </div>
+</header>
+<main class="relative z-10 max-w-[1680px] mx-auto px-6 py-16">
+<nav class="font-mono text-xs text-slate-400 uppercase tracking-widest mb-6" aria-label="Kruimelpad"><a class="hover:text-white" href="../index.html">Home</a> / <a class="hover:text-white" href="../blog/">Blog</a> / <a class="text-blue-400 hover:underline" href="../blog/categorie/energie-pv.html">Energiebesparing &amp; PV</a></nav>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-10">
+<article class="lg:col-span-8">
+<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-blue-500/30 bg-blue-500/10 text-blue-400 font-mono text-xs uppercase mb-6"><span class="w-2 h-2 rounded-full bg-blue-400"></span>Energiebesparing &amp; PV • 3 min leestijd</div>
+<h1 class="text-4xl md:text-5xl font-bold tracking-tight text-white mb-6 leading-tight">Energiemonitoring voor bedrijven: meten is weten (en besparen)</h1>
+<p class="text-xl text-slate-400 leading-relaxed mb-10">Wie niet weet waar de energie heen gaat, weet ook niet waar besparing te halen valt. Energiemonitoring maakt het verbruik zichtbaar per installatie, per afdeling of per proces. Dat is de basis voor gerichte maatregelen en voor het aantonen van resultaat.</p>
+<h2 id="wat-levert-monitoring-op" class="text-2xl md:text-3xl font-bold text-white tracking-tight mt-12 mb-4 scroll-mt-24">Wat levert monitoring op?</h2>
+<ul class="list-disc pl-6 space-y-2 text-slate-300 leading-relaxed mb-6 marker:text-blue-400"><li><strong class="text-white">Inzicht</strong>: welke installaties verbruiken het meest, en wanneer?</li><li><strong class="text-white">Sluipverbruik</strong>: verbruik 's nachts en in het weekend dat er niet hoort te zijn.</li><li><strong class="text-white">Afwijkingen</strong>: een installatie die plotseling meer verbruikt, wijst vaak op een storing of een verkeerde instelling.</li><li><strong class="text-white">Onderbouwing</strong>: van investeringen en van de rapportage voor de <a class="text-blue-400 hover:underline" href="energiebesparingsplicht.html">energiebesparingsplicht</a>.</li><li><strong class="text-white">Piekbeheersing</strong>: inzicht in pieken die de <a class="text-blue-400 hover:underline" href="netaansluiting-verzwaren.html">netaansluiting</a> belasten.</li></ul>
+<h2 id="wat-meet-u" class="text-2xl md:text-3xl font-bold text-white tracking-tight mt-12 mb-4 scroll-mt-24">Wat meet u?</h2>
+<p class="text-slate-300 leading-relaxed mb-5">Begin met de hoofdmeting: de kwartierwaarden van de meetdienst geven al veel inzicht in het verloop over de dag en de week. Daarna volgt submetering:</p>
+<div class="my-8 overflow-x-auto rounded-xl border border-white/10 bg-[#161a22]/80"><table class="w-full text-sm"><thead><tr><th class="text-left px-4 py-3 font-mono text-xs uppercase tracking-wider text-blue-400">Niveau</th><th class="text-left px-4 py-3 font-mono text-xs uppercase tracking-wider text-blue-400">Voorbeeld</th></tr></thead><tbody><tr class="border-t border-white/10"><td class="px-4 py-3 text-slate-300 align-top">Hoofdaansluiting</td><td class="px-4 py-3 text-slate-300 align-top">totaal verbruik en teruglevering</td></tr><tr class="border-t border-white/10"><td class="px-4 py-3 text-slate-300 align-top">Hoofdverdeler</td><td class="px-4 py-3 text-slate-300 align-top">per afgaande groep of onderverdeler</td></tr><tr class="border-t border-white/10"><td class="px-4 py-3 text-slate-300 align-top">Installatie</td><td class="px-4 py-3 text-slate-300 align-top">koeling, ventilatie, verlichting, perslucht</td></tr><tr class="border-t border-white/10"><td class="px-4 py-3 text-slate-300 align-top">Proces</td><td class="px-4 py-3 text-slate-300 align-top">per productielijn of machine</td></tr><tr class="border-t border-white/10"><td class="px-4 py-3 text-slate-300 align-top">Opwek</td><td class="px-4 py-3 text-slate-300 align-top">PV-installatie, eventueel opslag</td></tr></tbody></table></div>
+<p class="text-slate-300 leading-relaxed mb-5">Naast kWh is het nuttig om vermogen, arbeidsfactor en eventueel harmonische vervorming te meten. Dat helpt bij <a class="text-blue-400 hover:underline" href="blindstroomcompensatie.html">blindstroomcompensatie</a> en bij het opsporen van <a class="text-blue-400 hover:underline" href="harmonische-vervuiling.html">harmonische vervuiling</a>.</p>
+<h2 id="waar-plaatst-u-meters" class="text-2xl md:text-3xl font-bold text-white tracking-tight mt-12 mb-4 scroll-mt-24">Waar plaatst u meters?</h2>
+<p class="text-slate-300 leading-relaxed mb-5">De logische plek is de <a class="text-blue-400 hover:underline" href="hoofdverdeler-ontwerp.html">hoofdverdeler</a> en de onderverdelers. Bij nieuwbouw of renovatie is het relatief goedkoop om meters direct in te bouwen. Bij bestaande installaties zijn er meters met deelbare stroomtransformatoren die zonder grote ingrepen kunnen worden geplaatst. Let bij het ontwerp op:</p>
+<ol class="list-decimal pl-6 space-y-2 text-slate-300 leading-relaxed mb-6 marker:text-blue-400"><li>een logische indeling van groepen, zodat één meter één functie meet;</li><li>de nauwkeurigheidsklasse, passend bij het doel;</li><li>een communicatie-interface (bijvoorbeeld Modbus of een netwerkverbinding);</li><li>voldoende ruimte in de verdeler.</li></ol>
+<div class="my-8 p-6 rounded-xl border border-blue-500/30 bg-blue-500/10 text-slate-200 leading-relaxed"><div class="text-xs font-mono text-blue-400 uppercase tracking-widest mb-2">[PRAKTIJKTIP]</div>Leg vast welke groep welke meter heeft, en houd dat bij bij wijzigingen. Een meter die na een verbouwing een andere installatie meet dan op de lijst staat, levert verkeerde conclusies op.</div>
+<h2 id="van-data-naar-inzicht" class="text-2xl md:text-3xl font-bold text-white tracking-tight mt-12 mb-4 scroll-mt-24">Van data naar inzicht</h2>
+<p class="text-slate-300 leading-relaxed mb-5">Data alleen bespaart niets. Een monitoringplatform verzamelt de meetwaarden en maakt ze inzichtelijk met grafieken, vergelijkingen en kengetallen. Nuttige analyses zijn:</p>
+<ul class="list-disc pl-6 space-y-2 text-slate-300 leading-relaxed mb-6 marker:text-blue-400"><li>het basisverbruik buiten gebruikstijden;</li><li>het verbruik per vierkante meter, per product of per graaddag;</li><li>een vergelijking tussen vergelijkbare locaties of periodes;</li><li>automatische meldingen bij afwijkingen.</li></ul>
+<h2 id="van-inzicht-naar-maatregelen" class="text-2xl md:text-3xl font-bold text-white tracking-tight mt-12 mb-4 scroll-mt-24">Van inzicht naar maatregelen</h2>
+<p class="text-slate-300 leading-relaxed mb-5">Monitoring laat zien waar de kansen liggen. Veelvoorkomende ontdekkingen:</p>
+<ul class="list-disc pl-6 space-y-2 text-slate-300 leading-relaxed mb-6 marker:text-blue-400"><li>ventilatie of verlichting die 's nachts doorloopt;</li><li>perslucht met lekkages, zichtbaar als verbruik terwijl er niet wordt geproduceerd;</li><li>koel- en verwarmingssystemen die tegen elkaar in werken;</li><li>pompen en ventilatoren die op vol toeren draaien terwijl dat niet nodig is.</li></ul>
+<p class="text-slate-300 leading-relaxed mb-5">De oplossingen variëren van instellingen aanpassen in het <a class="text-blue-400 hover:underline" href="gebouwbeheersysteem.html">gebouwbeheersysteem</a> tot investeringen zoals <a class="text-blue-400 hover:underline" href="frequentieregelaar-energiebesparing.html">frequentieregelaars</a> of <a class="text-blue-400 hover:underline" href="led-relighting.html">LED relighting</a>.</p>
+<h2 id="resultaat-aantonen" class="text-2xl md:text-3xl font-bold text-white tracking-tight mt-12 mb-4 scroll-mt-24">Resultaat aantonen</h2>
+<p class="text-slate-300 leading-relaxed mb-5">Na een maatregel laat monitoring zien of de besparing ook werkelijk is gerealiseerd. Dat is belangrijk voor de interne verantwoording en voor prestatieafspraken met leveranciers. Lees ook <a class="text-blue-400 hover:underline" href="prestatiecontract-installaties.html">prestatiecontracten</a>.</p>
+<h2 id="koppeling-met-gebouwbeheer" class="text-2xl md:text-3xl font-bold text-white tracking-tight mt-12 mb-4 scroll-mt-24">Koppeling met gebouwbeheer</h2>
+<p class="text-slate-300 leading-relaxed mb-5">Een gebouwbeheersysteem gebruikt meetdata om installaties te sturen, bijvoorbeeld door belasting te verschuiven bij pieken of door installaties uit te schakelen als ruimten leeg zijn. Monitoring en sturing versterken elkaar.</p>
+<h2 id="advies" class="text-2xl md:text-3xl font-bold text-white tracking-tight mt-12 mb-4 scroll-mt-24">Advies</h2>
+<p class="text-slate-300 leading-relaxed mb-5">ECAP SLUI neemt meting en monitoring mee in het ontwerp van de <a class="text-blue-400 hover:underline" href="../diensten.html#energiedistributie">energiedistributie</a> en in <a class="text-blue-400 hover:underline" href="../diensten.html#energiebesparingsmaatregelen">energiebesparingsmaatregelen</a>, zodat besparing meetbaar wordt.</p>
+<h2 id="veelgestelde-vragen" class="text-2xl md:text-3xl font-bold text-white tracking-tight mt-12 mb-6">Veelgestelde vragen</h2><div class="space-y-4"><details class="p-6 rounded-xl border border-white/10 bg-[#161a22]/80"><summary class="font-semibold text-white cursor-pointer">Waar begin ik met energiemonitoring?</summary><p class="text-slate-300 leading-relaxed mt-3">Met de kwartierwaarden van de hoofdaansluiting. Die geven al veel inzicht. Daarna volgt submetering bij de grootste verbruikers.</p></details><details class="p-6 rounded-xl border border-white/10 bg-[#161a22]/80"><summary class="font-semibold text-white cursor-pointer">Kunnen meters in een bestaande verdeler worden geplaatst?</summary><p class="text-slate-300 leading-relaxed mt-3">Ja, bijvoorbeeld met deelbare stroomtransformatoren, zodat geen grote ingrepen nodig zijn.</p></details></div>
+<div class="mt-14 p-8 rounded-2xl border border-white/10 bg-[#161a22]/90">
+<div class="font-mono text-xs text-blue-400 uppercase tracking-widest mb-3">[SAMENWERKEN?]</div>
+<h2 class="text-2xl font-bold text-white mb-3">Advies op maat voor uw project</h2>
+<p class="text-slate-400 leading-relaxed mb-6">ECAP SLUI in Ede adviseert, engineert en calculeert elektrotechnische installaties en begeleidt de uitvoering, van de eerste ontwerpfase tot en met test &amp; commissioning. Met meer dan 30 jaar ervaring in utiliteit en industrie.</p>
+<div class="flex flex-wrap gap-4"><a class="px-6 py-3 rounded-xl bg-blue-600 hover:bg-blue-500 text-white font-semibold text-sm shadow-[0_0_25px_rgba(0,102,255,0.4)] transition" href="../contact.html">Neem contact op →</a><a class="px-6 py-3 rounded-xl border border-white/15 bg-white/5 hover:bg-white/10 text-white font-semibold text-sm transition" href="tel:+31651322666">Bel 06 51322666</a></div>
+</div>
+</article>
+<aside class="lg:col-span-4 space-y-6 lg:sticky lg:top-28 self-start">
+<div class="p-6 rounded-xl border border-white/10 bg-[#161a22]/80"><div class="text-xs font-mono text-blue-400 uppercase tracking-widest mb-4">[INHOUD]</div><ol class="space-y-2 text-sm text-slate-300 list-decimal pl-5 marker:text-blue-400"><li><a class="hover:text-white" href="#wat-levert-monitoring-op">Wat levert monitoring op?</a></li><li><a class="hover:text-white" href="#wat-meet-u">Wat meet u?</a></li><li><a class="hover:text-white" href="#waar-plaatst-u-meters">Waar plaatst u meters?</a></li><li><a class="hover:text-white" href="#van-data-naar-inzicht">Van data naar inzicht</a></li><li><a class="hover:text-white" href="#van-inzicht-naar-maatregelen">Van inzicht naar maatregelen</a></li><li><a class="hover:text-white" href="#resultaat-aantonen">Resultaat aantonen</a></li><li><a class="hover:text-white" href="#koppeling-met-gebouwbeheer">Koppeling met gebouwbeheer</a></li><li><a class="hover:text-white" href="#advies">Advies</a></li><li><a class="hover:text-white" href="#veelgestelde-vragen">Veelgestelde vragen</a></li></ol></div>
+<div class="p-6 rounded-xl border border-white/10 bg-[#161a22]/80"><div class="text-xs font-mono text-blue-400 uppercase tracking-widest mb-4">[GERELATEERDE DIENSTEN]</div><ul class="space-y-2 text-sm"><li><a class="text-blue-400 hover:underline" href="../diensten.html#energiebesparingsmaatregelen">Energiebesparingsmaatregelen</a></li><li><a class="text-blue-400 hover:underline" href="../diensten.html#pv-installaties">PV-installaties</a></li><li><a class="text-blue-400 hover:underline" href="../diensten.html#energiedistributie">Energiedistributie</a></li><li><a class="text-blue-400 hover:underline" href="../werkwijze.html">Werkwijze &amp; V-model</a></li></ul></div>
+<div class="p-6 rounded-xl border border-white/10 bg-[#161a22]/80 font-mono text-xs space-y-3"><div class="flex justify-between"><span class="text-slate-400">ZOEKWOORD</span><span class="text-white text-right">energiemonitoring bedrijf</span></div><div class="flex justify-between"><span class="text-slate-400">WOORDEN</span><span class="text-white">540</span></div><div class="flex justify-between"><span class="text-slate-400">CATEGORIE</span><a class="text-blue-400 text-right" href="../blog/categorie/energie-pv.html">Energiebesparing &amp; PV</a></div></div>
+</aside>
+</div>
+<section class="mt-16"><div class="font-mono text-xs text-blue-400 uppercase tracking-widest mb-6">[LEES OOK]</div><div class="grid grid-cols-1 md:grid-cols-3 gap-4"><a href="../blog/energiebesparingsplicht.html" class="group p-6 rounded-xl border border-white/10 bg-[#161a22]/80 hover:border-blue-500/50 transition flex flex-col">
+<div class="text-xs font-mono text-blue-400 mb-3 uppercase tracking-wider">Energiebesparing &amp; PV</div>
+<h3 class="font-semibold text-white text-lg leading-snug mb-2 group-hover:text-blue-300">Energiebesparingsplicht: wat moet u als bedrijf doen?</h3>
+<p class="text-sm text-slate-400 leading-relaxed flex-1">Uitleg over de energiebesparingsplicht voor bedrijven: wie eronder valt, de Erkende Maatregelenlijsten, informatieplicht, onderzoeksplicht en de rol van elektrotechniek.</p>
+<div class="mt-5 pt-4 border-t border-white/10 text-xs font-mono text-slate-400 flex justify-between"><span>3 MIN LEESTIJD</span><span class="text-blue-400">LEES →</span></div>
+</a><a href="../blog/energielabel-c-kantoor.html" class="group p-6 rounded-xl border border-white/10 bg-[#161a22]/80 hover:border-blue-500/50 transition flex flex-col">
+<div class="text-xs font-mono text-blue-400 mb-3 uppercase tracking-wider">Energiebesparing &amp; PV</div>
+<h3 class="font-semibold text-white text-lg leading-snug mb-2 group-hover:text-blue-300">Energielabel C voor kantoren: wat de elektrotechniek bijdraagt</h3>
+<p class="text-sm text-slate-400 leading-relaxed flex-1">Sinds 2023 moeten kantoren minimaal energielabel C hebben. Wat de plicht inhoudt, uitzonderingen en hoe verlichting, PV en regeling helpen het label te halen.</p>
+<div class="mt-5 pt-4 border-t border-white/10 text-xs font-mono text-slate-400 flex justify-between"><span>3 MIN LEESTIJD</span><span class="text-blue-400">LEES →</span></div>
+</a><a href="../blog/zonnepanelen-bedrijfsdak.html" class="group p-6 rounded-xl border border-white/10 bg-[#161a22]/80 hover:border-blue-500/50 transition flex flex-col">
+<div class="text-xs font-mono text-blue-400 mb-3 uppercase tracking-wider">Energiebesparing &amp; PV</div>
+<h3 class="font-semibold text-white text-lg leading-snug mb-2 group-hover:text-blue-300">Zonnepanelen op het bedrijfsdak: van haalbaarheid tot aansluiting</h3>
+<p class="text-sm text-slate-400 leading-relaxed flex-1">Zonnepanelen op uw bedrijfsdak: dakconstructie, opbrengst, eigen verbruik, netaansluiting en teruglevering, elektrotechnisch ontwerp, brandveiligheid en onderhoud.</p>
+<div class="mt-5 pt-4 border-t border-white/10 text-xs font-mono text-slate-400 flex justify-between"><span>3 MIN LEESTIJD</span><span class="text-blue-400">LEES →</span></div>
+</a></div></section>
+</main>
+<footer class="relative z-10 border-t border-white/10 bg-[#10131a]/80 mt-16">
+<div class="max-w-[1680px] mx-auto px-6 py-12 grid grid-cols-1 md:grid-cols-3 gap-10 text-sm">
+<div>
+<div class="text-base font-bold text-white tracking-tight">ECAP SLUI</div>
+<div class="text-[10px] font-mono tracking-widest text-slate-400 uppercase mt-1 mb-4">Elektrotechnisch calculatie-, adviserings- en projectenbureau</div>
+<address class="not-italic text-slate-400 leading-relaxed">Prof. Oudpark 90<br/>6716 EJ Ede<br/>
+<a class="text-blue-400 hover:underline" href="tel:+31651322666">06 51322666</a><br/>
+<a class="text-blue-400 hover:underline" href="mailto:vincent.slui@kpnmail.nl">vincent.slui@kpnmail.nl</a><br/>
+KvK 59289430</address>
+</div>
+<div>
+<div class="font-mono text-xs text-blue-400 uppercase tracking-widest mb-4">[NAVIGATIE]</div>
+<nav class="flex flex-wrap gap-x-6 gap-y-2 text-slate-300" aria-label="Footer"><a class="hover:text-white" href="../index.html">Home</a> <a class="hover:text-white" href="../diensten.html">Diensten</a> <a class="hover:text-white" href="../sectoren.html">Sectoren</a> <a class="hover:text-white" href="../projecten.html">Projecten</a> <a class="hover:text-white" href="../werkwijze.html">Werkwijze</a> <a class="hover:text-white" href="../over-ons.html">Over ons</a> <a class="hover:text-white" href="../blog/">Blog</a> <a class="hover:text-white" href="../contact.html">Contact</a> <a class="hover:text-white" href="../privacy.html">Privacyverklaring</a></nav>
+</div>
+<div>
+<div class="font-mono text-xs text-blue-400 uppercase tracking-widest mb-4">[STAY CONNECTED]</div>
+<div class="flex flex-col gap-2 text-slate-300">
+<a class="hover:text-white" href="https://www.linkedin.com/company/ecap-slui/" rel="noopener" target="_blank">LinkedIn ECAP SLUI →</a>
+<a class="hover:text-white" href="https://www.linkedin.com/in/vincent-slui-a629ba19/" rel="noopener" target="_blank">LinkedIn Vincent Slui →</a>
+</div>
+<div class="text-xs font-mono text-slate-500 mt-6">Beeld © Studio Csány</div>
+</div>
+</div>
+</footer>
+<script src="../shader.js"></script>
+<script>initWebGLShader('shader-canvas-blog');</script>
+</body>
+</html>

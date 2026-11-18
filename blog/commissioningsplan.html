@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="utf-8"/>
+<title>Het commissioningsplan: zo legt u testen vooraf vast | ECAP SLUI</title>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta name="description" content="Wat staat er in een commissioningsplan? Doel, scope, organisatie, testniveaus, protocollen, acceptatiecriteria, planning en documentatie, met een praktisch stappenplan."/>
+<meta name="robots" content="noindex, nofollow"/>
+<link rel="canonical" href="https://basbartclub.github.io/ecap-slui-stitch/blog/commissioningsplan.html"/>
+<meta property="og:type" content="article"/>
+<meta property="og:locale" content="nl_NL"/>
+<meta property="og:site_name" content="ECAP SLUI"/>
+<meta property="og:title" content="Het commissioningsplan: zo legt u testen vooraf vast | ECAP SLUI"/>
+<meta property="og:description" content="Wat staat er in een commissioningsplan? Doel, scope, organisatie, testniveaus, protocollen, acceptatiecriteria, planning en documentatie, met een praktisch stappenplan."/>
+<meta property="og:url" content="https://basbartclub.github.io/ecap-slui-stitch/blog/commissioningsplan.html"/>
+<meta property="og:image" content="https://basbartclub.github.io/ecap-slui-stitch/img/verdeelinrichting-ecap-slui.jpg"/>
+<meta name="twitter:card" content="summary_large_image"/>
+<link rel="icon" href="data:,"/>
+<link rel="stylesheet" href="../tokens.css"/>
+<script src="https://cdn.tailwindcss.com"></script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BlogPosting", "headline": "Het commissioningsplan: zo legt u testen vooraf vast", "description": "Wat staat er in een commissioningsplan? Doel, scope, organisatie, testniveaus, protocollen, acceptatiecriteria, planning en documentatie, met een praktisch stappenplan.", "inLanguage": "nl-NL", "keywords": "commissioningsplan", "articleSection": "Test & commissioning", "wordCount": 588, "datePublished": "2026-11-18", "dateModified": "2026-11-18", "mainEntityOfPage": "https://basbartclub.github.io/ecap-slui-stitch/blog/commissioningsplan.html", "image": "https://basbartclub.github.io/ecap-slui-stitch/img/verdeelinrichting-ecap-slui.jpg", "author": {"@type": "Organization", "name": "ECAP SLUI", "url": "https://basbartclub.github.io/ecap-slui-stitch/"}, "publisher": {"@type": "Organization", "name": "ECAP SLUI", "logo": {"@type": "ImageObject", "url": "https://basbartclub.github.io/ecap-slui-stitch/img/ecap-slui-logo.png"}}}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://basbartclub.github.io/ecap-slui-stitch/index.html"}, {"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://basbartclub.github.io/ecap-slui-stitch/blog/"}, {"@type": "ListItem", "position": 3, "name": "Test & commissioning", "item": "https://basbartclub.github.io/ecap-slui-stitch/blog/categorie/test-commissioning.html"}, {"@type": "ListItem", "position": 4, "name": "Het commissioningsplan: zo legt u testen vooraf vast", "item": "https://basbartclub.github.io/ecap-slui-stitch/blog/commissioningsplan.html"}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Wanneer stel je een commissioningsplan op?", "acceptedAnswer": {"@type": "Answer", "text": "Bij voorkeur in de ontwerpfase, zodat testbaarheid in het ontwerp kan worden meegenomen en de eisen in het bestek kunnen worden opgenomen."}}, {"@type": "Question", "name": "Wie keurt de testen goed?", "acceptedAnswer": {"@type": "Answer", "text": "Dat wordt in het commissioningsplan vastgelegd, meestal de opdrachtgever of de door hem aangewezen adviseur."}}]}</script>
+</head>
+<body class="bg-[#0b0e14] text-slate-100 min-h-screen">
+<div class="fixed inset-0 pointer-events-none opacity-30 z-0">
+<canvas class="w-full h-full" id="shader-canvas-blog"></canvas>
+</div>
+<header class="sticky top-0 z-50 border-b border-white/10 bg-[#0b0e14]/90 backdrop-blur-md">
+  <div class="max-w-[1680px] mx-auto px-6 h-20 flex items-center justify-between">
+    <a href="../index.html" class="flex items-center gap-4" aria-label="ECAP SLUI home">
+      <div class="w-10 h-10 rounded-lg bg-blue-600/20 border border-blue-500/40 flex items-center justify-center font-bold text-blue-400">
+        ES
+      </div>
+      <div>
+        <div class="text-base font-bold tracking-tight text-white">ECAP SLUI</div>
+        <div class="text-[10px] uppercase font-mono tracking-widest text-slate-400">Elektrotechnisch Bureau • Ede</div>
+      </div>
+    </a>
+    <nav class="hidden lg:flex items-center gap-8 text-sm font-medium text-slate-300" aria-label="Hoofdmenu">
+      <a href="../index.html" class="hover:text-white transition">Home</a>
+      <a href="../diensten.html" class="hover:text-white transition">Diensten</a>
+      <a href="../sectoren.html" class="hover:text-white transition">Sectoren</a>
+      <a href="../projecten.html" class="hover:text-white transition">Projecten</a>
+      <a href="../werkwijze.html" class="hover:text-white transition">Werkwijze</a>
+      <a href="../over-ons.html" class="hover:text-white transition">Over ons</a>
+      <a href="../blog/" class="text-blue-400">Blog</a>
+      <a href="../contact.html" class="hover:text-white transition">Contact</a>
+    </nav>
+    <div class="flex items-center gap-4">
+      <a href="../contact.html" class="px-5 py-2.5 rounded-lg bg-blue-600 hover:bg-blue-500 text-white font-medium text-sm transition shadow-[0_0_20px_rgba(0,102,255,0.35)]">
+        Direct Contact
+      </a>
+    </div>
+  </div>
+</header>
+<main class="relative z-10 max-w-[1680px] mx-auto px-6 py-16">
+<nav class="font-mono text-xs text-slate-400 uppercase tracking-widest mb-6" aria-label="Kruimelpad"><a class="hover:text-white" href="../index.html">Home</a> / <a class="hover:text-white" href="../blog/">Blog</a> / <a class="text-blue-400 hover:underline" href="../blog/categorie/test-commissioning.html">Test &amp; commissioning</a></nav>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-10">
+<article class="lg:col-span-8">
+<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-blue-500/30 bg-blue-500/10 text-blue-400 font-mono text-xs uppercase mb-6"><span class="w-2 h-2 rounded-full bg-blue-400"></span>Test &amp; commissioning • 3 min leestijd</div>
+<h1 class="text-4xl md:text-5xl font-bold tracking-tight text-white mb-6 leading-tight">Het commissioningsplan: zo legt u testen vooraf vast</h1>
+<p class="text-xl text-slate-400 leading-relaxed mb-10">Een commissioningsplan beschrijft hoe in een project wordt aangetoond dat installaties doen wat er is afgesproken. Het maakt van testen een gepland en controleerbaar proces in plaats van een laatste-minuutactiviteit vlak voor de oplevering.</p>
+<h2 id="waarom-een-plan" class="text-2xl md:text-3xl font-bold text-white tracking-tight mt-12 mb-4 scroll-mt-24">Waarom een plan?</h2>
+<p class="text-slate-300 leading-relaxed mb-5">Zonder plan wordt testen vaak een sluitpost. De planning loopt uit, de oplevering komt dichterbij en de testen worden ingekort of overgeslagen. Met een plan:</p>
+<ul class="list-disc pl-6 space-y-2 text-slate-300 leading-relaxed mb-6 marker:text-blue-400"><li>is vooraf duidelijk wat er moet worden getest;</li><li>weten alle partijen wat er van hen wordt verwacht;</li><li>is er tijd in de planning gereserveerd;</li><li>zijn de acceptatiecriteria vooraf afgesproken.</li></ul>
+<h2 id="de-inhoud-van-een-commissioningsplan" class="text-2xl md:text-3xl font-bold text-white tracking-tight mt-12 mb-4 scroll-mt-24">De inhoud van een commissioningsplan</h2>
+<h3 class="text-xl font-semibold text-white mt-8 mb-3">1. Doel en scope</h3>
+<p class="text-slate-300 leading-relaxed mb-5">Welke installaties vallen onder het plan? Alle gebouwgebonden installaties, of alleen de kritische? Wat is het doel: oplevering, certificering, een <a class="text-blue-400 hover:underline" href="prestatiecontract-installaties.html">prestatiecontract</a>?</p>
+<h3 class="text-xl font-semibold text-white mt-8 mb-3">2. Organisatie</h3>
+<p class="text-slate-300 leading-relaxed mb-5">Wie is verantwoordelijk voor het commissioningsproces? Welke rol hebben de opdrachtgever, de adviseurs, de installateurs en de beheerder? Wie keurt goed?</p>
+<h3 class="text-xl font-semibold text-white mt-8 mb-3">3. Testniveaus</h3>
+<p class="text-slate-300 leading-relaxed mb-5">Het plan beschrijft de testen in lagen, volgens het <a class="text-blue-400 hover:underline" href="v-model-bouwprojecten.html">V-model</a>:</p>
+<div class="my-8 overflow-x-auto rounded-xl border border-white/10 bg-[#161a22]/80"><table class="w-full text-sm"><thead><tr><th class="text-left px-4 py-3 font-mono text-xs uppercase tracking-wider text-blue-400">Niveau</th><th class="text-left px-4 py-3 font-mono text-xs uppercase tracking-wider text-blue-400">Test</th></tr></thead><tbody><tr class="border-t border-white/10"><td class="px-4 py-3 text-slate-300 align-top">Component</td><td class="px-4 py-3 text-slate-300 align-top">controle bij levering, fabrieksrapporten</td></tr><tr class="border-t border-white/10"><td class="px-4 py-3 text-slate-300 align-top">Systeem in de fabriek</td><td class="px-4 py-3 text-slate-300 align-top"><a class="text-blue-400 hover:underline" href="fat-sat-verschil.html">FAT</a></td></tr><tr class="border-t border-white/10"><td class="px-4 py-3 text-slate-300 align-top">Systeem op locatie</td><td class="px-4 py-3 text-slate-300 align-top">SAT</td></tr><tr class="border-t border-white/10"><td class="px-4 py-3 text-slate-300 align-top">Integraal</td><td class="px-4 py-3 text-slate-300 align-top"><a class="text-blue-400 hover:underline" href="integrale-test-installaties.html">iSAT</a></td></tr><tr class="border-t border-white/10"><td class="px-4 py-3 text-slate-300 align-top">Gebruik</td><td class="px-4 py-3 text-slate-300 align-top">seizoensgebonden controle, nazorg</td></tr></tbody></table></div>
+<h3 class="text-xl font-semibold text-white mt-8 mb-3">4. Testprotocollen</h3>
+<p class="text-slate-300 leading-relaxed mb-5">Per test een protocol met de stappen, de middelen en het verwachte resultaat. De protocollen worden in de loop van het project uitgewerkt, maar het plan legt vast welke er moeten komen en wie ze opstelt.</p>
+<h3 class="text-xl font-semibold text-white mt-8 mb-3">5. Acceptatiecriteria</h3>
+<p class="text-slate-300 leading-relaxed mb-5">Per eis: wanneer is het goed? Die criteria komen rechtstreeks uit het <a class="text-blue-400 hover:underline" href="programma-van-eisen-installaties.html">programma van eisen</a> en het ontwerp.</p>
+<h3 class="text-xl font-semibold text-white mt-8 mb-3">6. Planning</h3>
+<p class="text-slate-300 leading-relaxed mb-5">Wanneer vinden de testen plaats, en wat moet daarvoor klaar zijn? Integrale testen vragen dat alle betrokken systemen klaar zijn en hun SAT hebben doorlopen.</p>
+<h3 class="text-xl font-semibold text-white mt-8 mb-3">7. Afwijkingen</h3>
+<p class="text-slate-300 leading-relaxed mb-5">Hoe worden afwijkingen vastgelegd, wie lost ze op en hoe wordt opnieuw getest?</p>
+<h3 class="text-xl font-semibold text-white mt-8 mb-3">8. Documentatie</h3>
+<p class="text-slate-300 leading-relaxed mb-5">Welke rapporten worden opgeleverd, en hoe worden ze opgenomen in het <a class="text-blue-400 hover:underline" href="opleverdossier-installatie.html">opleverdossier</a>?</p>
+<h2 id="een-praktisch-stappenplan" class="text-2xl md:text-3xl font-bold text-white tracking-tight mt-12 mb-4 scroll-mt-24">Een praktisch stappenplan</h2>
+<ol class="list-decimal pl-6 space-y-2 text-slate-300 leading-relaxed mb-6 marker:text-blue-400"><li><strong class="text-white">Stel het plan op in de ontwerpfase</strong>, zodat testbaarheid in het ontwerp kan worden meegenomen.</li><li><strong class="text-white">Neem het op in het bestek</strong>, zodat installateurs weten wat er van hen wordt verwacht.</li><li><strong class="text-white">Werk de protocollen uit</strong> tijdens de uitvoeringsvoorbereiding.</li><li><strong class="text-white">Voer de FAT's uit</strong> vóór levering van de belangrijkste systemen.</li><li><strong class="text-white">Voer de SAT's uit</strong> na installatie.</li><li><strong class="text-white">Voer de integrale testen uit</strong> als alle systemen klaar zijn.</li><li><strong class="text-white">Rond af</strong> met een compleet dossier en een overdracht aan de beheerder.</li><li><strong class="text-white">Evalueer na een seizoen</strong> of de installaties in de praktijk presteren zoals bedoeld.</li></ol>
+<div class="my-8 p-6 rounded-xl border border-blue-500/30 bg-blue-500/10 text-slate-200 leading-relaxed"><div class="text-xs font-mono text-blue-400 uppercase tracking-widest mb-2">[PRAKTIJKTIP]</div>Reserveer in de projectplanning expliciet tijd voor testen en herstel, ook na de integrale test. Een planning waarin oplevering direct volgt op de laatste test, laat geen ruimte voor het oplossen van afwijkingen.</div>
+<h2 id="de-rol-van-testbaarheid-in-het-ontwerp" class="text-2xl md:text-3xl font-bold text-white tracking-tight mt-12 mb-4 scroll-mt-24">De rol van testbaarheid in het ontwerp</h2>
+<p class="text-slate-300 leading-relaxed mb-5">Een installatie die moeilijk te testen is, wordt slecht getest. In het ontwerp kan al rekening worden gehouden met testbaarheid: meetpunten in verdelers, testschakelaars, mogelijkheden om een netuitval te simuleren, en een <a class="text-blue-400 hover:underline" href="gebouwbeheersysteem.html">gebouwbeheersysteem</a> dat statussen en alarmen registreert.</p>
+<h2 id="commissioning-en-certificering" class="text-2xl md:text-3xl font-bold text-white tracking-tight mt-12 mb-4 scroll-mt-24">Commissioning en certificering</h2>
+<p class="text-slate-300 leading-relaxed mb-5">Duurzaamheidscertificaten zoals BREEAM waarderen een commissioningsplan dat vroeg in het project is opgesteld. Lees <a class="text-blue-400 hover:underline" href="breeam-installaties.html">BREEAM en elektrotechnische installaties</a>.</p>
+<h2 id="bij-ecap-slui" class="text-2xl md:text-3xl font-bold text-white tracking-tight mt-12 mb-4 scroll-mt-24">Bij ECAP SLUI</h2>
+<p class="text-slate-300 leading-relaxed mb-5">ECAP SLUI zet een test- en commissioningsmodule op om aan het einde van de bouw de FAT-, SAT- en iSat-testen uit te voeren, en waarborgt de kwaliteit gedurende het hele proces volgens het V-model. Bekijk <a class="text-blue-400 hover:underline" href="../diensten.html#test-commissioning">test &amp; commissioning</a> en <a class="text-blue-400 hover:underline" href="wat-is-commissioning.html">wat is commissioning</a>.</p>
+<h2 id="veelgestelde-vragen" class="text-2xl md:text-3xl font-bold text-white tracking-tight mt-12 mb-6">Veelgestelde vragen</h2><div class="space-y-4"><details class="p-6 rounded-xl border border-white/10 bg-[#161a22]/80"><summary class="font-semibold text-white cursor-pointer">Wanneer stel je een commissioningsplan op?</summary><p class="text-slate-300 leading-relaxed mt-3">Bij voorkeur in de ontwerpfase, zodat testbaarheid in het ontwerp kan worden meegenomen en de eisen in het bestek kunnen worden opgenomen.</p></details><details class="p-6 rounded-xl border border-white/10 bg-[#161a22]/80"><summary class="font-semibold text-white cursor-pointer">Wie keurt de testen goed?</summary><p class="text-slate-300 leading-relaxed mt-3">Dat wordt in het commissioningsplan vastgelegd, meestal de opdrachtgever of de door hem aangewezen adviseur.</p></details></div>
+<div class="mt-14 p-8 rounded-2xl border border-white/10 bg-[#161a22]/90">
+<div class="font-mono text-xs text-blue-400 uppercase tracking-widest mb-3">[SAMENWERKEN?]</div>
+<h2 class="text-2xl font-bold text-white mb-3">Advies op maat voor uw project</h2>
+<p class="text-slate-400 leading-relaxed mb-6">ECAP SLUI in Ede adviseert, engineert en calculeert elektrotechnische installaties en begeleidt de uitvoering, van de eerste ontwerpfase tot en met test &amp; commissioning. Met meer dan 30 jaar ervaring in utiliteit en industrie.</p>
+<div class="flex flex-wrap gap-4"><a class="px-6 py-3 rounded-xl bg-blue-600 hover:bg-blue-500 text-white font-semibold text-sm shadow-[0_0_25px_rgba(0,102,255,0.4)] transition" href="../contact.html">Neem contact op →</a><a class="px-6 py-3 rounded-xl border border-white/15 bg-white/5 hover:bg-white/10 text-white font-semibold text-sm transition" href="tel:+31651322666">Bel 06 51322666</a></div>
+</div>
+</article>
+<aside class="lg:col-span-4 space-y-6 lg:sticky lg:top-28 self-start">
+<div class="p-6 rounded-xl border border-white/10 bg-[#161a22]/80"><div class="text-xs font-mono text-blue-400 uppercase tracking-widest mb-4">[INHOUD]</div><ol class="space-y-2 text-sm text-slate-300 list-decimal pl-5 marker:text-blue-400"><li><a class="hover:text-white" href="#waarom-een-plan">Waarom een plan?</a></li><li><a class="hover:text-white" href="#de-inhoud-van-een-commissioningsplan">De inhoud van een commissioningsplan</a></li><li><a class="hover:text-white" href="#een-praktisch-stappenplan">Een praktisch stappenplan</a></li><li><a class="hover:text-white" href="#de-rol-van-testbaarheid-in-het-ontwerp">De rol van testbaarheid in het ontwerp</a></li><li><a class="hover:text-white" href="#commissioning-en-certificering">Commissioning en certificering</a></li><li><a class="hover:text-white" href="#bij-ecap-slui">Bij ECAP SLUI</a></li><li><a class="hover:text-white" href="#veelgestelde-vragen">Veelgestelde vragen</a></li></ol></div>
+<div class="p-6 rounded-xl border border-white/10 bg-[#161a22]/80"><div class="text-xs font-mono text-blue-400 uppercase tracking-widest mb-4">[GERELATEERDE DIENSTEN]</div><ul class="space-y-2 text-sm"><li><a class="text-blue-400 hover:underline" href="../diensten.html#test-commissioning">Test &amp; commissioning: FAT-, SAT- en iSat-testen</a></li><li><a class="text-blue-400 hover:underline" href="../diensten.html#begeleiding-wtb">Begeleiding werktuigbouwkundige installaties</a></li><li><a class="text-blue-400 hover:underline" href="../werkwijze.html">Werkwijze &amp; V-model</a></li></ul></div>
+<div class="p-6 rounded-xl border border-white/10 bg-[#161a22]/80 font-mono text-xs space-y-3"><div class="flex justify-between"><span class="text-slate-400">ZOEKWOORD</span><span class="text-white text-right">commissioningsplan</span></div><div class="flex justify-between"><span class="text-slate-400">WOORDEN</span><span class="text-white">588</span></div><div class="flex justify-between"><span class="text-slate-400">CATEGORIE</span><a class="text-blue-400 text-right" href="../blog/categorie/test-commissioning.html">Test &amp; commissioning</a></div></div>
+</aside>
+</div>
+<section class="mt-16"><div class="font-mono text-xs text-blue-400 uppercase tracking-widest mb-6">[LEES OOK]</div><div class="grid grid-cols-1 md:grid-cols-3 gap-4"><a href="../blog/brandcontrolematrix-testen.html" class="group p-6 rounded-xl border border-white/10 bg-[#161a22]/80 hover:border-blue-500/50 transition flex flex-col">
+<div class="text-xs font-mono text-blue-400 mb-3 uppercase tracking-wider">Test &amp; commissioning</div>
+<h3 class="font-semibold text-white text-lg leading-snug mb-2 group-hover:text-blue-300">De brandcontrolematrix opstellen en integraal testen</h3>
+<p class="text-sm text-slate-400 leading-relaxed flex-1">Wat is een brandcontrolematrix? Uitleg over sturingen bij brand, het opstellen van de matrix, raakvlakken tussen disciplines en het integraal testen van brandscenario&#x27;s.</p>
+<div class="mt-5 pt-4 border-t border-white/10 text-xs font-mono text-slate-400 flex justify-between"><span>3 MIN LEESTIJD</span><span class="text-blue-400">LEES →</span></div>
+</a><a href="../blog/retro-commissioning.html" class="group p-6 rounded-xl border border-white/10 bg-[#161a22]/80 hover:border-blue-500/50 transition flex flex-col">
+<div class="text-xs font-mono text-blue-400 mb-3 uppercase tracking-wider">Test &amp; commissioning</div>
+<h3 class="font-semibold text-white text-lg leading-snug mb-2 group-hover:text-blue-300">Retro-commissioning: bestaande gebouwen weer laten presteren</h3>
+<p class="text-sm text-slate-400 leading-relaxed flex-1">Wat is retro-commissioning? Hoe u een bestaand gebouw doorlicht, veelvoorkomende bevindingen, typische besparingen en een stappenplan voor installaties.</p>
+<div class="mt-5 pt-4 border-t border-white/10 text-xs font-mono text-slate-400 flex justify-between"><span>3 MIN LEESTIJD</span><span class="text-blue-400">LEES →</span></div>
+</a><a href="../blog/wat-is-commissioning.html" class="group p-6 rounded-xl border border-white/10 bg-[#161a22]/80 hover:border-blue-500/50 transition flex flex-col">
+<div class="text-xs font-mono text-blue-400 mb-3 uppercase tracking-wider">Test &amp; commissioning</div>
+<h3 class="font-semibold text-white text-lg leading-snug mb-2 group-hover:text-blue-300">Wat is commissioning? Kwaliteitsborging van installaties</h3>
+<p class="text-sm text-slate-400 leading-relaxed flex-1">Commissioning in de bouw uitgelegd: het proces van kwaliteitsbeheersing en prestatieborging van installaties, van ontwerp tot gebruik, en waarom het steeds belangrijker wordt.</p>
+<div class="mt-5 pt-4 border-t border-white/10 text-xs font-mono text-slate-400 flex justify-between"><span>3 MIN LEESTIJD</span><span class="text-blue-400">LEES →</span></div>
+</a></div></section>
+</main>
+<footer class="relative z-10 border-t border-white/10 bg-[#10131a]/80 mt-16">
+<div class="max-w-[1680px] mx-auto px-6 py-12 grid grid-cols-1 md:grid-cols-3 gap-10 text-sm">
+<div>
+<div class="text-base font-bold text-white tracking-tight">ECAP SLUI</div>
+<div class="text-[10px] font-mono tracking-widest text-slate-400 uppercase mt-1 mb-4">Elektrotechnisch calculatie-, adviserings- en projectenbureau</div>
+<address class="not-italic text-slate-400 leading-relaxed">Prof. Oudpark 90<br/>6716 EJ Ede<br/>
+<a class="text-blue-400 hover:underline" href="tel:+31651322666">06 51322666</a><br/>
+<a class="text-blue-400 hover:underline" href="mailto:vincent.slui@kpnmail.nl">vincent.slui@kpnmail.nl</a><br/>
+KvK 59289430</address>
+</div>
+<div>
+<div class="font-mono text-xs text-blue-400 uppercase tracking-widest mb-4">[NAVIGATIE]</div>
+<nav class="flex flex-wrap gap-x-6 gap-y-2 text-slate-300" aria-label="Footer"><a class="hover:text-white" href="../index.html">Home</a> <a class="hover:text-white" href="../diensten.html">Diensten</a> <a class="hover:text-white" href="../sectoren.html">Sectoren</a> <a class="hover:text-white" href="../projecten.html">Projecten</a> <a class="hover:text-white" href="../werkwijze.html">Werkwijze</a> <a class="hover:text-white" href="../over-ons.html">Over ons</a> <a class="hover:text-white" href="../blog/">Blog</a> <a class="hover:text-white" href="../contact.html">Contact</a> <a class="hover:text-white" href="../privacy.html">Privacyverklaring</a></nav>
+</div>
+<div>
+<div class="font-mono text-xs text-blue-400 uppercase tracking-widest mb-4">[STAY CONNECTED]</div>
+<div class="flex flex-col gap-2 text-slate-300">
+<a class="hover:text-white" href="https://www.linkedin.com/company/ecap-slui/" rel="noopener" target="_blank">LinkedIn ECAP SLUI →</a>
+<a class="hover:text-white" href="https://www.linkedin.com/in/vincent-slui-a629ba19/" rel="noopener" target="_blank">LinkedIn Vincent Slui →</a>
+</div>
+<div class="text-xs font-mono text-slate-500 mt-6">Beeld © Studio Csány</div>
+</div>
+</div>
+</footer>
+<script src="../shader.js"></script>
+<script>initWebGLShader('shader-canvas-blog');</script>
+</body>
+</html>

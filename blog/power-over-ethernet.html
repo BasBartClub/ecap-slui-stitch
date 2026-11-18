@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="utf-8"/>
+<title>Power over Ethernet: voeding via de datakabel | ECAP SLUI</title>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta name="description" content="Wat is Power over Ethernet (PoE)? De standaarden, vermogensklassen, toepassingen, warmte in kabelbundels, PoE-budget, noodvoeding en ontwerpregels."/>
+<meta name="robots" content="noindex, nofollow"/>
+<link rel="canonical" href="https://basbartclub.github.io/ecap-slui-stitch/blog/power-over-ethernet.html"/>
+<meta property="og:type" content="article"/>
+<meta property="og:locale" content="nl_NL"/>
+<meta property="og:site_name" content="ECAP SLUI"/>
+<meta property="og:title" content="Power over Ethernet: voeding via de datakabel | ECAP SLUI"/>
+<meta property="og:description" content="Wat is Power over Ethernet (PoE)? De standaarden, vermogensklassen, toepassingen, warmte in kabelbundels, PoE-budget, noodvoeding en ontwerpregels."/>
+<meta property="og:url" content="https://basbartclub.github.io/ecap-slui-stitch/blog/power-over-ethernet.html"/>
+<meta property="og:image" content="https://basbartclub.github.io/ecap-slui-stitch/img/verdeelinrichting-ecap-slui.jpg"/>
+<meta name="twitter:card" content="summary_large_image"/>
+<link rel="icon" href="data:,"/>
+<link rel="stylesheet" href="../tokens.css"/>
+<script src="https://cdn.tailwindcss.com"></script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BlogPosting", "headline": "Power over Ethernet: voeding via de datakabel", "description": "Wat is Power over Ethernet (PoE)? De standaarden, vermogensklassen, toepassingen, warmte in kabelbundels, PoE-budget, noodvoeding en ontwerpregels.", "inLanguage": "nl-NL", "keywords": "Power over Ethernet", "articleSection": "Data, communicatie & datacenters", "wordCount": 611, "datePublished": "2026-11-18", "dateModified": "2026-11-18", "mainEntityOfPage": "https://basbartclub.github.io/ecap-slui-stitch/blog/power-over-ethernet.html", "image": "https://basbartclub.github.io/ecap-slui-stitch/img/verdeelinrichting-ecap-slui.jpg", "author": {"@type": "Organization", "name": "ECAP SLUI", "url": "https://basbartclub.github.io/ecap-slui-stitch/"}, "publisher": {"@type": "Organization", "name": "ECAP SLUI", "logo": {"@type": "ImageObject", "url": "https://basbartclub.github.io/ecap-slui-stitch/img/ecap-slui-logo.png"}}}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://basbartclub.github.io/ecap-slui-stitch/index.html"}, {"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://basbartclub.github.io/ecap-slui-stitch/blog/"}, {"@type": "ListItem", "position": 3, "name": "Data, communicatie & datacenters", "item": "https://basbartclub.github.io/ecap-slui-stitch/blog/categorie/data-datacenters.html"}, {"@type": "ListItem", "position": 4, "name": "Power over Ethernet: voeding via de datakabel", "item": "https://basbartclub.github.io/ecap-slui-stitch/blog/power-over-ethernet.html"}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Hoeveel vermogen levert PoE?", "acceptedAnswer": {"@type": "Answer", "text": "Dat hangt af van de standaard. PoE, PoE+ en de hogere PoE-standaarden leveren steeds meer vermogen, zodat ook accesspoints, camera's en displays kunnen worden gevoed."}}, {"@type": "Question", "name": "Moet een PoE-switch op een UPS?", "acceptedAnswer": {"@type": "Answer", "text": "Voor kritische apparatuur zoals camera's en toegangslezers wel, omdat bij uitval van de switch ook de aangesloten apparaten uitvallen."}}]}</script>
+</head>
+<body class="bg-[#0b0e14] text-slate-100 min-h-screen">
+<div class="fixed inset-0 pointer-events-none opacity-30 z-0">
+<canvas class="w-full h-full" id="shader-canvas-blog"></canvas>
+</div>
+<header class="sticky top-0 z-50 border-b border-white/10 bg-[#0b0e14]/90 backdrop-blur-md">
+  <div class="max-w-[1680px] mx-auto px-6 h-20 flex items-center justify-between">
+    <a href="../index.html" class="flex items-center gap-4" aria-label="ECAP SLUI home">
+      <div class="w-10 h-10 rounded-lg bg-blue-600/20 border border-blue-500/40 flex items-center justify-center font-bold text-blue-400">
+        ES
+      </div>
+      <div>
+        <div class="text-base font-bold tracking-tight text-white">ECAP SLUI</div>
+        <div class="text-[10px] uppercase font-mono tracking-widest text-slate-400">Elektrotechnisch Bureau • Ede</div>
+      </div>
+    </a>
+    <nav class="hidden lg:flex items-center gap-8 text-sm font-medium text-slate-300" aria-label="Hoofdmenu">
+      <a href="../index.html" class="hover:text-white transition">Home</a>
+      <a href="../diensten.html" class="hover:text-white transition">Diensten</a>
+      <a href="../sectoren.html" class="hover:text-white transition">Sectoren</a>
+      <a href="../projecten.html" class="hover:text-white transition">Projecten</a>
+      <a href="../werkwijze.html" class="hover:text-white transition">Werkwijze</a>
+      <a href="../over-ons.html" class="hover:text-white transition">Over ons</a>
+      <a href="../blog/" class="text-blue-400">Blog</a>
+      <a href="../contact.html" class="hover:text-white transition">Contact</a>
+    </nav>
+    <div class="flex items-center gap-4">
+      <a href="../contact.html" class="px-5 py-2.5 rounded-lg bg-blue-600 hover:bg-blue-500 text-white font-medium text-sm transition shadow-[0_0_20px_rgba(0,102,255,0.35)]">
+        Direct Contact
+      </a>
+    </div>
+  </div>
+</header>
+<main class="relative z-10 max-w-[1680px] mx-auto px-6 py-16">
+<nav class="font-mono text-xs text-slate-400 uppercase tracking-widest mb-6" aria-label="Kruimelpad"><a class="hover:text-white" href="../index.html">Home</a> / <a class="hover:text-white" href="../blog/">Blog</a> / <a class="text-blue-400 hover:underline" href="../blog/categorie/data-datacenters.html">Data, communicatie &amp; datacenters</a></nav>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-10">
+<article class="lg:col-span-8">
+<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-blue-500/30 bg-blue-500/10 text-blue-400 font-mono text-xs uppercase mb-6"><span class="w-2 h-2 rounded-full bg-blue-400"></span>Data, communicatie &amp; datacenters • 3 min leestijd</div>
+<h1 class="text-4xl md:text-5xl font-bold tracking-tight text-white mb-6 leading-tight">Power over Ethernet: voeding via de datakabel</h1>
+<p class="text-xl text-slate-400 leading-relaxed mb-10">Met Power over Ethernet krijgt een apparaat zijn data én zijn voeding via één netwerkkabel. Geen stopcontact nodig bij elke camera, elk accesspoint of elke toegangslezer. Dat maakt installaties eenvoudiger, maar vraagt wel een doordacht ontwerp.</p>
+<h2 id="hoe-werkt-het" class="text-2xl md:text-3xl font-bold text-white tracking-tight mt-12 mb-4 scroll-mt-24">Hoe werkt het?</h2>
+<p class="text-slate-300 leading-relaxed mb-5">Een PoE-switch of een PoE-injector levert een gelijkspanning over de aders van een netwerkkabel. Het aangesloten apparaat herkent dat en neemt het vermogen af dat het nodig heeft. Voordat de voeding wordt ingeschakeld, controleert de switch of er een geschikt apparaat is aangesloten, zodat gewone netwerkapparatuur niet wordt beschadigd.</p>
+<h2 id="standaarden-en-vermogens" class="text-2xl md:text-3xl font-bold text-white tracking-tight mt-12 mb-4 scroll-mt-24">Standaarden en vermogens</h2>
+<div class="my-8 overflow-x-auto rounded-xl border border-white/10 bg-[#161a22]/80"><table class="w-full text-sm"><thead><tr><th class="text-left px-4 py-3 font-mono text-xs uppercase tracking-wider text-blue-400">Standaard</th><th class="text-left px-4 py-3 font-mono text-xs uppercase tracking-wider text-blue-400">Gangbare naam</th><th class="text-left px-4 py-3 font-mono text-xs uppercase tracking-wider text-blue-400">Kenmerk</th></tr></thead><tbody><tr class="border-t border-white/10"><td class="px-4 py-3 text-slate-300 align-top">IEEE 802.3af</td><td class="px-4 py-3 text-slate-300 align-top">PoE</td><td class="px-4 py-3 text-slate-300 align-top">laag vermogen, voor eenvoudige telefoons en sensoren</td></tr><tr class="border-t border-white/10"><td class="px-4 py-3 text-slate-300 align-top">IEEE 802.3at</td><td class="px-4 py-3 text-slate-300 align-top">PoE+</td><td class="px-4 py-3 text-slate-300 align-top">meer vermogen, voor accesspoints en camera's</td></tr><tr class="border-t border-white/10"><td class="px-4 py-3 text-slate-300 align-top">IEEE 802.3bt</td><td class="px-4 py-3 text-slate-300 align-top">PoE++ / 4PPoE</td><td class="px-4 py-3 text-slate-300 align-top">hoog vermogen via alle vier de paren, voor zware apparaten</td></tr></tbody></table></div>
+<p class="text-slate-300 leading-relaxed mb-5">Het vermogen dat bij het apparaat aankomt, is lager dan wat de switch levert, door verliezen in de kabel. Moderne accesspoints, PTZ-camera's met verwarming, displays en zelfs LED-verlichting vragen vermogens die alleen met de hogere standaarden mogelijk zijn.</p>
+<h2 id="toepassingen" class="text-2xl md:text-3xl font-bold text-white tracking-tight mt-12 mb-4 scroll-mt-24">Toepassingen</h2>
+<ul class="list-disc pl-6 space-y-2 text-slate-300 leading-relaxed mb-6 marker:text-blue-400"><li>wifi-accesspoints;</li><li>IP-camera's, ook buiten met verwarming;</li><li>toegangslezers en deurstations;</li><li>IP-telefoons;</li><li>sensoren voor gebouwautomatisering;</li><li>kleine displays en informatiezuilen;</li><li>LED-verlichting in specifieke systemen.</li></ul>
+<h2 id="warmte-in-kabelbundels" class="text-2xl md:text-3xl font-bold text-white tracking-tight mt-12 mb-4 scroll-mt-24">Warmte in kabelbundels</h2>
+<p class="text-slate-300 leading-relaxed mb-5">Bij hogere vermogens worden de kabels warm. In een dikke bundel kabels, zeker in een afgesloten goot of buis, kan de temperatuur oplopen. Dat verlaagt de prestaties van de datakabel en kan op termijn de kabel beschadigen. Normen en richtlijnen geven aanwijzingen voor maximale bundelgroottes en installatiemethoden.</p>
+<div class="my-8 p-6 rounded-xl border border-blue-500/30 bg-blue-500/10 text-slate-200 leading-relaxed"><div class="text-xs font-mono text-blue-400 uppercase tracking-widest mb-2">[PRAKTIJKTIP]</div>Bij hoge PoE-vermogens is Cat6A met dikkere aders gunstiger dan dunnere kabels, en helpt het om grote bundels te vermijden of op te splitsen. Neem dit mee in het ontwerp van de kabelgoten.</div>
+<h2 id="het-poe-budget" class="text-2xl md:text-3xl font-bold text-white tracking-tight mt-12 mb-4 scroll-mt-24">Het PoE-budget</h2>
+<p class="text-slate-300 leading-relaxed mb-5">Een switch heeft een maximaal totaal PoE-vermogen. Als alle poorten tegelijk het maximale vermogen vragen, kan dat budget worden overschreden. Bereken daarom per switch:</p>
+<ol class="list-decimal pl-6 space-y-2 text-slate-300 leading-relaxed mb-6 marker:text-blue-400"><li>het aantal PoE-apparaten;</li><li>het vermogen per apparaat, in het slechtste geval (bijvoorbeeld een camera met verwarming in de winter);</li><li>de reserve voor uitbreiding.</li></ol>
+<p class="text-slate-300 leading-relaxed mb-5">Kies switches met voldoende budget, of verdeel apparaten over meer switches.</p>
+<h2 id="noodvoeding" class="text-2xl md:text-3xl font-bold text-white tracking-tight mt-12 mb-4 scroll-mt-24">Noodvoeding</h2>
+<p class="text-slate-300 leading-relaxed mb-5">Met PoE wordt de netwerkswitch de voedingsbron voor alle aangesloten apparaten. Als de switch uitvalt, vallen ook de camera's, accesspoints en toegangslezers uit. Voor beveiligingssystemen is dat ongewenst. Zet PoE-switches voor kritische apparaten daarom op een <a class="text-blue-400 hover:underline" href="ups-systeem-kiezen.html">UPS</a> of op een voeding die is aangesloten op noodstroom. Bereken de benodigde capaciteit inclusief het PoE-vermogen.</p>
+<h2 id="overspanning-en-buitenapparatuur" class="text-2xl md:text-3xl font-bold text-white tracking-tight mt-12 mb-4 scroll-mt-24">Overspanning en buitenapparatuur</h2>
+<p class="text-slate-300 leading-relaxed mb-5">Camera's en lezers buiten zijn via de kabel verbonden met de switch binnen. Een overspanning door onweer kan via die kabel de switch bereiken. <a class="text-blue-400 hover:underline" href="overspanningsbeveiliging.html">Overspanningsbeveiliging</a> voor datakabels bij de binnenkomst helpt, net als een goede <a class="text-blue-400 hover:underline" href="aarding-ict-installatie.html">aarding</a>. Voor grotere afstanden is glasvezel met lokale voeding vaak beter; zie <a class="text-blue-400 hover:underline" href="cat6a-of-glasvezel.html">Cat6A of glasvezel</a>.</p>
+<h2 id="lengte" class="text-2xl md:text-3xl font-bold text-white tracking-tight mt-12 mb-4 scroll-mt-24">Lengte</h2>
+<p class="text-slate-300 leading-relaxed mb-5">PoE werkt binnen de normale lengtegrenzen van ethernet, tot 100 meter per kanaal. Bij langere afstanden zijn extenders of een andere oplossing nodig.</p>
+<h2 id="ontwerp" class="text-2xl md:text-3xl font-bold text-white tracking-tight mt-12 mb-4 scroll-mt-24">Ontwerp</h2>
+<p class="text-slate-300 leading-relaxed mb-5">PoE verschuift voeding van de elektrotechnische installatie naar de netwerkinfrastructuur. Dat betekent dat ICT en elektrotechniek samen moeten ontwerpen: waar komen de switches, hoeveel vermogen vragen ze, hoe wordt de warmte in de patchkast afgevoerd en hoe wordt alles gevoed bij een storing?</p>
+<h2 id="advies" class="text-2xl md:text-3xl font-bold text-white tracking-tight mt-12 mb-4 scroll-mt-24">Advies</h2>
+<p class="text-slate-300 leading-relaxed mb-5">ECAP SLUI begeleidt het ontwerp van <a class="text-blue-400 hover:underline" href="../diensten.html#communicatie-datanetwerken">communicatie- en datanetwerken</a> en de <a class="text-blue-400 hover:underline" href="../diensten.html#noodstroom-energievoorziening">energievoorziening</a> daarvan, zodat data en voeding goed op elkaar aansluiten.</p>
+<h2 id="veelgestelde-vragen" class="text-2xl md:text-3xl font-bold text-white tracking-tight mt-12 mb-6">Veelgestelde vragen</h2><div class="space-y-4"><details class="p-6 rounded-xl border border-white/10 bg-[#161a22]/80"><summary class="font-semibold text-white cursor-pointer">Hoeveel vermogen levert PoE?</summary><p class="text-slate-300 leading-relaxed mt-3">Dat hangt af van de standaard. PoE, PoE+ en de hogere PoE-standaarden leveren steeds meer vermogen, zodat ook accesspoints, camera's en displays kunnen worden gevoed.</p></details><details class="p-6 rounded-xl border border-white/10 bg-[#161a22]/80"><summary class="font-semibold text-white cursor-pointer">Moet een PoE-switch op een UPS?</summary><p class="text-slate-300 leading-relaxed mt-3">Voor kritische apparatuur zoals camera's en toegangslezers wel, omdat bij uitval van de switch ook de aangesloten apparaten uitvallen.</p></details></div>
+<div class="mt-14 p-8 rounded-2xl border border-white/10 bg-[#161a22]/90">
+<div class="font-mono text-xs text-blue-400 uppercase tracking-widest mb-3">[SAMENWERKEN?]</div>
+<h2 class="text-2xl font-bold text-white mb-3">Advies op maat voor uw project</h2>
+<p class="text-slate-400 leading-relaxed mb-6">ECAP SLUI in Ede adviseert, engineert en calculeert elektrotechnische installaties en begeleidt de uitvoering, van de eerste ontwerpfase tot en met test &amp; commissioning. Met meer dan 30 jaar ervaring in utiliteit en industrie.</p>
+<div class="flex flex-wrap gap-4"><a class="px-6 py-3 rounded-xl bg-blue-600 hover:bg-blue-500 text-white font-semibold text-sm shadow-[0_0_25px_rgba(0,102,255,0.4)] transition" href="../contact.html">Neem contact op →</a><a class="px-6 py-3 rounded-xl border border-white/15 bg-white/5 hover:bg-white/10 text-white font-semibold text-sm transition" href="tel:+31651322666">Bel 06 51322666</a></div>
+</div>
+</article>
+<aside class="lg:col-span-4 space-y-6 lg:sticky lg:top-28 self-start">
+<div class="p-6 rounded-xl border border-white/10 bg-[#161a22]/80"><div class="text-xs font-mono text-blue-400 uppercase tracking-widest mb-4">[INHOUD]</div><ol class="space-y-2 text-sm text-slate-300 list-decimal pl-5 marker:text-blue-400"><li><a class="hover:text-white" href="#hoe-werkt-het">Hoe werkt het?</a></li><li><a class="hover:text-white" href="#standaarden-en-vermogens">Standaarden en vermogens</a></li><li><a class="hover:text-white" href="#toepassingen">Toepassingen</a></li><li><a class="hover:text-white" href="#warmte-in-kabelbundels">Warmte in kabelbundels</a></li><li><a class="hover:text-white" href="#het-poe-budget">Het PoE-budget</a></li><li><a class="hover:text-white" href="#noodvoeding">Noodvoeding</a></li><li><a class="hover:text-white" href="#overspanning-en-buitenapparatuur">Overspanning en buitenapparatuur</a></li><li><a class="hover:text-white" href="#lengte">Lengte</a></li><li><a class="hover:text-white" href="#ontwerp">Ontwerp</a></li><li><a class="hover:text-white" href="#advies">Advies</a></li><li><a class="hover:text-white" href="#veelgestelde-vragen">Veelgestelde vragen</a></li></ol></div>
+<div class="p-6 rounded-xl border border-white/10 bg-[#161a22]/80"><div class="text-xs font-mono text-blue-400 uppercase tracking-widest mb-4">[GERELATEERDE DIENSTEN]</div><ul class="space-y-2 text-sm"><li><a class="text-blue-400 hover:underline" href="../diensten.html#communicatie-datanetwerken">Communicatie- en datanetwerken</a></li><li><a class="text-blue-400 hover:underline" href="../diensten.html#computerruimten-datacenters">Installaties in computerruimten en datacenters</a></li><li><a class="text-blue-400 hover:underline" href="../diensten.html#noodstroom-energievoorziening">Noodstroom- en energievoorziening</a></li><li><a class="text-blue-400 hover:underline" href="../werkwijze.html">Werkwijze &amp; V-model</a></li></ul></div>
+<div class="p-6 rounded-xl border border-white/10 bg-[#161a22]/80 font-mono text-xs space-y-3"><div class="flex justify-between"><span class="text-slate-400">ZOEKWOORD</span><span class="text-white text-right">Power over Ethernet</span></div><div class="flex justify-between"><span class="text-slate-400">WOORDEN</span><span class="text-white">611</span></div><div class="flex justify-between"><span class="text-slate-400">CATEGORIE</span><a class="text-blue-400 text-right" href="../blog/categorie/data-datacenters.html">Data, communicatie &amp; datacenters</a></div></div>
+</aside>
+</div>
+<section class="mt-16"><div class="font-mono text-xs text-blue-400 uppercase tracking-widest mb-6">[LEES OOK]</div><div class="grid grid-cols-1 md:grid-cols-3 gap-4"><a href="../blog/en-50600-datacenter.html" class="group p-6 rounded-xl border border-white/10 bg-[#161a22]/80 hover:border-blue-500/50 transition flex flex-col">
+<div class="text-xs font-mono text-blue-400 mb-3 uppercase tracking-wider">Data, communicatie &amp; datacenters</div>
+<h3 class="font-semibold text-white text-lg leading-snug mb-2 group-hover:text-blue-300">EN 50600: het Europese kader voor datacenterfaciliteiten</h3>
+<p class="text-sm text-slate-400 leading-relaxed flex-1">Wat is de EN 50600-reeks voor datacenters? Opbouw van de norm, beschikbaarheidsklassen, beveiliging, energie-efficiëntie en wat het betekent voor het ontwerp.</p>
+<div class="mt-5 pt-4 border-t border-white/10 text-xs font-mono text-slate-400 flex justify-between"><span>3 MIN LEESTIJD</span><span class="text-blue-400">LEES →</span></div>
+</a><a href="../blog/wifi-bedrijfspand.html" class="group p-6 rounded-xl border border-white/10 bg-[#161a22]/80 hover:border-blue-500/50 transition flex flex-col">
+<div class="text-xs font-mono text-blue-400 mb-3 uppercase tracking-wider">Data, communicatie &amp; datacenters</div>
+<h3 class="font-semibold text-white text-lg leading-snug mb-2 group-hover:text-blue-300">Wifi in een bedrijfspand: ontwerp vanuit dekking én capaciteit</h3>
+<p class="text-sm text-slate-400 leading-relaxed flex-1">Een betrouwbaar wifi-netwerk in kantoor, hal of zorggebouw: site survey, dekking en capaciteit, plaatsing van accesspoints, bekabeling, PoE en beheer.</p>
+<div class="mt-5 pt-4 border-t border-white/10 text-xs font-mono text-slate-400 flex justify-between"><span>3 MIN LEESTIJD</span><span class="text-blue-400">LEES →</span></div>
+</a><a href="../blog/aarding-ict-installatie.html" class="group p-6 rounded-xl border border-white/10 bg-[#161a22]/80 hover:border-blue-500/50 transition flex flex-col">
+<div class="text-xs font-mono text-blue-400 mb-3 uppercase tracking-wider">Data, communicatie &amp; datacenters</div>
+<h3 class="font-semibold text-white text-lg leading-snug mb-2 group-hover:text-blue-300">Aarding van ICT-installaties: storingsvrij en veilig</h3>
+<p class="text-sm text-slate-400 leading-relaxed flex-1">Aarding en vereffening voor ICT: waarom een gescheiden aarde geen goed idee is, vermazing, afscherming van kabels, racks, TN-S en overspanning.</p>
+<div class="mt-5 pt-4 border-t border-white/10 text-xs font-mono text-slate-400 flex justify-between"><span>3 MIN LEESTIJD</span><span class="text-blue-400">LEES →</span></div>
+</a></div></section>
+</main>
+<footer class="relative z-10 border-t border-white/10 bg-[#10131a]/80 mt-16">
+<div class="max-w-[1680px] mx-auto px-6 py-12 grid grid-cols-1 md:grid-cols-3 gap-10 text-sm">
+<div>
+<div class="text-base font-bold text-white tracking-tight">ECAP SLUI</div>
+<div class="text-[10px] font-mono tracking-widest text-slate-400 uppercase mt-1 mb-4">Elektrotechnisch calculatie-, adviserings- en projectenbureau</div>
+<address class="not-italic text-slate-400 leading-relaxed">Prof. Oudpark 90<br/>6716 EJ Ede<br/>
+<a class="text-blue-400 hover:underline" href="tel:+31651322666">06 51322666</a><br/>
+<a class="text-blue-400 hover:underline" href="mailto:vincent.slui@kpnmail.nl">vincent.slui@kpnmail.nl</a><br/>
+KvK 59289430</address>
+</div>
+<div>
+<div class="font-mono text-xs text-blue-400 uppercase tracking-widest mb-4">[NAVIGATIE]</div>
+<nav class="flex flex-wrap gap-x-6 gap-y-2 text-slate-300" aria-label="Footer"><a class="hover:text-white" href="../index.html">Home</a> <a class="hover:text-white" href="../diensten.html">Diensten</a> <a class="hover:text-white" href="../sectoren.html">Sectoren</a> <a class="hover:text-white" href="../projecten.html">Projecten</a> <a class="hover:text-white" href="../werkwijze.html">Werkwijze</a> <a class="hover:text-white" href="../over-ons.html">Over ons</a> <a class="hover:text-white" href="../blog/">Blog</a> <a class="hover:text-white" href="../contact.html">Contact</a> <a class="hover:text-white" href="../privacy.html">Privacyverklaring</a></nav>
+</div>
+<div>
+<div class="font-mono text-xs text-blue-400 uppercase tracking-widest mb-4">[STAY CONNECTED]</div>
+<div class="flex flex-col gap-2 text-slate-300">
+<a class="hover:text-white" href="https://www.linkedin.com/company/ecap-slui/" rel="noopener" target="_blank">LinkedIn ECAP SLUI →</a>
+<a class="hover:text-white" href="https://www.linkedin.com/in/vincent-slui-a629ba19/" rel="noopener" target="_blank">LinkedIn Vincent Slui →</a>
+</div>
+<div class="text-xs font-mono text-slate-500 mt-6">Beeld © Studio Csány</div>
+</div>
+</div>
+</footer>
+<script src="../shader.js"></script>
+<script>initWebGLShader('shader-canvas-blog');</script>
+</body>
+</html>

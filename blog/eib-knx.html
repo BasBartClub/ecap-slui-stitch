@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="utf-8"/>
+<title>Van EIB naar KNX: geschiedenis en compatibiliteit | ECAP SLUI</title>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta name="description" content="Wat is het verschil tussen EIB en KNX? De geschiedenis van de standaard, compatibiliteit van oude installaties, uitbreiden en moderniseren van een bestaande EIB-installatie."/>
+<meta name="robots" content="noindex, nofollow"/>
+<link rel="canonical" href="https://basbartclub.github.io/ecap-slui-stitch/blog/eib-knx.html"/>
+<meta property="og:type" content="article"/>
+<meta property="og:locale" content="nl_NL"/>
+<meta property="og:site_name" content="ECAP SLUI"/>
+<meta property="og:title" content="Van EIB naar KNX: geschiedenis en compatibiliteit | ECAP SLUI"/>
+<meta property="og:description" content="Wat is het verschil tussen EIB en KNX? De geschiedenis van de standaard, compatibiliteit van oude installaties, uitbreiden en moderniseren van een bestaande EIB-installatie."/>
+<meta property="og:url" content="https://basbartclub.github.io/ecap-slui-stitch/blog/eib-knx.html"/>
+<meta property="og:image" content="https://basbartclub.github.io/ecap-slui-stitch/img/verdeelinrichting-ecap-slui.jpg"/>
+<meta name="twitter:card" content="summary_large_image"/>
+<link rel="icon" href="data:,"/>
+<link rel="stylesheet" href="../tokens.css"/>
+<script src="https://cdn.tailwindcss.com"></script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BlogPosting", "headline": "Van EIB naar KNX: geschiedenis en compatibiliteit", "description": "Wat is het verschil tussen EIB en KNX? De geschiedenis van de standaard, compatibiliteit van oude installaties, uitbreiden en moderniseren van een bestaande EIB-installatie.", "inLanguage": "nl-NL", "keywords": "EIB KNX", "articleSection": "KNX & gebouwautomatisering", "wordCount": 532, "datePublished": "2026-11-18", "dateModified": "2026-11-18", "mainEntityOfPage": "https://basbartclub.github.io/ecap-slui-stitch/blog/eib-knx.html", "image": "https://basbartclub.github.io/ecap-slui-stitch/img/verdeelinrichting-ecap-slui.jpg", "author": {"@type": "Organization", "name": "ECAP SLUI", "url": "https://basbartclub.github.io/ecap-slui-stitch/"}, "publisher": {"@type": "Organization", "name": "ECAP SLUI", "logo": {"@type": "ImageObject", "url": "https://basbartclub.github.io/ecap-slui-stitch/img/ecap-slui-logo.png"}}}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://basbartclub.github.io/ecap-slui-stitch/index.html"}, {"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://basbartclub.github.io/ecap-slui-stitch/blog/"}, {"@type": "ListItem", "position": 3, "name": "KNX & gebouwautomatisering", "item": "https://basbartclub.github.io/ecap-slui-stitch/blog/categorie/knx-gebouwautomatisering.html"}, {"@type": "ListItem", "position": 4, "name": "Van EIB naar KNX: geschiedenis en compatibiliteit", "item": "https://basbartclub.github.io/ecap-slui-stitch/blog/eib-knx.html"}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Is EIB compatibel met KNX?", "acceptedAnswer": {"@type": "Answer", "text": "Ja, KNX TP is voortgebouwd op EIB en is daarmee compatibel. Bestaande EIB-installaties kunnen meestal worden uitgebreid met KNX-componenten."}}, {"@type": "Question", "name": "Wat als het projectbestand ontbreekt?", "acceptedAnswer": {"@type": "Answer", "text": "Dan moet de configuratie worden achterhaald door de componenten uit te lezen en te documenteren. Dat is tijdrovend, maar meestal mogelijk."}}]}</script>
+</head>
+<body class="bg-[#0b0e14] text-slate-100 min-h-screen">
+<div class="fixed inset-0 pointer-events-none opacity-30 z-0">
+<canvas class="w-full h-full" id="shader-canvas-blog"></canvas>
+</div>
+<header class="sticky top-0 z-50 border-b border-white/10 bg-[#0b0e14]/90 backdrop-blur-md">
+  <div class="max-w-[1680px] mx-auto px-6 h-20 flex items-center justify-between">
+    <a href="../index.html" class="flex items-center gap-4" aria-label="ECAP SLUI home">
+      <div class="w-10 h-10 rounded-lg bg-blue-600/20 border border-blue-500/40 flex items-center justify-center font-bold text-blue-400">
+        ES
+      </div>
+      <div>
+        <div class="text-base font-bold tracking-tight text-white">ECAP SLUI</div>
+        <div class="text-[10px] uppercase font-mono tracking-widest text-slate-400">Elektrotechnisch Bureau • Ede</div>
+      </div>
+    </a>
+    <nav class="hidden lg:flex items-center gap-8 text-sm font-medium text-slate-300" aria-label="Hoofdmenu">
+      <a href="../index.html" class="hover:text-white transition">Home</a>
+      <a href="../diensten.html" class="hover:text-white transition">Diensten</a>
+      <a href="../sectoren.html" class="hover:text-white transition">Sectoren</a>
+      <a href="../projecten.html" class="hover:text-white transition">Projecten</a>
+      <a href="../werkwijze.html" class="hover:text-white transition">Werkwijze</a>
+      <a href="../over-ons.html" class="hover:text-white transition">Over ons</a>
+      <a href="../blog/" class="text-blue-400">Blog</a>
+      <a href="../contact.html" class="hover:text-white transition">Contact</a>
+    </nav>
+    <div class="flex items-center gap-4">
+      <a href="../contact.html" class="px-5 py-2.5 rounded-lg bg-blue-600 hover:bg-blue-500 text-white font-medium text-sm transition shadow-[0_0_20px_rgba(0,102,255,0.35)]">
+        Direct Contact
+      </a>
+    </div>
+  </div>
+</header>
+<main class="relative z-10 max-w-[1680px] mx-auto px-6 py-16">
+<nav class="font-mono text-xs text-slate-400 uppercase tracking-widest mb-6" aria-label="Kruimelpad"><a class="hover:text-white" href="../index.html">Home</a> / <a class="hover:text-white" href="../blog/">Blog</a> / <a class="text-blue-400 hover:underline" href="../blog/categorie/knx-gebouwautomatisering.html">KNX &amp; gebouwautomatisering</a></nav>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-10">
+<article class="lg:col-span-8">
+<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-blue-500/30 bg-blue-500/10 text-blue-400 font-mono text-xs uppercase mb-6"><span class="w-2 h-2 rounded-full bg-blue-400"></span>KNX &amp; gebouwautomatisering • 3 min leestijd</div>
+<h1 class="text-4xl md:text-5xl font-bold tracking-tight text-white mb-6 leading-tight">Van EIB naar KNX: geschiedenis en compatibiliteit</h1>
+<p class="text-xl text-slate-400 leading-relaxed mb-10">Wie een oudere installatie tegenkomt, ziet soms de naam EIB, de European Installation Bus. Wie een nieuwe installatie laat ontwerpen, hoort over KNX. Wat is het verband, en kan een oude EIB-installatie worden uitgebreid met moderne KNX-componenten?</p>
+<h2 id="wat-was-eib" class="text-2xl md:text-3xl font-bold text-white tracking-tight mt-12 mb-4 scroll-mt-24">Wat was EIB?</h2>
+<p class="text-slate-300 leading-relaxed mb-5">EIB, de European Installation Bus, was een bussysteem voor gebouwautomatisering dat in de jaren negentig werd ontwikkeld door een samenwerking van fabrikanten. Het doel was een gemeenschappelijke standaard, zodat producten van verschillende fabrikanten konden samenwerken.</p>
+<h2 id="de-overgang-naar-knx" class="text-2xl md:text-3xl font-bold text-white tracking-tight mt-12 mb-4 scroll-mt-24">De overgang naar KNX</h2>
+<p class="text-slate-300 leading-relaxed mb-5">Rond 1999 kwamen de organisaties achter drie Europese standaarden samen: EIB, BatiBUS en EHS. Uit die samenwerking ontstond KNX. KNX bouwde voort op de technologie van EIB, en voegde onder meer nieuwe communicatiemedia en configuratiemogelijkheden toe. KNX is later vastgelegd in Europese en internationale normen.</p>
+<div class="my-8 overflow-x-auto rounded-xl border border-white/10 bg-[#161a22]/80"><table class="w-full text-sm"><thead><tr><th class="text-left px-4 py-3 font-mono text-xs uppercase tracking-wider text-blue-400"></th><th class="text-left px-4 py-3 font-mono text-xs uppercase tracking-wider text-blue-400">EIB</th><th class="text-left px-4 py-3 font-mono text-xs uppercase tracking-wider text-blue-400">KNX</th></tr></thead><tbody><tr class="border-t border-white/10"><td class="px-4 py-3 text-slate-300 align-top">Periode</td><td class="px-4 py-3 text-slate-300 align-top">vanaf jaren negentig</td><td class="px-4 py-3 text-slate-300 align-top">vanaf circa 2000</td></tr><tr class="border-t border-white/10"><td class="px-4 py-3 text-slate-300 align-top">Basis</td><td class="px-4 py-3 text-slate-300 align-top">eigen standaard</td><td class="px-4 py-3 text-slate-300 align-top">voortgebouwd op EIB, BatiBUS en EHS</td></tr><tr class="border-t border-white/10"><td class="px-4 py-3 text-slate-300 align-top">Media</td><td class="px-4 py-3 text-slate-300 align-top">twisted pair, lichtnet</td><td class="px-4 py-3 text-slate-300 align-top">twisted pair, IP, radio, lichtnet</td></tr><tr class="border-t border-white/10"><td class="px-4 py-3 text-slate-300 align-top">Normering</td><td class="px-4 py-3 text-slate-300 align-top">eigen specificatie</td><td class="px-4 py-3 text-slate-300 align-top">internationale normen</td></tr><tr class="border-t border-white/10"><td class="px-4 py-3 text-slate-300 align-top">Software</td><td class="px-4 py-3 text-slate-300 align-top">ETS</td><td class="px-4 py-3 text-slate-300 align-top">ETS (nieuwere versies)</td></tr></tbody></table></div>
+<h2 id="compatibiliteit" class="text-2xl md:text-3xl font-bold text-white tracking-tight mt-12 mb-4 scroll-mt-24">Compatibiliteit</h2>
+<p class="text-slate-300 leading-relaxed mb-5">Het goede nieuws: KNX TP is compatibel met EIB. Een oude EIB-installatie kan in de meeste gevallen worden uitgebreid met moderne KNX-componenten, en kan worden geprogrammeerd met moderne versies van de ETS-software. Dat is één van de sterke punten van de standaard: investeringen van decennia geleden blijven bruikbaar.</p>
+<h2 id="een-bestaande-eib-installatie-uitbreiden" class="text-2xl md:text-3xl font-bold text-white tracking-tight mt-12 mb-4 scroll-mt-24">Een bestaande EIB-installatie uitbreiden</h2>
+<h3 class="text-xl font-semibold text-white mt-8 mb-3">Stap 1: Inventariseren</h3>
+<p class="text-slate-300 leading-relaxed mb-5">Wat is er aanwezig? Welke componenten, welke topologie, welke functies? Is het projectbestand nog beschikbaar?</p>
+<h3 class="text-xl font-semibold text-white mt-8 mb-3">Stap 2: Het projectbestand</h3>
+<p class="text-slate-300 leading-relaxed mb-5">Zonder projectbestand is uitbreiden lastig. De configuratie moet dan worden achterhaald, wat tijdrovend kan zijn. Lees <a class="text-blue-400 hover:underline" href="knx-documentatie.html">KNX documentatie</a>.</p>
+<h3 class="text-xl font-semibold text-white mt-8 mb-3">Stap 3: Toestand beoordelen</h3>
+<p class="text-slate-300 leading-relaxed mb-5">Zijn de componenten nog in goede staat? Oude voedingen en componenten kunnen aan het einde van hun levensduur zijn. Een meting van de busspanning en een controle van de foutmeldingen geven inzicht.</p>
+<h3 class="text-xl font-semibold text-white mt-8 mb-3">Stap 4: Uitbreiden of moderniseren</h3>
+<p class="text-slate-300 leading-relaxed mb-5">Afhankelijk van de toestand en de wensen wordt de installatie uitgebreid, deels vervangen of gemoderniseerd. Bijvoorbeeld met een IP-router voor bediening via een app of koppeling met het <a class="text-blue-400 hover:underline" href="gebouwbeheersysteem.html">gebouwbeheersysteem</a>.</p>
+<div class="my-8 p-6 rounded-xl border border-blue-500/30 bg-blue-500/10 text-slate-200 leading-relaxed"><div class="text-xs font-mono text-blue-400 uppercase tracking-widest mb-2">[PRAKTIJKTIP]</div>Maak vóór elke wijziging aan een bestaande installatie een back-up van het projectbestand en controleer of het overeenkomt met de programmering van de componenten. Een verouderd projectbestand dat wordt teruggeschreven, kan functies wissen.</div>
+<h2 id="aandachtspunten-bij-oude-installaties" class="text-2xl md:text-3xl font-bold text-white tracking-tight mt-12 mb-4 scroll-mt-24">Aandachtspunten bij oude installaties</h2>
+<ul class="list-disc pl-6 space-y-2 text-slate-300 leading-relaxed mb-6 marker:text-blue-400"><li><strong class="text-white">Levensduur</strong>: elektronische componenten hebben een beperkte levensduur. Plan vervanging van kritische componenten.</li><li><strong class="text-white">Beschikbaarheid</strong>: sommige oude componenten worden niet meer gemaakt. Moderne vervangers zijn er meestal wel.</li><li><strong class="text-white">Kennis</strong>: niet elke integrator kent oude installaties. Kies een partij met ervaring.</li><li><strong class="text-white">Documentatie</strong>: werk na elke wijziging het projectbestand en de documentatie bij.</li></ul>
+<h2 id="waarom-het-verschil-ertoe-doet" class="text-2xl md:text-3xl font-bold text-white tracking-tight mt-12 mb-4 scroll-mt-24">Waarom het verschil ertoe doet</h2>
+<p class="text-slate-300 leading-relaxed mb-5">Voor een opdrachtgever betekent de geschiedenis vooral dit: een installatie met het label EIB is geen verloren investering. Met de juiste kennis kan ze worden onderhouden, uitgebreid en gemoderniseerd. Lees meer over <a class="text-blue-400 hover:underline" href="knx-domotica.html">KNX domotica</a>.</p>
+<h2 id="advies" class="text-2xl md:text-3xl font-bold text-white tracking-tight mt-12 mb-4 scroll-mt-24">Advies</h2>
+<p class="text-slate-300 leading-relaxed mb-5">EIB KNX domotica is één van de installatieonderdelen in het werkveld van ECAP SLUI. Bekijk <a class="text-blue-400 hover:underline" href="../diensten.html#eib-knx-domotica">EIB KNX domotica</a> en neem <a class="text-blue-400 hover:underline" href="../contact.html">contact</a> op.</p>
+<h2 id="veelgestelde-vragen" class="text-2xl md:text-3xl font-bold text-white tracking-tight mt-12 mb-6">Veelgestelde vragen</h2><div class="space-y-4"><details class="p-6 rounded-xl border border-white/10 bg-[#161a22]/80"><summary class="font-semibold text-white cursor-pointer">Is EIB compatibel met KNX?</summary><p class="text-slate-300 leading-relaxed mt-3">Ja, KNX TP is voortgebouwd op EIB en is daarmee compatibel. Bestaande EIB-installaties kunnen meestal worden uitgebreid met KNX-componenten.</p></details><details class="p-6 rounded-xl border border-white/10 bg-[#161a22]/80"><summary class="font-semibold text-white cursor-pointer">Wat als het projectbestand ontbreekt?</summary><p class="text-slate-300 leading-relaxed mt-3">Dan moet de configuratie worden achterhaald door de componenten uit te lezen en te documenteren. Dat is tijdrovend, maar meestal mogelijk.</p></details></div>
+<div class="mt-14 p-8 rounded-2xl border border-white/10 bg-[#161a22]/90">
+<div class="font-mono text-xs text-blue-400 uppercase tracking-widest mb-3">[SAMENWERKEN?]</div>
+<h2 class="text-2xl font-bold text-white mb-3">Advies op maat voor uw project</h2>
+<p class="text-slate-400 leading-relaxed mb-6">ECAP SLUI in Ede adviseert, engineert en calculeert elektrotechnische installaties en begeleidt de uitvoering, van de eerste ontwerpfase tot en met test &amp; commissioning. Met meer dan 30 jaar ervaring in utiliteit en industrie.</p>
+<div class="flex flex-wrap gap-4"><a class="px-6 py-3 rounded-xl bg-blue-600 hover:bg-blue-500 text-white font-semibold text-sm shadow-[0_0_25px_rgba(0,102,255,0.4)] transition" href="../contact.html">Neem contact op →</a><a class="px-6 py-3 rounded-xl border border-white/15 bg-white/5 hover:bg-white/10 text-white font-semibold text-sm transition" href="tel:+31651322666">Bel 06 51322666</a></div>
+</div>
+</article>
+<aside class="lg:col-span-4 space-y-6 lg:sticky lg:top-28 self-start">
+<div class="p-6 rounded-xl border border-white/10 bg-[#161a22]/80"><div class="text-xs font-mono text-blue-400 uppercase tracking-widest mb-4">[INHOUD]</div><ol class="space-y-2 text-sm text-slate-300 list-decimal pl-5 marker:text-blue-400"><li><a class="hover:text-white" href="#wat-was-eib">Wat was EIB?</a></li><li><a class="hover:text-white" href="#de-overgang-naar-knx">De overgang naar KNX</a></li><li><a class="hover:text-white" href="#compatibiliteit">Compatibiliteit</a></li><li><a class="hover:text-white" href="#een-bestaande-eib-installatie-uitbreiden">Een bestaande EIB-installatie uitbreiden</a></li><li><a class="hover:text-white" href="#aandachtspunten-bij-oude-installaties">Aandachtspunten bij oude installaties</a></li><li><a class="hover:text-white" href="#waarom-het-verschil-ertoe-doet">Waarom het verschil ertoe doet</a></li><li><a class="hover:text-white" href="#advies">Advies</a></li><li><a class="hover:text-white" href="#veelgestelde-vragen">Veelgestelde vragen</a></li></ol></div>
+<div class="p-6 rounded-xl border border-white/10 bg-[#161a22]/80"><div class="text-xs font-mono text-blue-400 uppercase tracking-widest mb-4">[GERELATEERDE DIENSTEN]</div><ul class="space-y-2 text-sm"><li><a class="text-blue-400 hover:underline" href="../diensten.html#eib-knx-domotica">EIB KNX domotica</a></li><li><a class="text-blue-400 hover:underline" href="../diensten.html#verlichting">Verlichting</a></li><li><a class="text-blue-400 hover:underline" href="../werkwijze.html">Werkwijze &amp; V-model</a></li></ul></div>
+<div class="p-6 rounded-xl border border-white/10 bg-[#161a22]/80 font-mono text-xs space-y-3"><div class="flex justify-between"><span class="text-slate-400">ZOEKWOORD</span><span class="text-white text-right">EIB KNX</span></div><div class="flex justify-between"><span class="text-slate-400">WOORDEN</span><span class="text-white">532</span></div><div class="flex justify-between"><span class="text-slate-400">CATEGORIE</span><a class="text-blue-400 text-right" href="../blog/categorie/knx-gebouwautomatisering.html">KNX &amp; gebouwautomatisering</a></div></div>
+</aside>
+</div>
+<section class="mt-16"><div class="font-mono text-xs text-blue-400 uppercase tracking-widest mb-6">[LEES OOK]</div><div class="grid grid-cols-1 md:grid-cols-3 gap-4"><a href="../blog/knx-of-dali.html" class="group p-6 rounded-xl border border-white/10 bg-[#161a22]/80 hover:border-blue-500/50 transition flex flex-col">
+<div class="text-xs font-mono text-blue-400 mb-3 uppercase tracking-wider">KNX &amp; gebouwautomatisering</div>
+<h3 class="font-semibold text-white text-lg leading-snug mb-2 group-hover:text-blue-300">KNX of DALI? Het verschil en wanneer u wat kiest</h3>
+<p class="text-sm text-slate-400 leading-relaxed flex-1">KNX en DALI vergeleken: wat ze zijn, waar ze sterk in zijn, de verschillen in toepassing, en hoe ze in de praktijk vaak worden gecombineerd via een gateway.</p>
+<div class="mt-5 pt-4 border-t border-white/10 text-xs font-mono text-slate-400 flex justify-between"><span>3 MIN LEESTIJD</span><span class="text-blue-400">LEES →</span></div>
+</a><a href="../blog/gebouwbeheersysteem.html" class="group p-6 rounded-xl border border-white/10 bg-[#161a22]/80 hover:border-blue-500/50 transition flex flex-col">
+<div class="text-xs font-mono text-blue-400 mb-3 uppercase tracking-wider">KNX &amp; gebouwautomatisering</div>
+<h3 class="font-semibold text-white text-lg leading-snug mb-2 group-hover:text-blue-300">Het gebouwbeheersysteem (GBS): installaties centraal bewaken</h3>
+<p class="text-sm text-slate-400 leading-relaxed flex-1">Wat is een gebouwbeheersysteem? Functies, opbouw, koppelingen met installaties, open protocollen, energiebeheer, beveiliging en aandachtspunten bij aanschaf.</p>
+<div class="mt-5 pt-4 border-t border-white/10 text-xs font-mono text-slate-400 flex justify-between"><span>2 MIN LEESTIJD</span><span class="text-blue-400">LEES →</span></div>
+</a><a href="../blog/zonwering-knx.html" class="group p-6 rounded-xl border border-white/10 bg-[#161a22]/80 hover:border-blue-500/50 transition flex flex-col">
+<div class="text-xs font-mono text-blue-400 mb-3 uppercase tracking-wider">KNX &amp; gebouwautomatisering</div>
+<h3 class="font-semibold text-white text-lg leading-snug mb-2 group-hover:text-blue-300">Zonwering automatiseren met KNX</h3>
+<p class="text-sm text-slate-400 leading-relaxed flex-1">Automatische zonwering met KNX: sturing op zon, wind en tijd, zonvolging, koppeling met klimaat en verlichting, veiligheid en gebruikerscomfort.</p>
+<div class="mt-5 pt-4 border-t border-white/10 text-xs font-mono text-slate-400 flex justify-between"><span>3 MIN LEESTIJD</span><span class="text-blue-400">LEES →</span></div>
+</a></div></section>
+</main>
+<footer class="relative z-10 border-t border-white/10 bg-[#10131a]/80 mt-16">
+<div class="max-w-[1680px] mx-auto px-6 py-12 grid grid-cols-1 md:grid-cols-3 gap-10 text-sm">
+<div>
+<div class="text-base font-bold text-white tracking-tight">ECAP SLUI</div>
+<div class="text-[10px] font-mono tracking-widest text-slate-400 uppercase mt-1 mb-4">Elektrotechnisch calculatie-, adviserings- en projectenbureau</div>
+<address class="not-italic text-slate-400 leading-relaxed">Prof. Oudpark 90<br/>6716 EJ Ede<br/>
+<a class="text-blue-400 hover:underline" href="tel:+31651322666">06 51322666</a><br/>
+<a class="text-blue-400 hover:underline" href="mailto:vincent.slui@kpnmail.nl">vincent.slui@kpnmail.nl</a><br/>
+KvK 59289430</address>
+</div>
+<div>
+<div class="font-mono text-xs text-blue-400 uppercase tracking-widest mb-4">[NAVIGATIE]</div>
+<nav class="flex flex-wrap gap-x-6 gap-y-2 text-slate-300" aria-label="Footer"><a class="hover:text-white" href="../index.html">Home</a> <a class="hover:text-white" href="../diensten.html">Diensten</a> <a class="hover:text-white" href="../sectoren.html">Sectoren</a> <a class="hover:text-white" href="../projecten.html">Projecten</a> <a class="hover:text-white" href="../werkwijze.html">Werkwijze</a> <a class="hover:text-white" href="../over-ons.html">Over ons</a> <a class="hover:text-white" href="../blog/">Blog</a> <a class="hover:text-white" href="../contact.html">Contact</a> <a class="hover:text-white" href="../privacy.html">Privacyverklaring</a></nav>
+</div>
+<div>
+<div class="font-mono text-xs text-blue-400 uppercase tracking-widest mb-4">[STAY CONNECTED]</div>
+<div class="flex flex-col gap-2 text-slate-300">
+<a class="hover:text-white" href="https://www.linkedin.com/company/ecap-slui/" rel="noopener" target="_blank">LinkedIn ECAP SLUI →</a>
+<a class="hover:text-white" href="https://www.linkedin.com/in/vincent-slui-a629ba19/" rel="noopener" target="_blank">LinkedIn Vincent Slui →</a>
+</div>
+<div class="text-xs font-mono text-slate-500 mt-6">Beeld © Studio Csány</div>
+</div>
+</div>
+</footer>
+<script src="../shader.js"></script>
+<script>initWebGLShader('shader-canvas-blog');</script>
+</body>
+</html>

@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="utf-8"/>
+<title>Frequentieregelaars: energie besparen op pompen en ventilatoren | ECAP SLUI</title>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta name="description" content="Hoe bespaart een frequentieregelaar energie? De affiniteitswetten, toepassingen bij pompen, ventilatoren en compressoren, en aandachtspunten in de installatie."/>
+<meta name="robots" content="noindex, nofollow"/>
+<link rel="canonical" href="https://basbartclub.github.io/ecap-slui-stitch/blog/frequentieregelaar-energiebesparing.html"/>
+<meta property="og:type" content="article"/>
+<meta property="og:locale" content="nl_NL"/>
+<meta property="og:site_name" content="ECAP SLUI"/>
+<meta property="og:title" content="Frequentieregelaars: energie besparen op pompen en ventilatoren | ECAP SLUI"/>
+<meta property="og:description" content="Hoe bespaart een frequentieregelaar energie? De affiniteitswetten, toepassingen bij pompen, ventilatoren en compressoren, en aandachtspunten in de installatie."/>
+<meta property="og:url" content="https://basbartclub.github.io/ecap-slui-stitch/blog/frequentieregelaar-energiebesparing.html"/>
+<meta property="og:image" content="https://basbartclub.github.io/ecap-slui-stitch/img/verdeelinrichting-ecap-slui.jpg"/>
+<meta name="twitter:card" content="summary_large_image"/>
+<link rel="icon" href="data:,"/>
+<link rel="stylesheet" href="../tokens.css"/>
+<script src="https://cdn.tailwindcss.com"></script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BlogPosting", "headline": "Frequentieregelaars: energie besparen op pompen en ventilatoren", "description": "Hoe bespaart een frequentieregelaar energie? De affiniteitswetten, toepassingen bij pompen, ventilatoren en compressoren, en aandachtspunten in de installatie.", "inLanguage": "nl-NL", "keywords": "frequentieregelaar energiebesparing", "articleSection": "Energiebesparing & PV", "wordCount": 647, "datePublished": "2026-11-18", "dateModified": "2026-11-18", "mainEntityOfPage": "https://basbartclub.github.io/ecap-slui-stitch/blog/frequentieregelaar-energiebesparing.html", "image": "https://basbartclub.github.io/ecap-slui-stitch/img/verdeelinrichting-ecap-slui.jpg", "author": {"@type": "Organization", "name": "ECAP SLUI", "url": "https://basbartclub.github.io/ecap-slui-stitch/"}, "publisher": {"@type": "Organization", "name": "ECAP SLUI", "logo": {"@type": "ImageObject", "url": "https://basbartclub.github.io/ecap-slui-stitch/img/ecap-slui-logo.png"}}}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://basbartclub.github.io/ecap-slui-stitch/index.html"}, {"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://basbartclub.github.io/ecap-slui-stitch/blog/"}, {"@type": "ListItem", "position": 3, "name": "Energiebesparing & PV", "item": "https://basbartclub.github.io/ecap-slui-stitch/blog/categorie/energie-pv.html"}, {"@type": "ListItem", "position": 4, "name": "Frequentieregelaars: energie besparen op pompen en ventilatoren", "item": "https://basbartclub.github.io/ecap-slui-stitch/blog/frequentieregelaar-energiebesparing.html"}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Hoeveel bespaart een frequentieregelaar?", "acceptedAnswer": {"@type": "Answer", "text": "Bij pompen en ventilatoren met wisselende vraag vaak veel, omdat het vermogen ongeveer met de derde macht van het toerental daalt. De werkelijke besparing hangt af van het systeem en de draaiuren."}}, {"@type": "Question", "name": "Is een frequentieregelaar altijd zinvol?", "acceptedAnswer": {"@type": "Answer", "text": "Niet bij een motor die continu op vol vermogen moet draaien. De besparing zit bij wisselende vraag."}}]}</script>
+</head>
+<body class="bg-[#0b0e14] text-slate-100 min-h-screen">
+<div class="fixed inset-0 pointer-events-none opacity-30 z-0">
+<canvas class="w-full h-full" id="shader-canvas-blog"></canvas>
+</div>
+<header class="sticky top-0 z-50 border-b border-white/10 bg-[#0b0e14]/90 backdrop-blur-md">
+  <div class="max-w-[1680px] mx-auto px-6 h-20 flex items-center justify-between">
+    <a href="../index.html" class="flex items-center gap-4" aria-label="ECAP SLUI home">
+      <div class="w-10 h-10 rounded-lg bg-blue-600/20 border border-blue-500/40 flex items-center justify-center font-bold text-blue-400">
+        ES
+      </div>
+      <div>
+        <div class="text-base font-bold tracking-tight text-white">ECAP SLUI</div>
+        <div class="text-[10px] uppercase font-mono tracking-widest text-slate-400">Elektrotechnisch Bureau • Ede</div>
+      </div>
+    </a>
+    <nav class="hidden lg:flex items-center gap-8 text-sm font-medium text-slate-300" aria-label="Hoofdmenu">
+      <a href="../index.html" class="hover:text-white transition">Home</a>
+      <a href="../diensten.html" class="hover:text-white transition">Diensten</a>
+      <a href="../sectoren.html" class="hover:text-white transition">Sectoren</a>
+      <a href="../projecten.html" class="hover:text-white transition">Projecten</a>
+      <a href="../werkwijze.html" class="hover:text-white transition">Werkwijze</a>
+      <a href="../over-ons.html" class="hover:text-white transition">Over ons</a>
+      <a href="../blog/" class="text-blue-400">Blog</a>
+      <a href="../contact.html" class="hover:text-white transition">Contact</a>
+    </nav>
+    <div class="flex items-center gap-4">
+      <a href="../contact.html" class="px-5 py-2.5 rounded-lg bg-blue-600 hover:bg-blue-500 text-white font-medium text-sm transition shadow-[0_0_20px_rgba(0,102,255,0.35)]">
+        Direct Contact
+      </a>
+    </div>
+  </div>
+</header>
+<main class="relative z-10 max-w-[1680px] mx-auto px-6 py-16">
+<nav class="font-mono text-xs text-slate-400 uppercase tracking-widest mb-6" aria-label="Kruimelpad"><a class="hover:text-white" href="../index.html">Home</a> / <a class="hover:text-white" href="../blog/">Blog</a> / <a class="text-blue-400 hover:underline" href="../blog/categorie/energie-pv.html">Energiebesparing &amp; PV</a></nav>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-10">
+<article class="lg:col-span-8">
+<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-blue-500/30 bg-blue-500/10 text-blue-400 font-mono text-xs uppercase mb-6"><span class="w-2 h-2 rounded-full bg-blue-400"></span>Energiebesparing &amp; PV • 3 min leestijd</div>
+<h1 class="text-4xl md:text-5xl font-bold tracking-tight text-white mb-6 leading-tight">Frequentieregelaars: energie besparen op pompen en ventilatoren</h1>
+<p class="text-xl text-slate-400 leading-relaxed mb-10">Veel pompen en ventilatoren draaien de hele dag op vol toeren, terwijl de vraag sterk wisselt. De overtollige capaciteit wordt dan weggesmoord met kleppen of afsluiters. Een frequentieregelaar past het toerental aan de vraag aan en bespaart daarmee vaak veel energie.</p>
+<h2 id="hoe-werkt-een-frequentieregelaar" class="text-2xl md:text-3xl font-bold text-white tracking-tight mt-12 mb-4 scroll-mt-24">Hoe werkt een frequentieregelaar?</h2>
+<p class="text-slate-300 leading-relaxed mb-5">Een frequentieregelaar zet de netspanning om in een spanning met variabele frequentie en amplitude. Daarmee kan het toerental van een asynchrone motor traploos worden geregeld. Daarnaast zorgt hij voor een zachte aanloop, wat de aanloopstroom beperkt en mechanische onderdelen spaart.</p>
+<h2 id="de-affiniteitswetten" class="text-2xl md:text-3xl font-bold text-white tracking-tight mt-12 mb-4 scroll-mt-24">De affiniteitswetten</h2>
+<p class="text-slate-300 leading-relaxed mb-5">Bij centrifugaalpompen en ventilatoren geldt bij benadering:</p>
+<ul class="list-disc pl-6 space-y-2 text-slate-300 leading-relaxed mb-6 marker:text-blue-400"><li>het debiet is evenredig met het toerental;</li><li>de opvoerhoogte of druk is evenredig met het kwadraat van het toerental;</li><li>het opgenomen vermogen is evenredig met de derde macht van het toerental.</li></ul>
+<p class="text-slate-300 leading-relaxed mb-5">Dat betekent: bij 80 procent toerental is het vermogen ongeveer de helft (0,8³ ≈ 0,51). Bij 50 procent toerental is het vermogen nog maar een achtste. Een kleine verlaging van het toerental levert dus een grote besparing op.</p>
+<div class="my-8 p-6 rounded-xl border border-blue-500/30 bg-blue-500/10 text-slate-200 leading-relaxed"><div class="text-xs font-mono text-blue-400 uppercase tracking-widest mb-2">[PRAKTIJKTIP]</div>In de praktijk is de besparing iets kleiner door een statische opvoerhoogte in het systeem en door de verliezen in de regelaar zelf. Toch blijft het effect bij systemen met wisselende vraag aanzienlijk.</div>
+<h2 id="waar-levert-het-het-meest-op" class="text-2xl md:text-3xl font-bold text-white tracking-tight mt-12 mb-4 scroll-mt-24">Waar levert het het meest op?</h2>
+<div class="my-8 overflow-x-auto rounded-xl border border-white/10 bg-[#161a22]/80"><table class="w-full text-sm"><thead><tr><th class="text-left px-4 py-3 font-mono text-xs uppercase tracking-wider text-blue-400">Toepassing</th><th class="text-left px-4 py-3 font-mono text-xs uppercase tracking-wider text-blue-400">Waarom besparing</th></tr></thead><tbody><tr class="border-t border-white/10"><td class="px-4 py-3 text-slate-300 align-top">Ventilatoren luchtbehandeling</td><td class="px-4 py-3 text-slate-300 align-top">vraag wisselt met bezetting en seizoen</td></tr><tr class="border-t border-white/10"><td class="px-4 py-3 text-slate-300 align-top">Circulatiepompen verwarming en koeling</td><td class="px-4 py-3 text-slate-300 align-top">vraag wisselt sterk over het jaar</td></tr><tr class="border-t border-white/10"><td class="px-4 py-3 text-slate-300 align-top">Procespompen</td><td class="px-4 py-3 text-slate-300 align-top">debiet geregeld met afsluiter</td></tr><tr class="border-t border-white/10"><td class="px-4 py-3 text-slate-300 align-top">Koeltorens en droge koelers</td><td class="px-4 py-3 text-slate-300 align-top">capaciteit afhankelijk van buitentemperatuur</td></tr><tr class="border-t border-white/10"><td class="px-4 py-3 text-slate-300 align-top">Compressoren</td><td class="px-4 py-3 text-slate-300 align-top">wisselende luchtvraag (bij geschikte compressoren)</td></tr></tbody></table></div>
+<p class="text-slate-300 leading-relaxed mb-5">De grootste besparing zit bij systemen die nu met een smoorklep, bypass of aan-uitregeling worden geregeld en lange draaiuren hebben.</p>
+<h2 id="van-smoren-naar-regelen" class="text-2xl md:text-3xl font-bold text-white tracking-tight mt-12 mb-4 scroll-mt-24">Van smoren naar regelen</h2>
+<p class="text-slate-300 leading-relaxed mb-5">Een pomp die op vol toeren draait met een half dichte afsluiter, verspilt energie in de afsluiter. Met een frequentieregelaar gaat de afsluiter open en regelt het toerental. Een ventilator met een regelklep werkt op dezelfde manier. Bij bestaande installaties is deze ombouw één van de meest rendabele <a class="text-blue-400 hover:underline" href="../diensten.html#energiebesparingsmaatregelen">energiebesparingsmaatregelen</a> en staat hij op veel Erkende Maatregelenlijsten van de <a class="text-blue-400 hover:underline" href="energiebesparingsplicht.html">energiebesparingsplicht</a>.</p>
+<h2 id="aandachtspunten-in-de-installatie" class="text-2xl md:text-3xl font-bold text-white tracking-tight mt-12 mb-4 scroll-mt-24">Aandachtspunten in de installatie</h2>
+<h3 class="text-xl font-semibold text-white mt-8 mb-3">Harmonischen</h3>
+<p class="text-slate-300 leading-relaxed mb-5">Frequentieregelaars zijn een belangrijke bron van <a class="text-blue-400 hover:underline" href="harmonische-vervuiling.html">harmonische vervuiling</a>. Kies regelaars met ingebouwde netsmoorspoelen of een actieve ingangstrap, zeker als er veel regelaars in één installatie komen.</p>
+<h3 class="text-xl font-semibold text-white mt-8 mb-3">Motorkabels en EMC</h3>
+<p class="text-slate-300 leading-relaxed mb-5">Tussen regelaar en motor lopen steile spanningspulsen. Gebruik afgeschermde motorkabels die aan beide zijden goed zijn aangesloten, houd kabels zo kort als redelijk mogelijk en volg de EMC-voorschriften van de fabrikant. Lange motorkabels kunnen spanningspieken bij de motor veroorzaken; filters kunnen dan nodig zijn.</p>
+<h3 class="text-xl font-semibold text-white mt-8 mb-3">Lagerstromen</h3>
+<p class="text-slate-300 leading-relaxed mb-5">Bij grotere motoren kunnen door de regelaar stromen door de lagers ontstaan die tot lagerschade leiden. Geïsoleerde lagers, aardingsborstels of filters voorkomen dat.</p>
+<h3 class="text-xl font-semibold text-white mt-8 mb-3">Aardlekbeveiliging</h3>
+<p class="text-slate-300 leading-relaxed mb-5">Frequentieregelaars veroorzaken lekstromen met hoge frequenties. Een aardlekschakelaar van het juiste type is nodig, en met lange motorkabels kan ongewenst uitschakelen optreden.</p>
+<h3 class="text-xl font-semibold text-white mt-8 mb-3">Koeling</h3>
+<p class="text-slate-300 leading-relaxed mb-5">Regelaars produceren warmte. Plaats ze in een geventileerde kast of ruimte en houd rekening met de warmteafgifte in het ontwerp van de <a class="text-blue-400 hover:underline" href="../diensten.html#begeleiding-wtb">werktuigbouwkundige installaties</a>.</p>
+<h2 id="de-motor" class="text-2xl md:text-3xl font-bold text-white tracking-tight mt-12 mb-4 scroll-mt-24">De motor</h2>
+<p class="text-slate-300 leading-relaxed mb-5">Niet elke bestaande motor is geschikt voor bedrijf op een frequentieregelaar, vooral oudere motoren. Bij lage toerentallen koelt een motor met een eigen ventilator minder goed. Controleer de geschiktheid, of combineer de ombouw met vervanging door een efficiëntere motor. Lees ook <a class="text-blue-400 hover:underline" href="aandrijftechniek.html">aandrijftechniek in de industrie</a>.</p>
+<h2 id="de-regeling" class="text-2xl md:text-3xl font-bold text-white tracking-tight mt-12 mb-4 scroll-mt-24">De regeling</h2>
+<p class="text-slate-300 leading-relaxed mb-5">Een frequentieregelaar bespaart alleen als hij ook regelt. Dat vraagt een goede regelparameter, zoals druk, temperatuur of CO₂, en een regelstrategie in het <a class="text-blue-400 hover:underline" href="gebouwbeheersysteem.html">gebouwbeheersysteem</a> of de procesbesturing. Een regelaar die vast op 100 procent staat, levert alleen een zachte start op.</p>
+<h2 id="advies" class="text-2xl md:text-3xl font-bold text-white tracking-tight mt-12 mb-4 scroll-mt-24">Advies</h2>
+<p class="text-slate-300 leading-relaxed mb-5">ECAP SLUI begeleidt de engineering en uitvoering van aandrijvingen en <a class="text-blue-400 hover:underline" href="../diensten.html#energiebesparingsmaatregelen">energiebesparingsmaatregelen</a>, en heeft ervaring met het begeleiden van <a class="text-blue-400 hover:underline" href="../diensten.html#industriele-aandrijftechniek">industriële aandrijftechniek</a>.</p>
+<h2 id="veelgestelde-vragen" class="text-2xl md:text-3xl font-bold text-white tracking-tight mt-12 mb-6">Veelgestelde vragen</h2><div class="space-y-4"><details class="p-6 rounded-xl border border-white/10 bg-[#161a22]/80"><summary class="font-semibold text-white cursor-pointer">Hoeveel bespaart een frequentieregelaar?</summary><p class="text-slate-300 leading-relaxed mt-3">Bij pompen en ventilatoren met wisselende vraag vaak veel, omdat het vermogen ongeveer met de derde macht van het toerental daalt. De werkelijke besparing hangt af van het systeem en de draaiuren.</p></details><details class="p-6 rounded-xl border border-white/10 bg-[#161a22]/80"><summary class="font-semibold text-white cursor-pointer">Is een frequentieregelaar altijd zinvol?</summary><p class="text-slate-300 leading-relaxed mt-3">Niet bij een motor die continu op vol vermogen moet draaien. De besparing zit bij wisselende vraag.</p></details></div>
+<div class="mt-14 p-8 rounded-2xl border border-white/10 bg-[#161a22]/90">
+<div class="font-mono text-xs text-blue-400 uppercase tracking-widest mb-3">[SAMENWERKEN?]</div>
+<h2 class="text-2xl font-bold text-white mb-3">Advies op maat voor uw project</h2>
+<p class="text-slate-400 leading-relaxed mb-6">ECAP SLUI in Ede adviseert, engineert en calculeert elektrotechnische installaties en begeleidt de uitvoering, van de eerste ontwerpfase tot en met test &amp; commissioning. Met meer dan 30 jaar ervaring in utiliteit en industrie.</p>
+<div class="flex flex-wrap gap-4"><a class="px-6 py-3 rounded-xl bg-blue-600 hover:bg-blue-500 text-white font-semibold text-sm shadow-[0_0_25px_rgba(0,102,255,0.4)] transition" href="../contact.html">Neem contact op →</a><a class="px-6 py-3 rounded-xl border border-white/15 bg-white/5 hover:bg-white/10 text-white font-semibold text-sm transition" href="tel:+31651322666">Bel 06 51322666</a></div>
+</div>
+</article>
+<aside class="lg:col-span-4 space-y-6 lg:sticky lg:top-28 self-start">
+<div class="p-6 rounded-xl border border-white/10 bg-[#161a22]/80"><div class="text-xs font-mono text-blue-400 uppercase tracking-widest mb-4">[INHOUD]</div><ol class="space-y-2 text-sm text-slate-300 list-decimal pl-5 marker:text-blue-400"><li><a class="hover:text-white" href="#hoe-werkt-een-frequentieregelaar">Hoe werkt een frequentieregelaar?</a></li><li><a class="hover:text-white" href="#de-affiniteitswetten">De affiniteitswetten</a></li><li><a class="hover:text-white" href="#waar-levert-het-het-meest-op">Waar levert het het meest op?</a></li><li><a class="hover:text-white" href="#van-smoren-naar-regelen">Van smoren naar regelen</a></li><li><a class="hover:text-white" href="#aandachtspunten-in-de-installatie">Aandachtspunten in de installatie</a></li><li><a class="hover:text-white" href="#de-motor">De motor</a></li><li><a class="hover:text-white" href="#de-regeling">De regeling</a></li><li><a class="hover:text-white" href="#advies">Advies</a></li><li><a class="hover:text-white" href="#veelgestelde-vragen">Veelgestelde vragen</a></li></ol></div>
+<div class="p-6 rounded-xl border border-white/10 bg-[#161a22]/80"><div class="text-xs font-mono text-blue-400 uppercase tracking-widest mb-4">[GERELATEERDE DIENSTEN]</div><ul class="space-y-2 text-sm"><li><a class="text-blue-400 hover:underline" href="../diensten.html#energiebesparingsmaatregelen">Energiebesparingsmaatregelen</a></li><li><a class="text-blue-400 hover:underline" href="../diensten.html#pv-installaties">PV-installaties</a></li><li><a class="text-blue-400 hover:underline" href="../diensten.html#energiedistributie">Energiedistributie</a></li><li><a class="text-blue-400 hover:underline" href="../werkwijze.html">Werkwijze &amp; V-model</a></li></ul></div>
+<div class="p-6 rounded-xl border border-white/10 bg-[#161a22]/80 font-mono text-xs space-y-3"><div class="flex justify-between"><span class="text-slate-400">ZOEKWOORD</span><span class="text-white text-right">frequentieregelaar energiebesparing</span></div><div class="flex justify-between"><span class="text-slate-400">WOORDEN</span><span class="text-white">647</span></div><div class="flex justify-between"><span class="text-slate-400">CATEGORIE</span><a class="text-blue-400 text-right" href="../blog/categorie/energie-pv.html">Energiebesparing &amp; PV</a></div></div>
+</aside>
+</div>
+<section class="mt-16"><div class="font-mono text-xs text-blue-400 uppercase tracking-widest mb-6">[LEES OOK]</div><div class="grid grid-cols-1 md:grid-cols-3 gap-4"><a href="../blog/zonnepanelen-bedrijfsdak.html" class="group p-6 rounded-xl border border-white/10 bg-[#161a22]/80 hover:border-blue-500/50 transition flex flex-col">
+<div class="text-xs font-mono text-blue-400 mb-3 uppercase tracking-wider">Energiebesparing &amp; PV</div>
+<h3 class="font-semibold text-white text-lg leading-snug mb-2 group-hover:text-blue-300">Zonnepanelen op het bedrijfsdak: van haalbaarheid tot aansluiting</h3>
+<p class="text-sm text-slate-400 leading-relaxed flex-1">Zonnepanelen op uw bedrijfsdak: dakconstructie, opbrengst, eigen verbruik, netaansluiting en teruglevering, elektrotechnisch ontwerp, brandveiligheid en onderhoud.</p>
+<div class="mt-5 pt-4 border-t border-white/10 text-xs font-mono text-slate-400 flex justify-between"><span>3 MIN LEESTIJD</span><span class="text-blue-400">LEES →</span></div>
+</a><a href="../blog/brandveiligheid-zonnepanelen.html" class="group p-6 rounded-xl border border-white/10 bg-[#161a22]/80 hover:border-blue-500/50 transition flex flex-col">
+<div class="text-xs font-mono text-blue-400 mb-3 uppercase tracking-wider">Energiebesparing &amp; PV</div>
+<h3 class="font-semibold text-white text-lg leading-snug mb-2 group-hover:text-blue-300">Brandveiligheid van zonnepanelen op bedrijfsdaken</h3>
+<p class="text-sm text-slate-400 leading-relaxed flex-1">Hoe voorkomt u brand bij PV-installaties op bedrijfsdaken? Oorzaken, connectoren, DC-bekabeling, dakopbouw, inspectie en afspraken met verzekeraar en brandweer.</p>
+<div class="mt-5 pt-4 border-t border-white/10 text-xs font-mono text-slate-400 flex justify-between"><span>3 MIN LEESTIJD</span><span class="text-blue-400">LEES →</span></div>
+</a><a href="../blog/omvormer-zonnepanelen-bedrijf.html" class="group p-6 rounded-xl border border-white/10 bg-[#161a22]/80 hover:border-blue-500/50 transition flex flex-col">
+<div class="text-xs font-mono text-blue-400 mb-3 uppercase tracking-wider">Energiebesparing &amp; PV</div>
+<h3 class="font-semibold text-white text-lg leading-snug mb-2 group-hover:text-blue-300">Omvormers voor zakelijke PV: string, centraal of optimizers?</h3>
+<p class="text-sm text-slate-400 leading-relaxed flex-1">Welke omvormer past bij een zakelijke zonne-installatie? Stringomvormers, centrale omvormers en optimizers vergeleken op opbrengst, schaduw, onderhoud en netkoppeling.</p>
+<div class="mt-5 pt-4 border-t border-white/10 text-xs font-mono text-slate-400 flex justify-between"><span>3 MIN LEESTIJD</span><span class="text-blue-400">LEES →</span></div>
+</a></div></section>
+</main>
+<footer class="relative z-10 border-t border-white/10 bg-[#10131a]/80 mt-16">
+<div class="max-w-[1680px] mx-auto px-6 py-12 grid grid-cols-1 md:grid-cols-3 gap-10 text-sm">
+<div>
+<div class="text-base font-bold text-white tracking-tight">ECAP SLUI</div>
+<div class="text-[10px] font-mono tracking-widest text-slate-400 uppercase mt-1 mb-4">Elektrotechnisch calculatie-, adviserings- en projectenbureau</div>
+<address class="not-italic text-slate-400 leading-relaxed">Prof. Oudpark 90<br/>6716 EJ Ede<br/>
+<a class="text-blue-400 hover:underline" href="tel:+31651322666">06 51322666</a><br/>
+<a class="text-blue-400 hover:underline" href="mailto:vincent.slui@kpnmail.nl">vincent.slui@kpnmail.nl</a><br/>
+KvK 59289430</address>
+</div>
+<div>
+<div class="font-mono text-xs text-blue-400 uppercase tracking-widest mb-4">[NAVIGATIE]</div>
+<nav class="flex flex-wrap gap-x-6 gap-y-2 text-slate-300" aria-label="Footer"><a class="hover:text-white" href="../index.html">Home</a> <a class="hover:text-white" href="../diensten.html">Diensten</a> <a class="hover:text-white" href="../sectoren.html">Sectoren</a> <a class="hover:text-white" href="../projecten.html">Projecten</a> <a class="hover:text-white" href="../werkwijze.html">Werkwijze</a> <a class="hover:text-white" href="../over-ons.html">Over ons</a> <a class="hover:text-white" href="../blog/">Blog</a> <a class="hover:text-white" href="../contact.html">Contact</a> <a class="hover:text-white" href="../privacy.html">Privacyverklaring</a></nav>
+</div>
+<div>
+<div class="font-mono text-xs text-blue-400 uppercase tracking-widest mb-4">[STAY CONNECTED]</div>
+<div class="flex flex-col gap-2 text-slate-300">
+<a class="hover:text-white" href="https://www.linkedin.com/company/ecap-slui/" rel="noopener" target="_blank">LinkedIn ECAP SLUI →</a>
+<a class="hover:text-white" href="https://www.linkedin.com/in/vincent-slui-a629ba19/" rel="noopener" target="_blank">LinkedIn Vincent Slui →</a>
+</div>
+<div class="text-xs font-mono text-slate-500 mt-6">Beeld © Studio Csány</div>
+</div>
+</div>
+</footer>
+<script src="../shader.js"></script>
+<script>initWebGLShader('shader-canvas-blog');</script>
+</body>
+</html>
