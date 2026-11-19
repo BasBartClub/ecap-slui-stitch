@@ -60,3 +60,30 @@ html{scroll-behavior:smooth;text-rendering:optimizeLegibility}
 :focus-visible{outline:2px solid #38bdf8;outline-offset:3px;border-radius:6px}
 .skip{position:absolute;left:-9999px;top:8px;z-index:100;background:#0066ff;color:#fff;padding:10px 16px;border-radius:8px}
 .skip:focus{left:8px}
+/* === 4K effects (home) === */
+.grain{position:fixed;inset:0;z-index:60;pointer-events:none;overflow:hidden;opacity:.05;mix-blend-mode:overlay}.grain::before{content:"";position:absolute;inset:-8%;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 .9 0'/%3E%3C/filter%3E%3Crect width='180' height='180' filter='url(%23n)'/%3E%3C/svg%3E");will-change:transform;animation:grain 1.2s steps(6) infinite}
+@keyframes grain{0%{transform:translate(0,0)}20%{transform:translate(-3%,2%)}40%{transform:translate(2%,-3%)}60%{transform:translate(-2%,-1%)}80%{transform:translate(3%,1%)}100%{transform:translate(0,0)}}
+.aura{position:absolute;left:50%;top:46%;width:min(58rem,100vw);aspect-ratio:1;translate:-50% -50%;z-index:-1;pointer-events:none;border-radius:50%;opacity:.2;filter:blur(48px);background:conic-gradient(from 20deg,#e7482f,#f2aa3c,#72b552,#59abd6,#3b82f6,#e7482f);-webkit-mask:radial-gradient(closest-side,transparent 58%,#000 64%,#000 72%,transparent 80%);mask:radial-gradient(closest-side,transparent 58%,#000 64%,#000 72%,transparent 80%);will-change:transform;animation:aura 48s linear infinite}
+@keyframes aura{to{transform:rotate(360deg)}}
+.glow{position:relative;isolation:isolate}
+.glow::before{content:"";position:absolute;inset:0;border-radius:inherit;z-index:-1;pointer-events:none;opacity:0;transition:opacity .35s;background:radial-gradient(420px circle at var(--mx,50%) var(--my,50%),rgba(56,189,248,.14),transparent 60%)}
+.glow:hover::before,.glow:focus-visible::before{opacity:1}
+.glow:hover{box-shadow:0 0 0 1px rgba(59,130,246,.25),0 18px 60px -20px rgba(37,99,235,.45)}
+.logo-glow{transition:filter .3s}
+a:hover>.logo-glow{filter:drop-shadow(0 0 14px rgba(89,171,214,.45))}
+.px-wrap picture{height:100%}
+.px-img{transform:translate3d(0,var(--py,0px),0) scale(1.14);will-change:transform}
+.flow text{font-family:var(--font-geist)}
+.flow .ft{fill:#fff;font-size:16px;font-weight:600}
+.flow .fs{fill:#94a3b8;font-size:10.5px;font-family:var(--font-mono);letter-spacing:.12em}
+.flow .fn rect:first-child{transition:fill .25s,stroke-opacity .25s}
+.flow a.fn:hover rect:first-child,.flow a.fn:focus-visible rect:first-child{fill:#17213a;stroke-opacity:1}
+.flow path{fill:none}
+.fw-b{stroke-width:2;stroke-opacity:.28;stroke-linecap:round;stroke-linejoin:round}
+.fw-g{stroke-width:9;stroke-opacity:.07;stroke-linecap:round;stroke-linejoin:round}
+.fw-f{stroke-width:2.6;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:10 26;animation:flow 1.6s linear infinite;animation-play-state:paused}
+.flow.on .fw-f{animation-play-state:running}
+@keyframes flow{to{stroke-dashoffset:-36}}
+@media (max-width:767px){.grain::before{animation:none}}
+main{overflow-x:clip}
+@media (prefers-reduced-motion:reduce){.grain::before,.aura,.fw-f{animation:none}.px-img{transform:none}}

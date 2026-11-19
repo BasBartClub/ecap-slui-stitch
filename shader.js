@@ -40,6 +40,7 @@ function initWebGLShader(canvasId) {
     uniform float u_time;
     uniform vec2 u_resolution;
     uniform vec2 u_mouse;
+    uniform float u_rich;
 
     float hash(vec2 p) {
       return fract(sin(dot(p, vec2(127.1, 311.7))) * 43758.5453123);
@@ -80,6 +81,36 @@ function initWebGLShader(canvasId) {
       vec3 sparkColor = vec3(0.1, 0.95, 0.65) * (glow * 2.2);
 
       vec3 col = baseColor + gridColor + pulseColor + sparkColor;
+      if (u_rich > 0.5) {
+        // Stroomlijnen: drie zachte 'geleiders' met lopende energiepakketten (alleen home)
+        float t = u_time;
+        vec3 cur = vec3(0.0);
+        for (int i = 0; i < 3; i++) {
+          float fi = float(i);
+          float y0 = 0.18 + fi * 0.16;
+          float y = y0 + 0.035 * sin(st.x * (2.2 + fi * 0.7) + t * (0.35 + fi * 0.12)) + 0.012 * sin(st.x * 9.0 - t * 1.3 + fi);
+          float d = abs(st.y - y);
+          float line = 0.0016 / (d + 0.0016);
+          float packet = pow(0.5 + 0.5 * sin(st.x * 2.4 - t * (1.1 + fi * 0.25) + fi * 2.1), 18.0);
+          vec3 c = fi < 0.5 ? vec3(0.23, 0.55, 1.0) : (fi < 1.5 ? vec3(0.22, 0.74, 0.97) : vec3(0.35, 0.67, 0.84));
+          cur += c * line * (0.22 + 1.6 * packet);
+        }
+        float fade = smoothstep(0.95, 0.15, abs(st.x)) ;
+        col += cur * fade * 0.55;
+        // Zwevende deeltjes
+        vec2 q = st * 14.0 + vec2(0.0, -t * 0.25);
+        vec2 qi = floor(q); vec2 qf = fract(q) - 0.5;
+        float h = hash(qi);
+        if (h > 0.9) {
+          vec2 o = vec2(hash(qi + 3.1), hash(qi + 7.7)) - 0.5;
+          float pd = length(qf - o * 0.6);
+          float tw = 0.5 + 0.5 * sin(t * 2.0 + h * 40.0);
+          col += vec3(0.4, 0.75, 1.0) * smoothstep(0.08, 0.0, pd) * tw * 0.9;
+        }
+        // Zachte glow rond de muis
+        vec2 m = (u_mouse - 0.5 * u_resolution.xy) / min(u_resolution.y, u_resolution.x);
+        col += vec3(0.1, 0.35, 0.9) * 0.18 * smoothstep(0.5, 0.0, length(st - m));
+      }
       col *= vig;
       col *= smoothstep(0.0, 0.3, normCoord.y);
 
@@ -111,6 +142,13 @@ function initWebGLShader(canvasId) {
   const uTime = gl.getUniformLocation(prog, 'u_time');
   const uRes = gl.getUniformLocation(prog, 'u_resolution');
   const uMouse = gl.getUniformLocation(prog, 'u_mouse');
+  const uRich = gl.getUniformLocation(prog, 'u_rich');
+  // Rijke modus alleen met echte GPU en voldoende ruimte; software-GL (SwiftShader/llvmpipe) en kleine schermen krijgen de lichte variant.
+  let soft = false;
+  try { const dbg = gl.getExtension('WEBGL_debug_renderer_info'); const r = dbg ? String(gl.getParameter(dbg.UNMASKED_RENDERER_WEBGL)) : ''; soft = /swiftshader|llvmpipe|software|basic render/i.test(r); } catch (e) {}
+  if (/[?&]fx=full\b/.test(location.search)) soft = false; // preview/screenshot: forceer volle kwaliteit
+  if (soft) scale = Math.min(scale, 0.5);
+  const rich = (canvas.hasAttribute('data-rich') && !soft && window.innerWidth >= 768 && (navigator.hardwareConcurrency || 8) > 4) ? 1 : 0;
 
   let mouse = { x: canvas.width / 2, y: canvas.height / 2 };
   window.addEventListener('mousemove', (e) => {
@@ -123,7 +161,8 @@ function initWebGLShader(canvasId) {
     }
   });
 
-  const reduce = window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches;
+  // Zonder GPU (software-GL) of bij reduced-motion: één stilstaand frame, geen CPU-zware animatielus.
+  const reduce = soft || (window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches);
   let running = true;
   document.addEventListener('visibilitychange', () => {
     const was = running; running = !document.hidden;
@@ -141,6 +180,7 @@ function initWebGLShader(canvasId) {
     if (uTime) gl.uniform1f(uTime, t * 0.001);
     if (uRes) gl.uniform2f(uRes, canvas.width, canvas.height);
     if (uMouse) gl.uniform2f(uMouse, mouse.x, mouse.y);
+    if (uRich) gl.uniform1f(uRich, rich);
     gl.drawArrays(gl.TRIANGLE_STRIP, 0, 4);
     if (!reduce) requestAnimationFrame(render);
   }
