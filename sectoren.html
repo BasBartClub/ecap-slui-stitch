@@ -13,16 +13,22 @@
 <meta property="og:title" content="Elektrotechniek voor industrie, food &amp; utiliteit | ECAP SLUI"/>
 <meta property="og:description" content="Elektrotechnisch advies en projectbegeleiding voor de voedingsmiddelenindustrie, (papier)industrie en utiliteit. Opdrachtgevers o.a. Campina Melkunie, Smurfit Kappa en Rijnstate."/>
 <meta property="og:url" content="https://basbartclub.github.io/ecap-slui-stitch/sectoren.html"/>
-<meta property="og:image" content="https://basbartclub.github.io/ecap-slui-stitch/img/verdeelinrichting-ecap-slui.jpg"/>
+<meta property="og:image" content="https://basbartclub.github.io/ecap-slui-stitch/img/og-ecap-slui.jpg"/>
 <meta name="twitter:card" content="summary_large_image"/>
-<link rel="icon" href="data:,"/>
+<meta property="og:image:width" content="1200"/>
+<meta property="og:image:height" content="630"/>
+<meta property="og:image:alt" content="Geopende elektrische verdeelinrichting – ECAP SLUI, Ede"/>
+<meta name="theme-color" content="#0b0e14"/>
+<link rel="icon" href="favicon.svg" type="image/svg+xml"/>
+<link rel="preload" href="fonts/Geist-Variable.woff2" as="font" type="font/woff2" crossorigin/>
+<link rel="preload" href="fonts/GeistMono-Variable.woff2" as="font" type="font/woff2" crossorigin/>
 <link rel="stylesheet" href="tokens.css"/>
 <script src="https://cdn.tailwindcss.com"></script>
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": ["Organization", "ProfessionalService"], "@id": "https://basbartclub.github.io/ecap-slui-stitch/#organisatie", "name": "ECAP SLUI", "description": "Elektrotechnisch calculatie-, adviserings- en projectenbureau in Ede.", "url": "https://basbartclub.github.io/ecap-slui-stitch/", "logo": "https://basbartclub.github.io/ecap-slui-stitch/img/ecap-slui-logo.png", "image": "https://basbartclub.github.io/ecap-slui-stitch/img/verdeelinrichting-ecap-slui.jpg", "telephone": "+31651322666", "email": "vincent.slui@kpnmail.nl", "address": {"@type": "PostalAddress", "streetAddress": "Prof. Oudpark 90", "postalCode": "6716 EJ", "addressLocality": "Ede", "addressCountry": "NL"}, "identifier": {"@type": "PropertyValue", "propertyID": "KvK", "value": "59289430"}, "contactPoint": {"@type": "ContactPoint", "name": "Vincent Slui", "telephone": "+31651322666", "email": "vincent.slui@kpnmail.nl", "contactType": "customer service", "availableLanguage": "nl"}, "sameAs": ["https://www.linkedin.com/company/ecap-slui/"], "knowsAbout": ["Elektrotechnisch advies", "Elektrotechnische calculatie", "Engineering elektrotechnische installaties", "ETB- en WTB-installaties", "Test & commissioning", "Energiedistributie", "Verlichting", "Gebouwgebonden installaties"]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": ["Organization", "ProfessionalService"], "@id": "https://basbartclub.github.io/ecap-slui-stitch/#organisatie", "name": "ECAP SLUI", "description": "Elektrotechnisch calculatie-, adviserings- en projectenbureau in Ede.", "url": "https://basbartclub.github.io/ecap-slui-stitch/", "logo": "https://basbartclub.github.io/ecap-slui-stitch/img/ecap-slui-logo.png", "image": "https://basbartclub.github.io/ecap-slui-stitch/img/og-ecap-slui.jpg", "telephone": "+31651322666", "email": "vincent.slui@kpnmail.nl", "address": {"@type": "PostalAddress", "streetAddress": "Prof. Oudpark 90", "postalCode": "6716 EJ", "addressLocality": "Ede", "addressCountry": "NL"}, "identifier": {"@type": "PropertyValue", "propertyID": "KvK", "value": "59289430"}, "contactPoint": {"@type": "ContactPoint", "name": "Vincent Slui", "telephone": "+31651322666", "email": "vincent.slui@kpnmail.nl", "contactType": "customer service", "availableLanguage": "nl"}, "sameAs": ["https://www.linkedin.com/company/ecap-slui/"], "knowsAbout": ["Elektrotechnisch advies", "Elektrotechnische calculatie", "Engineering elektrotechnische installaties", "ETB- en WTB-installaties", "Test & commissioning", "Energiedistributie", "Verlichting", "Gebouwgebonden installaties"]}</script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://basbartclub.github.io/ecap-slui-stitch/index.html"}, {"@type": "ListItem", "position": 2, "name": "Sectoren", "item": "https://basbartclub.github.io/ecap-slui-stitch/sectoren.html"}]}</script>
 </head>
 <body class="bg-[#0b0e14] text-slate-100 min-h-screen">
-<div class="fixed inset-0 pointer-events-none opacity-30 z-0">
+<div class="fixed inset-0 pointer-events-none opacity-30 z-0" aria-hidden="true">
 <canvas class="w-full h-full" id="shader-canvas-sectoren"></canvas>
 </div>
 <header class="sticky top-0 z-50 border-b border-white/10 bg-[#0b0e14]/90 backdrop-blur-md">
@@ -39,19 +45,33 @@
     <nav class="hidden lg:flex items-center gap-8 text-sm font-medium text-slate-300" aria-label="Hoofdmenu">
       <a href="index.html" class="hover:text-white transition">Home</a>
       <a href="diensten.html" class="hover:text-white transition">Diensten</a>
-      <a href="sectoren.html" class="text-blue-400">Sectoren</a>
+      <a href="sectoren.html" class="text-blue-400" aria-current="page">Sectoren</a>
       <a href="projecten.html" class="hover:text-white transition">Projecten</a>
       <a href="werkwijze.html" class="hover:text-white transition">Werkwijze</a>
       <a href="over-ons.html" class="hover:text-white transition">Over ons</a>
       <a href="blog/" class="hover:text-white transition">Blog</a>
       <a href="contact.html" class="hover:text-white transition">Contact</a>
     </nav>
-    <div class="flex items-center gap-4">
-      <a href="contact.html" class="px-5 py-2.5 rounded-lg bg-blue-600 hover:bg-blue-500 text-white font-medium text-sm transition shadow-[0_0_20px_rgba(0,102,255,0.35)]">
+    <div class="flex items-center gap-3">
+      <a href="contact.html" class="hidden sm:inline-flex px-5 py-2.5 rounded-lg bg-blue-600 hover:bg-blue-500 text-white font-medium text-sm transition shadow-[0_0_20px_rgba(0,102,255,0.35)]">
         Direct Contact
       </a>
+      <button type="button" id="menu-toggle" class="lg:hidden inline-flex items-center justify-center w-11 h-11 rounded-lg border border-white/15 bg-white/5 text-white hover:bg-white/10 transition" aria-controls="mobile-menu" aria-expanded="false" aria-label="Menu openen"><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path class="mi-open" d="M4 7h16M4 12h16M4 17h16"/><path class="mi-close" d="M6 6l12 12M18 6L6 18"/></svg></button>
     </div>
   </div>
+  <nav id="mobile-menu" class="lg:hidden hidden border-t border-white/10 bg-[#0b0e14]/95 backdrop-blur-md" aria-label="Mobiel menu">
+    <div class="max-w-[1680px] mx-auto px-6 py-4 grid grid-cols-1 sm:grid-cols-2 gap-1">
+      <a href="index.html" class="block px-3 py-3 rounded-lg font-medium text-slate-200 hover:bg-white/5">Home</a>
+      <a href="diensten.html" class="block px-3 py-3 rounded-lg font-medium text-slate-200 hover:bg-white/5">Diensten</a>
+      <a href="sectoren.html" class="block px-3 py-3 rounded-lg font-medium text-blue-400 bg-blue-500/10" aria-current="page">Sectoren</a>
+      <a href="projecten.html" class="block px-3 py-3 rounded-lg font-medium text-slate-200 hover:bg-white/5">Projecten</a>
+      <a href="werkwijze.html" class="block px-3 py-3 rounded-lg font-medium text-slate-200 hover:bg-white/5">Werkwijze</a>
+      <a href="over-ons.html" class="block px-3 py-3 rounded-lg font-medium text-slate-200 hover:bg-white/5">Over ons</a>
+      <a href="blog/" class="block px-3 py-3 rounded-lg font-medium text-slate-200 hover:bg-white/5">Blog</a>
+      <a href="contact.html" class="block px-3 py-3 rounded-lg font-medium text-slate-200 hover:bg-white/5">Contact</a>
+      <a href="contact.html" class="mt-3 sm:col-span-2 text-center px-5 py-3 rounded-lg bg-blue-600 hover:bg-blue-500 text-white font-semibold">Direct contact</a>
+    </div>
+  </nav>
 </header>
 <main class="relative z-10 max-w-[1680px] mx-auto px-6 py-16">
 <div class="font-mono text-xs text-blue-400 uppercase tracking-widest mb-3">[SECTOREN &amp; EXPERTISE • ECAP SLUI EDE]</div>
@@ -67,7 +87,7 @@
 <p class="text-sm text-slate-400 leading-relaxed mb-6">In de voedingsmiddelenindustrie draait de productie vaak continu en worden installaties intensief gereinigd. Elektrotechniek moet daar betrouwbaar, goed bereikbaar en zorgvuldig getest zijn.</p>
 <ul class="text-xs text-slate-300 space-y-2.5 font-mono"><li>✔ Energiedistributie naar productielijnen</li><li>✔ Begeleiding van industriële aandrijftechniek</li><li>✔ Test &amp; commissioning vóór ingebruikname</li></ul>
 <div class="text-xs font-mono text-slate-400 uppercase tracking-widest mt-8 mb-3">Opdrachtgevers</div>
-<div class="grid grid-cols-2 gap-3"><div class="rounded-xl bg-white p-4 flex items-center justify-center h-20" title="Campina Melkunie"><img src="img/logo-campina-melkunie.jpg" alt="Logo Campina Melkunie" loading="lazy" class="max-h-full max-w-full object-contain"/></div><div class="rounded-xl bg-white p-4 flex items-center justify-center h-20" title="Navobi"><img src="img/logo-navobi.jpg" alt="Logo Navobi" loading="lazy" class="max-h-full max-w-full object-contain"/></div><div class="rounded-xl bg-white p-4 flex items-center justify-center h-20" title="Ekro"><img src="img/logo-ekro.jpg" alt="Logo Ekro" loading="lazy" class="max-h-full max-w-full object-contain"/></div></div>
+<div class="grid grid-cols-2 gap-3"><div class="rounded-xl bg-white p-4 flex items-center justify-center h-20" title="Campina Melkunie"><picture><source type="image/webp" srcset="img/logo-campina-melkunie.webp"/><img src="img/logo-campina-melkunie.jpg" alt="Logo Campina Melkunie" width="300" height="150" loading="lazy" decoding="async" class="max-h-full max-w-full w-auto h-auto object-contain"/></picture></div><div class="rounded-xl bg-white p-4 flex items-center justify-center h-20" title="Navobi"><picture><source type="image/webp" srcset="img/logo-navobi.webp"/><img src="img/logo-navobi.jpg" alt="Logo Navobi" width="300" height="150" loading="lazy" decoding="async" class="max-h-full max-w-full w-auto h-auto object-contain"/></picture></div><div class="rounded-xl bg-white p-4 flex items-center justify-center h-20" title="Ekro"><picture><source type="image/webp" srcset="img/logo-ekro.webp"/><img src="img/logo-ekro.jpg" alt="Logo Ekro" width="300" height="150" loading="lazy" decoding="async" class="max-h-full max-w-full w-auto h-auto object-contain"/></picture></div></div>
 </div>
 <div class="mt-8 pt-4 border-t border-white/10 text-xs font-mono text-blue-400">FOCUS: Continuïteit &amp; Hygiëne</div>
 </div><div class="rounded-2xl border border-white/10 bg-[#161a22]/90 p-8 hover:border-blue-500/50 transition flex flex-col justify-between">
@@ -77,7 +97,7 @@
 <p class="text-sm text-slate-400 leading-relaxed mb-6">Papier- en kartonfabrieken en andere procesindustrie vragen om robuuste energiedistributie, goed doorgerekende kabels en beveiligingen en aandrijvingen die doen wat ze moeten doen.</p>
 <ul class="text-xs text-slate-300 space-y-2.5 font-mono"><li>✔ Kabelberekeningen volgens NEN 1010</li><li>✔ Noodstroom- en energievoorziening</li><li>✔ Begeleiding industriële aandrijftechniek</li></ul>
 <div class="text-xs font-mono text-slate-400 uppercase tracking-widest mt-8 mb-3">Opdrachtgevers</div>
-<div class="grid grid-cols-2 gap-3"><div class="rounded-xl bg-white p-4 flex items-center justify-center h-20" title="Neenah Coldenhove"><img src="img/logo-neenah-coldenhove.jpg" alt="Logo Neenah Coldenhove" loading="lazy" class="max-h-full max-w-full object-contain"/></div><div class="rounded-xl bg-white p-4 flex items-center justify-center h-20" title="MM Karton"><img src="img/logo-mm-karton.jpg" alt="Logo MM Karton" loading="lazy" class="max-h-full max-w-full object-contain"/></div><div class="rounded-xl bg-white p-4 flex items-center justify-center h-20" title="Smurfit Kappa"><img src="img/logo-smurfit-kappa.jpg" alt="Logo Smurfit Kappa" loading="lazy" class="max-h-full max-w-full object-contain"/></div><div class="rounded-xl bg-white p-4 flex items-center justify-center h-20" title="Parenco"><img src="img/logo-parenco.jpg" alt="Logo Parenco" loading="lazy" class="max-h-full max-w-full object-contain"/></div></div>
+<div class="grid grid-cols-2 gap-3"><div class="rounded-xl bg-white p-4 flex items-center justify-center h-20" title="Neenah Coldenhove"><picture><source type="image/webp" srcset="img/logo-neenah-coldenhove.webp"/><img src="img/logo-neenah-coldenhove.jpg" alt="Logo Neenah Coldenhove" width="300" height="150" loading="lazy" decoding="async" class="max-h-full max-w-full w-auto h-auto object-contain"/></picture></div><div class="rounded-xl bg-white p-4 flex items-center justify-center h-20" title="MM Karton"><picture><source type="image/webp" srcset="img/logo-mm-karton.webp"/><img src="img/logo-mm-karton.jpg" alt="Logo MM Karton" width="300" height="150" loading="lazy" decoding="async" class="max-h-full max-w-full w-auto h-auto object-contain"/></picture></div><div class="rounded-xl bg-white p-4 flex items-center justify-center h-20" title="Smurfit Kappa"><picture><source type="image/webp" srcset="img/logo-smurfit-kappa.webp"/><img src="img/logo-smurfit-kappa.jpg" alt="Logo Smurfit Kappa" width="300" height="150" loading="lazy" decoding="async" class="max-h-full max-w-full w-auto h-auto object-contain"/></picture></div><div class="rounded-xl bg-white p-4 flex items-center justify-center h-20" title="Parenco"><picture><source type="image/webp" srcset="img/logo-parenco.webp"/><img src="img/logo-parenco.jpg" alt="Logo Parenco" width="300" height="150" loading="lazy" decoding="async" class="max-h-full max-w-full w-auto h-auto object-contain"/></picture></div></div>
 </div>
 <div class="mt-8 pt-4 border-t border-white/10 text-xs font-mono text-blue-400">FOCUS: Continuïteit &amp; Vermogen</div>
 </div><div class="rounded-2xl border border-white/10 bg-[#161a22]/90 p-8 hover:border-blue-500/50 transition flex flex-col justify-between">
@@ -87,7 +107,7 @@
 <p class="text-sm text-slate-400 leading-relaxed mb-6">Van zorginstelling en gemeente tot luchthaven en monumentaal paleis: utiliteitsgebouwen vragen om gebouwgebonden installaties die veilig, efficiënt en goed beheerbaar zijn.</p>
 <ul class="text-xs text-slate-300 space-y-2.5 font-mono"><li>✔ Verlichting, noodverlichting &amp; KNX</li><li>✔ Brandmeld-, ontruimings- en beveiligingsinstallaties</li><li>✔ PV en energiebesparingsmaatregelen</li></ul>
 <div class="text-xs font-mono text-slate-400 uppercase tracking-widest mt-8 mb-3">Opdrachtgevers</div>
-<div class="grid grid-cols-2 gap-3"><div class="rounded-xl bg-white p-4 flex items-center justify-center h-20" title="Paleis Het Loo"><img src="img/logo-paleis-het-loo.jpg" alt="Logo Paleis Het Loo" loading="lazy" class="max-h-full max-w-full object-contain"/></div><div class="rounded-xl bg-white p-4 flex items-center justify-center h-20" title="BAM"><img src="img/logo-bam.jpg" alt="Logo BAM" loading="lazy" class="max-h-full max-w-full object-contain"/></div><div class="rounded-xl bg-white p-4 flex items-center justify-center h-20" title="Gemeente Wageningen"><img src="img/logo-gemeente-wageningen.jpg" alt="Logo Gemeente Wageningen" loading="lazy" class="max-h-full max-w-full object-contain"/></div><div class="rounded-xl bg-white p-4 flex items-center justify-center h-20" title="Rijnstate"><img src="img/logo-rijnstate.jpg" alt="Logo Rijnstate" loading="lazy" class="max-h-full max-w-full object-contain"/></div><div class="rounded-xl bg-white p-4 flex items-center justify-center h-20" title="Engie"><img src="img/logo-engie.png" alt="Logo Engie" loading="lazy" class="max-h-full max-w-full object-contain"/></div><div class="rounded-xl bg-white p-4 flex items-center justify-center h-20" title="Schiphol Amsterdam Airport"><img src="img/logo-schiphol.jpg" alt="Logo Schiphol Amsterdam Airport" loading="lazy" class="max-h-full max-w-full object-contain"/></div></div>
+<div class="grid grid-cols-2 gap-3"><div class="rounded-xl bg-white p-4 flex items-center justify-center h-20" title="Paleis Het Loo"><picture><source type="image/webp" srcset="img/logo-paleis-het-loo.webp"/><img src="img/logo-paleis-het-loo.jpg" alt="Logo Paleis Het Loo" width="300" height="150" loading="lazy" decoding="async" class="max-h-full max-w-full w-auto h-auto object-contain"/></picture></div><div class="rounded-xl bg-white p-4 flex items-center justify-center h-20" title="BAM"><picture><source type="image/webp" srcset="img/logo-bam.webp"/><img src="img/logo-bam.jpg" alt="Logo BAM" width="480" height="278" loading="lazy" decoding="async" class="max-h-full max-w-full w-auto h-auto object-contain"/></picture></div><div class="rounded-xl bg-white p-4 flex items-center justify-center h-20" title="Gemeente Wageningen"><picture><source type="image/webp" srcset="img/logo-gemeente-wageningen.webp"/><img src="img/logo-gemeente-wageningen.jpg" alt="Logo Gemeente Wageningen" width="300" height="150" loading="lazy" decoding="async" class="max-h-full max-w-full w-auto h-auto object-contain"/></picture></div><div class="rounded-xl bg-white p-4 flex items-center justify-center h-20" title="Rijnstate"><picture><source type="image/webp" srcset="img/logo-rijnstate.webp"/><img src="img/logo-rijnstate.jpg" alt="Logo Rijnstate" width="300" height="150" loading="lazy" decoding="async" class="max-h-full max-w-full w-auto h-auto object-contain"/></picture></div><div class="rounded-xl bg-white p-4 flex items-center justify-center h-20" title="Engie"><picture><source type="image/webp" srcset="img/logo-engie.webp"/><img src="img/logo-engie.png" alt="Logo Engie" width="480" height="343" loading="lazy" decoding="async" class="max-h-full max-w-full w-auto h-auto object-contain"/></picture></div><div class="rounded-xl bg-white p-4 flex items-center justify-center h-20" title="Schiphol Amsterdam Airport"><picture><source type="image/webp" srcset="img/logo-schiphol.webp"/><img src="img/logo-schiphol.jpg" alt="Logo Schiphol Amsterdam Airport" width="480" height="317" loading="lazy" decoding="async" class="max-h-full max-w-full w-auto h-auto object-contain"/></picture></div></div>
 </div>
 <div class="mt-8 pt-4 border-t border-white/10 text-xs font-mono text-blue-400">FOCUS: Veiligheid &amp; Beheerbaarheid</div>
 </div></div>
@@ -122,7 +142,8 @@ KvK 59289430</address>
 </div>
 </div>
 </footer>
-<script src="shader.js"></script>
-<script>initWebGLShader('shader-canvas-sectoren');</script>
+<script src="js/app.js" defer></script>
+<script src="shader.js" defer></script>
+<script>addEventListener('DOMContentLoaded',function(){initWebGLShader('shader-canvas-sectoren')});</script>
 </body>
 </html>

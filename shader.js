@@ -2,9 +2,15 @@ function initWebGLShader(canvasId) {
   const canvas = document.getElementById(canvasId);
   if (!canvas) return;
 
+  // Retina/4K: render at devicePixelRatio, capped to ~8.3 MP (3840x2160) for GPU budget.
+  const MAX_PIXELS = 3840 * 2160;
   function syncSize() {
-    const w = canvas.clientWidth || window.innerWidth;
-    const h = canvas.clientHeight || window.innerHeight;
+    const cw = canvas.clientWidth || window.innerWidth;
+    const ch = canvas.clientHeight || window.innerHeight;
+    let dpr = Math.min(window.devicePixelRatio || 1, 2);
+    if (cw * ch * dpr * dpr > MAX_PIXELS) dpr = Math.sqrt(MAX_PIXELS / (cw * ch));
+    const w = Math.max(1, Math.round(cw * dpr));
+    const h = Math.max(1, Math.round(ch * dpr));
     if (canvas.width !== w || canvas.height !== h) {
       canvas.width = w;
       canvas.height = h;
@@ -115,14 +121,21 @@ function initWebGLShader(canvasId) {
     }
   });
 
+  const reduce = window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches;
+  let running = true;
+  document.addEventListener('visibilitychange', () => {
+    const was = running; running = !document.hidden;
+    if (running && !was && !reduce) requestAnimationFrame(render);
+  });
   function render(t) {
+    if (!running) return;
     syncSize();
     gl.viewport(0, 0, canvas.width, canvas.height);
     if (uTime) gl.uniform1f(uTime, t * 0.001);
     if (uRes) gl.uniform2f(uRes, canvas.width, canvas.height);
     if (uMouse) gl.uniform2f(uMouse, mouse.x, mouse.y);
     gl.drawArrays(gl.TRIANGLE_STRIP, 0, 4);
-    requestAnimationFrame(render);
+    if (!reduce) requestAnimationFrame(render);
   }
-  render(0);
+  requestAnimationFrame(render);
 }
