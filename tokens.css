@@ -50,7 +50,7 @@ h1,h2,h3{overflow-wrap:break-word;hyphens:auto;-webkit-hyphens:auto}
 img{max-width:100%}
 /* 4K / grote schermen: alles schaalt mee via rem */
 @media (min-width:1920px){html{font-size:17px}}
-@media (min-width:2400px){html{font-size:19px}.max-w-\[1680px\]{max-width:112rem}}
+@media (min-width:2400px){html{font-size:19px}html .max-w-\[1680px\]{max-width:112rem}}
 @media (min-width:3200px){html{font-size:24px}}
 /* scroll-reveal */
 .rv{opacity:0;transform:translateY(18px);transition:opacity .7s cubic-bezier(.2,.7,.2,1),transform .7s cubic-bezier(.2,.7,.2,1)}
