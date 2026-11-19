@@ -4,10 +4,12 @@ function initWebGLShader(canvasId) {
 
   // Retina/4K: render at devicePixelRatio, capped to ~8.3 MP (3840x2160) for GPU budget.
   const MAX_PIXELS = 3840 * 2160;
+  // Adaptieve kwaliteit: start lager op kleine/zwakke apparaten en schaal terug als frames traag zijn.
+  let scale = (window.innerWidth < 768 || (navigator.hardwareConcurrency || 8) <= 4) ? 0.6 : 1;
   function syncSize() {
     const cw = canvas.clientWidth || window.innerWidth;
     const ch = canvas.clientHeight || window.innerHeight;
-    let dpr = Math.min(window.devicePixelRatio || 1, 2);
+    let dpr = Math.min(window.devicePixelRatio || 1, 2) * scale;
     if (cw * ch * dpr * dpr > MAX_PIXELS) dpr = Math.sqrt(MAX_PIXELS / (cw * ch));
     const w = Math.max(1, Math.round(cw * dpr));
     const h = Math.max(1, Math.round(ch * dpr));
@@ -127,8 +129,13 @@ function initWebGLShader(canvasId) {
     const was = running; running = !document.hidden;
     if (running && !was && !reduce) requestAnimationFrame(render);
   });
+  let last = 0, acc = 0, n = 0;
+  const FRAME = 1000 / 40; // max ~40 fps: rustige achtergrond, minder CPU/GPU
   function render(t) {
     if (!running) return;
+    if (!reduce && t - last < FRAME) { requestAnimationFrame(render); return; }
+    if (last) { acc += t - last; n++; if (n === 20) { if (acc / n > 45 && scale > 0.3) { scale *= 0.6; } acc = 0; n = 0; } }
+    last = t;
     syncSize();
     gl.viewport(0, 0, canvas.width, canvas.height);
     if (uTime) gl.uniform1f(uTime, t * 0.001);
@@ -137,5 +144,8 @@ function initWebGLShader(canvasId) {
     gl.drawArrays(gl.TRIANGLE_STRIP, 0, 4);
     if (!reduce) requestAnimationFrame(render);
   }
-  requestAnimationFrame(render);
+  const start = () => requestAnimationFrame(render);
+  // Start pas na load + idle, zodat de eerste weergave en interactie niet worden geblokkeerd.
+  const later = () => ('requestIdleCallback' in window) ? requestIdleCallback(start, { timeout: 2500 }) : setTimeout(start, 1200);
+  if (document.readyState === 'complete') later(); else addEventListener('load', later, { once: true });
 }
