@@ -23,12 +23,13 @@
 <link rel="preload" href="../fonts/Geist-Variable.woff2" as="font" type="font/woff2" crossorigin/>
 <link rel="preload" href="../fonts/GeistMono-Variable.woff2" as="font" type="font/woff2" crossorigin/>
 <link rel="stylesheet" href="../tokens.css"/>
-<script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="../css/app.css?v=1"/>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BlogPosting", "headline": "KNX documentatie en het ETS-projectbestand", "description": "Waarom documentatie van een KNX-installatie cruciaal is: het ETS-projectbestand, groepsadressen, wat er bij oplevering hoort en hoe u afhankelijkheid van één integrator voorkomt.", "inLanguage": "nl-NL", "keywords": "KNX documentatie", "articleSection": "KNX & gebouwautomatisering", "wordCount": 526, "datePublished": "2026-11-18", "dateModified": "2026-11-18", "mainEntityOfPage": "https://basbartclub.github.io/ecap-slui-stitch/blog/knx-documentatie.html", "image": {"@type": "ImageObject", "url": "https://basbartclub.github.io/ecap-slui-stitch/img/og-ecap-slui.jpg", "width": 1200, "height": 630}, "author": {"@type": "Organization", "name": "ECAP SLUI", "url": "https://basbartclub.github.io/ecap-slui-stitch/"}, "publisher": {"@type": "Organization", "name": "ECAP SLUI", "logo": {"@type": "ImageObject", "url": "https://basbartclub.github.io/ecap-slui-stitch/img/ecap-slui-logo.png"}}}</script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://basbartclub.github.io/ecap-slui-stitch/index.html"}, {"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://basbartclub.github.io/ecap-slui-stitch/blog/"}, {"@type": "ListItem", "position": 3, "name": "KNX & gebouwautomatisering", "item": "https://basbartclub.github.io/ecap-slui-stitch/blog/categorie/knx-gebouwautomatisering.html"}, {"@type": "ListItem", "position": 4, "name": "KNX documentatie en het ETS-projectbestand", "item": "https://basbartclub.github.io/ecap-slui-stitch/blog/knx-documentatie.html"}]}</script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Wat is een ETS-projectbestand?", "acceptedAnswer": {"@type": "Answer", "text": "Het bestand waarin de volledige configuratie van een KNX-installatie is vastgelegd, gemaakt met de software ETS."}}, {"@type": "Question", "name": "Van wie is het projectbestand?", "acceptedAnswer": {"@type": "Answer", "text": "Dat moet in het contract worden vastgelegd. Het is verstandig om te regelen dat het eigendom wordt van de opdrachtgever."}}]}</script>
 </head>
 <body class="bg-[#0b0e14] text-slate-100 min-h-screen">
+<a class="skip" href="#inhoud">Naar de inhoud</a>
 <div class="fixed inset-0 pointer-events-none opacity-30 z-0" aria-hidden="true">
 <canvas class="w-full h-full" id="shader-canvas-blog"></canvas>
 </div>
@@ -74,6 +75,7 @@
     </div>
   </nav>
 </header>
+<div id="inhoud" tabindex="-1"></div>
 <main class="relative z-10 max-w-[1680px] mx-auto px-6 py-16">
 <nav class="font-mono text-xs text-slate-400 uppercase tracking-widest mb-6" aria-label="Kruimelpad"><a class="hover:text-white" href="../index.html">Home</a> / <a class="hover:text-white" href="../blog/">Blog</a> / <a class="text-blue-400 hover:underline" href="../blog/categorie/knx-gebouwautomatisering.html">KNX &amp; gebouwautomatisering</a></nav>
 <div class="grid grid-cols-1 lg:grid-cols-12 gap-10">
@@ -96,11 +98,11 @@
 <h2 id="overdracht-aan-een-nieuwe-integrator" class="text-2xl md:text-3xl font-bold text-white tracking-tight mt-12 mb-4 scroll-mt-24">Overdracht aan een nieuwe integrator</h2>
 <p class="text-slate-300 leading-relaxed mb-5">Wie een nieuwe integrator inschakelt, geeft het actuele projectbestand en de documentatie mee. De nieuwe integrator controleert eerst of het projectbestand overeenkomt met de installatie, voordat hij wijzigingen doet.</p>
 <h2 id="testrapport" class="text-2xl md:text-3xl font-bold text-white tracking-tight mt-12 mb-4 scroll-mt-24">Testrapport</h2>
-<p class="text-slate-300 leading-relaxed mb-5">Een testrapport laat zien welke functies zijn getest en met welk resultaat. Bij oplevering is dat de basis voor acceptatie; later is het een referentie voor hoe de installatie moet werken. Lees <a class="text-blue-400 hover:underline" href="opleverdossier-installatie.html">het opleverdossier</a> en <a class="text-blue-400 hover:underline" href="knx-kantoor.html">KNX in kantoren</a>.</p>
+<p class="text-slate-300 leading-relaxed mb-5">Een testrapport laat zien welke functies zijn getest en met welk resultaat. Bij oplevering is dat de basis voor acceptatie; later is het een referentie voor hoe de installatie moet werken. Lees <a class="text-blue-400 underline decoration-blue-400/40 underline-offset-[3px] hover:decoration-blue-300 hover:text-blue-300" href="opleverdossier-installatie.html">het opleverdossier</a> en <a class="text-blue-400 underline decoration-blue-400/40 underline-offset-[3px] hover:decoration-blue-300 hover:text-blue-300" href="knx-kantoor.html">KNX in kantoren</a>.</p>
 <h2 id="bestaande-installaties-zonder-documentatie" class="text-2xl md:text-3xl font-bold text-white tracking-tight mt-12 mb-4 scroll-mt-24">Bestaande installaties zonder documentatie</h2>
-<p class="text-slate-300 leading-relaxed mb-5">Bij een bestaande installatie zonder projectbestand kan de configuratie worden uitgelezen en opnieuw worden gedocumenteerd. Dat is tijdrovend, maar het maakt de installatie weer beheersbaar. Lees ook <a class="text-blue-400 hover:underline" href="eib-knx.html">van EIB naar KNX</a>.</p>
+<p class="text-slate-300 leading-relaxed mb-5">Bij een bestaande installatie zonder projectbestand kan de configuratie worden uitgelezen en opnieuw worden gedocumenteerd. Dat is tijdrovend, maar het maakt de installatie weer beheersbaar. Lees ook <a class="text-blue-400 underline decoration-blue-400/40 underline-offset-[3px] hover:decoration-blue-300 hover:text-blue-300" href="eib-knx.html">van EIB naar KNX</a>.</p>
 <h2 id="advies" class="text-2xl md:text-3xl font-bold text-white tracking-tight mt-12 mb-4 scroll-mt-24">Advies</h2>
-<p class="text-slate-300 leading-relaxed mb-5">ECAP SLUI adviseert over EIB KNX domotica en zorgt dat aan het einde van de bouw een compleet opleverdossier wordt overhandigd. Bekijk <a class="text-blue-400 hover:underline" href="../diensten.html#eib-knx-domotica">EIB KNX domotica</a> en <a class="text-blue-400 hover:underline" href="../diensten.html#test-commissioning">test &amp; commissioning</a>.</p>
+<p class="text-slate-300 leading-relaxed mb-5">ECAP SLUI adviseert over EIB KNX domotica en zorgt dat aan het einde van de bouw een compleet opleverdossier wordt overhandigd. Bekijk <a class="text-blue-400 underline decoration-blue-400/40 underline-offset-[3px] hover:decoration-blue-300 hover:text-blue-300" href="../diensten.html#eib-knx-domotica">EIB KNX domotica</a> en <a class="text-blue-400 underline decoration-blue-400/40 underline-offset-[3px] hover:decoration-blue-300 hover:text-blue-300" href="../diensten.html#test-commissioning">test &amp; commissioning</a>.</p>
 <h2 id="veelgestelde-vragen" class="text-2xl md:text-3xl font-bold text-white tracking-tight mt-12 mb-6">Veelgestelde vragen</h2><div class="space-y-4"><details class="p-6 rounded-xl border border-white/10 bg-[#161a22]/80"><summary class="font-semibold text-white cursor-pointer">Wat is een ETS-projectbestand?</summary><p class="text-slate-300 leading-relaxed mt-3">Het bestand waarin de volledige configuratie van een KNX-installatie is vastgelegd, gemaakt met de software ETS.</p></details><details class="p-6 rounded-xl border border-white/10 bg-[#161a22]/80"><summary class="font-semibold text-white cursor-pointer">Van wie is het projectbestand?</summary><p class="text-slate-300 leading-relaxed mt-3">Dat moet in het contract worden vastgelegd. Het is verstandig om te regelen dat het eigendom wordt van de opdrachtgever.</p></details></div>
 <div class="mt-14 p-8 rounded-2xl border border-white/10 bg-[#161a22]/90">
 <div class="font-mono text-xs text-blue-400 uppercase tracking-widest mb-3">[SAMENWERKEN?]</div>
@@ -152,7 +154,7 @@ KvK 59289430</address>
 <a class="hover:text-white" href="https://www.linkedin.com/company/ecap-slui/" rel="noopener" target="_blank">LinkedIn ECAP SLUI →</a>
 <a class="hover:text-white" href="https://www.linkedin.com/in/vincent-slui-a629ba19/" rel="noopener" target="_blank">LinkedIn Vincent Slui →</a>
 </div>
-<div class="text-xs font-mono text-slate-500 mt-6">Beeld © Studio Csány</div>
+<div class="text-xs font-mono text-slate-400 mt-6">Beeld © Studio Csány</div>
 </div>
 </div>
 </footer>

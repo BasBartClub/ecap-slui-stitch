@@ -48,3 +48,15 @@ h1,h2,h3{overflow-wrap:break-word;hyphens:auto;-webkit-hyphens:auto}
 #menu-toggle[aria-expanded="true"] .mi-open{display:none}
 #menu-toggle[aria-expanded="true"] .mi-close{display:inline}
 img{max-width:100%}
+/* 4K / grote schermen: alles schaalt mee via rem */
+@media (min-width:1920px){html{font-size:17px}}
+@media (min-width:2400px){html{font-size:19px}.max-w-\[1680px\]{max-width:112rem}}
+@media (min-width:3200px){html{font-size:24px}}
+/* scroll-reveal */
+.rv{opacity:0;transform:translateY(18px);transition:opacity .7s cubic-bezier(.2,.7,.2,1),transform .7s cubic-bezier(.2,.7,.2,1)}
+.rv.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){.rv{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}}
+html{scroll-behavior:smooth;text-rendering:optimizeLegibility}
+:focus-visible{outline:2px solid #38bdf8;outline-offset:3px;border-radius:6px}
+.skip{position:absolute;left:-9999px;top:8px;z-index:100;background:#0066ff;color:#fff;padding:10px 16px;border-radius:8px}
+.skip:focus{left:8px}

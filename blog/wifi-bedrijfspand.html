@@ -23,12 +23,13 @@
 <link rel="preload" href="../fonts/Geist-Variable.woff2" as="font" type="font/woff2" crossorigin/>
 <link rel="preload" href="../fonts/GeistMono-Variable.woff2" as="font" type="font/woff2" crossorigin/>
 <link rel="stylesheet" href="../tokens.css"/>
-<script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="../css/app.css?v=1"/>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BlogPosting", "headline": "Wifi in een bedrijfspand: ontwerp vanuit dekking én capaciteit", "description": "Een betrouwbaar wifi-netwerk in kantoor, hal of zorggebouw: site survey, dekking en capaciteit, plaatsing van accesspoints, bekabeling, PoE en beheer.", "inLanguage": "nl-NL", "keywords": "wifi bedrijfspand ontwerp", "articleSection": "Data, communicatie & datacenters", "wordCount": 577, "datePublished": "2026-11-18", "dateModified": "2026-11-18", "mainEntityOfPage": "https://basbartclub.github.io/ecap-slui-stitch/blog/wifi-bedrijfspand.html", "image": {"@type": "ImageObject", "url": "https://basbartclub.github.io/ecap-slui-stitch/img/og-ecap-slui.jpg", "width": 1200, "height": 630}, "author": {"@type": "Organization", "name": "ECAP SLUI", "url": "https://basbartclub.github.io/ecap-slui-stitch/"}, "publisher": {"@type": "Organization", "name": "ECAP SLUI", "logo": {"@type": "ImageObject", "url": "https://basbartclub.github.io/ecap-slui-stitch/img/ecap-slui-logo.png"}}}</script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://basbartclub.github.io/ecap-slui-stitch/index.html"}, {"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://basbartclub.github.io/ecap-slui-stitch/blog/"}, {"@type": "ListItem", "position": 3, "name": "Data, communicatie & datacenters", "item": "https://basbartclub.github.io/ecap-slui-stitch/blog/categorie/data-datacenters.html"}, {"@type": "ListItem", "position": 4, "name": "Wifi in een bedrijfspand: ontwerp vanuit dekking én capaciteit", "item": "https://basbartclub.github.io/ecap-slui-stitch/blog/wifi-bedrijfspand.html"}]}</script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Hoeveel accesspoints heb ik nodig?", "acceptedAnswer": {"@type": "Answer", "text": "Dat hangt af van het gebouw, de materialen en vooral het aantal gebruikers en apparaten. Een site survey geeft een onderbouwd antwoord."}}, {"@type": "Question", "name": "Waarom is wifi slecht in een vergaderzaal?", "acceptedAnswer": {"@type": "Answer", "text": "Vaak door capaciteit: te veel apparaten op één accesspoint. Een extra accesspoint in de zaal lost dat meestal op."}}]}</script>
 </head>
 <body class="bg-[#0b0e14] text-slate-100 min-h-screen">
+<a class="skip" href="#inhoud">Naar de inhoud</a>
 <div class="fixed inset-0 pointer-events-none opacity-30 z-0" aria-hidden="true">
 <canvas class="w-full h-full" id="shader-canvas-blog"></canvas>
 </div>
@@ -74,6 +75,7 @@
     </div>
   </nav>
 </header>
+<div id="inhoud" tabindex="-1"></div>
 <main class="relative z-10 max-w-[1680px] mx-auto px-6 py-16">
 <nav class="font-mono text-xs text-slate-400 uppercase tracking-widest mb-6" aria-label="Kruimelpad"><a class="hover:text-white" href="../index.html">Home</a> / <a class="hover:text-white" href="../blog/">Blog</a> / <a class="text-blue-400 hover:underline" href="../blog/categorie/data-datacenters.html">Data, communicatie &amp; datacenters</a></nav>
 <div class="grid grid-cols-1 lg:grid-cols-12 gap-10">
@@ -93,7 +95,7 @@
 <h2 id="plaatsing-van-accesspoints" class="text-2xl md:text-3xl font-bold text-white tracking-tight mt-12 mb-4 scroll-mt-24">Plaatsing van accesspoints</h2>
 <ul class="list-disc pl-6 space-y-2 text-slate-300 leading-relaxed mb-6 marker:text-blue-400"><li>Bij voorkeur aan of in het plafond, zo dicht mogelijk bij de gebruikers.</li><li>Niet boven een metalen plafond of achter een kabelgoot.</li><li>Niet in technische ruimten of meterkasten 'omdat daar de kabel uitkomt'.</li><li>In hoge hallen: denk aan richtantennes of montage op lagere hoogte.</li><li>Buiten: speciale buitenaccesspoints met de juiste beschermingsgraad.</li></ul>
 <h2 id="bekabeling-en-voeding" class="text-2xl md:text-3xl font-bold text-white tracking-tight mt-12 mb-4 scroll-mt-24">Bekabeling en voeding</h2>
-<p class="text-slate-300 leading-relaxed mb-5">Accesspoints worden bekabeld via de <a class="text-blue-400 hover:underline" href="gestructureerde-bekabeling.html">gestructureerde bekabeling</a> en gevoed via <a class="text-blue-400 hover:underline" href="power-over-ethernet.html">Power over Ethernet</a>. Moderne accesspoints vragen meer vermogen en hogere snelheden. Cat6A is daarom een logische keuze voor nieuwe aansluitingen, en de switches moeten voldoende PoE-budget hebben. Overweeg twee kabels per accesspointpositie, voor de snelheid en voor toekomstige apparatuur.</p>
+<p class="text-slate-300 leading-relaxed mb-5">Accesspoints worden bekabeld via de <a class="text-blue-400 underline decoration-blue-400/40 underline-offset-[3px] hover:decoration-blue-300 hover:text-blue-300" href="gestructureerde-bekabeling.html">gestructureerde bekabeling</a> en gevoed via <a class="text-blue-400 underline decoration-blue-400/40 underline-offset-[3px] hover:decoration-blue-300 hover:text-blue-300" href="power-over-ethernet.html">Power over Ethernet</a>. Moderne accesspoints vragen meer vermogen en hogere snelheden. Cat6A is daarom een logische keuze voor nieuwe aansluitingen, en de switches moeten voldoende PoE-budget hebben. Overweeg twee kabels per accesspointpositie, voor de snelheid en voor toekomstige apparatuur.</p>
 <h2 id="frequentiebanden" class="text-2xl md:text-3xl font-bold text-white tracking-tight mt-12 mb-4 scroll-mt-24">Frequentiebanden</h2>
 <p class="text-slate-300 leading-relaxed mb-5">Wifi gebruikt verschillende frequentiebanden. De lagere band heeft meer bereik maar minder kanalen; de hogere banden hebben meer capaciteit maar minder bereik en worden sterker gedempt door wanden. Nieuwere wifi-generaties maken gebruik van extra spectrum, wat meer capaciteit biedt. Het ontwerp moet passen bij de apparaten die in het gebouw worden gebruikt.</p>
 <h2 id="storing-en-kanaalplanning" class="text-2xl md:text-3xl font-bold text-white tracking-tight mt-12 mb-4 scroll-mt-24">Storing en kanaalplanning</h2>
@@ -101,9 +103,9 @@
 <h2 id="beveiliging" class="text-2xl md:text-3xl font-bold text-white tracking-tight mt-12 mb-4 scroll-mt-24">Beveiliging</h2>
 <ul class="list-disc pl-6 space-y-2 text-slate-300 leading-relaxed mb-6 marker:text-blue-400"><li>Scheid het netwerk voor medewerkers, gasten en apparaten (zoals camera's en sensoren).</li><li>Gebruik actuele versleuteling en authenticatie.</li><li>Houd firmware actueel.</li></ul>
 <h2 id="gebouwautomatisering-en-iot" class="text-2xl md:text-3xl font-bold text-white tracking-tight mt-12 mb-4 scroll-mt-24">Gebouwautomatisering en IoT</h2>
-<p class="text-slate-300 leading-relaxed mb-5">Steeds meer gebouwinstallaties communiceren draadloos: sensoren voor aanwezigheid, temperatuur en luchtkwaliteit, slimme sloten en verlichting. Sommige gebruiken wifi, andere eigen draadloze protocollen. Neem ze mee in de planning, zodat ze het kantoornetwerk niet belasten. Zie ook <a class="text-blue-400 hover:underline" href="gebouwbeheersysteem.html">gebouwbeheersysteem</a>.</p>
+<p class="text-slate-300 leading-relaxed mb-5">Steeds meer gebouwinstallaties communiceren draadloos: sensoren voor aanwezigheid, temperatuur en luchtkwaliteit, slimme sloten en verlichting. Sommige gebruiken wifi, andere eigen draadloze protocollen. Neem ze mee in de planning, zodat ze het kantoornetwerk niet belasten. Zie ook <a class="text-blue-400 underline decoration-blue-400/40 underline-offset-[3px] hover:decoration-blue-300 hover:text-blue-300" href="gebouwbeheersysteem.html">gebouwbeheersysteem</a>.</p>
 <h2 id="advies" class="text-2xl md:text-3xl font-bold text-white tracking-tight mt-12 mb-4 scroll-mt-24">Advies</h2>
-<p class="text-slate-300 leading-relaxed mb-5">ECAP SLUI ontwerpt, stuurt aan en controleert <a class="text-blue-400 hover:underline" href="../diensten.html#communicatie-datanetwerken">communicatie- en datanetwerken</a>, inclusief de bekabeling en voeding van wifi en de afstemming met de ICT-partij.</p>
+<p class="text-slate-300 leading-relaxed mb-5">ECAP SLUI ontwerpt, stuurt aan en controleert <a class="text-blue-400 underline decoration-blue-400/40 underline-offset-[3px] hover:decoration-blue-300 hover:text-blue-300" href="../diensten.html#communicatie-datanetwerken">communicatie- en datanetwerken</a>, inclusief de bekabeling en voeding van wifi en de afstemming met de ICT-partij.</p>
 <h2 id="veelgestelde-vragen" class="text-2xl md:text-3xl font-bold text-white tracking-tight mt-12 mb-6">Veelgestelde vragen</h2><div class="space-y-4"><details class="p-6 rounded-xl border border-white/10 bg-[#161a22]/80"><summary class="font-semibold text-white cursor-pointer">Hoeveel accesspoints heb ik nodig?</summary><p class="text-slate-300 leading-relaxed mt-3">Dat hangt af van het gebouw, de materialen en vooral het aantal gebruikers en apparaten. Een site survey geeft een onderbouwd antwoord.</p></details><details class="p-6 rounded-xl border border-white/10 bg-[#161a22]/80"><summary class="font-semibold text-white cursor-pointer">Waarom is wifi slecht in een vergaderzaal?</summary><p class="text-slate-300 leading-relaxed mt-3">Vaak door capaciteit: te veel apparaten op één accesspoint. Een extra accesspoint in de zaal lost dat meestal op.</p></details></div>
 <div class="mt-14 p-8 rounded-2xl border border-white/10 bg-[#161a22]/90">
 <div class="font-mono text-xs text-blue-400 uppercase tracking-widest mb-3">[SAMENWERKEN?]</div>
@@ -155,7 +157,7 @@ KvK 59289430</address>
 <a class="hover:text-white" href="https://www.linkedin.com/company/ecap-slui/" rel="noopener" target="_blank">LinkedIn ECAP SLUI →</a>
 <a class="hover:text-white" href="https://www.linkedin.com/in/vincent-slui-a629ba19/" rel="noopener" target="_blank">LinkedIn Vincent Slui →</a>
 </div>
-<div class="text-xs font-mono text-slate-500 mt-6">Beeld © Studio Csány</div>
+<div class="text-xs font-mono text-slate-400 mt-6">Beeld © Studio Csány</div>
 </div>
 </div>
 </footer>

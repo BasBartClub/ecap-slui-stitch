@@ -23,12 +23,13 @@
 <link rel="preload" href="../fonts/Geist-Variable.woff2" as="font" type="font/woff2" crossorigin/>
 <link rel="preload" href="../fonts/GeistMono-Variable.woff2" as="font" type="font/woff2" crossorigin/>
 <link rel="stylesheet" href="../tokens.css"/>
-<script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="../css/app.css?v=1"/>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BlogPosting", "headline": "FAT en SAT: het verschil tussen fabrieks- en locatietest", "description": "Wat is het verschil tussen een Factory Acceptance Test (FAT) en een Site Acceptance Test (SAT)? Doel, inhoud, voorbereiding, voorbeelden en hoe ze samen fouten voorkomen.", "inLanguage": "nl-NL", "keywords": "FAT SAT", "articleSection": "Test & commissioning", "wordCount": 608, "datePublished": "2026-11-18", "dateModified": "2026-11-18", "mainEntityOfPage": "https://basbartclub.github.io/ecap-slui-stitch/blog/fat-sat-verschil.html", "image": {"@type": "ImageObject", "url": "https://basbartclub.github.io/ecap-slui-stitch/img/og-ecap-slui.jpg", "width": 1200, "height": 630}, "author": {"@type": "Organization", "name": "ECAP SLUI", "url": "https://basbartclub.github.io/ecap-slui-stitch/"}, "publisher": {"@type": "Organization", "name": "ECAP SLUI", "logo": {"@type": "ImageObject", "url": "https://basbartclub.github.io/ecap-slui-stitch/img/ecap-slui-logo.png"}}}</script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://basbartclub.github.io/ecap-slui-stitch/index.html"}, {"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://basbartclub.github.io/ecap-slui-stitch/blog/"}, {"@type": "ListItem", "position": 3, "name": "Test & commissioning", "item": "https://basbartclub.github.io/ecap-slui-stitch/blog/categorie/test-commissioning.html"}, {"@type": "ListItem", "position": 4, "name": "FAT en SAT: het verschil tussen fabrieks- en locatietest", "item": "https://basbartclub.github.io/ecap-slui-stitch/blog/fat-sat-verschil.html"}]}</script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Wat is een FAT?", "acceptedAnswer": {"@type": "Answer", "text": "Een Factory Acceptance Test: een test bij de fabrikant of bouwer van een product of systeem, voordat het naar de bouwplaats gaat."}}, {"@type": "Question", "name": "Wat is een SAT?", "acceptedAnswer": {"@type": "Answer", "text": "Een Site Acceptance Test: een test op de bouwplaats, nadat het systeem is geïnstalleerd en aangesloten."}}, {"@type": "Question", "name": "Waarom is een FAT nuttig?", "acceptedAnswer": {"@type": "Answer", "text": "Omdat fouten in de fabriek eenvoudiger en goedkoper te herstellen zijn dan op de bouwplaats."}}]}</script>
 </head>
 <body class="bg-[#0b0e14] text-slate-100 min-h-screen">
+<a class="skip" href="#inhoud">Naar de inhoud</a>
 <div class="fixed inset-0 pointer-events-none opacity-30 z-0" aria-hidden="true">
 <canvas class="w-full h-full" id="shader-canvas-blog"></canvas>
 </div>
@@ -74,6 +75,7 @@
     </div>
   </nav>
 </header>
+<div id="inhoud" tabindex="-1"></div>
 <main class="relative z-10 max-w-[1680px] mx-auto px-6 py-16">
 <nav class="font-mono text-xs text-slate-400 uppercase tracking-widest mb-6" aria-label="Kruimelpad"><a class="hover:text-white" href="../index.html">Home</a> / <a class="hover:text-white" href="../blog/">Blog</a> / <a class="text-blue-400 hover:underline" href="../blog/categorie/test-commissioning.html">Test &amp; commissioning</a></nav>
 <div class="grid grid-cols-1 lg:grid-cols-12 gap-10">
@@ -102,11 +104,11 @@
 <h2 id="na-de-test" class="text-2xl md:text-3xl font-bold text-white tracking-tight mt-12 mb-4 scroll-mt-24">Na de test</h2>
 <p class="text-slate-300 leading-relaxed mb-5">Afwijkingen worden vastgelegd op een lijst met acties, verantwoordelijken en termijnen. Bij de FAT wordt besloten of het product kan worden geleverd, eventueel onder voorwaarden. Bij de SAT wordt besloten of het systeem gereed is voor de integrale test.</p>
 <h2 id="de-volgende-stap-isat" class="text-2xl md:text-3xl font-bold text-white tracking-tight mt-12 mb-4 scroll-mt-24">De volgende stap: iSAT</h2>
-<p class="text-slate-300 leading-relaxed mb-5">Na de SAT van afzonderlijke systemen volgt de integrale test, waarbij systemen samen worden getest: brandmelding met ventilatie en deuren, noodstroom met de kritische installaties, het gebouwbeheersysteem met alle aangesloten installaties. Lees <a class="text-blue-400 hover:underline" href="integrale-test-installaties.html">integrale testen (iSAT)</a>.</p>
+<p class="text-slate-300 leading-relaxed mb-5">Na de SAT van afzonderlijke systemen volgt de integrale test, waarbij systemen samen worden getest: brandmelding met ventilatie en deuren, noodstroom met de kritische installaties, het gebouwbeheersysteem met alle aangesloten installaties. Lees <a class="text-blue-400 underline decoration-blue-400/40 underline-offset-[3px] hover:decoration-blue-300 hover:text-blue-300" href="integrale-test-installaties.html">integrale testen (iSAT)</a>.</p>
 <h2 id="in-het-v-model" class="text-2xl md:text-3xl font-bold text-white tracking-tight mt-12 mb-4 scroll-mt-24">In het V-model</h2>
-<p class="text-slate-300 leading-relaxed mb-5">FAT, SAT en iSAT vormen samen de rechterkant van het <a class="text-blue-400 hover:underline" href="v-model-bouwprojecten.html">V-model</a>. Elke test toetst een niveau van het ontwerp aan de linkerkant.</p>
+<p class="text-slate-300 leading-relaxed mb-5">FAT, SAT en iSAT vormen samen de rechterkant van het <a class="text-blue-400 underline decoration-blue-400/40 underline-offset-[3px] hover:decoration-blue-300 hover:text-blue-300" href="v-model-bouwprojecten.html">V-model</a>. Elke test toetst een niveau van het ontwerp aan de linkerkant.</p>
 <h2 id="bij-ecap-slui" class="text-2xl md:text-3xl font-bold text-white tracking-tight mt-12 mb-4 scroll-mt-24">Bij ECAP SLUI</h2>
-<p class="text-slate-300 leading-relaxed mb-5">ECAP SLUI zet een test- en commissioningsmodule op om aan het einde van de bouw de FAT-, SAT- en iSat-testen uit te voeren, en levert een compleet opleverdossier met de resultaten. Bekijk <a class="text-blue-400 hover:underline" href="../diensten.html#test-commissioning">test &amp; commissioning</a> en lees <a class="text-blue-400 hover:underline" href="wat-is-commissioning.html">wat is commissioning</a>.</p>
+<p class="text-slate-300 leading-relaxed mb-5">ECAP SLUI zet een test- en commissioningsmodule op om aan het einde van de bouw de FAT-, SAT- en iSat-testen uit te voeren, en levert een compleet opleverdossier met de resultaten. Bekijk <a class="text-blue-400 underline decoration-blue-400/40 underline-offset-[3px] hover:decoration-blue-300 hover:text-blue-300" href="../diensten.html#test-commissioning">test &amp; commissioning</a> en lees <a class="text-blue-400 underline decoration-blue-400/40 underline-offset-[3px] hover:decoration-blue-300 hover:text-blue-300" href="wat-is-commissioning.html">wat is commissioning</a>.</p>
 <h2 id="veelgestelde-vragen" class="text-2xl md:text-3xl font-bold text-white tracking-tight mt-12 mb-6">Veelgestelde vragen</h2><div class="space-y-4"><details class="p-6 rounded-xl border border-white/10 bg-[#161a22]/80"><summary class="font-semibold text-white cursor-pointer">Wat is een FAT?</summary><p class="text-slate-300 leading-relaxed mt-3">Een Factory Acceptance Test: een test bij de fabrikant of bouwer van een product of systeem, voordat het naar de bouwplaats gaat.</p></details><details class="p-6 rounded-xl border border-white/10 bg-[#161a22]/80"><summary class="font-semibold text-white cursor-pointer">Wat is een SAT?</summary><p class="text-slate-300 leading-relaxed mt-3">Een Site Acceptance Test: een test op de bouwplaats, nadat het systeem is geïnstalleerd en aangesloten.</p></details><details class="p-6 rounded-xl border border-white/10 bg-[#161a22]/80"><summary class="font-semibold text-white cursor-pointer">Waarom is een FAT nuttig?</summary><p class="text-slate-300 leading-relaxed mt-3">Omdat fouten in de fabriek eenvoudiger en goedkoper te herstellen zijn dan op de bouwplaats.</p></details></div>
 <div class="mt-14 p-8 rounded-2xl border border-white/10 bg-[#161a22]/90">
 <div class="font-mono text-xs text-blue-400 uppercase tracking-widest mb-3">[SAMENWERKEN?]</div>
@@ -158,7 +160,7 @@ KvK 59289430</address>
 <a class="hover:text-white" href="https://www.linkedin.com/company/ecap-slui/" rel="noopener" target="_blank">LinkedIn ECAP SLUI →</a>
 <a class="hover:text-white" href="https://www.linkedin.com/in/vincent-slui-a629ba19/" rel="noopener" target="_blank">LinkedIn Vincent Slui →</a>
 </div>
-<div class="text-xs font-mono text-slate-500 mt-6">Beeld © Studio Csány</div>
+<div class="text-xs font-mono text-slate-400 mt-6">Beeld © Studio Csány</div>
 </div>
 </div>
 </footer>
