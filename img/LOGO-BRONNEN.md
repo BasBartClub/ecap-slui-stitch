@@ -14,7 +14,7 @@ Alle bestanden staan lokaal in `img/` (en de onbewerkte originelen in `img/bron/
 | Rijksvastgoedbedrijf | `logo-rijksvastgoedbedrijf.png/webp` | Officieel Rijksoverheid-beeldmerk van `https://www.rijksvastgoedbedrijf.nl/themes/rijksoverheid/header-logo.svg`, gecombineerd met de organisatienaam in het officiële lettertype RijksSans van dezelfde site. Geen verzonnen merk. |
 | Eleqtron (Numansdorp) | `logo-eleqtron.png/webp` | Officieel PNG van `https://www.eleqtron.nl/assets/files/eleqtron-logo.png` |
 | Plug&Bim (Willemstad, Curaçao) | `logo-plug-bim.png/webp` | Officieel PNG van `https://plugandbim.com/wp-content/uploads/2023/05/black_logo_transparent_background-1.png` |
-| CX Nederland (cx.nl) | `logo-cx-nederland.svg/png/webp` | Officieel SVG van cx.nl: `https://www.cx.nl/hubfs/logo-cx-orange.svg` (zelfde merk als in de siteheader en als organisatielogo in de JSON-LD: `https://5652218.fs1.hubspotusercontent-na1.net/hubfs/5652218/Logo%20-%20CX.png`) |
+| Cx Nederland (Commissioning Nederland) | `logo-commissioning-nederland.svg/png/webp` | Officieel licht-modus-SVG van de eigen website, gebruikt in de siteheader: `https://web-commissioning-nederland.cdn.prismic.io/web-commissioning-nederland/agwrMKYofJOwHW1Q_logo-comm-nl-light-mode.svg` (bron: https://www.commissioningnederland.nl/) |
 
 ## Bestaande logo’s (ongewijzigd, al zichtbaar)
 
