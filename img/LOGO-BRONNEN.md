@@ -15,6 +15,7 @@ Alle bestanden staan lokaal in `img/` (en de onbewerkte originelen in `img/bron/
 | Eleqtron (Numansdorp) | `logo-eleqtron.png/webp` | Officieel PNG van `https://www.eleqtron.nl/assets/files/eleqtron-logo.png` |
 | Plug&Bim (Willemstad, Curaçao) | `logo-plug-bim.png/webp` | Officieel PNG van `https://plugandbim.com/wp-content/uploads/2023/05/black_logo_transparent_background-1.png` |
 | Cx Nederland (Commissioning Nederland) | `logo-commissioning-nederland.svg/png/webp` | Officieel licht-modus-SVG van de eigen website, gebruikt in de siteheader: `https://web-commissioning-nederland.cdn.prismic.io/web-commissioning-nederland/agwrMKYofJOwHW1Q_logo-comm-nl-light-mode.svg` (bron: https://www.commissioningnederland.nl/) |
+| Van Dorp (installatietechniek, vandorp.eu) | `logo-van-dorp.png/webp` | Aangeleverd door Daan, 23 nov 2026 (supplied by Daan, 23 Nov 2026). Origineel in `img/bron/van-dorp-logo-daan-2026-11-23.jpg`. |
 
 ## Bestaande logo’s (ongewijzigd, al zichtbaar)
 
@@ -26,6 +27,5 @@ Deze organisaties blijven een typografische naamtegel houden, in dezelfde witte 
 
 | Organisatie | Reden |
 |---|---|
-| Van Dorp (installatietechniek, vandorp.eu) | Officiële site is bevestigd, maar logo-bestanden staan achter Cloudflare en waren vanaf hier niet te downloaden. Geen bestand op Wikimedia. |
 | CMC Willemstad (Curaçao Medical Center, cmc.cw) | Officiële site is bevestigd (inclusief de door Vincent genoemde URL). Asset-downloads gaven 403; Wikipedia heeft alleen gebouwfoto’s, geen logo. |
 | Verhalle Groep | Elektrotechnisch installatiebedrijf / ingenieursbureau in Almere (verhallegroep.com / KvK 34297181, A.J.A.W. Verhalle Electrotechniek). Geen betrouwbaar openbaar logo gevonden. |
